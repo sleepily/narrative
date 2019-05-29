@@ -24,7 +24,7 @@ public static class ExtensionMethods
         if (isRadians)
             return new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
         else
-            return AngleToVector(angle * Mathf.Deg2Rad, true);
+            return AngleToVector2(angle * Mathf.Deg2Rad, true);
     }
 }
 
