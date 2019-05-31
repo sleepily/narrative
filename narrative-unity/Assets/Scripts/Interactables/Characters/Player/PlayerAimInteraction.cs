@@ -4,40 +4,31 @@ using UnityEngine;
 
 public class PlayerAimInteraction : MonoBehaviour
 {
-    public float rayForwardOffset = 3f;
-    public float maxDistance = 6f;
+    static float minDistance = 3.5f;
+    static float maxDistance = 6f;
 
-    public Camera thirdPersonCamera;
+    static Camera thirdPersonCamera;
 
-    private void Update()
+    private void Start()
     {
-        Raycast();
+        thirdPersonCamera = GetComponentInChildren<Camera>();
     }
 
-    void Raycast()
+    public static bool IsFocusable(Interactable focus)
     {
-        Ray cameraRay = new Ray();
-        cameraRay.origin = thirdPersonCamera.transform.position + (thirdPersonCamera.transform.forward * rayForwardOffset);
-        cameraRay.direction = thirdPersonCamera.transform.forward;
+        Vector3 focalPoint = thirdPersonCamera.transform.position + (thirdPersonCamera.transform.forward * minDistance);
 
-        RaycastHit hitInfo;
+        float distanceFromFocalPoint = Vector3.Distance(focalPoint, focus.gameObject.transform.position);
+        float distanceFromCamera = Vector3.Distance(thirdPersonCamera.transform.position, focus.gameObject.transform.position);
 
-        if (!Physics.Raycast(cameraRay, out hitInfo, maxDistance))
-            return;
+        // object to focus is inside dead zone
+        if (distanceFromCamera < minDistance)
+            return false;
 
-        GameObject collider = hitInfo.collider.gameObject;
+        // object to focus is too far away
+        if (distanceFromFocalPoint > maxDistance)
+            return false;
 
-        if (collider.GetComponent<Interactable>())
-        {
-            string action = "focus";
-
-            if (Input.GetAxisRaw("Use") > float.Epsilon)
-                action = "use";
-            
-            if (Input.GetAxisRaw("Search") > float.Epsilon)
-                action = "search";
-
-            EventManager.GlobalManager.TriggerEvent(collider.tag + "_" + collider.name, action);
-        }
+        return true;
     }
 }

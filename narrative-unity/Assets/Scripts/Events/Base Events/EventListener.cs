@@ -9,7 +9,7 @@ public class EventListener : MonoBehaviour
 
     private void Awake()
     {
-        eventManager = EventManager.GlobalManager;
+        eventManager = EventManager.Global;
     }
 
     // start listening on enable

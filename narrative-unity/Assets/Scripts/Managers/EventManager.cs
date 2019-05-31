@@ -5,15 +5,15 @@ using UnityEngine.Events;
 
 public class EventManager
 {
-    private static EventManager globalManager;
-    public static EventManager GlobalManager
+    private static EventManager global;
+    public static EventManager Global
     {
         get
         {
-            if (globalManager == null)
-                globalManager = new EventManager();
+            if (global == null)
+                global = new EventManager();
 
-            return globalManager;
+            return global;
         }
     }
 
@@ -22,8 +22,12 @@ public class EventManager
     public Dictionary<string, List<EventFunction>> events;
     public Dictionary<string, List<UnityEvent>> alternateEvents;
 
-    public void StartListening(string eventID, EventFunction listener)
+    public GameObject lastSender;
+
+    public void StartListening(string eventID, EventFunction eventFunction)
     {
+        string log;
+
         // create events list if it doesn't exist
         if (events == null)
             events = new Dictionary<string, List<EventFunction>>();
@@ -33,11 +37,16 @@ public class EventManager
             events.Add(eventID, new List<EventFunction>());
 
         // add listener calling this function
-        events[eventID].Add(listener);
+        events[eventID].Add(eventFunction);
+
+        log = string.Format("<color={1}>EventManager:</color> Listening for {0}.", eventID, "lime");
+        Debug.Log(log);
     }
 
     public void StopListening(string eventID, EventFunction listener)
     {
+        string log;
+
         // exit if dictionary doesn't exist
         if (events == null)
             return;
@@ -48,23 +57,35 @@ public class EventManager
 
         // remove this listener from the event
         events[eventID].Remove(listener);
+
+        log = string.Format("<color={1}>EventManager:</color> Stop listening for {0}.", eventID, "orange");
+        Debug.Log(log);
     }
 
-    public void TriggerEvent(string eventID, string param = "")
+    public void TriggerEvent(string eventID, GameObject sender, string parameter = "")
     {
+        string log;
+
         // exit if dictionary doesn't exist
         if (events == null)
             return;
         
         if (!events.ContainsKey(eventID))
         {
-            Debug.Log(string.Format("EventID {0} is unknown.", eventID));
+            log = string.Format("<color={1}>EventManager:</color> EventID {0} does not exist.", eventID, "red");
+            Debug.Log(log);
+
             return;
         }
 
+        log = string.Format("<color={2}>EventManager:</color> Triggering {0} with \"{1}\".", eventID, parameter, "cyan");
+        Debug.Log(log);
+
+        lastSender = sender;
+
         for (int listenerIndex = events[eventID].Count - 1; listenerIndex >= 0; listenerIndex--)
         {
-            events[eventID][listenerIndex](param);
+            events[eventID][listenerIndex](parameter);
         }
     }
 }

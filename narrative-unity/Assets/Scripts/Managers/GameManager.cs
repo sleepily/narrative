@@ -2,22 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager
+public class GameManager : MonoBehaviour
 {
-    /*
-     * singleton game manager instance
-     */
-    private static GameManager game;
-    public static GameManager Global
+    public static GameManager GLOBAL;
+
+    public static float timeScale = 1f;
+
+    public DialogueManager dialogueManager;
+    public Camera thirdPersonCamera;
+
+    private void Awake()
     {
-        get
-        {
-            if (game == null)
-                game = new GameManager();
-
-            return game;
-        }
+        GLOBAL = this;
     }
-
-
 }

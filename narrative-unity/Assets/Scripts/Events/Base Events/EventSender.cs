@@ -9,6 +9,6 @@ public class EventSender : MonoBehaviour
 
     private void Awake()
     {
-        eventManager = EventManager.GlobalManager;
+        eventManager = EventManager.Global;
     }
 }
