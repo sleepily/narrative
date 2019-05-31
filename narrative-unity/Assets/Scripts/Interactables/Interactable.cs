@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-
     // check for last mouse action to avoid spam of commands on every frame
     enum LastMouseAction
     {

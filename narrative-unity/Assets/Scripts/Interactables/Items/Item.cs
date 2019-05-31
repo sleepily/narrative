@@ -55,13 +55,12 @@ public class Item : Interactable
 
     public void FocusItem()
     {
-        //TODO: use overlay/outline instead of color change
-        meshRenderer.material.color = Color.green;
+        meshRenderer.material.SetColor("_OutlineColor", Color.yellow);
     }
 
     void UnfocusItem()
     {
-        meshRenderer.material.color = initialColor;
+        meshRenderer.material.SetColor("_OutlineColor", Color.clear);
     }
 
     public void PickupItem()

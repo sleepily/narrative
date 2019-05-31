@@ -5,8 +5,11 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    public float charactersPerSecond = 10f;
+
     public SpeechBubble speechBubblePrefab;
     SpeechBubble speechBubble;
+    bool textFinished = true;
 
     Queue<string> phrases;
 
@@ -39,6 +42,9 @@ public class DialogueManager : MonoBehaviour
         if (!speechBubble)
             return;
 
+        if (!textFinished)
+            return;
+
         if (phrases.Count == 0)
         {
             EndDialogue();
@@ -46,11 +52,39 @@ public class DialogueManager : MonoBehaviour
         }
 
         string phrase = phrases.Dequeue();
-        speechBubble.dialoguePhrase.text = phrase;
+        StartCoroutine(TextAnimation(phrase));
     }
 
     void EndDialogue()
     {
         Destroy(speechBubble.gameObject);
+    }
+
+    IEnumerator TextAnimation(string sentence)
+    {
+        bool skip = false;
+        bool textActive = false; // avoid skipping message due to key check in same frame
+        speechBubble.dialoguePhrase.text = "";
+        textFinished = false;
+
+        foreach (char letter in sentence.ToCharArray())
+        {
+            speechBubble.dialoguePhrase.text += letter;
+
+            if (Input.GetKeyDown(KeyCode.Space) && textActive)
+            {
+                skip = true;
+                textFinished = true;
+            }
+
+            textActive = true;
+
+            if (!skip)
+                yield return null; // new WaitForSeconds(1f / charactersPerSecond);
+        }
+
+        textFinished = true;
+
+        yield return null;
     }
 }
