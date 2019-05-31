@@ -4,26 +4,51 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
+
+    // check for last mouse action to avoid spam of commands on every frame
+    enum LastMouseAction
+    {
+        OnMouseEnter,
+        OnMouseOver,
+        OnMouseDown,
+        OnMouseExit
+    }
+
+    LastMouseAction lastMouseAction = LastMouseAction.OnMouseExit;
+
     private void OnMouseOver()
     {
         if (PlayerAimInteraction.IsFocusable(this))
-            Focus();
+            if (lastMouseAction != LastMouseAction.OnMouseOver)
+            {
+                Focus();
+                lastMouseAction = LastMouseAction.OnMouseOver;
+            }
     }
 
     private void OnMouseDown()
     {
         if (PlayerAimInteraction.IsFocusable(this))
         {
-            if (Input.GetMouseButtonDown(0))
-                Interact();
-            if (Input.GetMouseButtonDown(1))
-                Search();
+            if (lastMouseAction != LastMouseAction.OnMouseDown)
+            {
+                if (Input.GetMouseButtonDown(0))
+                    Interact();
+                if (Input.GetMouseButtonDown(1))
+                    Search();
+
+                lastMouseAction = LastMouseAction.OnMouseDown;
+            }
         }
     }
 
     private void OnMouseExit()
     {
-        Unfocus();
+        if (lastMouseAction != LastMouseAction.OnMouseExit)
+        {
+            Unfocus();
+            lastMouseAction = LastMouseAction.OnMouseExit;
+        }
     }
 
 
