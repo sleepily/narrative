@@ -55,12 +55,12 @@ public class Item : Interactable
 
     public void FocusItem()
     {
-        meshRenderer.material.SetColor("_OutlineColor", Color.yellow);
+        //meshRenderer.material.SetColor("_OutlineColor", Color.yellow);
     }
 
     void UnfocusItem()
     {
-        meshRenderer.material.SetColor("_OutlineColor", Color.clear);
+        //meshRenderer.material.SetColor("_OutlineColor", Color.clear);
     }
 
     public void PickupItem()
