@@ -5,9 +5,7 @@ using UnityEngine;
 public class Item : Interactable
 {
     protected MeshRenderer meshRenderer;
-    protected Color initialColor;
-
-    protected bool focused = false;
+    protected Color fresnelColor = Color.yellow;
 
     [SerializeField]
     bool isUsable = true;
@@ -45,22 +43,28 @@ public class Item : Interactable
     private void Start()
     {
         GetAllComponents();
+        SetGlowColor(Color.clear);
     }
 
     void GetAllComponents()
     {
         meshRenderer = GetComponent<MeshRenderer>();
-        initialColor = meshRenderer.material.color;
+        fresnelColor = meshRenderer.material.GetColor("_GlowColor");
     }
 
     public void FocusItem()
     {
-        //meshRenderer.material.SetColor("_OutlineColor", Color.yellow);
+        SetGlowColor(fresnelColor);
     }
 
     void UnfocusItem()
     {
-        //meshRenderer.material.SetColor("_OutlineColor", Color.clear);
+        SetGlowColor(Color.clear);
+    }
+
+    void SetGlowColor(Color color)
+    {
+        meshRenderer.material.SetColor("_GlowColor", color);
     }
 
     public void PickupItem()
