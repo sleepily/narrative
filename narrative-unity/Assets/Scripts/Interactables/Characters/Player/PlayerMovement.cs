@@ -5,17 +5,12 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
 {
-    public GameObject viewingDirection;
+    public GameObject cameraArm;
     public GameObject playerModel;
 
     [SerializeField]
     [Range(2.6f, 3.6f)]
     float movementSpeed = 3.6f;
-
-    [SerializeField]
-    [Range(0f, .2f)]
-    float groundCheckMargin = .1f;
-    bool isGrounded = false;
 
     CharacterController controller;
     CapsuleCollider capsuleCollider;
@@ -34,44 +29,42 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        GetInput();
-        GroundCheck();
+        GetInputAxis();
         Move();
         RotatePlayerModel();
     }
 
-    void GetInput()
+    void GetInputAxis()
     {
         inputAxis.x = Input.GetAxisRaw("Horizontal");
         inputAxis.y = Input.GetAxisRaw("Vertical");
     }
 
-    void GroundCheck()
-    {
-        Ray groundCheckRay = new Ray(capsuleCollider.center, Vector3.down);
-        float checkDistance = (capsuleCollider.height / 2) + groundCheckMargin;
-
-        isGrounded = (capsuleCollider.Raycast(groundCheckRay, out RaycastHit hitInfo, checkDistance));
-    }
-
     void Move()
     {
-        Vector3 desiredForwardMotion = viewingDirection.transform.forward * inputAxis.y;
-        Vector3 desiredSidewardMotion = viewingDirection.transform.right * inputAxis.x;
+        Vector3 desiredForwardMotion = cameraArm.transform.forward * inputAxis.y;
+        Vector3 desiredSidewardMotion = cameraArm.transform.right * inputAxis.x;
 
         Vector3 desiredMove = desiredForwardMotion + desiredSidewardMotion;
 
+        /*
+         * Force movement on XZ plane, introduce movement speed and apply gravity
+         * since we are not using SimpleMove()
+         */
         desiredMove = Vector3.ProjectOnPlane(desiredMove, Vector3.up).normalized;
-        
+        desiredMove *= movementSpeed;
         desiredMove += (Physics.gravity * Time.deltaTime);
 
-        controller.Move(desiredMove * movementSpeed * Time.deltaTime);
+        /*
+         * Let the controller handle movement for better collision control
+         */
+        controller.Move(desiredMove * Time.deltaTime);
     }
 
     void RotatePlayerModel()
     {
-        Vector3 playerRotation = viewingDirection.transform.eulerAngles;
-        playerRotation.x = 0f; // lock X rotation so the player doesn't tilt forward
+        Vector3 viewingRotation = cameraArm.transform.eulerAngles;
+        Vector3 playerRotation = Vector3.up * viewingRotation.y; // prevent player tilt (Y only)
         playerModel.transform.eulerAngles = playerRotation;
     }
 }

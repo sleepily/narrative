@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 8163109732280187606}
   - component: {fileID: 8163109732280187607}
   m_Layer: 0
-  m_Name: Mouse Rotator
+  m_Name: Camera Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -396,7 +396,7 @@ GameObject:
   - component: {fileID: 8163109732797532113}
   - component: {fileID: 8163109732797532112}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -590,10 +590,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc45bd6dcbf3d3e41b21e73c3af2a4f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewingDirection: {fileID: 8163109732280187605}
+  cameraArm: {fileID: 0}
   playerModel: {fileID: 8163109733146601172}
   movementSpeed: 3.6
-  groundCheckMargin: 0.01
 --- !u!114 &8163109733526020027
 MonoBehaviour:
   m_ObjectHideFlags: 0
