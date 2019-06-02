@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class Inventory
+public class Inventory : MonoBehaviour
 {
     public Dictionary<string, Item> items;
     

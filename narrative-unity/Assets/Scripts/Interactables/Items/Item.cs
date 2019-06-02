@@ -5,7 +5,12 @@ using UnityEngine;
 public class Item : Interactable
 {
     protected MeshRenderer meshRenderer;
-    protected Color fresnelColor = Color.yellow;
+    protected Color glowColor = Color.yellow;
+    protected Color currentGlowColor, desiredGlowColor;
+
+    [Range(.01f, 1f)]
+    float colorLerpFactor = .5f;
+    bool lerpIsFinished = true;
 
     [SerializeField]
     bool isUsable = true;
@@ -43,18 +48,54 @@ public class Item : Interactable
     private void Start()
     {
         GetAllComponents();
-        SetGlowColor(Color.clear);
+        SetGlowColor(Color.clear, true);
     }
 
     void GetAllComponents()
     {
         meshRenderer = GetComponent<MeshRenderer>();
-        fresnelColor = meshRenderer.material.GetColor("_GlowColor");
+        glowColor = meshRenderer.material.GetColor("_GlowColor");
+    }
+
+    void SetGlowColor(Color color, bool isInstant = false)
+    {
+        desiredGlowColor = color;
+        lerpIsFinished = isInstant;
+
+        if (!isInstant)
+            return;
+
+        currentGlowColor = desiredGlowColor;
+        meshRenderer.material.SetColor("_GlowColor", desiredGlowColor);
+
+    }
+
+    private void Update()
+    {
+        LerpGlowColor();
+    }
+
+    void LerpGlowColor()
+    {
+        if (lerpIsFinished)
+            return;
+
+        currentGlowColor = Color.Lerp
+        (
+            currentGlowColor,
+            desiredGlowColor,
+            Time.deltaTime / colorLerpFactor
+        );
+
+        meshRenderer.material.SetColor("_GlowColor", currentGlowColor);
+
+        if (currentGlowColor.Equals(desiredGlowColor))
+            lerpIsFinished = true;
     }
 
     public void FocusItem()
     {
-        SetGlowColor(fresnelColor);
+        SetGlowColor(glowColor);
     }
 
     void UnfocusItem()
@@ -62,15 +103,11 @@ public class Item : Interactable
         SetGlowColor(Color.clear);
     }
 
-    void SetGlowColor(Color color)
-    {
-        meshRenderer.material.SetColor("_GlowColor", color);
-    }
-
     public void PickupItem()
     {
         EventManager.Global.TriggerEvent("Inventory_Add", gameObject, name); // tag + "_" + name
 
+        SetGlowColor(Color.clear, true);
         gameObject.SetActive(false);
     }
 

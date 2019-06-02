@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         GetInput();
         GroundCheck();
         Move();
+        RotatePlayerModel();
     }
 
     void GetInput()
@@ -55,16 +56,22 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
-        Vector3 desiredMove = viewingDirection.transform.forward * inputAxis.y + viewingDirection.transform.right * inputAxis.x;
+        Vector3 desiredForwardMotion = viewingDirection.transform.forward * inputAxis.y;
+        Vector3 desiredSidewardMotion = viewingDirection.transform.right * inputAxis.x;
+
+        Vector3 desiredMove = desiredForwardMotion + desiredSidewardMotion;
+
         desiredMove = Vector3.ProjectOnPlane(desiredMove, Vector3.up).normalized;
-
-        if (!isGrounded)
-            desiredMove += Physics.gravity;
-
-        Vector3 playerRotation = viewingDirection.transform.eulerAngles;
-        playerRotation.x = 0f;
-        playerModel.transform.eulerAngles = playerRotation;
+        
+        desiredMove += (Physics.gravity * Time.deltaTime);
 
         controller.Move(desiredMove * movementSpeed * Time.deltaTime);
+    }
+
+    void RotatePlayerModel()
+    {
+        Vector3 playerRotation = viewingDirection.transform.eulerAngles;
+        playerRotation.x = 0f; // lock X rotation so the player doesn't tilt forward
+        playerModel.transform.eulerAngles = playerRotation;
     }
 }
