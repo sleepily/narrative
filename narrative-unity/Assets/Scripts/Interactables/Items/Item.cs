@@ -26,14 +26,14 @@ public class Item : Interactable
         EventManager.Global.StopListening("Item_Key", ItemEventFunction);
     }
 
-    public void ItemEventFunction(string parameter = "")
+    public void ItemEventFunction(GameObject sender, string parameter = "")
     {
         switch (parameter)
         {
             case "interact":
                 PickupItem();
                 break;
-            case "search":
+            case "use":
                 break;
             case "focus":
                 FocusItem();
@@ -106,16 +106,19 @@ public class Item : Interactable
 
     public void PickupItem()
     {
+        gameObject.SetActive(false);
+
         EventManager.Global.TriggerEvent("Inventory_Add", gameObject, name); // tag + "_" + name
 
         SetGlowColor(Color.clear, true);
-        gameObject.SetActive(false);
     }
 
     public void UseItem()
     {
         if (!isUsable)
+        {
             return;
+        }
 
         EventManager.Global.TriggerEvent("Inventory_Remove", gameObject, name); // tag + "_" + name
     }

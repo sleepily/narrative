@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public static float timeScale = 1f;
 
     public DialogueManager dialogueManager;
+    public InventoryManager inventoryManager;
+
     public Camera thirdPersonCamera;
 
     private void Awake()

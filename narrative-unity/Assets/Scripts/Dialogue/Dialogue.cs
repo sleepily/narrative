@@ -9,6 +9,10 @@ public class Dialogue
     [HideInInspector]
     public Interactable interactable;
 
+    public enum Condition { None, Item, Flag };
+
+    public Condition condition;
+
     [TextArea(1, 30)]
     public string[] phrases;
 }

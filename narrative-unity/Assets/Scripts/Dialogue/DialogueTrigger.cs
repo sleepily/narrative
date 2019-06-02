@@ -17,4 +17,10 @@ public class DialogueTrigger : MonoBehaviour
     {
         GameManager.GLOBAL.dialogueManager.StartDialogue(dialogue, interactable);
     }
+
+    public void TriggerItemDialogue()
+    {
+        Item dialogueItem = GameManager.GLOBAL.inventoryManager.GetCurrentItem();
+        GameManager.GLOBAL.dialogueManager.StartDialogue(dialogue, interactable);
+    }
 }

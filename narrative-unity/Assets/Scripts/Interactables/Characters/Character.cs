@@ -23,12 +23,15 @@ public class Character : Interactable
         EventManager.Global.StartListening(name, EventFunction);
     }
 
-    public void EventFunction(string parameter = "")
+    public void EventFunction(GameObject sender, string parameter = "")
     {
         switch (parameter)
         {
             case "interact":
                 dialogueTrigger.TriggerDialogue();
+                break;
+            case "search":
+                dialogueTrigger.TriggerItemDialogue();
                 break;
             case "focus":
                 //TODO: small pop-up

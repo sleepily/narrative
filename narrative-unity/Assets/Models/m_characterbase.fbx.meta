@@ -23,7 +23,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -72,7 +72,132 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: m_characterbase(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Body
+      parentName: m_characterbase(Clone)
+      position: {x: -0, y: 0.76961696, z: 0.060413856}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.24735345, y: 0.24735345, z: 0.24735345}
+    - name: All_the_Stuffs
+      parentName: m_characterbase(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.01, y: 0.01, z: 0.01}
+    - name: pSphere1
+      parentName: All_the_Stuffs
+      position: {x: -0.3537248, y: 5.7677407, z: 0.59585184}
+      rotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+      scale: {x: 0.19859053, y: 0.19859053, z: 0.19859053}
+    - name: transform6
+      parentName: pSphere1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPipe3
+      parentName: All_the_Stuffs
+      position: {x: -0.29538128, y: 5.6757884, z: 0.7045865}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform1
+      parentName: pPipe3
+      position: {x: 0.29538128, y: -5.6757884, z: -0.7045865}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPipe4
+      parentName: All_the_Stuffs
+      position: {x: 1, y: 5.6757884, z: 0.7045865}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: -1, y: 1, z: 1}
+    - name: transform2
+      parentName: pPipe4
+      position: {x: 0.29538128, y: -5.6757884, z: -0.7045865}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPipe5
+      parentName: All_the_Stuffs
+      position: {x: -0, y: 5.713167, z: 0.50056016}
+      rotation: {x: 0.9738431, y: -0, z: -0.0060456726, w: 0.22714138}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform7
+      parentName: pPipe5
+      position: {x: -0.0031075054, y: -5.713167, z: -0.50056016}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pSphere2
+      parentName: All_the_Stuffs
+      position: {x: 0.354, y: 5.7677407, z: 0.59585184}
+      rotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+      scale: {x: 0.19859053, y: 0.19859053, z: 0.19859053}
+    - name: transform5
+      parentName: pSphere2
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCube3
+      parentName: All_the_Stuffs
+      position: {x: -0, y: 4.1749306, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: -0.8333333, y: 1, z: 1}
+    - name: transform3
+      parentName: pCube3
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCube4
+      parentName: All_the_Stuffs
+      position: {x: -0, y: 2.6915956, z: 0.103439644}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform11
+      parentName: pCube4
+      position: {x: -0, y: -2.6915956, z: -0.103439644}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pSphere3
+      parentName: All_the_Stuffs
+      position: {x: 0.00013759232, y: 5.7677407, z: 0.59585184}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform9
+      parentName: pSphere3
+      position: {x: -0.00013759232, y: -5.7677407, z: -0.59585184}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCube5
+      parentName: All_the_Stuffs
+      position: {x: -0, y: 5.7743373, z: 0.098721325}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.5429813, y: 1.2332784, z: 1.3042939}
+    - name: transform8
+      parentName: pCube5
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCube6
+      parentName: All_the_Stuffs
+      position: {x: -0, y: 5.709631, z: 0.27362376}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform10
+      parentName: pCube6
+      position: {x: -0, y: -5.709631, z: -0.27362376}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCube1
+      parentName: All_the_Stuffs
+      position: {x: -0, y: 4.1749306, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.8333333, y: 1, z: 1}
+    - name: transform4
+      parentName: pCube1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -81,12 +206,12 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: 
+    rootMotionBoneName: Body
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

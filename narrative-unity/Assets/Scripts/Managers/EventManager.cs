@@ -17,10 +17,11 @@ public class EventManager
         }
     }
 
-    public delegate void EventFunction(string param = "");
+    public delegate void EventFunction(GameObject sender, string param = "");
+    public delegate void EventFunctionWithItem(GameObject sender, Item item, string param = "");
 
     public Dictionary<string, List<EventFunction>> events;
-    public Dictionary<string, List<UnityEvent>> alternateEvents;
+    public Dictionary<string, List<EventFunctionWithItem>> itemEvents;
 
     public GameObject lastSender;
 
@@ -90,7 +91,7 @@ public class EventManager
 
         for (int listenerIndex = events[eventID].Count - 1; listenerIndex >= 0; listenerIndex--)
         {
-            events[eventID][listenerIndex](parameter);
+            events[eventID][listenerIndex](sender, parameter);
         }
     }
 }

@@ -16,32 +16,16 @@ public class Interactable : MonoBehaviour
     LastMouseAction lastMouseAction = LastMouseAction.OnMouseExit;
 
     /*
-     * OnMouse functions to determine whether to focus, unfocus, interact with or search an object
+     * OnMouse functions to determine whether to focus, unfocus, interact with or use an object
      */
-    private void OnMouseOver()
+    private void OnMouseEnter()
     {
-        if (PlayerAimInteraction.IsFocusable(this))
-            if (lastMouseAction != LastMouseAction.OnMouseOver)
-            {
-                Focus();
-                lastMouseAction = LastMouseAction.OnMouseOver;
-            }
+        MouseButtonCheck();
     }
 
-    private void OnMouseDown()
+    private void OnMouseOver()
     {
-        if (PlayerAimInteraction.IsFocusable(this))
-        {
-            if (lastMouseAction != LastMouseAction.OnMouseDown)
-            {
-                if (Input.GetMouseButtonDown(0))
-                    Interact();
-                if (Input.GetMouseButtonDown(1))
-                    Search();
-
-                lastMouseAction = LastMouseAction.OnMouseDown;
-            }
-        }
+        MouseButtonCheck();
     }
 
     private void OnMouseExit()
@@ -53,7 +37,40 @@ public class Interactable : MonoBehaviour
         }
     }
 
+    void MouseButtonCheck()
+    {
+        if (PlayerAimInteraction.IsFocusable(this))
+        {
+            if (lastMouseAction != LastMouseAction.OnMouseOver)
+            {
+                Focus();
+                lastMouseAction = LastMouseAction.OnMouseOver;
+            }
 
+            if (lastMouseAction != LastMouseAction.OnMouseDown)
+            {
+                bool buttonDown = false;
+
+                if (Input.GetAxisRaw("Interact") > float.Epsilon)
+                {
+                    buttonDown = true;
+                    Interact();
+                }
+                if (Input.GetAxisRaw("UseItem") > float.Epsilon)
+                {
+                    buttonDown = true;
+                    Use();
+                }
+
+                if (buttonDown)
+                    lastMouseAction = LastMouseAction.OnMouseDown;
+            }
+        }
+    }
+
+    /*
+     * All possible world object/item interactions
+     */
     public void Focus()
     {
         EventManager.Global.TriggerEvent(name, gameObject, "focus");
@@ -69,8 +86,8 @@ public class Interactable : MonoBehaviour
         EventManager.Global.TriggerEvent(name, gameObject, "interact");
     }
 
-    public void Search()
+    public void Use()
     {
-        EventManager.Global.TriggerEvent(name, gameObject, "search");
+        EventManager.Global.TriggerEvent(name, gameObject, "use");
     }
 }
