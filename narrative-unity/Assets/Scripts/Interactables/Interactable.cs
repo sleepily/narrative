@@ -66,6 +66,8 @@ public class Interactable : MonoBehaviour
                     lastMouseAction = LastMouseAction.OnMouseDown;
             }
         }
+        else
+            OnMouseExit();
     }
 
     /*

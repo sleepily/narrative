@@ -3,19 +3,32 @@ using System.Collections;
 
 public class SmoothCameraWithBumper : MonoBehaviour
 {
-    private Transform target;
+    [Header("Properties")]
 
-    Vector3 initialPosition;
+    [Range(0.02f, 4f)]
+    [SerializeField]
+    [Tooltip("Amount of camera lerp smoothing.")]
+    private float damping = .04f;
+
+    [SerializeField]
+    [Tooltip("Move camera forward when bumping to prevent clipping.")]
+    float clippingPreventionDistance = 1f;
+
+    [Header("Debug")]
 
     [SerializeField]
     bool drawDebugRay = false;
 
-    [Range(0.02f, 4f)]
-    [SerializeField]
-    private float damping = .04f;
 
-    [SerializeField]
-    float clippingPreventionDistance = 1f;
+    private Transform target;
+
+    Vector3 initialPosition;
+
+    Vector3 desiredPosition, targetBackDirection;
+    float initialDistance, checkingDistance;
+
+    RaycastHit hitInfo;
+    Ray ray;
 
     private void Start()
     {
@@ -27,40 +40,65 @@ public class SmoothCameraWithBumper : MonoBehaviour
         if (!target)
             target = transform.parent;
 
-        initialPosition = transform.position;
+        initialPosition = transform.localPosition;
     }
 
     private void Update()
     {
-        Vector3 desiredPosition = target.TransformPoint(initialPosition);
-        
-        Vector3 targetBackDirection = target.transform.forward * -1;
+        SetVariables();
+        CameraBumpCheck();
+        LerpCamera();
 
-        RaycastHit hitInfo;
-        Ray ray = new Ray(target.transform.position, targetBackDirection);
+        DrawDebugRay();
+    }
 
-        float initialDistance = Mathf.Abs(initialPosition.z);
+    void SetVariables()
+    {
+        desiredPosition = target.TransformPoint(initialPosition);
+        targetBackDirection = target.transform.forward * -1;
 
-        float checkingDistance = initialDistance + clippingPreventionDistance;
+        hitInfo = new RaycastHit();
+        ray = new Ray(target.transform.position, targetBackDirection);
 
-        if (drawDebugRay)
-            Debug.DrawRay(ray.origin, ray.direction * checkingDistance, Color.gray);
+        initialDistance = Mathf.Abs(initialPosition.z);
+        checkingDistance = initialDistance + clippingPreventionDistance;
+    }
 
+    void DrawDebugRay()
+    {
+        if (!drawDebugRay)
+            return;
+
+        Debug.DrawRay(ray.origin, ray.direction * checkingDistance, Color.gray);
+
+        if (hitInfo.point == Vector3.zero)
+            return;
+
+        Debug.DrawRay(ray.origin, hitInfo.point - ray.origin, Color.green);
+    }
+
+    void CameraBumpCheck()
+    {
         if (Physics.Raycast(ray, out hitInfo, checkingDistance))
         {
             if (hitInfo.transform == target || hitInfo.transform == transform)
                 return;
 
-            desiredPosition = hitInfo.point;
-
-            desiredPosition += target.forward * clippingPreventionDistance;
-            
-            if (drawDebugRay)
-                Debug.DrawRay(ray.origin, hitInfo.point - ray.origin, Color.green);
+            CalculateNewCameraPosition();
         }
         else
             desiredPosition = target.transform.position + targetBackDirection * initialDistance;
+    }
 
+    void CalculateNewCameraPosition()
+    {
+        desiredPosition = hitInfo.point;
+
+        desiredPosition += target.forward * clippingPreventionDistance;
+    }
+
+    void LerpCamera()
+    {
         transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime / damping);
     }
 }

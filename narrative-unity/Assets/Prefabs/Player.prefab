@@ -461,9 +461,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9932a022a28995b4ba233e8587798a12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drawDebugRay: 1
   damping: 0.02
   clippingPreventionDistance: 1
+  drawDebugRay: 1
 --- !u!20 &8163109732585943100
 Camera:
   m_ObjectHideFlags: 0
@@ -539,14 +539,14 @@ MonoBehaviour:
   finalBlitToCameraTarget: 1
   antialiasingMode: 0
   temporalAntialiasing:
-    jitterSpread: 0.75
-    sharpness: 0.25
-    stationaryBlending: 0.95
-    motionBlending: 0.85
+    jitterSpread: 0.895
+    sharpness: 2.12
+    stationaryBlending: 0.99
+    motionBlending: 0.99
   subpixelMorphologicalAntialiasing:
     quality: 2
   fastApproximateAntialiasing:
-    fastMode: 0
+    fastMode: 1
     keepAlpha: 0
   fog:
     enabled: 1
@@ -636,7 +636,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38da4e018574f3848aa76788b2dd5413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentItemText: {fileID: 1921823463}
 --- !u!1 &8163109733146601172
 GameObject:
   m_ObjectHideFlags: 0

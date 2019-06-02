@@ -30,7 +30,7 @@ public class Character : Interactable
             case "interact":
                 dialogueTrigger.TriggerDialogue();
                 break;
-            case "search":
+            case "use":
                 dialogueTrigger.TriggerItemDialogue();
                 break;
             case "focus":

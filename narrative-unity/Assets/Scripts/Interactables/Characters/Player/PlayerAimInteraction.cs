@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAimInteraction : MonoBehaviour
 {
-    static float minDistance = 3.5f;
+    static float minDistance = 2.5f;
     static float maxDistance = 6f;
 
     static Camera thirdPersonCamera;
