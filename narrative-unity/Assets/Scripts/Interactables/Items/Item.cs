@@ -8,12 +8,13 @@ public class Item : Interactable
     protected Color glowColor = Color.yellow;
     protected Color currentGlowColor, desiredGlowColor;
 
-    [Range(.01f, 1f)]
-    float colorLerpFactor = .5f;
-    bool lerpIsFinished = true;
+    [Range(.01f, .8f)]
+    [SerializeField]
+    protected float colorLerpFactor = .2f;
+    protected bool lerpIsFinished = true;
 
     [SerializeField]
-    bool isUsable = true;
+    protected bool isUsable = true;
     
     private void OnEnable()
     {

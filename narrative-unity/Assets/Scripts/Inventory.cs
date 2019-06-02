@@ -22,10 +22,14 @@ public class Inventory : MonoBehaviour
         Item itemToAdd = EventManager.Global.lastSender.GetComponent<Item>();
 
         items.Add(parameter, itemToAdd);
+
+        Debug.Log(string.Format("InventoryManager: Added item {0}", itemToAdd.name));
     }
 
     public void Remove(string parameter = "")
     {
         items.Remove(parameter);
+
+        Debug.Log(string.Format("InventoryManager: Removed item {0}", parameter));
     }
 }
