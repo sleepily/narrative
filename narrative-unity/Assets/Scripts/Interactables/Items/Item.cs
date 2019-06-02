@@ -12,15 +12,15 @@ public class Item : Interactable
     
     private void OnEnable()
     {
-        EventManager.Global.StartListening("Item_Key", EventFunction);
+        EventManager.Global.StartListening("Item_Key", ItemEventFunction);
     }
 
     private void OnDisable()
     {
-        EventManager.Global.StopListening("Item_Key", EventFunction);
+        EventManager.Global.StopListening("Item_Key", ItemEventFunction);
     }
 
-    public void EventFunction(string parameter = "")
+    public void ItemEventFunction(string parameter = "")
     {
         switch (parameter)
         {

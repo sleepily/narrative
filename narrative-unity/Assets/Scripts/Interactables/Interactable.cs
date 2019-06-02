@@ -15,6 +15,9 @@ public class Interactable : MonoBehaviour
 
     LastMouseAction lastMouseAction = LastMouseAction.OnMouseExit;
 
+    /*
+     * OnMouse functions to determine whether to focus, unfocus, interact with or search an object
+     */
     private void OnMouseOver()
     {
         if (PlayerAimInteraction.IsFocusable(this))

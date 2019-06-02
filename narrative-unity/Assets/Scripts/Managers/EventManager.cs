@@ -24,6 +24,11 @@ public class EventManager
 
     public GameObject lastSender;
 
+    string startString  = "<color={1}>EventManager:</color> Listening for {0}.";
+    string stopString   = "<color={1}>EventManager:</color> Stop listening for {0}.";
+    string noKeyString  = "<color={1}>EventManager:</color> EventID {0} does not exist.";
+    string triggerString = "<color={2}>EventManager:</color> Triggering {0} with \"{1}\".";
+
     public void StartListening(string eventID, EventFunction eventFunction)
     {
         string log;
@@ -39,7 +44,7 @@ public class EventManager
         // add listener calling this function
         events[eventID].Add(eventFunction);
 
-        log = string.Format("<color={1}>EventManager:</color> Listening for {0}.", eventID, "lime");
+        log = string.Format(startString, eventID, "lime");
         Debug.Log(log);
     }
 
@@ -58,7 +63,7 @@ public class EventManager
         // remove this listener from the event
         events[eventID].Remove(listener);
 
-        log = string.Format("<color={1}>EventManager:</color> Stop listening for {0}.", eventID, "orange");
+        log = string.Format(stopString, eventID, "orange");
         Debug.Log(log);
     }
 
@@ -72,13 +77,13 @@ public class EventManager
         
         if (!events.ContainsKey(eventID))
         {
-            log = string.Format("<color={1}>EventManager:</color> EventID {0} does not exist.", eventID, "red");
+            log = string.Format(noKeyString, eventID, "red");
             Debug.Log(log);
 
             return;
         }
 
-        log = string.Format("<color={2}>EventManager:</color> Triggering {0} with \"{1}\".", eventID, parameter, "cyan");
+        log = string.Format(triggerString, eventID, parameter, "cyan");
         Debug.Log(log);
 
         lastSender = sender;
