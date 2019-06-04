@@ -58,19 +58,6 @@ public class Item : Interactable
         glowColor = meshRenderer.material.GetColor("_GlowColor");
     }
 
-    void SetGlowColor(Color color, bool isInstant = false)
-    {
-        desiredGlowColor = color;
-        lerpIsFinished = isInstant;
-
-        if (!isInstant)
-            return;
-
-        currentGlowColor = desiredGlowColor;
-        meshRenderer.material.SetColor("_GlowColor", desiredGlowColor);
-
-    }
-
     private void Update()
     {
         LerpGlowColor();
@@ -102,6 +89,18 @@ public class Item : Interactable
     void UnfocusItem()
     {
         SetGlowColor(Color.clear);
+    }
+
+    void SetGlowColor(Color color, bool isInstant = false)
+    {
+        desiredGlowColor = color;
+        lerpIsFinished = isInstant;
+
+        if (!isInstant)
+            return;
+
+        currentGlowColor = desiredGlowColor;
+        meshRenderer.material.SetColor("_GlowColor", desiredGlowColor);
     }
 
     public void PickupItem()
