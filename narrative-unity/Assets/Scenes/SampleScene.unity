@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.09553683, g: 0.07296797, b: 0.03428599, a: 1}
+  m_IndirectSpecularColor: {r: 0.08996482, g: 0.10030443, b: 0.1028942, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -995,8 +995,6 @@ GameObject:
   - component: {fileID: 1483834700}
   - component: {fileID: 1483834699}
   - component: {fileID: 1483834698}
-  - component: {fileID: 1483834702}
-  - component: {fileID: 1483834701}
   m_Layer: 0
   m_Name: Character_Placeholder
   m_TagString: Character
@@ -1076,37 +1074,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1483834696}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1483834701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1483834696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18873c5477d885848bca79fedc5b7762, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Placeholder
-    interactable: {fileID: 0}
-    condition: 0
-    phrases:
-    - Hi! I'm the Placeholder!
-    - Woop Woop
---- !u!114 &1483834702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1483834696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c469d8a055b862e4592723978aa8f348, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1542314020
 GameObject:
   m_ObjectHideFlags: 0

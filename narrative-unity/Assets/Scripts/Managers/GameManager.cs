@@ -7,8 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager GLOBAL;
 
     public static float timeScale = 1f;
-
-    public DialogueManager dialogueManager;
+    
     public InventoryManager inventoryManager;
 
     public Camera thirdPersonCamera;

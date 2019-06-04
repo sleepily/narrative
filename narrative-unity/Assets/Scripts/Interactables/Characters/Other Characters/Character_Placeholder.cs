@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character_Placeholder : Character
+public class Character_Placeholder : CharacterWithDialogue
 {
 
 }
