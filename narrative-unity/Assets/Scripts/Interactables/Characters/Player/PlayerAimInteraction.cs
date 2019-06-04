@@ -16,17 +16,14 @@ public class PlayerAimInteraction : MonoBehaviour
 
     public static bool IsFocusable(Interactable focus)
     {
-        Vector3 focalPoint = thirdPersonCamera.transform.position + (thirdPersonCamera.transform.forward * minDistance);
-
-        float distanceFromFocalPoint = Vector3.Distance(focalPoint, focus.gameObject.transform.position);
-        float distanceFromCamera = Vector3.Distance(thirdPersonCamera.transform.position, focus.gameObject.transform.position);
+        float distanceFromCamera = Vector3.Distance(thirdPersonCamera.transform.position, focus.transform.position);
 
         // object to focus is inside dead zone
         if (distanceFromCamera < minDistance)
             return false;
 
         // object to focus is too far away
-        if (distanceFromFocalPoint > maxDistance)
+        if (distanceFromCamera > maxDistance)
             return false;
 
         return true;
