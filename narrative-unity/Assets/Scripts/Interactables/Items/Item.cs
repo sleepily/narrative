@@ -7,26 +7,24 @@ public class Item : Interactable
     protected MeshRenderer meshRenderer;
     protected Color glowColor = Color.yellow;
     protected Color currentGlowColor, desiredGlowColor;
-
-    [Range(.01f, .8f)]
-    [SerializeField]
+    
     protected float colorLerpFactor = .2f;
     protected bool lerpIsFinished = true;
 
     [SerializeField]
     protected bool isUsable = true;
-    
+
     private void OnEnable()
     {
-        EventManager.Global.StartListening("Item_Key", ItemEventFunction);
+        EventManager.Global.StartListening(name, ItemEventFunction);
     }
 
     private void OnDisable()
     {
-        EventManager.Global.StopListening("Item_Key", ItemEventFunction);
+        EventManager.Global.StopListening(name, ItemEventFunction);
     }
 
-    public void ItemEventFunction(GameObject sender, string parameter = "")
+    public virtual void ItemEventFunction(GameObject sender, string parameter = "")
     {
         switch (parameter)
         {

@@ -449,6 +449,9 @@ namespace Fungus.EditorUtils
                 //reset all
                 foreach (var item in filteredBlocks)
                 {
+                    if (!item)
+                        continue;
+
                     item.IsFiltered = false;
                 }
                 

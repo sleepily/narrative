@@ -8,6 +8,9 @@ using Fungus;
 public class CharacterWithDialogue : Interactable
 {
     Flowchart flowchart;
+    bool isInDialogue;
+
+    Block blockStart, blockWrongItem;
 
     private void Start()
     {
@@ -17,6 +20,8 @@ public class CharacterWithDialogue : Interactable
     void GetAllComponents()
     {
         flowchart = GetComponent<Flowchart>();
+        blockStart = flowchart.FindBlock("Start");
+        blockWrongItem = flowchart.FindBlock("WrongItem");
     }
 
     private void OnEnable()
@@ -45,13 +50,25 @@ public class CharacterWithDialogue : Interactable
         }
     }
 
+    private void Update()
+    {
+        IsInDialogueCheck();
+    }
+
+    bool IsInDialogueCheck()
+    {
+        return isInDialogue = flowchart.HasExecutingBlocks();
+    }
+
     /*
      * Execute Start block, which will handle conditions and jumps
      */
     public bool TriggerDialogue()
     {
-        Block startBlock = flowchart.FindBlock("Start");
-        return flowchart.ExecuteBlock(startBlock);
+        if (isInDialogue)
+            return false;
+        
+        return flowchart.ExecuteBlock(blockStart);
     }
 
     /*
@@ -59,6 +76,9 @@ public class CharacterWithDialogue : Interactable
      */
     public bool TriggerItemDialogue(Item item = null)
     {
+        if (isInDialogue)
+            return false;
+
         if (!item)
             item = GameManager.GLOBAL.inventoryManager.GetCurrentItem();
 
@@ -71,10 +91,7 @@ public class CharacterWithDialogue : Interactable
         Block itemBlock = flowchart.FindBlock(item.name);
 
         if (!itemBlock)
-        {
-            Debug.Log(string.Format("<color=orange>{0}:</color> Cannot trigger dialogue with {1}.", name, item.name));
-            return false;
-        }
+            return flowchart.ExecuteBlock(blockWrongItem);
 
         flowchart.ExecuteBlock(itemBlock);
         return true;
