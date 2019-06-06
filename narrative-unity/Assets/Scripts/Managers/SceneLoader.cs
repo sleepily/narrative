@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    public LoadSceneMode loadSceneMode;
-
     public bool LoadScene(int sceneBuildIndex = 1, LoadSceneMode loadSceneMode = LoadSceneMode.Single)
     {
         StartCoroutine(Coroutine_LoadScene(sceneBuildIndex, loadSceneMode));
@@ -21,7 +19,7 @@ public class SceneLoader : MonoBehaviour
         return true;
     }
 
-    public static int GetSceneBuildIndex(string sceneName)
+    public int GetSceneBuildIndex(string sceneName)
     {
         return SceneManager.GetSceneByName(sceneName).buildIndex;
     }
