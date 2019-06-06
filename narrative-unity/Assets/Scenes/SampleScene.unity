@@ -385,6 +385,7 @@ GameObject:
   - component: {fileID: 238959818}
   - component: {fileID: 238959823}
   - component: {fileID: 238959804}
+  - component: {fileID: 238959824}
   m_Layer: 0
   m_Name: Character_Placeholder2
   m_TagString: Character
@@ -1765,6 +1766,20 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
+--- !u!136 &238959824
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238959776}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &305249801
 GameObject:
   m_ObjectHideFlags: 0
@@ -2263,7 +2278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 238959777}
+  selectedFlowchart: {fileID: 1483834701}
 --- !u!4 &1268499869
 Transform:
   m_ObjectHideFlags: 1
@@ -2519,7 +2534,6 @@ GameObject:
   - component: {fileID: 1483834697}
   - component: {fileID: 1483834700}
   - component: {fileID: 1483834699}
-  - component: {fileID: 1483834698}
   - component: {fileID: 1483834705}
   - component: {fileID: 1483834701}
   - component: {fileID: 1483834704}
@@ -2550,6 +2564,7 @@ GameObject:
   - component: {fileID: 1483834726}
   - component: {fileID: 1483834729}
   - component: {fileID: 1483834731}
+  - component: {fileID: 1483834698}
   m_Layer: 0
   m_Name: Character_Placeholder
   m_TagString: Character
@@ -2571,8 +2586,8 @@ Transform:
   m_Father: {fileID: 236228691}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1483834698
-BoxCollider:
+--- !u!136 &1483834698
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2581,8 +2596,9 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1483834699
 MeshRenderer:
@@ -2654,9 +2670,8 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 1483834729}
-  selectedCommands:
-  - {fileID: 1483834731}
+  - {fileID: 1483834715}
+  selectedCommands: []
   variables:
   - {fileID: 1483834709}
   - {fileID: 1483834708}

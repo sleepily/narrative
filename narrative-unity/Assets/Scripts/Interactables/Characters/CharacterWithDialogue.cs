@@ -20,8 +20,13 @@ public class CharacterWithDialogue : Interactable
     void GetAllComponents()
     {
         flowchart = GetComponent<Flowchart>();
-        blockStart = flowchart.FindBlock("Start");
-        blockWrongItem = flowchart.FindBlock("WrongItem");
+        blockStart = FindBlockInFlowchart("Start");
+        blockWrongItem = FindBlockInFlowchart("WrongItem");
+    }
+
+    Block FindBlockInFlowchart(string blockID)
+    {
+        return flowchart.FindBlock(blockID);
     }
 
     private void OnEnable()
