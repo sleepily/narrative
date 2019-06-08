@@ -4,21 +4,17 @@ using UnityEngine;
 
 public class CursorLock : MonoBehaviour
 {
+    public static bool isLocked = false;
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        SetCursorLock(true);
     }
 
-    void Update()
+    public static void SetCursorLock(bool isLocked = true)
     {
-        if (Input.GetKeyDown(KeyCode.E))
-            TogglePause();
-    }
-
-    static void TogglePause()
-    {
-        GameManager.GLOBAL.isPaused = !GameManager.GLOBAL.isPaused;
-        Cursor.lockState = GameManager.GLOBAL.isPaused ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.lockState = isLocked ? CursorLockMode.Locked : CursorLockMode.None;
         Cursor.visible = (Cursor.lockState == CursorLockMode.None);
     }
 }

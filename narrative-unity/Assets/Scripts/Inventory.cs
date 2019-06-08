@@ -6,5 +6,6 @@ using TMPro;
 
 public class Inventory : MonoBehaviour
 {
+    public Transform itemTransformParent;
 
 }

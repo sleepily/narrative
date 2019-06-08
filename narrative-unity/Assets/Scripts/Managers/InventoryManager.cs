@@ -6,7 +6,11 @@ using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
+    public bool isOpen = false;
+
     Item currentItem;
+
+    public Transform itemViewParent;
 
     public TextMeshProUGUI currentItemText;
 
@@ -56,14 +60,26 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
-        GetInput(); //TODO: replace with HUD
+        GetInput();
     }
 
     void GetInput()
     {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            isOpen = !isOpen;
+            CursorLock.SetCursorLock(!isOpen);
+
+            if (GetCurrentItem())
+            {
+                currentItem.ResetTransform();
+                currentItem.ShowInInventory();
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            if (IsEmpty())
+            if (IsEmpty)
             {
                 Debug.Log(stringInventoryEmpty);
                 return;
@@ -75,10 +91,7 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    bool IsEmpty()
-    {
-        return (items == null || items.Count == 0);
-    }
+    bool IsEmpty => (items == null || items.Count == 0);
 
     bool SetCurrentItem(string itemID)
     {
@@ -97,10 +110,10 @@ public class InventoryManager : MonoBehaviour
     {
         currentItem = item;
         currentItemText.text = "Current Item: " + item.name;
+        item.gameObject.SetActive(true);
+        item.transform.parent = itemViewParent;
+        item.transform.localPosition = Vector3.forward;
     }
 
-    public Item GetCurrentItem()
-    {
-        return currentItem;
-    }
+    public Item GetCurrentItem() => currentItem;
 }

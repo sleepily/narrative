@@ -37,11 +37,8 @@ public class Interactable : MonoBehaviour
 
     private void OnMouseExit()
     {
-        if (lastMouseAction != LastMouseAction.OnMouseExit)
-        {
-            Unfocus();
-            lastMouseAction = LastMouseAction.OnMouseExit;
-        }
+        Unfocus();
+        lastMouseAction = LastMouseAction.OnMouseExit;
     }
 
     /*
@@ -52,32 +49,26 @@ public class Interactable : MonoBehaviour
     {
         if (PlayerAimInteraction.IsFocusable(this))
         {
-            if (lastMouseAction != LastMouseAction.OnMouseDown)
+            if (Input.GetMouseButtonDown(0))
             {
-                if (Input.GetMouseButtonDown(0))
-                {
-                    lastMouseAction = LastMouseAction.OnMouseDown;
-                    Interact();
-
-                    return;
-                }
-
-                if (Input.GetMouseButtonDown(1))
-                {
-                    lastMouseAction = LastMouseAction.OnMouseDown;
-                    Use();
-
-                    return;
-                }
-            }
-
-            if (lastMouseAction != LastMouseAction.OnMouseOver)
-            {
-                Focus();
-                lastMouseAction = LastMouseAction.OnMouseOver;
+                lastMouseAction = LastMouseAction.OnMouseDown;
+                Interact();
 
                 return;
             }
+
+            if (Input.GetMouseButtonDown(1))
+            {
+                lastMouseAction = LastMouseAction.OnMouseDown;
+                Use();
+
+                return;
+            }
+
+            Focus();
+            lastMouseAction = LastMouseAction.OnMouseOver;
+
+            return;
         }
         else
             OnMouseExit();

@@ -28,12 +28,8 @@ public class DemoScripts : MonoBehaviour
             GameManager.GLOBAL.sceneLoader.LoadScene(0);
         }
 
-        float scrollDelta = Input.mouseScrollDelta.y;
+        float exposureChange = Input.GetKeyDown(KeyCode.LeftBracket) ? -1f : Input.GetKeyDown(KeyCode.RightBracket) ? 1f : 0f;
 
-        if (Mathf.Abs(scrollDelta) > float.Epsilon)
-        {
-            // colorGrading.postExposure.value += scrollDelta / 5;
-            autoExposure.keyValue.value += scrollDelta / 5;
-        }
+        autoExposure.keyValue.value += exposureChange / 5;
     }
 }

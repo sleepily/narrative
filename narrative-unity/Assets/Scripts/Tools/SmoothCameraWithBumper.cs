@@ -45,6 +45,14 @@ public class SmoothCameraWithBumper : MonoBehaviour
 
     private void Update()
     {
+        CameraOperations();
+    }
+
+    void CameraOperations()
+    {
+        if (GameManager.GLOBAL.inventoryManager.isOpen)
+            return;
+
         SetVariables();
         CameraBumpCheck();
         LerpCamera();

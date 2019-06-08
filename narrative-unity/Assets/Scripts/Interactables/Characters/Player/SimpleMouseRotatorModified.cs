@@ -38,7 +38,7 @@ namespace UnityStandardAssets.Utility
 
         private void Update()
         {
-            if (GameManager.GLOBAL.isPaused)
+            if (GameManager.GLOBAL.isPaused || GameManager.GLOBAL.inventoryManager.isOpen)
                 return;
 
             // we make initial calculations from the original local rotation
