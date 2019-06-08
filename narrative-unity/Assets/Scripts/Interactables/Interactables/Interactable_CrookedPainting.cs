@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class Interactable_CrookedPainting : Interactable
 {
+    Puzzle_CrookedPainting puzzle;
+
     public bool isStraight = false;
 
     Animator animator;
@@ -13,6 +15,7 @@ public class Interactable_CrookedPainting : Interactable
     {
         base.GetAllComponents();
 
+        puzzle = GetComponentInParent<Puzzle_CrookedPainting>();
         animator = GetComponent<Animator>();
     }
 
@@ -27,5 +30,6 @@ public class Interactable_CrookedPainting : Interactable
     {
         isStraight = true;
         animator.SetBool("isStraight", isStraight);
+        puzzle.PuzzleSolved();
     }
 }

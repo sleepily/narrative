@@ -27,15 +27,9 @@ public class Interactable : MonoBehaviour
     /*
      * OnMouse functions to determine whether to focus, unfocus, interact with or use an object
      */
-    private void OnMouseEnter()
-    {
-        MouseButtonCheck();
-    }
+    private void OnMouseEnter() => MouseButtonCheck();
 
-    private void OnMouseOver()
-    {
-        MouseButtonCheck();
-    }
+    private void OnMouseOver() => MouseButtonCheck();
 
     private void OnMouseExit()
     {
@@ -54,29 +48,31 @@ public class Interactable : MonoBehaviour
     {
         if (PlayerAimInteraction.IsFocusable(this))
         {
+            if (lastMouseAction != LastMouseAction.OnMouseDown)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    lastMouseAction = LastMouseAction.OnMouseDown;
+                    Interact();
+
+                    return;
+                }
+
+                if (Input.GetMouseButtonDown(1))
+                {
+                    lastMouseAction = LastMouseAction.OnMouseDown;
+                    Use();
+
+                    return;
+                }
+            }
+
             if (lastMouseAction != LastMouseAction.OnMouseOver)
             {
                 Focus();
                 lastMouseAction = LastMouseAction.OnMouseOver;
-            }
 
-            if (lastMouseAction != LastMouseAction.OnMouseDown)
-            {
-                bool buttonDown = false;
-
-                if (Input.GetAxisRaw("Interact") > float.Epsilon)
-                {
-                    buttonDown = true;
-                    Interact();
-                }
-                if (Input.GetAxisRaw("UseItem") > float.Epsilon)
-                {
-                    buttonDown = true;
-                    Use();
-                }
-
-                if (buttonDown)
-                    lastMouseAction = LastMouseAction.OnMouseDown;
+                return;
             }
         }
         else
@@ -103,10 +99,7 @@ public class Interactable : MonoBehaviour
 
     private void Update() => UpdateFunctions();
 
-    protected virtual void UpdateFunctions()
-    {
-        LerpGlowColor();
-    }
+    protected virtual void UpdateFunctions() => LerpGlowColor();
 
     /*
      * Constantly lerps to the desired glow color
@@ -144,10 +137,7 @@ public class Interactable : MonoBehaviour
     /*
      * In case only the glow color needs to be overriden
      */
-    protected virtual void OverrideGlowColor(Color glowColorOverride)
-    {
-        glowColor = glowColorOverride;
-    }
+    protected virtual void OverrideGlowColor(Color glowColorOverride) => glowColor = glowColorOverride;
 
     /*
      * Enable/Disable listening when objects are used/not used.
@@ -156,15 +146,9 @@ public class Interactable : MonoBehaviour
 
     private void OnDisable() => OnDisableFunctions();
 
-    protected virtual void OnEnableFunctions()
-    {
-        EventManager.Global.StartListening(name, EventFunction);
-    }
+    protected virtual void OnEnableFunctions() => EventManager.Global.StartListening(name, EventFunction);
 
-    protected virtual void OnDisableFunctions()
-    {
-        EventManager.Global.StopListening(name, EventFunction);
-    }
+    protected virtual void OnDisableFunctions() => EventManager.Global.StopListening(name, EventFunction);
 
     /*
      * EventFunction triggered through EventSystem to allow for global object communication
@@ -193,23 +177,11 @@ public class Interactable : MonoBehaviour
     /*
      * All possible interaction functions which are defined in the subclasses
      */
-    public virtual void Focus()
-    {
-        SetGlowColor(glowColor);
-    }
+    public virtual void Focus() => SetGlowColor(glowColor);
 
-    public virtual void Unfocus()
-    {
-        SetGlowColor(Color.clear);
-    }
+    public virtual void Unfocus() => SetGlowColor(Color.clear);
 
-    public virtual void Interact()
-    {
+    public virtual void Interact() { }
 
-    }
-
-    public virtual void Use()
-    {
-
-    }
+    public virtual void Use() { }
 }
