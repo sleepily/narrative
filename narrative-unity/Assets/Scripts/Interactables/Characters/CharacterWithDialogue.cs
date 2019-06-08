@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
 
-[RequireComponent(typeof(Fungus.Character))]
+[RequireComponent(typeof(Character))]
 [RequireComponent(typeof(Flowchart))]
 public class CharacterWithDialogue : Interactable
 {
@@ -12,13 +12,24 @@ public class CharacterWithDialogue : Interactable
 
     Block blockStart, blockWrongItem;
 
+    Color characterGlowColorOverride = new Color(Color.yellow.r, Color.yellow.g, Color.yellow.b, .2f);
+
     private void Start()
     {
-        GetAllComponents();
+
     }
 
-    void GetAllComponents()
+    protected override void StartFunctions()
     {
+        base.StartFunctions();
+
+        OverrideGlowColor(characterGlowColorOverride);
+    }
+
+    protected override void GetAllComponents()
+    {
+        base.GetAllComponents();
+
         flowchart = GetComponent<Flowchart>();
         blockStart = FindBlockInFlowchart("Start");
         blockWrongItem = FindBlockInFlowchart("WrongItem");
@@ -34,25 +45,16 @@ public class CharacterWithDialogue : Interactable
         EventManager.Global.StartListening(name, EventFunction);
     }
 
-    public void EventFunction(GameObject sender, string parameter = "")
+    public override void Interact()
     {
-        switch (parameter)
-        {
-            case "interact":
-                TriggerDialogue();
-                break;
-            case "use":
-                TriggerItemDialogue();
-                break;
-            case "focus":
-                //TODO: small pop-up
-                break;
-            case "unfocus":
-                //TODO: remove small pop-up
-                break;
-            default:
-                break;
-        }
+        base.Interact();
+        TriggerDialogue();
+    }
+
+    public override void Use()
+    {
+        base.Use();
+        TriggerItemDialogue();
     }
 
     private void Update()
@@ -62,6 +64,9 @@ public class CharacterWithDialogue : Interactable
 
     bool IsInDialogueCheck()
     {
+        if (!flowchart)
+            return false;
+
         return isInDialogue = flowchart.HasExecutingBlocks();
     }
 
