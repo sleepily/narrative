@@ -4,10 +4,8 @@ using UnityEngine;
 using Fungus;
 
 [RequireComponent(typeof(Character))]
-[RequireComponent(typeof(Flowchart))]
 public class CharacterWithDialogue : Interactable
 {
-    Flowchart flowchart;
     bool isInDialogue;
 
     Block blockStart, blockWrongItem;
@@ -30,9 +28,7 @@ public class CharacterWithDialogue : Interactable
     {
         base.GetAllComponents();
 
-        flowchart = GetComponent<Flowchart>();
-        blockStart = FindBlockInFlowchart("Start");
-        blockWrongItem = FindBlockInFlowchart("WrongItem");
+        GetFlowchart();
     }
 
     Block FindBlockInFlowchart(string blockID)
@@ -48,12 +44,14 @@ public class CharacterWithDialogue : Interactable
     public override void Interact()
     {
         base.Interact();
+
         TriggerDialogue();
     }
 
     public override void Use()
     {
         base.Use();
+
         TriggerItemDialogue();
     }
 
@@ -62,9 +60,20 @@ public class CharacterWithDialogue : Interactable
         IsInDialogueCheck();
     }
 
-    bool IsInDialogueCheck()
+    Flowchart GetFlowchart()
     {
         if (!flowchart)
+            flowchart = GetComponent<Flowchart>();
+
+        blockStart = FindBlockInFlowchart("Start");
+        blockWrongItem = FindBlockInFlowchart("WrongItem");
+
+        return flowchart;
+    }
+
+    bool IsInDialogueCheck()
+    {
+        if (!GetFlowchart())
             return false;
 
         return isInDialogue = flowchart.HasExecutingBlocks();

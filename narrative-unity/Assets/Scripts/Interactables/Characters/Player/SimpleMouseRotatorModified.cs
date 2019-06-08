@@ -38,6 +38,9 @@ namespace UnityStandardAssets.Utility
 
         private void Update()
         {
+            if (GameManager.GLOBAL.isPaused)
+                return;
+
             // we make initial calculations from the original local rotation
             transform.localRotation = m_OriginalRotation;
 

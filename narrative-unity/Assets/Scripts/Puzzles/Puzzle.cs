@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
+[RequireComponent(typeof(Flowchart))]
 public class Puzzle : MonoBehaviour
 {
     protected bool isSolved = false;
@@ -26,5 +28,6 @@ public class Puzzle : MonoBehaviour
 
     public virtual void PuzzleCheck() { }
 
-    public virtual bool PuzzleSolved() => true;
+    public virtual bool PuzzleSolved() => isSolved = true;
+    public virtual void PuzzleSolvedReminder() { }
 }

@@ -6,7 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager GLOBAL;
 
-    public static float timeScale = 1f;
+    public bool isPaused = false;
+    public float timeScale = 1f;
     
     [Header("Managers")]
     public InventoryManager inventoryManager;

@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 [RequireComponent(typeof(MeshRenderer))]
 [RequireComponent(typeof(MeshCollider))]
+[RequireComponent(typeof(Flowchart))]
 public class Interactable : MonoBehaviour
 {
     protected MeshRenderer meshRenderer;
@@ -12,6 +14,8 @@ public class Interactable : MonoBehaviour
 
     protected float colorLerpFactor = .2f;
     protected bool lerpIsFinished = true;
+
+    protected Flowchart flowchart;
 
     // check for last mouse action to avoid spam of commands on every frame
     enum LastMouseAction
@@ -95,6 +99,11 @@ public class Interactable : MonoBehaviour
         // Get components needed for color glow on hover
         meshRenderer = GetComponent<MeshRenderer>();
         glowColor = meshRenderer.material.GetColor("_GlowColor");
+
+        // Get flowchart and add it in case it doesn't exist
+        flowchart = GetComponent<Flowchart>();
+        if (!flowchart)
+            flowchart = gameObject.AddComponent<Flowchart>();
     }
 
     private void Update() => UpdateFunctions();

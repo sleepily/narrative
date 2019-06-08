@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CursorLock : MonoBehaviour
 {
-    public bool paused = false;
-
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -17,11 +15,10 @@ public class CursorLock : MonoBehaviour
             TogglePause();
     }
 
-    void TogglePause()
+    static void TogglePause()
     {
-        paused = !paused;
-        Time.timeScale = paused ? 0 : GameManager.timeScale;
-        Cursor.lockState = paused ? CursorLockMode.None : CursorLockMode.Locked;
+        GameManager.GLOBAL.isPaused = !GameManager.GLOBAL.isPaused;
+        Cursor.lockState = GameManager.GLOBAL.isPaused ? CursorLockMode.None : CursorLockMode.Locked;
         Cursor.visible = (Cursor.lockState == CursorLockMode.None);
     }
 }

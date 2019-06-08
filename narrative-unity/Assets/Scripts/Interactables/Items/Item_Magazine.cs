@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character_Placeholder2 : CharacterWithDialogue
+public class Item_Magazine : Item
 {
 
 }

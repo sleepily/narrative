@@ -8,17 +8,23 @@ public class Puzzle_BookArray : Puzzle
     List<Interactable_Book> books = new List<Interactable_Book>();
     List<Interactable_Book> booksToSwap = new List<Interactable_Book>();
 
-    public int bookCount = 10;
-    public float bookWidth = .3f;
+    int bookCount = 10;
+
+    [Tooltip("Controls how far the books will spread.")]
+    public float bookDistance = .3f;
+
+    [Tooltip("Type in the book numbers to create solution.")]
     public string solution = "12 34 5678";
 
     protected override void StartFunctions()
     {
         base.StartFunctions();
 
+        // Format the string for the methods to use it
         solution = FormatSolutionString();
+
+        // Order books by scene hierarchy
         ReorderBooks();
-        booksToSwap.Clear();
     }
 
     protected override void GetAllComponents()
@@ -69,19 +75,33 @@ public class Puzzle_BookArray : Puzzle
 
     public void SwapBooks()
     {
+        if (isSolved)
+        {
+            PuzzleSolvedReminder();
+            ResetSwappedBooks();
+
+            return;
+        }
+
+        // Get book indices for swapping
         int bookIndexA = books.IndexOf(booksToSwap[0]);
         int bookIndexB = books.IndexOf(booksToSwap[1]);
 
+        // Swap books
         Interactable_Book tempBook = books[bookIndexA];
         books[bookIndexA] = books[bookIndexB];
         books[bookIndexB] = tempBook;
 
-        books[bookIndexA].Swapped();
-        books[bookIndexB].Swapped();
+        ResetSwappedBooks();
+        ReorderBooks();
+    }
+
+    void ResetSwappedBooks()
+    {
+        booksToSwap[0].Swapped();
+        booksToSwap[1].Swapped();
 
         booksToSwap.Clear();
-
-        ReorderBooks();
     }
 
     void ReorderBooks()
@@ -89,7 +109,7 @@ public class Puzzle_BookArray : Puzzle
         for (int bookIndex = 0; bookIndex < bookCount; bookIndex++)
         {
             Vector3 bookPosition = books[bookIndex].transform.localPosition;
-            bookPosition.x = bookWidth * bookIndex;
+            bookPosition.x = bookDistance * bookIndex;
             books[bookIndex].transform.localPosition = bookPosition;
         }
 
@@ -116,14 +136,5 @@ public class Puzzle_BookArray : Puzzle
 
         if (isCorrectSolution)
             PuzzleSolved();
-    }
-
-    public override bool PuzzleSolved()
-    {
-        // Placeholder solve event
-        transform.position += Vector3.up;
-
-        isSolved = true;
-        return true;
     }
 }

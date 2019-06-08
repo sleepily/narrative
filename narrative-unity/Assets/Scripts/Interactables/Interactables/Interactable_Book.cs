@@ -26,7 +26,7 @@ public class Interactable_Book : Interactable
 
         string id = name;
 
-        // Find integer number in book name
+        // Find integer number in GameObject name
         id = Regex.Match(id, @"\d+").Value;
 
         bookID = int.Parse(id);
