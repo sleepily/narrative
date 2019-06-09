@@ -830,6 +830,8 @@ MonoBehaviour:
   itemViewParent: {fileID: 758138773}
   currentItemText: {fileID: 1921823463}
   itemSayDialog: {fileID: 518741806}
+  objectsToHide:
+  - {fileID: 1656443732}
 --- !u!1 &437173906
 GameObject:
   m_ObjectHideFlags: 0
@@ -3161,7 +3163,6 @@ MonoBehaviour:
   isPaused: 0
   inventoryManager: {fileID: 305249803}
   sceneLoader: {fileID: 16393225}
-  dialogueManager: {fileID: 0}
   thirdPersonCamera: {fileID: 8430584281224740679}
   interactableSayDialog: {fileID: 518741806}
   characterSayDialog: {fileID: 0}
@@ -4432,6 +4433,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1626033273}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1656443732 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8163109732509056083, guid: 910f5d7b3bc44e5449b40034316d338f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4534179366620727097}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1682841707
 GameObject:
   m_ObjectHideFlags: 0
@@ -5316,6 +5323,30 @@ PrefabInstance:
     - target: {fileID: 8163109733526020031, guid: 910f5d7b3bc44e5449b40034316d338f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8163109732509056172, guid: 910f5d7b3bc44e5449b40034316d338f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8163109732509056172, guid: 910f5d7b3bc44e5449b40034316d338f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8163109732509056173, guid: 910f5d7b3bc44e5449b40034316d338f,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8163109732509056173, guid: 910f5d7b3bc44e5449b40034316d338f,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 518741801, guid: 910f5d7b3bc44e5449b40034316d338f, type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

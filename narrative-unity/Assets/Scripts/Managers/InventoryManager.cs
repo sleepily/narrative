@@ -14,6 +14,8 @@ public class InventoryManager : MonoBehaviour
     public TextMeshProUGUI currentItemText;
     public SayDialog itemSayDialog;
 
+    public List<GameObject> objectsToHide;
+
     public Dictionary<string, Item> items;
 
     string stringItemAdded = "<color=lime>InventoryManager:</color> Added item {0}.";
@@ -89,10 +91,20 @@ public class InventoryManager : MonoBehaviour
         isOpen = !isOpen;
         CursorLock.SetCursorLock(!isOpen);
 
+        HideObjects();
+
         if (GetCurrentItem())
         {
             currentItem.ResetTransform();
             currentItem.ShowInInventory();
+        }
+    }
+
+    void HideObjects()
+    {
+        foreach (GameObject gameObject in objectsToHide)
+        {
+            gameObject.SetActive(!isOpen);
         }
     }
 
