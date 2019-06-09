@@ -21,17 +21,6 @@ public class Interactable : MonoBehaviour
     protected Flowchart flowchart;
     protected bool isInDialogue;
 
-    // check for last mouse action to avoid spam of commands on every frame
-    enum LastMouseAction
-    {
-        OnMouseEnter,
-        OnMouseOver,
-        OnMouseDown,
-        OnMouseExit
-    }
-
-    LastMouseAction lastMouseAction = LastMouseAction.OnMouseExit;
-
     /*
      * OnMouse functions to determine whether to focus, unfocus, interact with or use an object
      */
@@ -42,7 +31,6 @@ public class Interactable : MonoBehaviour
     private void OnMouseExit()
     {
         Unfocus();
-        lastMouseAction = LastMouseAction.OnMouseExit;
     }
 
     /*
@@ -55,23 +43,17 @@ public class Interactable : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                lastMouseAction = LastMouseAction.OnMouseDown;
                 Interact();
-
                 return;
             }
 
             if (Input.GetMouseButtonDown(1))
             {
-                lastMouseAction = LastMouseAction.OnMouseDown;
                 Use();
-
                 return;
             }
 
             Focus();
-            lastMouseAction = LastMouseAction.OnMouseOver;
-
             return;
         }
         else
