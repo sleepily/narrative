@@ -8,6 +8,8 @@ public class Puzzle : MonoBehaviour
 {
     protected bool isSolved = false;
 
+    protected Flowchart flowchart;
+
     /*
      * Separate virtual Start and Update functions to allow easier subclass specific actions
      */
@@ -15,7 +17,29 @@ public class Puzzle : MonoBehaviour
 
     protected virtual void StartFunctions() => GetAllComponents();
 
-    protected virtual void GetAllComponents() { }
+    protected virtual void GetAllComponents()
+    {
+        GetFlowchart();
+    }
+
+    Flowchart GetFlowchart()
+    {
+        if (!flowchart)
+            flowchart = GetComponent<Flowchart>();
+
+        return flowchart;
+    }
+
+    public void TriggerDialogue()
+    {
+        if (!GetFlowchart())
+        {
+            Debug.LogWarning(name + ": Cannot trigger dialogue, Flowchart missing.");
+            return;
+        }
+
+        flowchart.ExecuteBlock("Start");
+    }
 
     private void Update() => UpdateFunctions();
 
@@ -28,6 +52,11 @@ public class Puzzle : MonoBehaviour
 
     public virtual void PuzzleCheck() { }
 
-    public virtual bool PuzzleSolved() => isSolved = true;
+    public virtual void PuzzleSolved()
+    {
+        isSolved = true;
+        TriggerDialogue();
+    }
+
     public virtual void PuzzleSolvedReminder() { }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,9 +12,11 @@ public class GameManager : MonoBehaviour
     [Header("Managers")]
     public InventoryManager inventoryManager;
     public SceneLoader sceneLoader;
+    public DialogueManager dialogueManager;
 
     [Header("Global References")]
     public Camera thirdPersonCamera;
+    public SayDialog interactableSayDialog, characterSayDialog;
 
     private void Awake()
     {

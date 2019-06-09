@@ -23,13 +23,22 @@ public class Interactable_CrookedPainting : Interactable
     {
         base.Interact();
 
-        SetStraight();
+        if (isStraight)
+        {
+            puzzle.PuzzleSolvedReminder();
+            return;
+        }
     }
 
-    void SetStraight()
+    public void SetStraight()
     {
         isStraight = true;
         animator.SetBool("isStraight", isStraight);
+    }
+
+    public void SolvePuzzle()
+    {
+        TriggerDialogue();
         puzzle.PuzzleSolved();
     }
 }

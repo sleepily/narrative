@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using TMPro;
+using Fungus;
 
 public class InventoryManager : MonoBehaviour
 {
     public bool isOpen = false;
 
     Item currentItem;
-
     public Transform itemViewParent;
-
     public TextMeshProUGUI currentItemText;
+    public SayDialog itemSayDialog;
 
     public Dictionary<string, Item> items;
 
@@ -67,14 +67,7 @@ public class InventoryManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            isOpen = !isOpen;
-            CursorLock.SetCursorLock(!isOpen);
-
-            if (GetCurrentItem())
-            {
-                currentItem.ResetTransform();
-                currentItem.ShowInInventory();
-            }
+            ToggleInventory();
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -88,6 +81,18 @@ public class InventoryManager : MonoBehaviour
             currentItem = items.First().Value;
 
             Debug.Log(string.Format(stringItemSelected, currentItem.name));
+        }
+    }
+
+    public void ToggleInventory()
+    {
+        isOpen = !isOpen;
+        CursorLock.SetCursorLock(!isOpen);
+
+        if (GetCurrentItem())
+        {
+            currentItem.ResetTransform();
+            currentItem.ShowInInventory();
         }
     }
 

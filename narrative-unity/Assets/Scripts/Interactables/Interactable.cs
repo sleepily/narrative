@@ -8,14 +8,18 @@ using Fungus;
 [RequireComponent(typeof(Flowchart))]
 public class Interactable : MonoBehaviour
 {
+    [Header("Color Glow Components")]
     protected MeshRenderer meshRenderer;
-    protected Color glowColor = Color.yellow;
     protected Color currentGlowColor, desiredGlowColor;
 
+    [Header("Color Glow Properties")]
+    protected Color glowColor = Color.yellow;
     protected float colorLerpFactor = .2f;
     protected bool lerpIsFinished = true;
 
+    [Header("Dialogue")]
     protected Flowchart flowchart;
+    protected bool isInDialogue;
 
     // check for last mouse action to avoid spam of commands on every frame
     enum LastMouseAction
@@ -91,12 +95,69 @@ public class Interactable : MonoBehaviour
         meshRenderer = GetComponent<MeshRenderer>();
         glowColor = meshRenderer.material.GetColor("_GlowColor");
 
-        // Get flowchart and add it in case it doesn't exist
-        flowchart = GetComponent<Flowchart>();
-        if (!flowchart)
-            flowchart = gameObject.AddComponent<Flowchart>();
+        GetFlowchart();
     }
 
+    protected Flowchart GetFlowchart()
+    {
+        if (!flowchart)
+            flowchart = GetComponent<Flowchart>();
+
+        return flowchart;
+    }
+
+    protected bool IsInDialogueCheck()
+    {
+        if (!GetFlowchart())
+            return false;
+
+        return isInDialogue = flowchart.HasExecutingBlocks();
+    }
+
+    /*
+     * Execute Start block, which will handle conditions and jumps
+     */
+    public virtual void TriggerDialogue()
+    {
+        if (IsInDialogueCheck())
+            return;
+
+        flowchart.ExecuteBlock("Start");
+        return;
+    }
+
+    /*
+     * Trigger character dialogue using an item and jump to the block with the item's ID
+     */
+    public virtual bool TriggerItemDialogue(Item item = null)
+    {
+        if (IsInDialogueCheck())
+            return false;
+
+        if (!item)
+            item = GameManager.GLOBAL.inventoryManager.GetCurrentItem();
+
+        if (!item)
+        {
+            Debug.Log(string.Format("<color=orange>{0}:</color> No item for dialogue.", name));
+            return false;
+        }
+
+        Block itemBlock = flowchart.FindBlock(item.name);
+
+        if (!itemBlock)
+        {
+            flowchart.ExecuteBlock("WrongItem");
+            return false;
+        }
+
+        flowchart.ExecuteBlock(itemBlock);
+        return true;
+    }
+
+    /*
+     * Use virtual void in Update for inheritance compatibility
+     */
     private void Update() => UpdateFunctions();
 
     protected virtual void UpdateFunctions() => LerpGlowColor();
@@ -134,6 +195,7 @@ public class Interactable : MonoBehaviour
         currentGlowColor = desiredGlowColor;
         meshRenderer.material.SetColor("_GlowColor", desiredGlowColor);
     }
+
     /*
      * In case only the glow color needs to be overriden
      */
@@ -181,7 +243,7 @@ public class Interactable : MonoBehaviour
 
     public virtual void Unfocus() => SetGlowColor(Color.clear);
 
-    public virtual void Interact() { }
+    public virtual void Interact() => TriggerDialogue();
 
-    public virtual void Use() { }
+    public virtual void Use() => TriggerItemDialogue();
 }

@@ -69,7 +69,7 @@ public class Interactable_Book : Interactable
 
     public override void Interact()
     {
-        base.Interact();
+        // Don't call base.Interact(), since no dialogue is needed
 
         if (!selectedForSwap)
             SelectForSwap();

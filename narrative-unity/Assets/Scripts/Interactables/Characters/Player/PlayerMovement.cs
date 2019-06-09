@@ -29,6 +29,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        DoPlayerMovement();
+    }
+
+    void DoPlayerMovement()
+    {
+        if (GameManager.GLOBAL.inventoryManager.isOpen)
+            return;
+
         GetInputAxis();
         Move();
         RotatePlayerModel();

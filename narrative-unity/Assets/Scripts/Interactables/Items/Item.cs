@@ -14,7 +14,9 @@ public class Item : Interactable
     float scrollSpeed = 24f;
     float zoomDistance = 2f;
 
-
+    /*
+     * Pick up item when clicked.
+     */
     public override void Interact()
     {
         base.Interact();
@@ -22,14 +24,12 @@ public class Item : Interactable
         PickupItem();
     }
 
-    public override void Use()
-    {
-        base.Use();
+    /*
+     * Don't trigger dialogue when using another item on this item
+     */
+    public override void Use() { }
 
-        UseItem();
-    }
-
-    void PickupItem()
+    public void PickupItem()
     {
         EventManager.Global.TriggerEvent("Inventory_Add", gameObject, name);
         isInInventory = true;
@@ -37,9 +37,13 @@ public class Item : Interactable
         SetGlowColor(Color.clear, true);
 
         gameObject.SetActive(false);
+
+        GameManager.GLOBAL.inventoryManager.ToggleInventory();
+
+        TriggerDialogue();
     }
 
-    void UseItem()
+    public void UseItem()
     {
         if (!isUsable)
             return;
