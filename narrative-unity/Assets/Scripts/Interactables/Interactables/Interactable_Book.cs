@@ -41,13 +41,6 @@ public class Interactable_Book : Interactable
         puzzle = GetComponentInParent<Puzzle_BookArray>();
     }
 
-    void OnDrawGizmos()
-    {
-        GetBookID();
-
-        Handles.Label(transform.position, bookID.ToString());
-    }
-
     /*
      * Prevent color glow change if book is selected for swap
      */

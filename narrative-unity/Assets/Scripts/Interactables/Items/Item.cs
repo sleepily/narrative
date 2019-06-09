@@ -86,6 +86,9 @@ public class Item : Interactable
         if (!GameManager.GLOBAL.inventoryManager.isOpen)
             return;
 
+        if (IsInDialogueCheck())
+            return;
+
         Vector2 scrollDelta;
         scrollDelta = Input.mouseScrollDelta;
 

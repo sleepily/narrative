@@ -95,6 +95,7 @@ public class InventoryManager : MonoBehaviour
 
         if (GetCurrentItem())
         {
+            currentItem.transform.parent = itemViewParent;
             currentItem.ResetTransform();
             currentItem.ShowInInventory();
         }
