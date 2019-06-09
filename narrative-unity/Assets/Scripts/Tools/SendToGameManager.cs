@@ -7,6 +7,6 @@ public class SendToGameManager : MonoBehaviour
 {
     private void Start()
     {
-        GameManager.GLOBAL.thirdPersonCamera = GetComponent<Camera>();
+        GameManager.GLOBAL.player.thirdPersonCamera = GetComponent<Camera>();
     }
 }

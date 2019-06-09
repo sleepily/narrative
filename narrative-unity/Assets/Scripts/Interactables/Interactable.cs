@@ -129,7 +129,13 @@ public class Interactable : MonoBehaviour
 
         if (!itemBlock)
         {
-            flowchart.ExecuteBlock("WrongItem");
+            Block wrongItemBlock = flowchart.FindBlock("WrongItem");
+
+            if (wrongItemBlock)
+                flowchart.ExecuteBlock(wrongItemBlock);
+            else
+                GameManager.GLOBAL.player.WrongItemDialogue();
+
             return false;
         }
 

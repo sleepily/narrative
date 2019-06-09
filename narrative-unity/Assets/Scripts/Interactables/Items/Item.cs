@@ -8,11 +8,12 @@ public class Item : Interactable
     [SerializeField]
     protected bool isUsable = true;
     protected bool isInInventory = false;
+    public bool isCurrentItem = false;
 
     [Header("Item inspection")]
     float rotationSpeed = 14f;
     float scrollSpeed = 24f;
-    float zoomDistance = 2f;
+    float zoomDistance = 1.2f;
 
     /*
      * Pick up item when clicked.
@@ -73,22 +74,24 @@ public class Item : Interactable
         if (!isInInventory)
             return;
 
-        gameObject.SetActive(GameManager.GLOBAL.inventoryManager.isOpen);
+        gameObject.SetActive(isCurrentItem);
     }
 
     void InspectWithMouse()
     {
-        // Item is not present
-        if (!isInInventory)
+        // Item is not focused in Inventory
+        if (!isCurrentItem)
             return;
 
         // Inventory isn't open
         if (!GameManager.GLOBAL.inventoryManager.isOpen)
             return;
 
+        // Prevent mouse interaction advancing dialogue
         if (IsInDialogueCheck())
             return;
 
+        // Get mouse input
         Vector2 scrollDelta;
         scrollDelta = Input.mouseScrollDelta;
 
@@ -113,7 +116,6 @@ public class Item : Interactable
         localPosition += Vector3.back * scrollDelta.y * (scrollSpeed / 100);
 
         localPosition.z = Mathf.Clamp(localPosition.z, -zoomDistance, zoomDistance);
-
         transform.localPosition = localPosition;
     }
 }

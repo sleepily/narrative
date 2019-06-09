@@ -12,6 +12,12 @@ public class PlayerMovement : MonoBehaviour
     [Range(2.6f, 3.6f)]
     float movementSpeed = 3.6f;
 
+    [SerializeField]
+    [Range(.1f, .5f)]
+    float rotationSpeed = .2f;
+
+    Vector3 lastMove = Vector3.forward;
+
     CharacterController controller;
     CapsuleCollider capsuleCollider;
     Vector2 inputAxis;
@@ -38,8 +44,14 @@ public class PlayerMovement : MonoBehaviour
             return;
 
         GetInputAxis();
-        Move();
-        RotatePlayerModel();
+
+        bool movementInput = inputAxis.magnitude > float.Epsilon;
+
+        if (movementInput)
+        {
+            Move();
+            RotatePlayerModel();
+        }
     }
 
     void GetInputAxis()
@@ -64,15 +76,26 @@ public class PlayerMovement : MonoBehaviour
         desiredMove += (Physics.gravity * Time.deltaTime);
 
         /*
+         * Update class variable for rotation later on
+         */
+        lastMove = desiredMove * Time.deltaTime;
+
+        /*
          * Let the controller handle movement for better collision control
          */
-        controller.Move(desiredMove * Time.deltaTime);
+        controller.Move(lastMove);
     }
 
     void RotatePlayerModel()
     {
-        Vector3 viewingRotation = cameraArm.transform.eulerAngles;
-        Vector3 playerRotation = Vector3.up * viewingRotation.y; // prevent player tilt (Y only)
-        playerModel.transform.eulerAngles = playerRotation;
+        Vector3 viewingRotation = lastMove.normalized;
+        viewingRotation.y = 0f;
+
+        playerModel.transform.forward = Vector3.Lerp
+        (
+            playerModel.transform.forward,
+            viewingRotation,
+            Time.deltaTime / rotationSpeed
+        );
     }
 }

@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public SceneLoader sceneLoader;
 
     [Header("Global References")]
-    public Camera thirdPersonCamera;
+    public Player player;
     public SayDialog interactableSayDialog, characterSayDialog;
 
     private void Awake()
