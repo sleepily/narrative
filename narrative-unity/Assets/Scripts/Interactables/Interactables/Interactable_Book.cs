@@ -53,6 +53,9 @@ public class Interactable_Book : Interactable
      */
     public override void Focus()
     {
+        if (puzzle.isSolved)
+            return;
+
         if (selectedForSwap)
             return;
 
@@ -70,6 +73,12 @@ public class Interactable_Book : Interactable
     public override void Interact()
     {
         // Don't call base.Interact(), since no dialogue is needed
+
+        if (puzzle.isSolved)
+        {
+            puzzle.TriggerDialogue();
+            return;
+        }
 
         if (!selectedForSwap)
             SelectForSwap();

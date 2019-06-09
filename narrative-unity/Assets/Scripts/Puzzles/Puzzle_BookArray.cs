@@ -137,4 +137,18 @@ public class Puzzle_BookArray : Puzzle
         if (isCorrectSolution)
             PuzzleSolved();
     }
+
+    public override void PuzzleSolved()
+    {
+        flowchart.SetBooleanVariable("isSolved", true);
+
+        base.PuzzleSolved();
+    }
+
+    public override void PuzzleSolvedReminder()
+    {
+        base.PuzzleSolvedReminder();
+
+        TriggerDialogue();
+    }
 }

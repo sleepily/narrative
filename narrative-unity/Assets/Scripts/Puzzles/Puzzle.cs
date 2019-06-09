@@ -6,7 +6,7 @@ using Fungus;
 [RequireComponent(typeof(Flowchart))]
 public class Puzzle : MonoBehaviour
 {
-    protected bool isSolved = false;
+    public bool isSolved = false;
 
     protected Flowchart flowchart;
 
@@ -30,6 +30,14 @@ public class Puzzle : MonoBehaviour
         return flowchart;
     }
 
+    protected bool IsInDialogueCheck()
+    {
+        if (!GetFlowchart())
+            return false;
+
+        return flowchart.HasExecutingBlocks();
+    }
+
     public void TriggerDialogue()
     {
         if (!GetFlowchart())
@@ -37,6 +45,9 @@ public class Puzzle : MonoBehaviour
             Debug.LogWarning(name + ": Cannot trigger dialogue, Flowchart missing.");
             return;
         }
+
+        if (IsInDialogueCheck())
+            return;
 
         flowchart.ExecuteBlock("Start");
     }
