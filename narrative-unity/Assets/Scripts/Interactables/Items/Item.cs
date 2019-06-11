@@ -78,6 +78,9 @@ public class Item : Interactable
         gameObject.SetActive(isCurrentItem);
     }
 
+    /*
+     * Allow rotating/zooming the item in the Inventory
+     */
     void InspectWithMouse()
     {
         // Item is not focused in Inventory
