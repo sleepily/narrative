@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
 
-[RequireComponent(typeof(Flowchart))]
+[RequireComponent(typeof(CharacterController))]
 public class Player : CharacterWithDialogue
 {
     public Camera thirdPersonCamera;

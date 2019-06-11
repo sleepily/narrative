@@ -154,9 +154,9 @@ Canvas:
   m_GameObject: {fileID: 518741800}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_RenderMode: 1
+  m_Camera: {fileID: 8163109732585943100}
+  m_PlaneDistance: 0.6
   m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -986,7 +986,7 @@ Camera:
   m_GameObject: {fileID: 8163109732585943073}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -1265,10 +1265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraArm: {fileID: 8163109732280187605}
   playerModel: {fileID: 8163109733146601172}
-  isRunning: 0
-  walkingSpeed: 1.8
-  runningSpeed: 2.8
-  rotationSpeed: 0.14
+  movementSettings: {fileID: 11400000, guid: 63d4148cec0f5b84687dc90f70e362f4, type: 2}
 --- !u!114 &8163109733526020027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1343,7 +1340,7 @@ MonoBehaviour:
   scrollPos: {x: 0, y: 0}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 400
+  blockViewHeight: 441
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -1353,8 +1350,7 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 1777237339}
-  selectedCommands:
-  - {fileID: 1777237340}
+  selectedCommands: []
   variables:
   - {fileID: 1777237348}
   - {fileID: 4235203636782434610}

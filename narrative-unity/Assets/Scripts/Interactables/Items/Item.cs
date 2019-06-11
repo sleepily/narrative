@@ -5,6 +5,8 @@ using UnityEngine;
 public class Item : Interactable
 {
     [Header("General")]
+    public ItemStats itemStats;
+
     protected bool isInInventory = false;
     public bool isCurrentItem = false;
 

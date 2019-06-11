@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Puzzle_CrookedPainting : Puzzle
 {
-    public Item_Magazine magazine;
+    public Item magazine;
 
     public override void PuzzleSolved()
     {

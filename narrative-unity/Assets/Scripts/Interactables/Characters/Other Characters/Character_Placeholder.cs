@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Character_Placeholder : CharacterWithDialogue
 {
+    public ItemStats requiredItemKey;
+
     public override void Use()
     {
         TriggerItemDialogue(GameManager.GLOBAL.inventoryManager.GetCurrentItem());
@@ -14,7 +16,7 @@ public class Character_Placeholder : CharacterWithDialogue
         if (!item)
             return false;
 
-        if (item.GetType() == typeof(Item_GoldenKey))
+        if (item.itemStats == requiredItemKey)
             item.UseItem();
 
         return base.TriggerItemDialogue(item);
