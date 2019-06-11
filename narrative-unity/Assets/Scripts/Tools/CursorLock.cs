@@ -12,6 +12,9 @@ public class CursorLock : MonoBehaviour
         SetCursorLock(true);
     }
 
+    /*
+     * Locks or unlocks the OS cursor for inventory, pause menu etc.
+     */
     public static void SetCursorLock(bool isLocked = true)
     {
         Cursor.lockState = isLocked ? CursorLockMode.Locked : CursorLockMode.None;

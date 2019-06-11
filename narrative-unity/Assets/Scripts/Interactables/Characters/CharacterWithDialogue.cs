@@ -8,11 +8,6 @@ public class CharacterWithDialogue : Interactable
 {
     Color characterGlowColorOverride = new Color(Color.yellow.r, Color.yellow.g, Color.yellow.b, .2f);
 
-    private void Start()
-    {
-
-    }
-
     protected override void StartFunctions()
     {
         base.StartFunctions();
@@ -20,13 +15,11 @@ public class CharacterWithDialogue : Interactable
         OverrideGlowColor(characterGlowColorOverride);
     }
 
-    private void OnEnable()
+    /*
+     * Override UpdateFunctions to prevent glow lerping
+     */
+    protected override void UpdateFunctions()
     {
-        EventManager.Global.StartListening(name, EventFunction);
-    }
 
-    private void Update()
-    {
-        IsInDialogueCheck();
     }
 }

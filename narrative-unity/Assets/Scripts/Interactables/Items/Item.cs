@@ -5,8 +5,6 @@ using UnityEngine;
 public class Item : Interactable
 {
     [Header("General")]
-    [SerializeField]
-    protected bool isUsable = true;
     protected bool isInInventory = false;
     public bool isCurrentItem = false;
 
@@ -20,6 +18,9 @@ public class Item : Interactable
      */
     public override void Interact()
     {
+        if (isInInventory)
+            return;
+
         base.Interact();
 
         PickupItem();
@@ -28,7 +29,11 @@ public class Item : Interactable
     /*
      * Don't trigger dialogue when using another item on this item
      */
-    public override void Use() { }
+    public override void Use()
+    {
+        if (isInInventory)
+            return;
+    }
 
     public void PickupItem()
     {
@@ -37,8 +42,6 @@ public class Item : Interactable
 
         SetGlowColor(Color.clear, true);
 
-        gameObject.SetActive(false);
-
         GameManager.GLOBAL.inventoryManager.ToggleInventory();
 
         TriggerDialogue();
@@ -46,9 +49,6 @@ public class Item : Interactable
 
     public void UseItem()
     {
-        if (!isUsable)
-            return;
-
         EventManager.Global.TriggerEvent("Inventory_Remove", gameObject, name);
     }
 
@@ -62,9 +62,10 @@ public class Item : Interactable
 
     public void ResetTransform()
     {
-        Quaternion resetRotation = transform.localRotation;
-        resetRotation.eulerAngles = Vector3.zero;
-        transform.localRotation = resetRotation;
+        // Set rotation 
+        Quaternion localRotation = transform.localRotation;
+        localRotation.eulerAngles = new Vector3(.2f, .3f, 0f);
+        transform.localRotation = localRotation;
 
         transform.localPosition = Vector3.zero;
     }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item_Key : Item
+public class Item_GoldenKey : Item
 {
 
 }

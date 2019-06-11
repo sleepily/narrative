@@ -8,13 +8,21 @@ public class PlayerMovement : MonoBehaviour
     public GameObject cameraArm;
     public GameObject playerModel;
 
+    public bool isRunning = false;
+
     [SerializeField]
-    [Range(2.6f, 3.6f)]
-    float movementSpeed = 3.6f;
+    [Range(1.4f, 2.2f)]
+    float walkingSpeed = 1.8f;
+
+    [SerializeField]
+    [Range(2.2f, 3.4f)]
+    float runningSpeed = 2.8f;
+
+    float movementSpeed = 2.4f;
 
     [SerializeField]
     [Range(.1f, .5f)]
-    float rotationSpeed = .2f;
+    float rotationSpeed = .14f;
 
     Vector3 lastMove = Vector3.forward;
 
@@ -58,6 +66,8 @@ public class PlayerMovement : MonoBehaviour
     {
         inputAxis.x = Input.GetAxisRaw("Horizontal");
         inputAxis.y = Input.GetAxisRaw("Vertical");
+
+        isRunning = Input.GetAxisRaw("Run") > float.Epsilon;
     }
 
     void Move()
@@ -66,6 +76,11 @@ public class PlayerMovement : MonoBehaviour
         Vector3 desiredSidewardMotion = cameraArm.transform.right * inputAxis.x;
 
         Vector3 desiredMove = desiredForwardMotion + desiredSidewardMotion;
+
+        /*
+         * Toggle walking/running speed
+         */
+        movementSpeed = isRunning ? runningSpeed : walkingSpeed;
 
         /*
          * Force movement on XZ plane, introduce movement speed and apply gravity

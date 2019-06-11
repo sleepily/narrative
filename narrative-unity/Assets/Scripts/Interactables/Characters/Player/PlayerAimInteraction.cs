@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class PlayerAimInteraction : MonoBehaviour
 {
+    [SerializeField]
+    [Tooltip("The minimum distance for an object to be focusable.")]
     static float minDistance = 2.5f;
-    static float maxDistance = 6f;
+
+    [SerializeField]
+    [Tooltip("The maximum distance for an object to still be focusable.")]
+    static float maxDistance = 5f;
 
     static Camera thirdPersonCamera;
 
     private void Start()
     {
-        thirdPersonCamera = GetComponentInChildren<Camera>();
+        thirdPersonCamera = GameManager.GLOBAL.player.thirdPersonCamera;
     }
 
     public static bool IsFocusable(Interactable focus)

@@ -71,13 +71,16 @@ public class InventoryManager : MonoBehaviour
 
     public void Remove(GameObject sender, string parameter = "")
     {
-        Item itemToRemove = null;
+        Item itemToRemove = sender.GetComponent<Item>();
 
         if (!itemToRemove)
         {
             Debug.Log(string.Format(stringItemNotFound, parameter));
             return;
         }
+
+        SetCurrentItem(NextItem());
+        itemToRemove.gameObject.SetActive(false);
 
         items.Remove(itemToRemove);
 
@@ -224,7 +227,7 @@ public class InventoryManager : MonoBehaviour
 
         currentItem.isCurrentItem = true;
         currentItem.transform.parent = currentItemParent;
-        currentItem.transform.localPosition = Vector3.forward;
+        currentItem.transform.localPosition = Vector3.zero;
         currentItem.gameObject.SetActive(true);
     }
 
