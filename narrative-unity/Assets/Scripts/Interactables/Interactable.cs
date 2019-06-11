@@ -125,7 +125,7 @@ public class Interactable : MonoBehaviour
             return false;
         }
 
-        Block itemBlock = flowchart.FindBlock(item.name);
+        Block itemBlock = flowchart.FindBlock(item.itemStats.name);
 
         if (!itemBlock)
         {

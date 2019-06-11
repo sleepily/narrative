@@ -3328,7 +3328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 759344620}
+  selectedFlowchart: {fileID: 1483834701}
 --- !u!4 &1268499869
 Transform:
   m_ObjectHideFlags: 1
@@ -3723,9 +3723,8 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 1483834710}
-  selectedCommands:
-  - {fileID: 1483834711}
+  - {fileID: 1483834702}
+  selectedCommands: []
   variables:
   - {fileID: 1483834709}
   - {fileID: 1483834708}
@@ -3755,12 +3754,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 115
     y: 228
-    width: 146
+    width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 1
-  blockName: Item_GoldenKey
+  blockName: GoldenKey
   description: 
   eventHandler: {fileID: 0}
   commandList:
