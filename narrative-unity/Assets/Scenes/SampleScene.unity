@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.057154685, g: 0.060798958, b: 0.06956746, a: 1}
+  m_IndirectSpecularColor: {r: 0.05715466, g: 0.06079892, b: 0.06956741, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3723,7 +3723,7 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 1483834702}
+  - {fileID: 1483834715}
   selectedCommands: []
   variables:
   - {fileID: 1483834709}
