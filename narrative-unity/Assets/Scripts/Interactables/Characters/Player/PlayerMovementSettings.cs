@@ -13,6 +13,6 @@ public class PlayerMovementSettings : ScriptableObject
     [Range(2.2f, 3.4f)]
     public float runningSpeed = 2.8f;
 
-    [Range(.1f, .5f)]
-    public float rotationSpeed = .14f;
+    [Range(.02f, .4f)]
+    public float rotationSpeed = .02f;
 }

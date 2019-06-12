@@ -46,9 +46,11 @@ public class PlayerMovement : MonoBehaviour
         // Only proceed further if there is any input
         bool movementInput = inputAxis.magnitude > float.Epsilon;
 
+        /*
         // Don't proceed if there is no input
         if (!movementInput)
             return;
+            */
 
         // Calculate both the desired move and player rotation and apply them
         controller.Move(CalculatePlayerMove());
@@ -80,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
         // Force movement on XZ plane, introduce movement speed and apply gravity
         desiredMove = Vector3.ProjectOnPlane(desiredMove, Vector3.up).normalized;
         desiredMove *= movementSpeed;
-        desiredMove += (Physics.gravity * Time.deltaTime);
+        desiredMove += (Physics.gravity);
 
         // Update class variable for rotation later on
         lastMove = desiredMove * Time.deltaTime;
@@ -94,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
      */
     public Vector3 NewPlayerRotation()
     {
-        // Get last mmovement direction and set Y to 0 to prevent tilt
+        // Get last movement direction and set Y to 0 to prevent tilt
         Vector3 viewingRotation = lastMove.normalized;
         viewingRotation.y = 0f;
 
