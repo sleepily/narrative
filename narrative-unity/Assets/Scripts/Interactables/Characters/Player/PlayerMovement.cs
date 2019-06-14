@@ -46,13 +46,14 @@ public class PlayerMovement : MonoBehaviour
         // Only proceed further if there is any input
         bool movementInput = inputAxis.magnitude > float.Epsilon;
 
-        // Calculate desired move, if there is no input only apply gravity
+        // Only apply gravity if there is no input 
         if (!movementInput)
         {
             controller.Move(Physics.gravity);
             return;
         }
 
+        // Calculate desired move, 
         controller.Move(CalculatePlayerMove());
 
         // Calculate player rotation and apply
