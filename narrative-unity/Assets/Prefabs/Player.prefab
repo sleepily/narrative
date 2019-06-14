@@ -844,7 +844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cadd54e4832aeef4b9359f44cbe335cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationRange: {x: 100, y: 361}
+  rotationRange: {x: 120, y: 361}
   rotationRangeOffset: {x: 30, y: 0}
   rotationSpeed: 5
   dampingTime: 0
@@ -974,7 +974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9932a022a28995b4ba233e8587798a12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damping: 0.02
+  damping: 0.16
   clippingPreventionDistance: 1
   drawDebugRay: 1
 --- !u!20 &8163109732585943100

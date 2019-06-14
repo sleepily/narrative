@@ -225,6 +225,9 @@ public class InventoryManager : MonoBehaviour
         // Set new Item
         currentItem = item;
 
+        if (item == null)
+            return;
+
         currentItem.isCurrentItem = true;
         currentItem.transform.parent = currentItemParent;
         currentItem.transform.localPosition = Vector3.zero;
