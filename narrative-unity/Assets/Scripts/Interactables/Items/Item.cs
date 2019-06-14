@@ -13,7 +13,7 @@ public class Item : Interactable
     [Header("Item inspection")]
     float rotationSpeed = 14f;
     float scrollSpeed = 24f;
-    float zoomDistance = 1.2f;
+    float zoomDistance = 1.6f;
 
     /*
      * Pick up item when clicked.
@@ -121,7 +121,7 @@ public class Item : Interactable
         Vector3 localPosition = transform.localPosition;
         localPosition += Vector3.back * scrollDelta.y * (scrollSpeed / 100);
 
-        localPosition.z = Mathf.Clamp(localPosition.z, -zoomDistance, zoomDistance);
+        localPosition.z = Mathf.Clamp(localPosition.z, -Mathf.Abs(zoomDistance), 0f);
         transform.localPosition = localPosition;
     }
 }
