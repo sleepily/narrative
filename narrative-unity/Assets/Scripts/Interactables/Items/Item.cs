@@ -4,119 +4,124 @@ using UnityEngine;
 
 public class Item : Interactable
 {
-    protected MeshRenderer meshRenderer;
-    protected Color glowColor = Color.yellow;
-    protected Color currentGlowColor, desiredGlowColor;
-    
-    protected float colorLerpFactor = .2f;
-    protected bool lerpIsFinished = true;
+    [Header("General")]
+    public ItemStats itemStats;
 
-    [SerializeField]
-    protected bool isUsable = true;
+    protected bool isInInventory = false;
+    public bool isCurrentItem = false;
 
-    private void OnEnable()
+    [Header("Item inspection")]
+    float rotationSpeed = 14f;
+    float scrollSpeed = 24f;
+    float zoomDistance = 1.6f;
+
+    /*
+     * Pick up item when clicked.
+     */
+    public override void Interact()
     {
-        EventManager.Global.StartListening(name, ItemEventFunction);
-    }
-
-    private void OnDisable()
-    {
-        EventManager.Global.StopListening(name, ItemEventFunction);
-    }
-
-    public virtual void ItemEventFunction(GameObject sender, string parameter = "")
-    {
-        switch (parameter)
-        {
-            case "interact":
-                PickupItem();
-                break;
-            case "use":
-                break;
-            case "focus":
-                FocusItem();
-                break;
-            case "unfocus":
-                UnfocusItem();
-                break;
-            default:
-                break;
-        }
-    }
-
-    private void Start()
-    {
-        GetAllComponents();
-        SetGlowColor(Color.clear, true);
-    }
-
-    void GetAllComponents()
-    {
-        meshRenderer = GetComponent<MeshRenderer>();
-        glowColor = meshRenderer.material.GetColor("_GlowColor");
-    }
-
-    private void Update()
-    {
-        LerpGlowColor();
-    }
-
-    void LerpGlowColor()
-    {
-        if (lerpIsFinished)
+        if (isInInventory)
             return;
 
-        currentGlowColor = Color.Lerp
-        (
-            currentGlowColor,
-            desiredGlowColor,
-            Time.deltaTime / colorLerpFactor
-        );
+        base.Interact();
 
-        meshRenderer.material.SetColor("_GlowColor", currentGlowColor);
-
-        if (currentGlowColor.Equals(desiredGlowColor))
-            lerpIsFinished = true;
+        PickupItem();
     }
 
-    public void FocusItem()
+    /*
+     * Don't trigger dialogue when using another item on this item
+     */
+    public override void Use()
     {
-        SetGlowColor(glowColor);
-    }
-
-    void UnfocusItem()
-    {
-        SetGlowColor(Color.clear);
-    }
-
-    void SetGlowColor(Color color, bool isInstant = false)
-    {
-        desiredGlowColor = color;
-        lerpIsFinished = isInstant;
-
-        if (!isInstant)
+        if (isInInventory)
             return;
-
-        currentGlowColor = desiredGlowColor;
-        meshRenderer.material.SetColor("_GlowColor", desiredGlowColor);
     }
 
     public void PickupItem()
     {
-        gameObject.SetActive(false);
-
-        EventManager.Global.TriggerEvent("Inventory_Add", gameObject, name); // tag + "_" + name
+        EventManager.Global.TriggerEvent("Inventory_Add", gameObject, name);
+        isInInventory = true;
 
         SetGlowColor(Color.clear, true);
+
+        GameManager.GLOBAL.inventoryManager.ToggleInventory();
+
+        TriggerDialogue();
     }
 
     public void UseItem()
     {
-        if (!isUsable)
-        {
-            return;
-        }
+        EventManager.Global.TriggerEvent("Inventory_Remove", gameObject, name);
+    }
 
-        EventManager.Global.TriggerEvent("Inventory_Remove", gameObject, name); // tag + "_" + name
+    protected override void UpdateFunctions()
+    {
+        base.UpdateFunctions();
+
+        ShowInInventory();
+        InspectWithMouse();
+    }
+
+    public void ResetTransform()
+    {
+        // Set rotation 
+        Quaternion localRotation = transform.localRotation;
+        localRotation.eulerAngles = new Vector3(.2f, .3f, 0f);
+        transform.localRotation = localRotation;
+
+        transform.localPosition = Vector3.zero;
+    }
+
+    public void ShowInInventory()
+    {
+        if (!isInInventory)
+            return;
+
+        gameObject.SetActive(isCurrentItem);
+    }
+
+    /*
+     * Allow rotating/zooming the item in the Inventory
+     */
+    void InspectWithMouse()
+    {
+        // Item is not focused in Inventory
+        if (!isCurrentItem)
+            return;
+
+        // Inventory isn't open
+        if (!GameManager.GLOBAL.inventoryManager.isOpen)
+            return;
+
+        // Prevent mouse interaction advancing dialogue
+        if (IsInDialogueCheck())
+            return;
+
+        // Get mouse input
+        Vector2 scrollDelta;
+        scrollDelta = Input.mouseScrollDelta;
+
+        bool mouseDown = Mathf.Abs(Input.GetAxisRaw("Interact")) > float.Epsilon;
+        bool scrolling = Mathf.Abs(scrollDelta.magnitude) > float.Epsilon;
+
+        // Return if there is no mouse input
+        if (!mouseDown && !scrolling)
+            return;
+
+        // Get rotation info through mouse position delta
+        Vector2 rotation;
+        rotation.x = Input.GetAxisRaw("Mouse X") * rotationSpeed;
+        rotation.y = Input.GetAxisRaw("Mouse Y") * rotationSpeed;
+
+        // Apply rotation
+        transform.Rotate(Vector3.up, -rotation.x);
+        transform.Rotate(Vector3.right, rotation.y);
+
+        // Clamp and apply zoom
+        Vector3 localPosition = transform.localPosition;
+        localPosition += Vector3.back * scrollDelta.y * (scrollSpeed / 100);
+
+        localPosition.z = Mathf.Clamp(localPosition.z, -Mathf.Abs(zoomDistance), 0f);
+        transform.localPosition = localPosition;
     }
 }

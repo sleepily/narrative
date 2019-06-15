@@ -2,18 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
 {
     public GameObject cameraArm;
     public GameObject playerModel;
 
-    [SerializeField]
-    [Range(2.6f, 3.6f)]
-    float movementSpeed = 3.6f;
+    public PlayerMovementSettings movementSettings;
+
+    float movementSpeed;
+
+    // Set forward so the player doesn't start laying on the ground
+    Vector3 lastMove = Vector3.forward;
 
     CharacterController controller;
-    CapsuleCollider capsuleCollider;
     Vector2 inputAxis;
 
     private void Start()
@@ -24,47 +25,92 @@ public class PlayerMovement : MonoBehaviour
     void GetAllComponents()
     {
         controller = GetComponent<CharacterController>();
-        capsuleCollider = GetComponent<CapsuleCollider>();
     }
 
     void Update()
     {
+        DoPlayerMovement();
+    }
+
+    /*
+     * Do all checks and calculations, then move the player
+     */
+    void DoPlayerMovement()
+    {
+        // Don't allow player movement when the inventory is open
+        if (GameManager.GLOBAL.inventoryManager.isOpen)
+            return;
+
         GetInputAxis();
-        Move();
-        RotatePlayerModel();
+
+        // Only proceed further if there is any input
+        bool movementInput = inputAxis.magnitude > float.Epsilon;
+
+        // Only apply gravity if there is no input 
+        if (!movementInput)
+        {
+            controller.Move(Physics.gravity);
+            return;
+        }
+
+        // Calculate desired move, 
+        controller.Move(CalculatePlayerMove());
+
+        // Calculate player rotation and apply
+        playerModel.transform.forward = NewPlayerRotation();
     }
 
     void GetInputAxis()
     {
         inputAxis.x = Input.GetAxisRaw("Horizontal");
         inputAxis.y = Input.GetAxisRaw("Vertical");
+
+        movementSettings.isRunning = Input.GetAxisRaw("Run") > float.Epsilon;
     }
 
-    void Move()
+    /*
+     * Calculate desired movement and physics and send it to the character controller
+     */
+    public Vector3 CalculatePlayerMove()
     {
+        // Calculate desired movement from input and forward direction
         Vector3 desiredForwardMotion = cameraArm.transform.forward * inputAxis.y;
         Vector3 desiredSidewardMotion = cameraArm.transform.right * inputAxis.x;
 
         Vector3 desiredMove = desiredForwardMotion + desiredSidewardMotion;
 
-        /*
-         * Force movement on XZ plane, introduce movement speed and apply gravity
-         * since we are not using SimpleMove()
-         */
+        // Toggle walking/running speed
+        movementSpeed = movementSettings.isRunning ? movementSettings.runningSpeed : movementSettings.walkingSpeed;
+
+        // Force movement on XZ plane, introduce movement speed and apply gravity
         desiredMove = Vector3.ProjectOnPlane(desiredMove, Vector3.up).normalized;
         desiredMove *= movementSpeed;
-        desiredMove += (Physics.gravity * Time.deltaTime);
+        desiredMove += (Physics.gravity);
 
-        /*
-         * Let the controller handle movement for better collision control
-         */
-        controller.Move(desiredMove * Time.deltaTime);
+        // Update class variable for rotation later on
+        lastMove = desiredMove * Time.deltaTime;
+
+        // Return move vector to use with the character controller
+        return lastMove;
     }
 
-    void RotatePlayerModel()
+    /*
+     * Lerp the player facing towards the last movement direction
+     */
+    public Vector3 NewPlayerRotation()
     {
-        Vector3 viewingRotation = cameraArm.transform.eulerAngles;
-        Vector3 playerRotation = Vector3.up * viewingRotation.y; // prevent player tilt (Y only)
-        playerModel.transform.eulerAngles = playerRotation;
+        // Get last movement direction and set Y to 0 to prevent tilt
+        Vector3 viewingRotation = lastMove.normalized;
+        viewingRotation.y = 0f;
+
+        // Lerp forward vector to prevent sudden value changes
+        viewingRotation = Vector3.Lerp
+        (
+            playerModel.transform.forward,
+            viewingRotation,
+            Time.deltaTime / movementSettings.rotationSpeed
+        );
+
+        return viewingRotation;
     }
 }

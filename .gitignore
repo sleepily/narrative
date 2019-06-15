@@ -35,3 +35,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+narrative-unity/Assets/Plugins/Fungus/Integrations/Spine/Fungus-Spine.unitypackage.meta
+narrative-unity/Assets/Plugins/Fungus/Integrations/Playmaker/Fungus-PlayMaker.unitypackage.meta

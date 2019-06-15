@@ -5,6 +5,9 @@ using UnityEngine.Events;
 
 public class EventManager
 {
+    /*
+     * Singleton instance to allow global use
+     */
     private static EventManager global;
     public static EventManager Global
     {
@@ -24,6 +27,16 @@ public class EventManager
     public Dictionary<string, List<EventFunctionWithItem>> itemEvents;
 
     public GameObject lastSender;
+
+    public enum LogLevel
+    {
+        Verbose,
+        Warnings,
+        Errors,
+        None
+    }
+
+    public LogLevel logLevel = LogLevel.Errors;
 
     string startString  = "<color={1}>EventManager:</color> Listening for {0}.";
     string stopString   = "<color={1}>EventManager:</color> Stop listening for {0}.";
@@ -46,7 +59,9 @@ public class EventManager
         events[eventID].Add(eventFunction);
 
         log = string.Format(startString, eventID, "lime");
-        Debug.Log(log);
+
+        if (logLevel == LogLevel.Verbose)
+            Debug.Log(log);
     }
 
     public void StopListening(string eventID, EventFunction listener)
@@ -65,7 +80,9 @@ public class EventManager
         events[eventID].Remove(listener);
 
         log = string.Format(stopString, eventID, "orange");
-        Debug.Log(log);
+
+        if (logLevel == LogLevel.Warnings)
+            Debug.Log(log);
     }
 
     public void TriggerEvent(string eventID, GameObject sender, string parameter = "")
@@ -79,13 +96,17 @@ public class EventManager
         if (!events.ContainsKey(eventID))
         {
             log = string.Format(noKeyString, eventID, "red");
-            Debug.Log(log);
+
+            if (logLevel == LogLevel.Errors)
+                Debug.Log(log);
 
             return;
         }
 
         log = string.Format(triggerString, eventID, parameter, "cyan");
-        Debug.Log(log);
+
+        if (logLevel == LogLevel.Verbose)
+            Debug.Log(log);
 
         lastSender = sender;
 

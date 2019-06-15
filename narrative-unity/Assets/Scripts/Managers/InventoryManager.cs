@@ -3,14 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using TMPro;
+using Fungus;
 
 public class InventoryManager : MonoBehaviour
 {
+    [Header("Information")]
+    [HideInInspector]
+    public bool isOpen = false;
+
     Item currentItem;
 
-    public TextMeshProUGUI currentItemText;
+    [Header("References")]
+    [Tooltip("Where the current Item is moved for inspection.")]
+    public Transform itemInspectionParent;
+    [Tooltip("Where the current Item is moved while the Inventory is closed.")]
+    public Transform itemHotCornerParent;
+    Transform currentItemParent;
 
-    public Dictionary<string, Item> items;
+    [Tooltip("The SayDialog where Item text is displayed.")]
+    public SayDialog itemSayDialog;
+
+    [Space]
+
+    [Tooltip("Objects that will be hidden when the Inventory is open.")]
+    public List<GameObject> objectsToHide;
+
+    [Space]
+
+    [Tooltip("All Items in the Inventory.")]
+    [HideInInspector]
+    public List<Item> items;
 
     string stringItemAdded = "<color=lime>InventoryManager:</color> Added item {0}.";
     string stringItemRemoved = "<color=cyan>InventoryManager:</color> Removed item {0}.";
@@ -27,20 +49,20 @@ public class InventoryManager : MonoBehaviour
 
     private void Start()
     {
-        items = new Dictionary<string, Item>();
+        items = new List<Item>();
     }
 
     public void Add(GameObject sender, string parameter = "")
     {
         Item itemToAdd = sender.GetComponent<Item>();
 
-        if (items.ContainsKey(parameter))
+        if (items.Contains(itemToAdd))
         {
             Debug.Log(string.Format(stringItemAlreadyInInventory, itemToAdd.name));
             return;
         }
 
-        items.Add(parameter, itemToAdd);
+        items.Add(itemToAdd);
 
         SetCurrentItem(itemToAdd);
 
@@ -49,41 +71,136 @@ public class InventoryManager : MonoBehaviour
 
     public void Remove(GameObject sender, string parameter = "")
     {
-        items.Remove(parameter);
+        Item itemToRemove = sender.GetComponent<Item>();
+
+        if (!itemToRemove)
+        {
+            Debug.Log(string.Format(stringItemNotFound, parameter));
+            return;
+        }
+
+        SetCurrentItem(NextItem());
+        itemToRemove.gameObject.SetActive(false);
+
+        items.Remove(itemToRemove);
 
         Debug.Log(string.Format(stringItemRemoved, parameter));
     }
 
+    bool GetItemInInventory(string itemID, out Item itemOut)
+    {
+        foreach (Item item in items)
+            if (item.name == itemID)
+            {
+                itemOut = item;
+                return true;
+            }
+
+        itemOut = null;
+        return false;
+    }
+
     private void Update()
     {
-        GetInput(); //TODO: replace with HUD
+        GetInput();
     }
 
     void GetInput()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.E))
+            ToggleInventory();
+
+        if (Input.GetMouseButtonDown(1))
+            ShowCurrentItemDescription();
+
+        UseScrollDeltaToChangeCurrentItem();
+    }
+
+    public void ToggleInventory()
+    {
+        isOpen = !isOpen;
+        CursorLock.SetCursorLock(!isOpen);
+
+        currentItemParent = isOpen ? itemInspectionParent : itemHotCornerParent;
+
+        HideObjects();
+
+        if (GetCurrentItem())
         {
-            if (IsEmpty())
-            {
-                Debug.Log(stringInventoryEmpty);
-                return;
-            }
-
-            currentItem = items.First().Value;
-
-            Debug.Log(string.Format(stringItemSelected, currentItem.name));
+            currentItem.transform.parent = currentItemParent;
+            currentItem.ResetTransform();
+            currentItem.ShowInInventory();
         }
     }
 
-    bool IsEmpty()
+    void HideObjects()
     {
-        return (items == null || items.Count == 0);
+        foreach (GameObject gameObject in objectsToHide)
+        {
+            gameObject.SetActive(!isOpen);
+        }
     }
 
+    bool ShowCurrentItemDescription()
+    {
+        if (!isOpen || !currentItem)
+            return false;
+
+        currentItem.TriggerDialogue();
+        return true;
+    }
+
+    void UseScrollDeltaToChangeCurrentItem()
+    {
+        if (isOpen)
+            return;
+
+        Vector2 scrollDelta = Input.mouseScrollDelta;
+
+        if (scrollDelta.y > float.Epsilon)
+            SetCurrentItem(NextItem());
+
+        if (scrollDelta.y < -float.Epsilon)
+            SetCurrentItem(PreviousItem());
+    }
+
+    Item NextItem() => GetItemRelativeToCurrent(1);
+
+    Item PreviousItem() => GetItemRelativeToCurrent(-1);
+
+    Item GetItemRelativeToCurrent(int indexOffset)
+    {
+        // If there is no item currently selected
+        if (!currentItem)
+            return null;
+
+        // Fetch current Item's index
+        int currentItemIndex = items.IndexOf(currentItem);
+
+        // Apply index offset
+        int newItemIndex = currentItemIndex + indexOffset;
+
+        // If it goes below 0, set to last index
+        if (newItemIndex < 0)
+            newItemIndex = items.Count - 1;
+
+        // If it goes over list length, set to first item
+        if (newItemIndex >= items.Count)
+            newItemIndex = 0;
+
+        return items[newItemIndex];
+    }
+
+    bool IsEmpty => (items == null || items.Count == 0);
+
+    /*
+     * Find the item reference first if only a string is present
+     */
     bool SetCurrentItem(string itemID)
     {
         Item foundItem;
-        if (!items.TryGetValue(itemID, out foundItem))
+
+        if (!GetItemInInventory(itemID, out foundItem))
         {
             Debug.Log(string.Format(stringItemNotFound, itemID));
             return false;
@@ -93,14 +210,29 @@ public class InventoryManager : MonoBehaviour
         return true;
     }
 
+    /*
+     * Set item as current Item
+     */
     void SetCurrentItem(Item item)
     {
+        // Unset previous Item if there is one
+        if (currentItem)
+        {
+            currentItem.isCurrentItem = false;
+            currentItem.gameObject.SetActive(false);
+        }
+
+        // Set new Item
         currentItem = item;
-        currentItemText.text = "Current Item: " + item.name;
+
+        if (item == null)
+            return;
+
+        currentItem.isCurrentItem = true;
+        currentItem.transform.parent = currentItemParent;
+        currentItem.transform.localPosition = Vector3.zero;
+        currentItem.gameObject.SetActive(true);
     }
 
-    public Item GetCurrentItem()
-    {
-        return currentItem;
-    }
+    public Item GetCurrentItem() => currentItem;
 }

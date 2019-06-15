@@ -4,11 +4,14 @@ using System.Collections;
 public class SmoothCameraWithBumper : MonoBehaviour
 {
     [Header("Properties")]
+    [SerializeField]
+    [Tooltip("Don't bump into items.")]
+    bool ignoreItems = true;
 
     [Range(0.02f, 4f)]
     [SerializeField]
     [Tooltip("Amount of camera lerp smoothing.")]
-    private float damping = .04f;
+    float damping = .04f;
 
     [SerializeField]
     [Tooltip("Move camera forward when bumping to prevent clipping.")]
@@ -45,6 +48,14 @@ public class SmoothCameraWithBumper : MonoBehaviour
 
     private void Update()
     {
+        CameraOperations();
+    }
+
+    void CameraOperations()
+    {
+        if (GameManager.GLOBAL.inventoryManager.isOpen)
+            return;
+
         SetVariables();
         CameraBumpCheck();
         LerpCamera();
@@ -82,6 +93,11 @@ public class SmoothCameraWithBumper : MonoBehaviour
         if (Physics.Raycast(ray, out hitInfo, checkingDistance))
         {
             if (hitInfo.transform == target || hitInfo.transform == transform)
+                return;
+
+            Item bumpedItem = hitInfo.collider.gameObject.GetComponent<Item>();
+
+            if (bumpedItem && ignoreItems)
                 return;
 
             CalculateNewCameraPosition();
