@@ -4,7 +4,7 @@ using UnityEngine;
 using Fungus;
 
 [RequireComponent(typeof(MeshRenderer))]
-[RequireComponent(typeof(MeshCollider))]
+[RequireComponent(typeof(Collider))]
 [RequireComponent(typeof(Flowchart))]
 public class Interactable : MonoBehaviour
 {

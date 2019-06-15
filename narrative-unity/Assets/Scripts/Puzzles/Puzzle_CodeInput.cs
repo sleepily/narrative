@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Puzzle_CodeInput : Puzzle
 {
+    public Interactable_CodeInput.CodeType codeType;
+
     int playerInput;
     int solutionInt;
 
     private void OnEnable()
     {
-        EventManager.Global.StartListening("Puzzle_CodeInput Chest", EventFunction);
+        EventManager.Global.StartListening("Puzzle_CodeInput " + codeType.ToString(), EventFunction);
     }
 
     protected override void StartFunctions()

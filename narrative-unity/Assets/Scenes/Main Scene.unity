@@ -571,7 +571,7 @@ GameObject:
   - component: {fileID: 314843678}
   - component: {fileID: 314843677}
   m_Layer: 8
-  m_Name: InputField (TMP)
+  m_Name: InputField Digits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2062,7 +2062,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e905d2a6286bd134ab1933b5c9d858ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receiver: Puzzle_CodeInput Chest
   inputField: {fileID: 279761503}
   lastCharDelay: 0.4
   playerInput: 0
@@ -2592,6 +2591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSolved: 0
   solution: 5364
+  codeType: 0
 --- !u!114 &777790820
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5213,7 +5213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 777790821}
+  selectedFlowchart: {fileID: 1928582078}
 --- !u!4 &1705705785
 Transform:
   m_ObjectHideFlags: 1
@@ -7729,8 +7729,8 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
---- !u!64 &6318911020982505162
-MeshCollider:
+--- !u!65 &6318911020982505162
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -7739,10 +7739,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4068373912626513877, guid: 8546f4efeff1c0749873db73dd36417e, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 10, y: 20, z: 10}
+  m_Center: {x: 0, y: -4.15, z: 0}
 --- !u!1 &6362645012591842045
 GameObject:
   m_ObjectHideFlags: 0

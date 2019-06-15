@@ -7,7 +7,6 @@ using UnityEngine.Events;
 
 public class UI_CodeInput : MonoBehaviour
 {
-    public string receiver = "Puzzle_CodeInput Chest";
     public TextMeshProUGUI inputField;
 
     [Tooltip("How long the code is shown after the input has been completed.")]
@@ -64,11 +63,29 @@ public class UI_CodeInput : MonoBehaviour
 
             if (charIndex < 4)
                 return;
+
+            EventManager.Global.TriggerEvent(GetReceiverID(), gameObject, playerInput.ToString());
         }
 
-        EventManager.Global.TriggerEvent(receiver, gameObject, playerInput.ToString());
+        if (codeType == Interactable_CodeInput.CodeType.text)
+        {
+            string formattedString = inputField.text.Trim();
+            formattedString = formattedString.ToLower();
+
+            int length = formattedString.Length;
+
+            if (length < 8)
+                return;
+
+            EventManager.Global.TriggerEvent(GetReceiverID(), gameObject, formattedString);
+        }
 
         Invoke("Hide", lastCharDelay);
+    }
+
+    string GetReceiverID()
+    {
+        return "Puzzle_CodeInput " + codeType.ToString();
     }
 
     void Show()
