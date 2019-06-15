@@ -10,6 +10,9 @@ public class UI_CodeInput : MonoBehaviour
     public string receiver = "Puzzle_CodeInput Chest";
     public TextMeshProUGUI inputField;
 
+    [Tooltip("How long the code is shown after the input has been completed.")]
+    public float lastCharDelay = .4f;
+
     public int playerInput;
 
     Canvas canvas;
@@ -37,6 +40,9 @@ public class UI_CodeInput : MonoBehaviour
         Invoke("SubmitAnswer", .02f);
     }
 
+    /*
+     * Format the answer and submit it to the puzzle
+     */
     public void SubmitAnswer()
     {
         if (codeType == Interactable_CodeInput.CodeType.digits)
@@ -62,19 +68,28 @@ public class UI_CodeInput : MonoBehaviour
 
         EventManager.Global.TriggerEvent(receiver, gameObject, playerInput.ToString());
 
-        ToggleVisibility(setVisible: false);
+        Invoke("Hide", lastCharDelay);
+    }
+
+    void Show()
+    {
+        ToggleVisibility(true);
+    }
+
+    void Hide()
+    {
+        ToggleVisibility(false);
     }
 
     public void ToggleVisibility(bool setVisible = true)
     {
         isVisible = setVisible;
 
+        // When the UI is shown, get focus and reset text
         if (isVisible)
-        {
             textFieldEvent.Invoke();
-        }
 
-        inputField.text = isVisible ? "" : inputField.text;
+        // Hide the canvas by setting its scale to 0
         canvas.transform.localScale = isVisible ? localScale : Vector3.zero;
     }
 }

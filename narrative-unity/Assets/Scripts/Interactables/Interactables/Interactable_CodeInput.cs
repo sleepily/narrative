@@ -25,6 +25,9 @@ public class Interactable_CodeInput : Interactable
             return;
         }
 
+        if (puzzle.IsInDialogueCheck())
+            return;
+
         codeInput.ToggleVisibility(setVisible: true);
     }
 }

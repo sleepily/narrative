@@ -33,7 +33,7 @@ public class Puzzle : MonoBehaviour
         return flowchart;
     }
 
-    protected bool IsInDialogueCheck()
+    public bool IsInDialogueCheck()
     {
         if (!GetFlowchart())
             return false;
