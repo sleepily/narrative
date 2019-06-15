@@ -106,7 +106,7 @@ public class Puzzle_BookArray : Puzzle
         for (int bookIndex = 0; bookIndex < bookCount; bookIndex++)
         {
             Vector3 bookPosition = books[bookIndex].transform.localPosition;
-            bookPosition.x = bookDistance * bookIndex;
+            bookPosition.z = bookDistance * bookIndex;
             books[bookIndex].transform.localPosition = bookPosition;
         }
 
