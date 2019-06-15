@@ -5,7 +5,7 @@ using System.Linq;
 
 public class Puzzle_Xylophone : Puzzle
 {
-    public string solution = "10010110";
+    // public string solution = "10010110";
     bool[] solutionArray;
     public bool isPlaying = false;
 
@@ -47,7 +47,7 @@ public class Puzzle_Xylophone : Puzzle
         return output;
     }
 
-    public override void PuzzleCheck()
+    public override bool PuzzleCheck()
     {
         base.PuzzleCheck();
 
@@ -56,11 +56,12 @@ public class Puzzle_Xylophone : Puzzle
             if (solutionArray[keyIndex] != keys[keyIndex].selected)
             {
                 PuzzleReset();
-                return;
+                return false;
             }
         }
 
         PuzzleSolved();
+        return true;
     }
 
     public override void PuzzleReset()

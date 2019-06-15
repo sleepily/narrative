@@ -13,9 +13,6 @@ public class Puzzle_BookArray : Puzzle
     [Tooltip("Controls how far the books will spread.")]
     public float bookDistance = .3f;
 
-    [Tooltip("Type in the book numbers to create solution.")]
-    public string solution = "12 34 5678";
-
     protected override void StartFunctions()
     {
         base.StartFunctions();
@@ -116,15 +113,10 @@ public class Puzzle_BookArray : Puzzle
         PuzzleCheck();
     }
 
-    public override void PuzzleCheck()
+    public override bool PuzzleCheck()
     {
         base.PuzzleCheck();
 
-        CompareWithSolution();
-    }
-
-    void CompareWithSolution()
-    {
         string bookIDs = "";
 
         // Get current book order
@@ -136,6 +128,8 @@ public class Puzzle_BookArray : Puzzle
 
         if (isCorrectSolution)
             PuzzleSolved();
+
+        return isCorrectSolution;
     }
 
     public override void PuzzleSolved()

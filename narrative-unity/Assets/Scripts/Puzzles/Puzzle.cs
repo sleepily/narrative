@@ -10,6 +10,9 @@ public class Puzzle : MonoBehaviour
 
     protected Flowchart flowchart;
 
+    [Tooltip("Puzzle solution. Book: BookIDs, Xylophone Keys: 1/0, Code: answer")]
+    public string solution = "";
+
     /*
      * Separate virtual Start and Update functions to allow easier subclass specific actions
      */
@@ -61,7 +64,7 @@ public class Puzzle : MonoBehaviour
      */
     public virtual void PuzzleReset() { }
 
-    public virtual void PuzzleCheck() { }
+    public virtual bool PuzzleCheck() => false;
 
     public virtual void PuzzleSolved()
     {
