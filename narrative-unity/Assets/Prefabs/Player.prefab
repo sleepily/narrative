@@ -817,6 +817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9932a022a28995b4ba233e8587798a12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ignoreItems: 1
   damping: 0.16
   clippingPreventionDistance: 1
   drawDebugRay: 1
@@ -1768,6 +1769,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 2999fadbf633844419037b3562477ffb,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2d6c06354b654474980074c32aebe029, type: 2}
+    - target: {fileID: -6057140222963153312, guid: 2999fadbf633844419037b3562477ffb,
+        type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: b5989538188850942bbfded0e922e2f7, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2999fadbf633844419037b3562477ffb, type: 3}
 --- !u!4 &6474863853268972077 stripped
