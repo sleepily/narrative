@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.05715466, g: 0.06079892, b: 0.06956741, a: 1}
+  m_IndirectSpecularColor: {r: 0.057154674, g: 0.06079894, b: 0.06956743, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 112000000, guid: 8876b4a5378abaf42912ea271299cec2,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6202,8 +6202,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 419.9561
-    y: 63.02201
+    x: 435.3407
+    y: 100.38463
     width: 192.85713
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -6369,7 +6369,7 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 862252986}
+  - {fileID: 862252982}
   selectedCommands: []
   variables:
   - {fileID: 862252977}
