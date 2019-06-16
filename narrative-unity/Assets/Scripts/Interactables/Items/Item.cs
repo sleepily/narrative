@@ -39,6 +39,9 @@ public class Item : Interactable
 
     public void PickupItem()
     {
+        if (!itemStats.isPU)
+            return;
+
         EventManager.Global.TriggerEvent("Inventory_Add", gameObject, name);
         isInInventory = true;
 

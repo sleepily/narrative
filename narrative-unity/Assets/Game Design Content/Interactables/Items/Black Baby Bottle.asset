@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Black Baby Bottle
   m_EditorClassIdentifier: 
   name: BlackBabyBottle
+  isPU: 0
