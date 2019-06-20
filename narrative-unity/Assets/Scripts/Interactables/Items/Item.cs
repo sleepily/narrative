@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : Interactable
+public class Item : InteractableWithDialogue
 {
     [Header("General")]
     public ItemStats itemStats;
@@ -45,7 +45,9 @@ public class Item : Interactable
         EventManager.Global.TriggerEvent("Inventory_Add", gameObject, name);
         isInInventory = true;
 
-        SetGlowColor(Color.clear, true);
+
+        if (glowable)
+            glowable.SetGlowColor(Color.clear, true);
 
         GameManager.GLOBAL.inventoryManager.ToggleInventory();
 

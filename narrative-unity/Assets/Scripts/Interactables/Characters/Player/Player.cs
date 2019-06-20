@@ -8,12 +8,9 @@ public class Player : CharacterWithDialogue
 {
     public Camera thirdPersonCamera;
 
-    protected override void StartFunctions() { }
+    public override void StartFunctions() { }
 
-    protected override void GetAllComponents()
-    {
-        GetFlowchart();
-    }
+    protected override void GetAllComponents() => GetFlowchart();
 
     protected override void UpdateFunctions() { }
 

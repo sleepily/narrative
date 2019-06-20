@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-public class Interactable_CrookedPainting : Interactable
+public class Interactable_CrookedPainting : InteractableWithDialogue
 {
     Puzzle_CrookedPainting puzzle;
 

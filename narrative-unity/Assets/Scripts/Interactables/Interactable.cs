@@ -5,21 +5,9 @@ using Fungus;
 
 [RequireComponent(typeof(MeshRenderer))]
 [RequireComponent(typeof(Collider))]
-[RequireComponent(typeof(Flowchart))]
 public class Interactable : MonoBehaviour
 {
-    [Header("Color Glow Components")]
-    protected MeshRenderer meshRenderer;
-    protected Color currentGlowColor, desiredGlowColor;
-
-    [Header("Color Glow Properties")]
-    protected Color glowColor = Color.yellow;
-    protected float colorLerpFactor = .2f;
-    protected bool lerpIsFinished = true;
-
-    [Header("Dialogue")]
-    protected Flowchart flowchart;
-    protected bool isInDialogue;
+    protected Glowable glowable;
 
     /*
      * OnMouse functions to determine whether to focus, unfocus, interact with or use an object
@@ -64,83 +52,12 @@ public class Interactable : MonoBehaviour
      * Separate virtual Start and Update functions to allow easier subclass specific actions
      */
     private void Start() => StartFunctions();
+    public virtual void StartFunctions() => GetAllComponents();
+    protected virtual void GetAllComponents() => GetGlowable();
 
-    protected virtual void StartFunctions()
+    void GetGlowable()
     {
-        GetAllComponents();
-        SetGlowColor(Color.clear, isInstantTransition: true);
-    }
-
-    protected virtual void GetAllComponents()
-    {
-        // Get components needed for color glow on hover
-        meshRenderer = GetComponent<MeshRenderer>();
-        glowColor = meshRenderer.material.GetColor("_GlowColor");
-
-        GetFlowchart();
-    }
-
-    protected Flowchart GetFlowchart()
-    {
-        if (!flowchart)
-            flowchart = GetComponent<Flowchart>();
-
-        return flowchart;
-    }
-
-    protected bool IsInDialogueCheck()
-    {
-        if (!GetFlowchart())
-            return false;
-
-        return isInDialogue = flowchart.HasExecutingBlocks();
-    }
-
-    /*
-     * Execute Start block, which will handle conditions and jumps
-     */
-    public virtual void TriggerDialogue()
-    {
-        if (IsInDialogueCheck())
-            return;
-
-        flowchart.ExecuteBlock("Start");
-        return;
-    }
-
-    /*
-     * Trigger character dialogue using an item and jump to the block with the item's ID
-     */
-    public virtual bool TriggerItemDialogue(Item item = null)
-    {
-        if (IsInDialogueCheck())
-            return false;
-
-        if (!item)
-            item = GameManager.GLOBAL.inventoryManager.GetCurrentItem();
-
-        if (!item)
-        {
-            Debug.Log(string.Format("<color=orange>{0}:</color> No item for dialogue.", name));
-            return false;
-        }
-
-        Block itemBlock = flowchart.FindBlock(item.itemStats.name);
-
-        if (!itemBlock)
-        {
-            Block wrongItemBlock = flowchart.FindBlock("WrongItem");
-
-            if (wrongItemBlock)
-                flowchart.ExecuteBlock(wrongItemBlock);
-            else
-                GameManager.GLOBAL.player.WrongItemDialogue();
-
-            return false;
-        }
-
-        flowchart.ExecuteBlock(itemBlock);
-        return true;
+        glowable = GetComponent<Glowable>();
     }
 
     /*
@@ -148,46 +65,7 @@ public class Interactable : MonoBehaviour
      */
     private void Update() => UpdateFunctions();
 
-    protected virtual void UpdateFunctions() => LerpGlowColor();
-
-    /*
-     * Constantly lerps to the desired glow color
-     * No action is taken when the color lerp has finished
-     */
-    protected void LerpGlowColor()
-    {
-        if (lerpIsFinished)
-            return;
-
-        currentGlowColor = Color.Lerp
-        (
-            currentGlowColor,
-            desiredGlowColor,
-            Time.deltaTime / colorLerpFactor
-        );
-
-        meshRenderer.material.SetColor("_GlowColor", currentGlowColor);
-
-        if (currentGlowColor.Equals(desiredGlowColor))
-            lerpIsFinished = true;
-    }
-
-    protected void SetGlowColor(Color color, bool isInstantTransition = false)
-    {
-        desiredGlowColor = color;
-        lerpIsFinished = isInstantTransition;
-
-        if (!isInstantTransition)
-            return;
-
-        currentGlowColor = desiredGlowColor;
-        meshRenderer.material.SetColor("_GlowColor", desiredGlowColor);
-    }
-
-    /*
-     * In case only the glow color needs to be overriden
-     */
-    protected virtual void OverrideGlowColor(Color glowColorOverride) => glowColor = glowColorOverride;
+    protected virtual void UpdateFunctions() { }
 
     /*
      * Enable/Disable listening when objects are used/not used.
@@ -227,11 +105,19 @@ public class Interactable : MonoBehaviour
     /*
      * All possible interaction functions which are defined in the subclasses
      */
-    public virtual void Focus() => SetGlowColor(glowColor);
+    public virtual void Focus()
+    {
+        if (glowable)
+            glowable.SetGlowColorGlow();
+    }
 
-    public virtual void Unfocus() => SetGlowColor(Color.clear);
+    public virtual void Unfocus()
+    {
+        if (glowable)
+            glowable.SetGlowColorClear();
+    }
 
-    public virtual void Interact() => TriggerDialogue();
+    public virtual void Interact() { }
 
-    public virtual void Use() => TriggerItemDialogue();
+    public virtual void Use() { }
 }

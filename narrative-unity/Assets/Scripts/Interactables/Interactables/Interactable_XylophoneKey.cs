@@ -11,7 +11,7 @@ public class Interactable_XylophoneKey : Interactable
 
     int keyID = -1;
 
-    protected override void StartFunctions()
+    public override void StartFunctions()
     {
         base.StartFunctions();
 
@@ -71,13 +71,15 @@ public class Interactable_XylophoneKey : Interactable
     void Select()
     {
         selected = true;
-        SetGlowColor(selectedGlowColor, isInstantTransition: true);
+        if (glowable)
+            glowable.SetGlowColor(selectedGlowColor, isInstantTransition: true);
     }
 
     public void Deselect()
     {
         selected = false;
-        SetGlowColor(Color.clear);
+        if (glowable)
+            glowable.SetGlowColor(Color.clear);
     }
 
     public void Play()
@@ -85,6 +87,7 @@ public class Interactable_XylophoneKey : Interactable
         // Play sound
 
         selected = false;
-        SetGlowColor(Color.clear);
+        if (glowable)
+            glowable.SetGlowColor(Color.clear);
     }
 }

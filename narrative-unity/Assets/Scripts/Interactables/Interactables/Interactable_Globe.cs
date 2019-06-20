@@ -14,7 +14,7 @@ public class Interactable_Globe : Interactable
     float desiredRotationAngle = 0f;
     float allowedAngleDifference = 2f;
 
-    protected override void StartFunctions()
+    public override void StartFunctions()
     {
         base.StartFunctions();
     }

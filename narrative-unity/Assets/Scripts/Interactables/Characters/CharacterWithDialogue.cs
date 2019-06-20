@@ -4,15 +4,16 @@ using UnityEngine;
 using Fungus;
 
 [RequireComponent(typeof(Character))]
-public class CharacterWithDialogue : Interactable
+public class CharacterWithDialogue : InteractableWithDialogue
 {
     Color characterGlowColorOverride = new Color(Color.yellow.r, Color.yellow.g, Color.yellow.b, .2f);
 
-    protected override void StartFunctions()
+    public override void StartFunctions()
     {
         base.StartFunctions();
 
-        OverrideGlowColor(characterGlowColorOverride);
+        if (glowable)
+            glowable.OverrideGlowColor(characterGlowColorOverride);
     }
 
     /*
