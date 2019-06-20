@@ -1771,14 +1771,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: 2999fadbf633844419037b3562477ffb,
         type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 2d6c06354b654474980074c32aebe029, type: 2}
-    - target: {fileID: -6057140222963153312, guid: 2999fadbf633844419037b3562477ffb,
-        type: 3}
       propertyPath: m_Avatar
       value: 
       objectReference: {fileID: 9000000, guid: b5989538188850942bbfded0e922e2f7, type: 3}
+    - target: {fileID: -6057140222963153312, guid: 2999fadbf633844419037b3562477ffb,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2d6c06354b654474980074c32aebe029, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2999fadbf633844419037b3562477ffb, type: 3}
 --- !u!4 &6474863853268972077 stripped
