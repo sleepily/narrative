@@ -1495,9 +1495,8 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 436314758}
-  selectedCommands:
-  - {fileID: 8296172669349751979}
+  - {fileID: 436314757}
+  selectedCommands: []
   variables:
   - {fileID: 8296172669349751951}
   - {fileID: 8296172669349751953}
@@ -1567,6 +1566,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 8296172669349751980}
   - {fileID: 436314790}
   - {fileID: 436314793}
   - {fileID: 8296172669349751961}
@@ -1575,7 +1575,6 @@ MonoBehaviour:
   - {fileID: 436314787}
   - {fileID: 436314795}
   - {fileID: 8296172669349751975}
-  - {fileID: 8296172669349751980}
 --- !u!114 &436314758
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1601,6 +1600,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 8296172669349751979}
   - {fileID: 8296172669349751960}
   - {fileID: 8296172669349751959}
   - {fileID: 8296172669349751958}
@@ -1609,7 +1609,6 @@ MonoBehaviour:
   - {fileID: 8296172669349751955}
   - {fileID: 8296172669349751954}
   - {fileID: 8296172669349751974}
-  - {fileID: 8296172669349751979}
 --- !u!114 &436314759
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -7073,7 +7072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1170377104056170207}
+  selectedFlowchart: {fileID: 436314753}
 --- !u!4 &1705705785
 Transform:
   m_ObjectHideFlags: 1
