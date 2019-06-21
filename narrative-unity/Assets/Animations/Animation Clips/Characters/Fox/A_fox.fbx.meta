@@ -8,7 +8,7 @@ ModelImporter:
     second: walk body
   - first:
       74: 7193094952016763602
-    second: look around
+    second: idle body
   - first:
       74: 1071775788784825545
     second: walk head
@@ -70,7 +70,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: look around
+      name: idle body
       takeName: Take 001
       internalID: 7193094952016763602
       firstFrame: 40

@@ -2430,6 +2430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraArm: {fileID: 8163109732280187605}
   playerModel: {fileID: 8163109733146601172}
+  animator: {fileID: 754367437254392543}
   movementSettings: {fileID: 11400000, guid: 63d4148cec0f5b84687dc90f70e362f4, type: 2}
 --- !u!114 &8163109733526020027
 MonoBehaviour:
