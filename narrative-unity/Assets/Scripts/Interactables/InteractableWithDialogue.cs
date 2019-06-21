@@ -62,7 +62,7 @@ public class InteractableWithDialogue : Interactable
             return false;
         }
 
-        Block itemBlock = flowchart.FindBlock(item.itemStats.name);
+        Block itemBlock = flowchart.FindBlock(item.itemStats.ID);
 
         if (!itemBlock)
         {

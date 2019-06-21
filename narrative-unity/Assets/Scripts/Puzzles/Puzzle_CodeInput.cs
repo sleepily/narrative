@@ -46,11 +46,4 @@ public class Puzzle_CodeInput : Puzzle
 
         return answerIsCorrect;
     }
-
-    public override void PuzzleSolved()
-    {
-        flowchart.SetBooleanVariable("isSolved", true);
-
-        base.PuzzleSolved();
-    }
 }

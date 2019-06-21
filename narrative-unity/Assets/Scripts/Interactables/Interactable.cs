@@ -17,6 +17,9 @@ public class Interactable : MonoBehaviour
     protected float colorLerpFactor = .2f;
     protected bool lerpIsFinished = true;
 
+    [Tooltip("Deselect in case this interactable should not be focusable.")]
+    public bool isFocusable = true;
+
     /*
      * OnMouse functions to determine whether to focus, unfocus, interact with or use an object
      */
@@ -35,6 +38,9 @@ public class Interactable : MonoBehaviour
      */
     void MouseButtonCheck()
     {
+        if (!isFocusable)
+            return;
+
         if (PlayerAimInteraction.IsFocusable(this))
         {
             if (Input.GetMouseButtonDown(0))

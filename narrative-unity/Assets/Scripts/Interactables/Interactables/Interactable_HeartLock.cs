@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Interactable_HeartLock : InteractableWithDialogue
 {
-    public ItemStats itemToUnlock;
-    public GameObject glassDoors;
+    [Tooltip("Water bottle (will be unfocusable before unlock)")]
+    public Item waterBottle;
 
-    public override void Use()
+    [Tooltip("The glass doors animator that will open once unlocked")]
+    public Animator glassAnimator;
+
+    public void Solve()
     {
-        if (itemToUnlock != GameManager.GLOBAL.inventoryManager.GetCurrentItem().itemStats)
-            return;
-
-        glassDoors.SetActive(false);
+        waterBottle.isFocusable = true;
+        glassAnimator.SetBool("isSolved", true);
     }
 }

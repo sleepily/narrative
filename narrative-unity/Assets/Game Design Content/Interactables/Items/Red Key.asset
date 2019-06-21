@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ef49b875c7f5f438a18375c95578e8, type: 3}
   m_Name: Red Key
   m_EditorClassIdentifier: 
-  name: RedKey
+  ID: RedKey
+  canBePickedUp: 1
+  inventoryInspectionScale: 3
+  handheldScale: 1

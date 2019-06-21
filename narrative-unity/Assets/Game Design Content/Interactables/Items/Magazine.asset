@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ef49b875c7f5f438a18375c95578e8, type: 3}
   m_Name: Magazine
   m_EditorClassIdentifier: 
-  name: Magazine
+  ID: Magazine
+  canBePickedUp: 1
+  inventoryInspectionScale: 1
+  handheldScale: 1

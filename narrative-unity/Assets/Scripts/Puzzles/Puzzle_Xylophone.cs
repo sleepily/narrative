@@ -9,6 +9,8 @@ public class Puzzle_Xylophone : Puzzle
     bool[] solutionArray;
     public bool isPlaying = false;
 
+    public Interactable_BookWithBabyPowder bookWithBabyPowder;
+
     Interactable_XylophoneKey[] keys = new Interactable_XylophoneKey[8];
 
     private void OnEnable()
@@ -55,6 +57,7 @@ public class Puzzle_Xylophone : Puzzle
         {
             if (solutionArray[keyIndex] != keys[keyIndex].selected)
             {
+                Debug.Log("Wrong key at position " + keyIndex);
                 PuzzleReset();
                 return false;
             }
@@ -75,7 +78,6 @@ public class Puzzle_Xylophone : Puzzle
     public override void PuzzleSolved()
     {
         base.PuzzleSolved();
-
-        Debug.Log("Xylophone correct");
+        bookWithBabyPowder.Activate();
     }
 }

@@ -36,7 +36,7 @@ public class EventManager
         None
     }
 
-    public LogLevel logLevel = LogLevel.Errors;
+    public LogLevel logLevel = LogLevel.Verbose;
 
     string startString  = "<color={1}>EventManager:</color> Listening for {0}.";
     string stopString   = "<color={1}>EventManager:</color> Stop listening for {0}.";
