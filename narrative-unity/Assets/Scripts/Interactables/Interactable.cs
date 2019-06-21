@@ -5,9 +5,17 @@ using Fungus;
 
 [RequireComponent(typeof(MeshRenderer))]
 [RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(Flowchart))]
 public class Interactable : MonoBehaviour
 {
-    protected Glowable glowable;
+    [Header("Color Glow Components")]
+    protected MeshRenderer meshRenderer;
+    protected Color currentGlowColor, desiredGlowColor;
+
+    [Header("Color Glow Properties")]
+    protected Color glowColor = Color.yellow;
+    protected float colorLerpFactor = .2f;
+    protected bool lerpIsFinished = true;
 
     /*
      * OnMouse functions to determine whether to focus, unfocus, interact with or use an object
@@ -52,12 +60,18 @@ public class Interactable : MonoBehaviour
      * Separate virtual Start and Update functions to allow easier subclass specific actions
      */
     private void Start() => StartFunctions();
-    public virtual void StartFunctions() => GetAllComponents();
-    protected virtual void GetAllComponents() => GetGlowable();
 
-    void GetGlowable()
+    protected virtual void StartFunctions()
     {
-        glowable = GetComponent<Glowable>();
+        GetAllComponents();
+        SetGlowColor(Color.clear, isInstantTransition: true);
+    }
+
+    protected virtual void GetAllComponents()
+    {
+        // Get components needed for color glow on hover
+        meshRenderer = GetComponent<MeshRenderer>();
+        glowColor = meshRenderer.material.GetColor("_GlowColor");
     }
 
     /*
@@ -65,7 +79,46 @@ public class Interactable : MonoBehaviour
      */
     private void Update() => UpdateFunctions();
 
-    protected virtual void UpdateFunctions() { }
+    protected virtual void UpdateFunctions() => LerpGlowColor();
+
+    /*
+     * Constantly lerps to the desired glow color
+     * No action is taken when the color lerp has finished
+     */
+    protected void LerpGlowColor()
+    {
+        if (lerpIsFinished)
+            return;
+
+        currentGlowColor = Color.Lerp
+        (
+            currentGlowColor,
+            desiredGlowColor,
+            Time.deltaTime / colorLerpFactor
+        );
+
+        meshRenderer.material.SetColor("_GlowColor", currentGlowColor);
+
+        if (currentGlowColor.Equals(desiredGlowColor))
+            lerpIsFinished = true;
+    }
+
+    protected void SetGlowColor(Color color, bool isInstantTransition = false)
+    {
+        desiredGlowColor = color;
+        lerpIsFinished = isInstantTransition;
+
+        if (!isInstantTransition)
+            return;
+
+        currentGlowColor = desiredGlowColor;
+        meshRenderer.material.SetColor("_GlowColor", desiredGlowColor);
+    }
+
+    /*
+     * In case only the glow color needs to be overriden
+     */
+    protected virtual void OverrideGlowColor(Color glowColorOverride) => glowColor = glowColorOverride;
 
     /*
      * Enable/Disable listening when objects are used/not used.
@@ -105,17 +158,9 @@ public class Interactable : MonoBehaviour
     /*
      * All possible interaction functions which are defined in the subclasses
      */
-    public virtual void Focus()
-    {
-        if (glowable)
-            glowable.SetGlowColorGlow();
-    }
+    public virtual void Focus() => SetGlowColor(glowColor);
 
-    public virtual void Unfocus()
-    {
-        if (glowable)
-            glowable.SetGlowColorClear();
-    }
+    public virtual void Unfocus() => SetGlowColor(Color.clear);
 
     public virtual void Interact() { }
 

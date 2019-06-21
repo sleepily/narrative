@@ -35,19 +35,19 @@ public class Item : InteractableWithDialogue
     {
         if (isInInventory)
             return;
+
+        base.Use();
     }
 
     public void PickupItem()
     {
-        if (!itemStats.isPU)
+        if (!itemStats.canBePickedUp)
             return;
 
         EventManager.Global.TriggerEvent("Inventory_Add", gameObject, name);
         isInInventory = true;
 
-
-        if (glowable)
-            glowable.SetGlowColor(Color.clear, true);
+        SetGlowColor(Color.clear, true);
 
         GameManager.GLOBAL.inventoryManager.ToggleInventory();
 

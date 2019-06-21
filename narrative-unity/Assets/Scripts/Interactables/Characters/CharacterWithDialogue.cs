@@ -8,12 +8,11 @@ public class CharacterWithDialogue : InteractableWithDialogue
 {
     Color characterGlowColorOverride = new Color(Color.yellow.r, Color.yellow.g, Color.yellow.b, .2f);
 
-    public override void StartFunctions()
+    protected override void StartFunctions()
     {
         base.StartFunctions();
 
-        if (glowable)
-            glowable.OverrideGlowColor(characterGlowColorOverride);
+        OverrideGlowColor(characterGlowColorOverride);
     }
 
     /*

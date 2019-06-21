@@ -9,6 +9,9 @@ public class UI_CodeInput : MonoBehaviour
 {
     public TextMeshProUGUI inputField;
 
+    [Tooltip("Date = 8, Text = 4/8 (help/iloveyou), Digits: 4")]
+    public int inputLength = 4;
+
     [Tooltip("How long the code is shown after the input has been completed.")]
     public float lastCharDelay = .4f;
 
@@ -61,7 +64,7 @@ public class UI_CodeInput : MonoBehaviour
             if (!int.TryParse(formattedString, out playerInput))
                 return;
 
-            if (charIndex < 4)
+            if (charIndex < inputLength)
                 return;
 
             EventManager.Global.TriggerEvent(GetReceiverID(), gameObject, playerInput.ToString());
@@ -69,12 +72,16 @@ public class UI_CodeInput : MonoBehaviour
 
         if (codeType == Interactable_CodeInput.CodeType.text)
         {
-            string formattedString = inputField.text.Trim();
-            formattedString = formattedString.ToLower();
+            string formattedString = "";
+
+            // Only include letters, not spacings or symbols
+            foreach (char letter in inputField.text.ToCharArray())
+                if (char.IsLetter(letter))
+                    formattedString += letter;
 
             int length = formattedString.Length;
 
-            if (length < 8)
+            if (length < inputLength)
                 return;
 
             EventManager.Global.TriggerEvent(GetReceiverID(), gameObject, formattedString);

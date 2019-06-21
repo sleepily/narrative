@@ -7,7 +7,7 @@ using Fungus;
 public class ItemStats : ScriptableObject
 {
     public new string name;
-    public bool isPU = true;
+    public bool canBePickedUp = true;
     public float inventoryInspectionScale = 1f;
     public float handheldScale = 1f;
 }

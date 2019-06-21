@@ -12,7 +12,7 @@ public class Interactable_Book : Interactable
     Puzzle_BookArray puzzle;
     int bookID = -1;
 
-    public override void StartFunctions()
+    protected override void StartFunctions()
     {
         base.StartFunctions();
 
@@ -84,8 +84,7 @@ public class Interactable_Book : Interactable
         selectedForSwap = true;
         puzzle.AddBookToSwitch(this);
 
-        if (glowable)
-            glowable.SetGlowColor(selectedGlowColor, isInstantTransition: true);
+        SetGlowColor(selectedGlowColor, isInstantTransition: true);
     }
 
     void DeselectForSwap()
@@ -100,7 +99,6 @@ public class Interactable_Book : Interactable
     {
         selectedForSwap = false;
 
-        if (glowable)
-            glowable.SetGlowColor(Color.clear, isInstantTransition: true);
+        SetGlowColor(Color.clear, isInstantTransition: true);
     }
 }
