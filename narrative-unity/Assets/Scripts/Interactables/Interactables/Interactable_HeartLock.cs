@@ -13,6 +13,6 @@ public class Interactable_HeartLock : InteractableWithDialogue
     public void Solve()
     {
         waterBottle.isFocusable = true;
-        glassAnimator.SetBool("isSolved", true);
+        glassAnimator.SetTrigger("isSolved");
     }
 }

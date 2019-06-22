@@ -15,7 +15,8 @@ public class UI_CodeInput : MonoBehaviour
     [Tooltip("How long the code is shown after the input has been completed.")]
     public float lastCharDelay = .4f;
 
-    public int playerInput;
+    [Range(.01f, 1f)]
+    public float popupLerpTime = .1f;
 
     Canvas canvas;
     Vector3 localScale;
@@ -47,7 +48,7 @@ public class UI_CodeInput : MonoBehaviour
      */
     public void SubmitAnswer()
     {
-        if (codeType == Interactable_CodeInput.CodeType.digits)
+        if (codeType == Interactable_CodeInput.CodeType.digits || codeType == Interactable_CodeInput.CodeType.date)
         {
             string formattedString = "";
 
@@ -61,23 +62,22 @@ public class UI_CodeInput : MonoBehaviour
                 formattedString += letter;
             }
 
-            if (!int.TryParse(formattedString, out playerInput))
-                return;
-
             if (charIndex < inputLength)
                 return;
 
-            EventManager.Global.TriggerEvent(GetReceiverID(), gameObject, playerInput.ToString());
+            EventManager.Global.TriggerEvent(GetReceiverID(), gameObject, formattedString);
         }
 
-        if (codeType == Interactable_CodeInput.CodeType.text)
+        if (codeType == Interactable_CodeInput.CodeType.HELP || codeType == Interactable_CodeInput.CodeType.ILOVEYOU)
         {
             string formattedString = "";
 
             // Only include letters, not spacings or symbols
             foreach (char letter in inputField.text.ToCharArray())
                 if (char.IsLetter(letter))
-                    formattedString += letter;
+                    formattedString += char.ToUpper(letter);
+
+            formattedString.ToUpper();
 
             int length = formattedString.Length;
 
@@ -113,7 +113,7 @@ public class UI_CodeInput : MonoBehaviour
         if (isVisible)
             textFieldEvent.Invoke();
 
-        // Hide the canvas by setting its scale to 0
-        canvas.transform.localScale = isVisible ? localScale : Vector3.zero;
+        // Animate the canvas popping up/hiding
+        transform.localScale = isVisible ? localScale : Vector3.zero;
     }
 }

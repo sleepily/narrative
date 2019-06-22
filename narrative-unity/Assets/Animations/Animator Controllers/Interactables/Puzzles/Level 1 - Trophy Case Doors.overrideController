@@ -6,7 +6,7 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Level 1 - Vitrine Glass Doors
+  m_Name: Level 1 - Trophy Case Doors
   m_Controller: {fileID: 9100000, guid: f6981834c87c17d4aa8c394a9347595d, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: 134ede8d61368764ba9a7e4935763d87, type: 2}

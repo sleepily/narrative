@@ -38,6 +38,7 @@ public class Puzzle_CodeInput : Puzzle
     public override bool PuzzleCheck()
     {
         bool answerIsCorrect = playerInput.Equals(solution);
+        // Debug.Log(string.Format("Comparing {0} with {1}", playerInput, solution));
 
         if (answerIsCorrect)
             PuzzleSolved();

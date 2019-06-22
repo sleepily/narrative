@@ -81,7 +81,7 @@ public class Puzzle : MonoBehaviour
 
         foreach (Animator animator in animators)
             if (animator)
-                animator.SetBool("isSolved", true);
+                animator.SetTrigger("isSolved");
     }
 
     public virtual void PuzzleSolvedReminder() { }

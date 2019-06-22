@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Interactable_BookWithBabyPowder normal
+  m_Name: Level 1 - Trophy Case open
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -36,7 +36,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0.20108083, z: 0}
+        value: {x: 0, y: 1, z: 0.282}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -117,7 +117,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.20108083
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -136,7 +136,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: 0.282
         inSlope: 0
         outSlope: 0
         tangentMode: 136
