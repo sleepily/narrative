@@ -26,6 +26,8 @@ public class Interactable_Book : Interactable
      */
     void OnDrawGizmos()
     {
+        if (debugNumber < 0)
+            return;
         Handles.Label(transform.position, debugNumber.ToString());
     }
 

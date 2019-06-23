@@ -9644,6 +9644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  debugNumber: -1
 --- !u!114 &1714950962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9708,6 +9709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  debugNumber: -1
 --- !u!114 &1714950965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9772,6 +9774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  debugNumber: 5
 --- !u!114 &1714950968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9836,6 +9839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  debugNumber: 9
 --- !u!114 &1714950971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9900,6 +9904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  debugNumber: 1
 --- !u!114 &1714950974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9964,6 +9969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  debugNumber: 0
 --- !u!114 &1714950977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10028,6 +10034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  debugNumber: 1
 --- !u!114 &1714950980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10092,6 +10099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  debugNumber: 7
 --- !u!114 &1714950983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10156,6 +10164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  debugNumber: 0
 --- !u!114 &1714950986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10220,6 +10229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  debugNumber: 2
 --- !u!114 &1714950989
 MonoBehaviour:
   m_ObjectHideFlags: 0
