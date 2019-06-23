@@ -9,8 +9,6 @@ public class Puzzle_Xylophone : Puzzle
     bool[] solutionArray;
     public bool isPlaying = false;
 
-    public Interactable_BookWithBabyPowder bookWithBabyPowder;
-
     Interactable_XylophoneKey[] keys = new Interactable_XylophoneKey[8];
 
     private void OnEnable()
@@ -73,11 +71,5 @@ public class Puzzle_Xylophone : Puzzle
 
         for (int keyIndex = 0; keyIndex < keys.Length; keyIndex++)
             keys[keyIndex].Deselect();
-    }
-
-    public override void PuzzleSolved()
-    {
-        base.PuzzleSolved();
-        bookWithBabyPowder.Activate();
     }
 }

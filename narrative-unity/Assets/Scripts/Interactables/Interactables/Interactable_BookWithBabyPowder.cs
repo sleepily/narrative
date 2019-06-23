@@ -2,19 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interactable_BookWithBabyPowder : Interactable
+public class Interactable_BookWithBabyPowder : InteractableWithDialogue
 {
-    public Item babyPowder;
 
-    public void Activate()
-    {
-        isFocusable = true;
-    }
-
-    public override void Interact()
-    {
-        base.Interact();
-
-        babyPowder.PickupItem();
-    }
 }

@@ -161,6 +161,11 @@ public class Interactable : MonoBehaviour
         }
     }
 
+    public void SetFocusable(bool focus = true)
+    {
+        isFocusable = focus;
+    }
+
     /*
      * All possible interaction functions which are defined in the subclasses
      */
