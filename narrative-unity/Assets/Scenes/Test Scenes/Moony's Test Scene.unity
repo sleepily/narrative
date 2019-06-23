@@ -98,7 +98,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 112000000, guid: 8876b4a5378abaf42912ea271299cec2,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -279,6 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a41b40c58ab129449bb50def8b0870d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   itemStats: {fileID: 11400000, guid: 33547da7ebafd074e8eb7a29c6c660f6, type: 2}
   isCurrentItem: 0
 --- !u!64 &12304141
@@ -1957,6 +1958,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSolved: 0
+  animators: []
+  itemsToPickUp: []
   solution: 12 34 5678
   bookDistance: 0.3
 --- !u!114 &233461470
@@ -2518,6 +2521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a41b40c58ab129449bb50def8b0870d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   itemStats: {fileID: 11400000, guid: 2b65ff452b0a95543b3904c34c923e5a, type: 2}
   isCurrentItem: 0
 --- !u!114 &255757282
@@ -2831,6 +2835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f691f40f7baff46858033edc13e2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!1 &291913182
 GameObject:
   m_ObjectHideFlags: 0
@@ -2950,6 +2955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f691f40f7baff46858033edc13e2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!1 &305249801
 GameObject:
   m_ObjectHideFlags: 0
@@ -3134,9 +3140,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 321.06476
-    y: 45.503067
-    width: 128.04881
+    x: 249.1135
+    y: 17.45427
+    width: 122.911415
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3409,7 +3415,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 230.82086
     y: 119.89334
-    width: 191.46347
+    width: 182.65828
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3663,6 +3669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a41b40c58ab129449bb50def8b0870d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   itemStats: {fileID: 11400000, guid: 0a55594495db0da41834096e6cc99840, type: 2}
   isCurrentItem: 0
 --- !u!114 &392131426
@@ -3678,11 +3685,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 31.374357, y: -15.015259}
+  scrollPos: {x: 45.720364, y: 18.600529}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.8199997
+  zoom: 0.7899997
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -3988,6 +3995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f691f40f7baff46858033edc13e2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!1 &492769319
 GameObject:
   m_ObjectHideFlags: 0
@@ -4210,6 +4218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f691f40f7baff46858033edc13e2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!1 &608680204
 GameObject:
   m_ObjectHideFlags: 0
@@ -4386,6 +4395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a41b40c58ab129449bb50def8b0870d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   itemStats: {fileID: 11400000, guid: f3646721b5de95343abfdc22e6470d92, type: 2}
   isCurrentItem: 0
 --- !u!114 &608680211
@@ -4401,11 +4411,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 0, y: 0}
+  scrollPos: {x: 19.179848, y: 4.9477925}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.94000006
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -4414,7 +4424,11 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 608680209}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 608680205}
+  - {fileID: 608680208}
+  - {fileID: 608680207}
+  - {fileID: 608680206}
   variables: []
   description: 
   stepPause: 0
@@ -4601,7 +4615,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a41b40c58ab129449bb50def8b0870d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemStats: {fileID: 11400000, guid: c314631e0dce7224dbff202650519757, type: 2}
+  isFocusable: 1
+  itemStats: {fileID: 0}
   isCurrentItem: 0
 --- !u!114 &649523913
 MonoBehaviour:
@@ -4878,6 +4893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e42b4f1c154f174697b6b783b92994a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   isStraight: 0
 --- !u!114 &759344620
 MonoBehaviour:
@@ -6342,6 +6358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a41b40c58ab129449bb50def8b0870d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   itemStats: {fileID: 0}
   isCurrentItem: 0
 --- !u!114 &862252988
@@ -6459,6 +6476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f691f40f7baff46858033edc13e2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!65 &884996149
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6691,6 +6709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a41b40c58ab129449bb50def8b0870d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   itemStats: {fileID: 11400000, guid: 6575d1c8c50b22a4995178a77cb93b17, type: 2}
   isCurrentItem: 0
 --- !u!64 &992227660
@@ -7662,6 +7681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f691f40f7baff46858033edc13e2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!4 &1086662154 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1086388323499015426, guid: 910f5d7b3bc44e5449b40034316d338f,
@@ -8318,6 +8338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c469d8a055b862e4592723978aa8f348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   requiredItemKey: {fileID: 11400000, guid: 2b65ff452b0a95543b3904c34c923e5a, type: 2}
 --- !u!114 &1483834705
 MonoBehaviour:
@@ -9194,6 +9215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f691f40f7baff46858033edc13e2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!1 &1542314020
 GameObject:
   m_ObjectHideFlags: 0
@@ -9445,8 +9467,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSolved: 0
+  animators: []
+  itemsToPickUp: []
   solution: 
-  magazine: {fileID: 992227659}
 --- !u!114 &1682841711
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -9590,6 +9613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a41b40c58ab129449bb50def8b0870d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   itemStats: {fileID: 11400000, guid: 1daaca8efa4b71743a10b2bb8b9a9eef, type: 2}
   isCurrentItem: 0
 --- !u!114 &1772068963
@@ -9764,6 +9788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a41b40c58ab129449bb50def8b0870d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   itemStats: {fileID: 11400000, guid: c303d23be30667e438e44ffaf69ee369, type: 2}
   isCurrentItem: 0
 --- !u!114 &1839126458
@@ -9936,6 +9961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f691f40f7baff46858033edc13e2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!65 &1857915505
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10113,6 +10139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f691f40f7baff46858033edc13e2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!4 &1889476898 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: e2f27864d3dcc4a4cb91d5ee41d1ce82,
@@ -10304,6 +10331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f691f40f7baff46858033edc13e2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!1 &2125694949
 GameObject:
   m_ObjectHideFlags: 0
