@@ -98,7 +98,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 112000000, guid: 8876b4a5378abaf42912ea271299cec2,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -364,6 +364,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSolved: 0
+  animators: []
+  itemsToPickUp: []
   solution: 12 34 5678
   bookDistance: 0.3
 --- !u!114 &233461470
@@ -886,7 +888,7 @@ Transform:
   - {fileID: 410144196}
   - {fileID: 782384529}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &255757280
 GameObject:
@@ -924,6 +926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a41b40c58ab129449bb50def8b0870d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   itemStats: {fileID: 11400000, guid: 2b65ff452b0a95543b3904c34c923e5a, type: 2}
   isCurrentItem: 0
 --- !u!114 &255757282
@@ -1238,6 +1241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f691f40f7baff46858033edc13e2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!1 &291913182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,6 +1361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f691f40f7baff46858033edc13e2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!1 &305249801
 GameObject:
   m_ObjectHideFlags: 0
@@ -1493,6 +1498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca4b9af6cf99553448b9bc4fa01512df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   angleIncrement: 36
   rotationSpeed: 1.4
 --- !u!114 &320145870
@@ -1761,6 +1767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f691f40f7baff46858033edc13e2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!1 &492769319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1971,6 +1978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f691f40f7baff46858033edc13e2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!1001 &624041061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2199,6 +2207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44fe3c45b121e0246863c6dfae516b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   selected: 0
 --- !u!64 &624041074
 MeshCollider:
@@ -2226,6 +2235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b4622f7665b530478f3faeceb00af59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!114 &624041076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2289,6 +2299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44fe3c45b121e0246863c6dfae516b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   selected: 0
 --- !u!114 &624041079
 MonoBehaviour:
@@ -2353,6 +2364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44fe3c45b121e0246863c6dfae516b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   selected: 0
 --- !u!114 &624041082
 MonoBehaviour:
@@ -2417,6 +2429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44fe3c45b121e0246863c6dfae516b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   selected: 0
 --- !u!114 &624041085
 MonoBehaviour:
@@ -2481,6 +2494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44fe3c45b121e0246863c6dfae516b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   selected: 0
 --- !u!114 &624041088
 MonoBehaviour:
@@ -2545,6 +2559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44fe3c45b121e0246863c6dfae516b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   selected: 0
 --- !u!114 &624041091
 MonoBehaviour:
@@ -2609,6 +2624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44fe3c45b121e0246863c6dfae516b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   selected: 0
 --- !u!114 &624041094
 MonoBehaviour:
@@ -2673,6 +2689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44fe3c45b121e0246863c6dfae516b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   selected: 0
 --- !u!114 &624041097
 MonoBehaviour:
@@ -2775,7 +2792,7 @@ PrefabInstance:
     - target: {fileID: 8163109733526020031, guid: 910f5d7b3bc44e5449b40034316d338f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8163109733526020031, guid: 910f5d7b3bc44e5449b40034316d338f,
         type: 3}
@@ -2963,6 +2980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e42b4f1c154f174697b6b783b92994a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   isStraight: 0
 --- !u!114 &759344620
 MonoBehaviour:
@@ -3745,8 +3763,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSolved: 0
+  animators: []
+  itemsToPickUp: []
   solution: 10010110
   isPlaying: 0
+  bookWithBabyPowder: {fileID: 0}
 --- !u!114 &791224483
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4194,6 +4215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f691f40f7baff46858033edc13e2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!65 &884996149
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4421,6 +4443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a41b40c58ab129449bb50def8b0870d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   itemStats: {fileID: 11400000, guid: 6575d1c8c50b22a4995178a77cb93b17, type: 2}
   isCurrentItem: 0
 --- !u!64 &992227660
@@ -4645,7 +4668,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: d16cd79d451d43546a9d8b0adf5ed509,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d16cd79d451d43546a9d8b0adf5ed509,
         type: 3}
@@ -4685,7 +4708,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: d16cd79d451d43546a9d8b0adf5ed509,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d16cd79d451d43546a9d8b0adf5ed509,
         type: 3}
@@ -4959,6 +4982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f691f40f7baff46858033edc13e2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!1 &1205404942
 GameObject:
   m_ObjectHideFlags: 0
@@ -4988,7 +5012,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1205404944
 MonoBehaviour:
@@ -5046,7 +5070,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1293893412
 GameObject:
@@ -5230,90 +5254,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318006211}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1347538339
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 4df06af8f530c0b409b195dc3018ec75,
-        type: 3}
-      propertyPath: m_Name
-      value: greenhouse_test
-      objectReference: {fileID: 0}
-    - target: {fileID: -2935178516487846228, guid: 4df06af8f530c0b409b195dc3018ec75,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 4df06af8f530c0b409b195dc3018ec75,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.374608
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 4df06af8f530c0b409b195dc3018ec75,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.59
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 4df06af8f530c0b409b195dc3018ec75,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.029326
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 4df06af8f530c0b409b195dc3018ec75,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 4df06af8f530c0b409b195dc3018ec75,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 4df06af8f530c0b409b195dc3018ec75,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 4df06af8f530c0b409b195dc3018ec75,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 4df06af8f530c0b409b195dc3018ec75,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 4df06af8f530c0b409b195dc3018ec75,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 4df06af8f530c0b409b195dc3018ec75,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 4df06af8f530c0b409b195dc3018ec75,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3065081794545675929, guid: 4df06af8f530c0b409b195dc3018ec75,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 3065081794545675929, guid: 4df06af8f530c0b409b195dc3018ec75,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.66
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4df06af8f530c0b409b195dc3018ec75, type: 3}
 --- !u!1 &1466319566
 GameObject:
   m_ObjectHideFlags: 0
@@ -5508,6 +5448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bc800bb9363277478ab6d805bf9ed39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!114 &1479019303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5760,6 +5701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c469d8a055b862e4592723978aa8f348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   requiredItemKey: {fileID: 11400000, guid: 2b65ff452b0a95543b3904c34c923e5a, type: 2}
 --- !u!114 &1483834705
 MonoBehaviour:
@@ -6636,6 +6578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f691f40f7baff46858033edc13e2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!1 &1542314020
 GameObject:
   m_ObjectHideFlags: 0
@@ -6682,7 +6625,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1626033273
 GameObject:
@@ -6861,8 +6804,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSolved: 0
+  animators: []
+  itemsToPickUp: []
   solution: 
-  magazine: {fileID: 992227659}
 --- !u!114 &1682841711
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6936,6 +6880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a41b40c58ab129449bb50def8b0870d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
   itemStats: {fileID: 11400000, guid: c303d23be30667e438e44ffaf69ee369, type: 2}
   isCurrentItem: 0
 --- !u!114 &1839126458
@@ -7108,6 +7053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f691f40f7baff46858033edc13e2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!65 &1857915505
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7285,6 +7231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f691f40f7baff46858033edc13e2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!1 &1885890757 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2555079074185682087, guid: c344c543567342145a993bb869147648,
@@ -7340,6 +7287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2ae15b74e5dee348899db9112dfd5e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!64 &1885890760
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7418,7 +7366,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1955832352
 GameObject:
@@ -7630,6 +7578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f691f40f7baff46858033edc13e2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!4 &2061617535 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4534179366033693211, guid: 910f5d7b3bc44e5449b40034316d338f,
