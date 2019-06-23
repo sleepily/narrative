@@ -12,11 +12,21 @@ public class Interactable_Book : Interactable
     Puzzle_BookArray puzzle;
     int bookID = -1;
 
+    public int debugNumber = 0;
+
     protected override void StartFunctions()
     {
         base.StartFunctions();
 
         GetBookID();
+    }
+
+    /*
+     * Debugging the book order
+     */
+    void OnDrawGizmos()
+    {
+        Handles.Label(transform.position, debugNumber.ToString());
     }
 
     public int GetBookID()
