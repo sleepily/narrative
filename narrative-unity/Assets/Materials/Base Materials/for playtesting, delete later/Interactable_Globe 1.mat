@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Interactable_Globe
+  m_Name: Interactable_Globe 1
   m_Shader: {fileID: -6465566751694194690, guid: 7d249fc12aa62ca4fa906df9ab6afa3b,
     type: 3}
   m_ShaderKeywords: 
@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Texture:
-        m_Texture: {fileID: 2800000, guid: a37feeca580f6dd428da060a675f4bdc, type: 3}
+        m_Texture: {fileID: 2800000, guid: 44432d855f2d93048856eda62681edac, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
