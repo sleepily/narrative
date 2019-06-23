@@ -83,6 +83,7 @@ public class Interactable_Book : Interactable
     {
         selectedForSwap = true;
         puzzle.AddBookToSwitch(this);
+
         SetGlowColor(selectedGlowColor, isInstantTransition: true);
     }
 
@@ -97,6 +98,7 @@ public class Interactable_Book : Interactable
     public void Swapped()
     {
         selectedForSwap = false;
+
         SetGlowColor(Color.clear, isInstantTransition: true);
     }
 }

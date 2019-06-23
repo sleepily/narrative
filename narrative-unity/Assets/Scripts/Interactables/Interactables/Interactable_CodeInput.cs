@@ -10,7 +10,8 @@ public class Interactable_CodeInput : Interactable
     {
         digits,
         date,
-        text
+        HELP,
+        ILOVEYOU
     }
 
     public CodeType codeType;

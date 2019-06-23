@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Tools;
 
 public class PlayerMovement : MonoBehaviour
 {
     public GameObject cameraArm;
     public GameObject playerModel;
+
+    public Animator animator;
 
     public PlayerMovementSettings movementSettings;
 
@@ -17,10 +20,7 @@ public class PlayerMovement : MonoBehaviour
     CharacterController controller;
     Vector2 inputAxis;
 
-    private void Start()
-    {
-        GetAllComponents();
-    }
+    private void Start() => GetAllComponents();
 
     void GetAllComponents()
     {
@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         DoPlayerMovement();
+        UpdateAnimator();
     }
 
     /*
@@ -50,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
         if (!movementInput)
         {
             controller.Move(Physics.gravity);
+            movementSpeed = 0f;
             return;
         }
 
@@ -112,5 +114,11 @@ public class PlayerMovement : MonoBehaviour
         );
 
         return viewingRotation;
+    }
+
+    void UpdateAnimator()
+    {
+        float walkingSpeed = ExtensionMethods.Map01(movementSpeed, 0f, movementSettings.walkingSpeed);
+        animator.SetFloat("walkingSpeed", walkingSpeed);
     }
 }

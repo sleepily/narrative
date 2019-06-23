@@ -55,6 +55,7 @@ public class Puzzle_Xylophone : Puzzle
         {
             if (solutionArray[keyIndex] != keys[keyIndex].selected)
             {
+                Debug.Log("Wrong key at position " + keyIndex);
                 PuzzleReset();
                 return false;
             }
@@ -70,12 +71,5 @@ public class Puzzle_Xylophone : Puzzle
 
         for (int keyIndex = 0; keyIndex < keys.Length; keyIndex++)
             keys[keyIndex].Deselect();
-    }
-
-    public override void PuzzleSolved()
-    {
-        base.PuzzleSolved();
-
-        Debug.Log("Xylophone correct");
     }
 }

@@ -4,12 +4,5 @@ using UnityEngine;
 
 public class Puzzle_CrookedPainting : Puzzle
 {
-    public Item magazine;
 
-    public override void PuzzleSolved()
-    {
-        base.PuzzleSolved();
-
-        magazine.PickupItem();
-    }
 }

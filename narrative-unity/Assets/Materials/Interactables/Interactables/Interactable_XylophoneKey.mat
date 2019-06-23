@@ -39,5 +39,5 @@ Material:
     m_Colors:
     - Color_51B51BFA: {r: 27.53272, g: 21.67823, b: 0, a: 1}
     - Color_9D90B658: {r: 1, g: 1, b: 1, a: 0}
-    - _Albedo: {r: 0.68164825, g: 0.69456196, b: 0.6981132, a: 0}
-    - _GlowColor: {r: 5.278032, g: 4.7812757, b: 0, a: 1}
+    - _Albedo: {r: 1, g: 1, b: 1, a: 1}
+    - _GlowColor: {r: 12.125731, g: 0, b: 0, a: 1}

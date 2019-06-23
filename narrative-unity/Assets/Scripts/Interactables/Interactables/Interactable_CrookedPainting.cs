@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-public class Interactable_CrookedPainting : Interactable
+public class Interactable_CrookedPainting : InteractableWithDialogue
 {
     Puzzle_CrookedPainting puzzle;
 
@@ -23,17 +23,13 @@ public class Interactable_CrookedPainting : Interactable
     {
         base.Interact();
 
-        if (isStraight)
-        {
-            puzzle.PuzzleSolvedReminder();
-            return;
-        }
+        puzzle.TriggerDialogue();
     }
 
     public void SetStraight()
     {
         isStraight = true;
-        animator.SetBool("isStraight", isStraight);
+        animator.SetTrigger("isSolved");
     }
 
     public void SolvePuzzle()

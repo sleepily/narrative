@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class Puzzle_CodeInput : Puzzle
 {
-    public Interactable_CodeInput.CodeType codeType;
-
-    int playerInput;
-    int solutionInt;
+    protected string codeType = "";
+    string playerInput;
 
     private void OnEnable()
     {
-        EventManager.Global.StartListening("Puzzle_CodeInput " + codeType.ToString(), EventFunction);
+        OnEnableFunctions();
+    }
+
+    protected virtual void OnEnableFunctions()
+    {
+        EventManager.Global.StartListening("Puzzle_CodeInput " + codeType, EventFunction);
     }
 
     protected override void StartFunctions()
@@ -19,23 +22,23 @@ public class Puzzle_CodeInput : Puzzle
         base.StartFunctions();
 
         solution = solution.Trim();
-        solutionInt = int.Parse(solution);
     }
 
-    public void SetPlayerInput(int inputNumber)
+    public void SetPlayerInput(string inputString)
     {
-        playerInput = inputNumber;
+        playerInput = inputString.Trim();
     }
 
     public void EventFunction(GameObject sender, string playerAnswer = "")
     {
-        SetPlayerInput(int.Parse(playerAnswer));
+        SetPlayerInput(playerAnswer);
         PuzzleCheck();
     }
 
     public override bool PuzzleCheck()
     {
-        bool answerIsCorrect = (playerInput == solutionInt);
+        bool answerIsCorrect = playerInput.Equals(solution);
+        // Debug.Log(string.Format("Comparing {0} with {1}", playerInput, solution));
 
         if (answerIsCorrect)
             PuzzleSolved();
@@ -43,12 +46,5 @@ public class Puzzle_CodeInput : Puzzle
             TriggerDialogue();
 
         return answerIsCorrect;
-    }
-
-    public override void PuzzleSolved()
-    {
-        flowchart.SetBooleanVariable("isSolved", true);
-
-        base.PuzzleSolved();
     }
 }

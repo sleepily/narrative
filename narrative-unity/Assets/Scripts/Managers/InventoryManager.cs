@@ -58,7 +58,7 @@ public class InventoryManager : MonoBehaviour
 
         if (items.Contains(itemToAdd))
         {
-            Debug.Log(string.Format(stringItemAlreadyInInventory, itemToAdd.name));
+            Debug.Log(string.Format(stringItemAlreadyInInventory, itemToAdd.itemStats.ID));
             return;
         }
 
@@ -66,7 +66,7 @@ public class InventoryManager : MonoBehaviour
 
         SetCurrentItem(itemToAdd);
 
-        Debug.Log(string.Format(stringItemAdded, itemToAdd.name));
+        Debug.Log(string.Format(stringItemAdded, itemToAdd.itemStats.ID));
     }
 
     public void Remove(GameObject sender, string parameter = "")
@@ -90,7 +90,7 @@ public class InventoryManager : MonoBehaviour
     bool GetItemInInventory(string itemID, out Item itemOut)
     {
         foreach (Item item in items)
-            if (item.name == itemID)
+            if (item.itemStats.ID == itemID)
             {
                 itemOut = item;
                 return true;

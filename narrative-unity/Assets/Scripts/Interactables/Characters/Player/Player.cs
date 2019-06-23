@@ -10,10 +10,7 @@ public class Player : CharacterWithDialogue
 
     protected override void StartFunctions() { }
 
-    protected override void GetAllComponents()
-    {
-        GetFlowchart();
-    }
+    protected override void GetAllComponents() => GetFlowchart();
 
     protected override void UpdateFunctions() { }
 

@@ -6,7 +6,6 @@ using System.Text.RegularExpressions;
 
 public class Interactable_XylophoneKey : Interactable
 {
-    Color selectedGlowColor = Color.blue;
     public bool selected = false;
 
     int keyID = -1;
@@ -71,7 +70,7 @@ public class Interactable_XylophoneKey : Interactable
     void Select()
     {
         selected = true;
-        SetGlowColor(selectedGlowColor, isInstantTransition: true);
+        SetGlowColor(meshRenderer.material.GetColor("_GlowColor"), isInstantTransition: true);
     }
 
     public void Deselect()

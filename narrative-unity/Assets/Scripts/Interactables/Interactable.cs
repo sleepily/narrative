@@ -17,9 +17,8 @@ public class Interactable : MonoBehaviour
     protected float colorLerpFactor = .2f;
     protected bool lerpIsFinished = true;
 
-    [Header("Dialogue")]
-    protected Flowchart flowchart;
-    protected bool isInDialogue;
+    [Tooltip("Deselect in case this interactable should not be focusable.")]
+    public bool isFocusable = true;
 
     /*
      * OnMouse functions to determine whether to focus, unfocus, interact with or use an object
@@ -39,6 +38,9 @@ public class Interactable : MonoBehaviour
      */
     void MouseButtonCheck()
     {
+        if (!isFocusable)
+            return;
+
         if (PlayerAimInteraction.IsFocusable(this))
         {
             if (Input.GetMouseButtonDown(0))
@@ -76,71 +78,6 @@ public class Interactable : MonoBehaviour
         // Get components needed for color glow on hover
         meshRenderer = GetComponent<MeshRenderer>();
         glowColor = meshRenderer.material.GetColor("_GlowColor");
-
-        GetFlowchart();
-    }
-
-    protected Flowchart GetFlowchart()
-    {
-        if (!flowchart)
-            flowchart = GetComponent<Flowchart>();
-
-        return flowchart;
-    }
-
-    protected bool IsInDialogueCheck()
-    {
-        if (!GetFlowchart())
-            return false;
-
-        return isInDialogue = flowchart.HasExecutingBlocks();
-    }
-
-    /*
-     * Execute Start block, which will handle conditions and jumps
-     */
-    public virtual void TriggerDialogue()
-    {
-        if (IsInDialogueCheck())
-            return;
-
-        flowchart.ExecuteBlock("Start");
-        return;
-    }
-
-    /*
-     * Trigger character dialogue using an item and jump to the block with the item's ID
-     */
-    public virtual bool TriggerItemDialogue(Item item = null)
-    {
-        if (IsInDialogueCheck())
-            return false;
-
-        if (!item)
-            item = GameManager.GLOBAL.inventoryManager.GetCurrentItem();
-
-        if (!item)
-        {
-            Debug.Log(string.Format("<color=orange>{0}:</color> No item for dialogue.", name));
-            return false;
-        }
-
-        Block itemBlock = flowchart.FindBlock(item.itemStats.name);
-
-        if (!itemBlock)
-        {
-            Block wrongItemBlock = flowchart.FindBlock("WrongItem");
-
-            if (wrongItemBlock)
-                flowchart.ExecuteBlock(wrongItemBlock);
-            else
-                GameManager.GLOBAL.player.WrongItemDialogue();
-
-            return false;
-        }
-
-        flowchart.ExecuteBlock(itemBlock);
-        return true;
     }
 
     /*
@@ -224,6 +161,11 @@ public class Interactable : MonoBehaviour
         }
     }
 
+    public void SetFocusable(bool focus = true)
+    {
+        isFocusable = focus;
+    }
+
     /*
      * All possible interaction functions which are defined in the subclasses
      */
@@ -231,7 +173,7 @@ public class Interactable : MonoBehaviour
 
     public virtual void Unfocus() => SetGlowColor(Color.clear);
 
-    public virtual void Interact() => TriggerDialogue();
+    public virtual void Interact() { }
 
-    public virtual void Use() => TriggerItemDialogue();
+    public virtual void Use() { }
 }

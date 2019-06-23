@@ -82,7 +82,7 @@ public class EventManager
         log = string.Format(stopString, eventID, "orange");
 
         if (logLevel == LogLevel.Warnings)
-            Debug.Log(log);
+            Debug.LogWarning(log);
     }
 
     public void TriggerEvent(string eventID, GameObject sender, string parameter = "")
@@ -98,7 +98,7 @@ public class EventManager
             log = string.Format(noKeyString, eventID, "red");
 
             if (logLevel == LogLevel.Errors)
-                Debug.Log(log);
+                Debug.LogError(log);
 
             return;
         }

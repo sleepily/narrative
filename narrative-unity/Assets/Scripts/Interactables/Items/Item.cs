@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : Interactable
+public class Item : InteractableWithDialogue
 {
     [Header("General")]
     public ItemStats itemStats;
@@ -35,11 +35,16 @@ public class Item : Interactable
     {
         if (isInInventory)
             return;
+
+        base.Use();
     }
 
     public void PickupItem()
     {
-        EventManager.Global.TriggerEvent("Inventory_Add", gameObject, name);
+        if (!itemStats.canBePickedUp)
+            return;
+
+        EventManager.Global.TriggerEvent("Inventory_Add", gameObject, itemStats.ID);
         isInInventory = true;
 
         SetGlowColor(Color.clear, true);
@@ -51,7 +56,8 @@ public class Item : Interactable
 
     public void UseItem()
     {
-        EventManager.Global.TriggerEvent("Inventory_Remove", gameObject, name);
+        Debug.Log("Using " + itemStats.ID);
+        EventManager.Global.TriggerEvent("Inventory_Remove", gameObject, itemStats.ID);
     }
 
     protected override void UpdateFunctions()
@@ -68,6 +74,14 @@ public class Item : Interactable
         Quaternion localRotation = transform.localRotation;
         localRotation.eulerAngles = new Vector3(.2f, .3f, 0f);
         transform.localRotation = localRotation;
+
+        float itemScale = 1f;
+
+        if (GameManager.GLOBAL.inventoryManager.isOpen)
+        {
+            if (isCurrentItem)
+                itemScale = itemStats.inventoryInspectionScale;
+        }
 
         transform.localPosition = Vector3.zero;
     }
