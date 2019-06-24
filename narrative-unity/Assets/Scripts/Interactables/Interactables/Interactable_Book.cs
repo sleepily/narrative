@@ -23,14 +23,14 @@ public class Interactable_Book : Interactable
 
     /*
      * Debugging the book order
-     */
+     
     void OnDrawGizmos()
     {
         if (debugNumber < 0)
             return;
         Handles.Label(transform.position, debugNumber.ToString());
     }
-
+    */
     public int GetBookID()
     {
         if (bookID >= 0)

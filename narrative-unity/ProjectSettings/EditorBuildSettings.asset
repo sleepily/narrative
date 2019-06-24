@@ -5,19 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/0 Setup Scene.unity
     guid: c3899f99c62e06f479ba8557f0937f64
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/1 Stairs to Library.unity
     guid: f776657961c92bd40be6942d951947a8
   - enabled: 1
     path: Assets/Scenes/2 Library.unity
     guid: 8a0e62ef1eca82b458f68b110860f587
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/3 Stairs to Greenhouse.unity
     guid: 65fcd1deba0c5d544af3b50b52f02c37
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/4 Greenhouse.unity
     guid: 6d0a65dfd93ccc648a6198f27c7265e0
   m_configObjects: {}
