@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Item_Key
+  m_Name: Interactable_LemonadeGlass
   m_Shader: {fileID: -6465566751694194690, guid: 7d249fc12aa62ca4fa906df9ab6afa3b,
     type: 3}
   m_ShaderKeywords: 
@@ -39,5 +39,5 @@ Material:
     m_Colors:
     - Color_51B51BFA: {r: 27.53272, g: 21.67823, b: 0, a: 1}
     - Color_9D90B658: {r: 1, g: 1, b: 1, a: 0}
-    - _Albedo: {r: 0.8018868, g: 0.15420902, b: 0, a: 0}
-    - _GlowColor: {r: 9.082411, g: 8.274029, b: 0, a: 1}
+    - _Albedo: {r: 0.9622642, g: 0.92141336, b: 0.9468071, a: 0.078431375}
+    - _GlowColor: {r: 5.278032, g: 4.7812757, b: 0, a: 1}

@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 661370626}
   - component: {fileID: 661370625}
   - component: {fileID: 661370627}
+  - component: {fileID: 661370628}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -203,9 +204,9 @@ MonoBehaviour:
   isPaused: 0
   inventoryManager: {fileID: 419560851}
   sceneLoader: {fileID: 739304756}
-  player: {fileID: 6557549512754107860}
   interactableSayDialog: {fileID: 1450946498}
   characterSayDialog: {fileID: 0}
+  player: {fileID: 6557549512754107860}
 --- !u!4 &661370626
 Transform:
   m_ObjectHideFlags: 0
@@ -238,6 +239,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   postProcessVolume: {fileID: 0}
   reloadKey: 114
+--- !u!114 &661370628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661370624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70b9ae45f9f8854c9e8e2ac2ef615cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &739304755
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,6 +280,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc12e66f9d90e448b4226d746fe9d73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentLevelIndex: 1
+  levelTeleportLocations:
+  - {fileID: 11400000, guid: 2e18c09d26e19dd41853efe779492e2c, type: 2}
+  - {fileID: 11400000, guid: 8445c194b1d6efa4793ff0ac3fc0ea8c, type: 2}
+  - {fileID: 11400000, guid: e68ffae6b9ca4ca47b3ee262e6fee256, type: 2}
+  - {fileID: 11400000, guid: c72823bf099b4f243b2a1f6d8f8b4299, type: 2}
+  - {fileID: 11400000, guid: 17d624eeed070d54387c61406f6bfe06, type: 2}
 --- !u!4 &739304757
 Transform:
   m_ObjectHideFlags: 0
@@ -421,6 +441,62 @@ Transform:
   m_Father: {fileID: 661370626}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1777237338 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1777237338, guid: 910f5d7b3bc44e5449b40034316d338f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5248654216896492709}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1923009412
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1923009414}
+  - component: {fileID: 1923009413}
+  m_Layer: 0
+  m_Name: _FungusState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1923009413
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923009412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedFlowchart: {fileID: 1777237338}
+--- !u!4 &1923009414
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923009412}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1086388324447981038 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1086388323499015426, guid: 910f5d7b3bc44e5449b40034316d338f,
@@ -448,12 +524,12 @@ PrefabInstance:
     - target: {fileID: 8163109733526020031, guid: 910f5d7b3bc44e5449b40034316d338f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.71
+      value: -22.33
       objectReference: {fileID: 0}
     - target: {fileID: 8163109733526020031, guid: 910f5d7b3bc44e5449b40034316d338f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3.3
       objectReference: {fileID: 0}
     - target: {fileID: 8163109733526020031, guid: 910f5d7b3bc44e5449b40034316d338f,
         type: 3}

@@ -38,6 +38,9 @@ public class PlayerMovement : MonoBehaviour
      */
     void DoPlayerMovement()
     {
+        if (!GameManager.GLOBAL.sceneLoader.HasFinishedLoading())
+            return;
+
         // Don't allow player movement when the inventory is open
         if (GameManager.GLOBAL.inventoryManager.isOpen)
             return;
@@ -50,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         // Only apply gravity if there is no input 
         if (!movementInput)
         {
-            controller.Move(Physics.gravity);
+            controller.Move(Physics.gravity * Time.deltaTime);
             movementSpeed = 0f;
             return;
         }

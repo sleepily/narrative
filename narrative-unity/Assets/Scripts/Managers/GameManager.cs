@@ -14,11 +14,15 @@ public class GameManager : MonoBehaviour
     public SceneLoader sceneLoader;
 
     [Header("Global References")]
+    public SayDialog interactableSayDialog;
+    public SayDialog characterSayDialog;
+
+    [HideInInspector]
     public Player player;
-    public SayDialog interactableSayDialog, characterSayDialog;
 
     private void Awake()
     {
         GLOBAL = this;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 }

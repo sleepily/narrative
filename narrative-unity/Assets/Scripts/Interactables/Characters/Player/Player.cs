@@ -7,6 +7,7 @@ using Fungus;
 public class Player : CharacterWithDialogue
 {
     public Camera thirdPersonCamera;
+    public TeleportPlayer teleportPlayer;
 
     protected override void StartFunctions() { }
 

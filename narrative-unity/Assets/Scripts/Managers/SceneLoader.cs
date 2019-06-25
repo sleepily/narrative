@@ -5,9 +5,48 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    public bool LoadScene(int sceneBuildIndex = 1, LoadSceneMode loadSceneMode = LoadSceneMode.Single)
+    public enum SceneIndices
     {
+        Setup,
+        Stairs1,
+        Library,
+        Stairs2,
+        Greenhouse,
+        Stairs3,
+        Void,
+        Stairs4,
+        Ending
+    }
+
+    [Header("Playtesting")]
+    public SceneIndices currentLevelIndex = SceneIndices.Stairs1;
+
+    public List<TeleportLocation> levelTeleportLocations;
+
+    bool hasFinishedLoading;
+
+    private void Start()
+    {
+        LoadScene((int)currentLevelIndex);
+    }
+
+    int SetCurrentLevel(int index = 1)
+    {
+        currentLevelIndex = (SceneIndices)index;
+        return index;
+    }
+
+    public bool LoadScene(int sceneBuildIndex = 0, LoadSceneMode loadSceneMode = LoadSceneMode.Single, bool teleportPlayer = true)
+    {
+        if (sceneBuildIndex <= 0)
+            sceneBuildIndex = SetCurrentLevel();
+
+        Debug.Log("Loading scene " + sceneBuildIndex + " with mode " + loadSceneMode.ToString());
+
         StartCoroutine(Coroutine_LoadScene(sceneBuildIndex, loadSceneMode));
+
+        if (teleportPlayer)
+            GameManager.GLOBAL.player.teleportPlayer.Teleport(levelTeleportLocations[sceneBuildIndex - 1]);
 
         return true;
     }
@@ -24,13 +63,28 @@ public class SceneLoader : MonoBehaviour
         return SceneManager.GetSceneByName(sceneName).buildIndex;
     }
 
+    public bool HasFinishedLoading()
+    {
+        return hasFinishedLoading;
+    }
+
     IEnumerator Coroutine_LoadScene(int sceneBuildIndex, LoadSceneMode loadSceneMode)
     {
+        if (!hasFinishedLoading)
+            yield return null;
+
+        hasFinishedLoading = false;
         yield return SceneManager.LoadSceneAsync(sceneBuildIndex, loadSceneMode);
+        hasFinishedLoading = true;
     }
 
     IEnumerator Coroutine_UnloadScene(int sceneBuildIndex)
     {
+        if (!hasFinishedLoading)
+            yield return null;
+
+        hasFinishedLoading = false;
         yield return SceneManager.UnloadSceneAsync(sceneBuildIndex);
+        hasFinishedLoading = true;
     }
 }

@@ -120,20 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!64 &6337981
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4400251635586232387}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -6932458794391701229, guid: d16cd79d451d43546a9d8b0adf5ed509, type: 3}
 --- !u!1001 &50949590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17264,14 +17250,41 @@ GameObject:
   - component: {fileID: 2814976207334402403}
   - component: {fileID: 2791426280062424174}
   - component: {fileID: 632676357064179547}
-  - component: {fileID: 6337981}
+  - component: {fileID: 4400251635586232388}
+  - component: {fileID: 4400251635586232389}
   m_Layer: 0
-  m_Name: L_Door_Entrance
+  m_Name: Exit Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4400251635586232388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4400251635586232387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9172263921c14474b951dd2be30cc4f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 11400000, guid: e68ffae6b9ca4ca47b3ee262e6fee256, type: 2}
+--- !u!65 &4400251635586232389
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4400251635586232387}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 183.48892, y: 307.1082, z: 22.286139}
+  m_Center: {x: -87.12467, y: 0, z: -0.000101089456}
 --- !u!1 &4428874558796470420
 GameObject:
   m_ObjectHideFlags: 0
@@ -20161,7 +20174,7 @@ GameObject:
   - component: {fileID: 354449679722262999}
   - component: {fileID: 1077230343}
   m_Layer: 0
-  m_Name: C_Door_Front
+  m_Name: Entrance Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
