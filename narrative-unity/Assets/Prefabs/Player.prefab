@@ -2010,8 +2010,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cadd54e4832aeef4b9359f44cbe335cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationRange: {x: 120, y: 361}
-  rotationRangeOffset: {x: 0, y: 0}
+  rotationRange: {x: 136, y: 361}
+  rotationRangeOffset: {x: 10, y: 0}
   rotationSpeed: 5
   dampingTime: 0
   autoZeroVerticalOnMobile: 1

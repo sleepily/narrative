@@ -27,7 +27,7 @@ public class DemoScripts : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(reloadKey))
-            GameManager.GLOBAL.sceneLoader.LoadScene(0);
+            GameManager.GLOBAL.sceneLoader.ReloadScene();
 
         if (postProcessVolume)
         {

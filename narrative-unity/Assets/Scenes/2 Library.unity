@@ -22429,21 +22429,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -27, y: 14}
+  scrollPos: {x: 107.75256, y: 11.051544}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.97
   scrollViewRect:
     serializedVersion: 2
     x: 0
     y: 0
     width: 0
     height: 0
-  selectedBlocks:
-  - {fileID: 8296172669043255497}
-  selectedCommands:
-  - {fileID: 8296172669043255500}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 8296172669043255495}
   description: 
@@ -22621,7 +22619,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 366
     y: 60
-    width: 133
+    width: 135.56702
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -22671,8 +22669,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 182
-    y: 69
+    x: 195
+    y: 89
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
