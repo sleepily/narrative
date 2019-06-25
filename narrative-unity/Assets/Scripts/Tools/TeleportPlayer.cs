@@ -29,6 +29,8 @@ public class TeleportPlayer : MonoBehaviour
         if (!destination)
             return;
 
+        Debug.Log("Teleporting to " + destination.location);
+
         this.transform.position = destination.location;
     }
 
