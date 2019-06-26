@@ -57,7 +57,8 @@ public class Item : InteractableWithDialogue
     public void UseItem()
     {
         Debug.Log("Using " + itemStats.ID);
-        EventManager.Global.TriggerEvent("Inventory_Remove", gameObject, itemStats.ID);
+        // EventManager.Global.TriggerEvent("Inventory_Remove", gameObject, itemStats.ID);
+        GameManager.GLOBAL.inventoryManager.Remove(gameObject, itemStats.ID);
     }
 
     protected override void UpdateFunctions()

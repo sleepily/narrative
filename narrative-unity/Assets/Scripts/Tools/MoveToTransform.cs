@@ -9,7 +9,7 @@ public class MoveToTransform : MonoBehaviour
     public void Move()
     {
         transform.parent = newParent;
-        transform.position = Vector3.zero;
-        transform.rotation = Quaternion.Euler(Vector3.zero);
+        transform.localPosition = Vector3.zero;
+        transform.localRotation = Quaternion.Euler(Vector3.zero);
     }
 }
