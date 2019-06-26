@@ -9,6 +9,9 @@ public class Player : CharacterWithDialogue
     public Camera thirdPersonCamera;
     public TeleportPlayer teleportPlayer;
 
+    [HideInInspector]
+    public bool isLocked = false;
+
     protected override void StartFunctions() { }
 
     protected override void GetAllComponents() => GetFlowchart();

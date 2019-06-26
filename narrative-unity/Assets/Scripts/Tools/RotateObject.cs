@@ -11,6 +11,6 @@ public class RotateObject : MonoBehaviour
 
     private void Update()
     {
-        transform.Rotate(rotationAxis, rotationSpeed * Time.deltaTime);
+        transform.Rotate(rotationAxis.normalized, rotationSpeed * Time.deltaTime);
     }
 }

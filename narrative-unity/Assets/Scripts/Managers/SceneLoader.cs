@@ -64,8 +64,12 @@ public class SceneLoader : MonoBehaviour
             yield return null;
 
         hasFinishedLoading = false;
+        GameManager.GLOBAL.player.isLocked = true;
+
         yield return SceneManager.LoadSceneAsync(sceneBuildIndex, loadSceneMode);
+
         hasFinishedLoading = true;
+        GameManager.GLOBAL.player.isLocked = false;
     }
 
     IEnumerator Coroutine_UnloadScene(int sceneBuildIndex)
@@ -74,7 +78,11 @@ public class SceneLoader : MonoBehaviour
             yield return null;
 
         hasFinishedLoading = false;
+        GameManager.GLOBAL.player.isLocked = true;
+
         yield return SceneManager.UnloadSceneAsync(sceneBuildIndex);
+
         hasFinishedLoading = true;
+        GameManager.GLOBAL.player.isLocked = false;
     }
 }

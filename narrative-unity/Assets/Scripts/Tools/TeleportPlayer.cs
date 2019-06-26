@@ -34,8 +34,11 @@ public class TeleportPlayer : MonoBehaviour
         this.transform.position = destination.location;
     }
 
-    public void TeleportIntoLevel(TeleportLocation destination)
+    public void TeleportIntoLevel(TeleportLocation destination, bool loseItems = true)
     {
+        if (loseItems)
+            GameManager.GLOBAL.inventoryManager.ClearInventory();
+
         Teleport(destination);
         GameManager.GLOBAL.sceneLoader.LoadScene((int)destination.levelIndex);
     }

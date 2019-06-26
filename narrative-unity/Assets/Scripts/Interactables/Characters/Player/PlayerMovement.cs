@@ -38,6 +38,10 @@ public class PlayerMovement : MonoBehaviour
      */
     void DoPlayerMovement()
     {
+        // Don't allow movement when player is giving input/in dialogue
+        if (GameManager.GLOBAL.player.isLocked)
+            return;
+
         if (!GameManager.GLOBAL.sceneLoader.HasFinishedLoading())
             return;
 

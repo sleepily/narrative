@@ -100,19 +100,29 @@ public class InventoryManager : MonoBehaviour
         return false;
     }
 
-    private void Update()
+    public void ClearInventory()
     {
-        GetInput();
+        if (IsEmpty())
+            return;
+
+        items.Clear();
+
+        Item nullItem = null;
+        SetCurrentItem(nullItem);
     }
+
+    private void Update() => GetInput();
 
     void GetInput()
     {
         if (Input.GetKeyDown(KeyCode.E))
             ToggleInventory();
 
+        // Allow reading item text again with RMB
         if (Input.GetMouseButtonDown(1))
             ShowCurrentItemDescription();
 
+        // Allow item switching with scroll wheel
         UseScrollDeltaToChangeCurrentItem();
     }
 
@@ -133,12 +143,13 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    /*
+     * Hide Objects such as the cursor when opening the inventory
+     */
     void HideObjects()
     {
         foreach (GameObject gameObject in objectsToHide)
-        {
             gameObject.SetActive(!isOpen);
-        }
     }
 
     bool ShowCurrentItemDescription()
@@ -191,24 +202,7 @@ public class InventoryManager : MonoBehaviour
         return items[newItemIndex];
     }
 
-    bool IsEmpty => (items == null || items.Count == 0);
-
-    /*
-     * Find the item reference first if only a string is present
-     */
-    bool SetCurrentItem(string itemID)
-    {
-        Item foundItem;
-
-        if (!GetItemInInventory(itemID, out foundItem))
-        {
-            Debug.Log(string.Format(stringItemNotFound, itemID));
-            return false;
-        }
-
-        SetCurrentItem(foundItem);
-        return true;
-    }
+    bool IsEmpty() => (items == null || items.Count == 0);
 
     /*
      * Set item as current Item
