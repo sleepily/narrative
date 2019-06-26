@@ -35,9 +35,9 @@ Material:
     m_Floats:
     - Vector1_BA917125: 1.59
     - Vector1_D4967334: 2.44
-    - _FresnelEffect: 1
+    - _FresnelEffect: 0.11
     m_Colors:
     - Color_51B51BFA: {r: 27.53272, g: 21.67823, b: 0, a: 1}
     - Color_9D90B658: {r: 1, g: 1, b: 1, a: 0}
     - _Albedo: {r: 1, g: 1, b: 1, a: 1}
-    - _GlowColor: {r: 12.125731, g: 0, b: 0, a: 1}
+    - _GlowColor: {r: 0, g: 0.122234076, b: 2.6390157, a: 1}
