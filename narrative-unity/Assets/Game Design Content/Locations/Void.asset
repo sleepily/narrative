@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e13a5695dd09e844bf00285bb8da44d, type: 3}
-  m_Name: Stairs 3
+  m_Name: Void
   m_EditorClassIdentifier: 
-  levelIndex: 5
-  location: {x: 78, y: 9, z: 0}
+  levelIndex: 6
+  location: {x: 100, y: 16, z: 0}

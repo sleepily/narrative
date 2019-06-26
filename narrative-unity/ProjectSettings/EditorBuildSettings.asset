@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/4 Greenhouse.unity
     guid: 6d0a65dfd93ccc648a6198f27c7265e0
+  - enabled: 1
+    path: Assets/Scenes/5 Stairs to Void.unity
+    guid: 4512e250f2db6b843b9945679f2bb710
+  - enabled: 1
+    path: Assets/Scenes/6 Void.unity
+    guid: 76dbe1c9b1fdb2f4b9cce9bcfe145166
   m_configObjects: {}

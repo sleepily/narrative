@@ -280,7 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc12e66f9d90e448b4226d746fe9d73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLevelIndex: 4
+  currentLevelIndex: 5
   levelTeleportLocations:
   - {fileID: 11400000, guid: 2e18c09d26e19dd41853efe779492e2c, type: 2}
   - {fileID: 11400000, guid: 8445c194b1d6efa4793ff0ac3fc0ea8c, type: 2}

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Greenhouse
   m_EditorClassIdentifier: 
   levelIndex: 4
-  location: {x: 55, y: 9, z: -2}
+  location: {x: 55, y: 9, z: 0}
