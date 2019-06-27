@@ -7,13 +7,14 @@ public class Item : InteractableWithDialogue
     [Header("General")]
     public ItemStats itemStats;
 
-    protected bool isInInventory = false;
+    public bool isInInventory { get; protected set; } = false;
     public bool isCurrentItem = false;
 
     [Header("Item inspection")]
     float rotationSpeed = 14f;
     float scrollSpeed = 24f;
     float zoomDistance = 1.6f;
+
 
     /*
      * Pick up item when clicked.
