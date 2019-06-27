@@ -23284,6 +23284,8 @@ GameObject:
   - component: {fileID: 8296172669043255499}
   - component: {fileID: 8296172669043255501}
   - component: {fileID: 8296172669043255488}
+  - component: {fileID: 8296172669043255502}
+  - component: {fileID: 8296172669043255503}
   m_Layer: 0
   m_Name: Chest with Picture
   m_TagString: Untagged
@@ -23332,8 +23334,10 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 8296172669043255497}
+  selectedCommands:
+  - {fileID: 8296172669043255503}
   variables:
   - {fileID: 8296172669043255495}
   description: 
@@ -23547,6 +23551,7 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 8296172669043255500}
+  - {fileID: 8296172669043255503}
 --- !u!114 &8296172669043255498
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -23652,6 +23657,84 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8296172669043255502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669043255487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9616f6f6323220946ae34d1814f204ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliderToDisable: {fileID: 9101430577587994718}
+--- !u!114 &8296172669043255503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669043255487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 10
+  indentLevel: 0
+  description: 
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8296172669043255502}
+        m_MethodName: Disable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+BooleanEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+IntegerEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+FloatEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+StringEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &8296172669166054926
 GameObject:
   m_ObjectHideFlags: 0
@@ -25568,6 +25651,7 @@ GameObject:
   - component: {fileID: 3911704927967959456}
   - component: {fileID: 2157470064922969281}
   - component: {fileID: 6313025752396219791}
+  - component: {fileID: 8729316370830734109}
   m_Layer: 0
   m_Name: Chest_bottom
   m_TagString: Untagged
@@ -25575,6 +25659,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &8729316370830734109
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8729316370830734108}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 1739138944737939703, guid: b0dafd48e50165540a9b94a148f8ac4f, type: 3}
 --- !u!4 &8762514710768864615
 Transform:
   m_ObjectHideFlags: 0
@@ -26035,8 +26133,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 103.681175, y: 97.882286, z: 95.01916}
-  m_Center: {x: 0.365874, y: -10.342461, z: -44.800346}
+  m_Size: {x: 103.681175, y: 53.13605, z: 95.01916}
+  m_Center: {x: 0.36588404, y: 12.030643, z: -44.800346}
 --- !u!1 &9101430578990097096
 GameObject:
   m_ObjectHideFlags: 0

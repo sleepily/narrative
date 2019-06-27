@@ -239,6 +239,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   postProcessVolume: {fileID: 0}
   reloadKey: 9
+  teleportLocations:
+  - {fileID: 11400000, guid: 8445c194b1d6efa4793ff0ac3fc0ea8c, type: 2}
+  - {fileID: 11400000, guid: c72823bf099b4f243b2a1f6d8f8b4299, type: 2}
+  - {fileID: 11400000, guid: 26c7191552004a9428e28d756e4b6631, type: 2}
 --- !u!114 &661370628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,7 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc12e66f9d90e448b4226d746fe9d73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLevelIndex: 5
+  currentLevelIndex: 1
   levelTeleportLocations:
   - {fileID: 11400000, guid: 2e18c09d26e19dd41853efe779492e2c, type: 2}
   - {fileID: 11400000, guid: 8445c194b1d6efa4793ff0ac3fc0ea8c, type: 2}

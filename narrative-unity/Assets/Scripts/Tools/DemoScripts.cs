@@ -13,6 +13,8 @@ public class DemoScripts : MonoBehaviour
 
     public KeyCode reloadKey = KeyCode.R;
 
+    public List<TeleportLocation> teleportLocations;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,21 @@ public class DemoScripts : MonoBehaviour
     {
         if (Input.GetKeyDown(reloadKey))
             GameManager.GLOBAL.sceneLoader.ReloadScene();
+
+        int teleport = -1;
+
+        if (Input.GetKeyDown(KeyCode.Z))
+            teleport = 0;
+        if (Input.GetKeyDown(KeyCode.X))
+            teleport = 1;
+        if (Input.GetKeyDown(KeyCode.C))
+            teleport = 2;
+
+        if (teleport >= 0)
+        {
+            TeleportLocation destination = teleportLocations[teleport];
+            GameManager.GLOBAL.player.teleportPlayer.TeleportIntoLevel(destination);
+        }
 
         if (postProcessVolume)
         {

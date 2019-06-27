@@ -1003,6 +1003,7 @@ GameObject:
   - component: {fileID: 7636942376733117884}
   - component: {fileID: 1823315807287915180}
   - component: {fileID: 9159786655309837180}
+  - component: {fileID: 29459397826702057}
   m_Layer: 0
   m_Name: stone23
   m_TagString: Untagged
@@ -1010,6 +1011,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &29459397826702057
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29459397826702056}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -8352492820767739252, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!33 &31783515089659956
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1078,6 +1093,7 @@ GameObject:
   - component: {fileID: 8821909011039134173}
   - component: {fileID: 5856708738753015991}
   - component: {fileID: 5322200020481709650}
+  - component: {fileID: 96329504922815646}
   m_Layer: 0
   m_Name: stone12
   m_TagString: Untagged
@@ -1085,6 +1101,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &96329504922815646
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96329504922815645}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -6668181584211690610, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!4 &104926639993290667
 Transform:
   m_ObjectHideFlags: 0
@@ -1110,6 +1140,7 @@ GameObject:
   - component: {fileID: 8742471863077611340}
   - component: {fileID: 4805426185399102643}
   - component: {fileID: 3495747621977590017}
+  - component: {fileID: 111585379901134466}
   m_Layer: 0
   m_Name: heartplant5
   m_TagString: Untagged
@@ -1117,6 +1148,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &111585379901134466
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111585379901134465}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -7357147732953882097, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!4 &124801578139258142
 Transform:
   m_ObjectHideFlags: 0
@@ -1269,6 +1314,7 @@ GameObject:
   - component: {fileID: 4742115883964907159}
   - component: {fileID: 9049585103795093286}
   - component: {fileID: 2234639064876976583}
+  - component: {fileID: 238817951778520809}
   m_Layer: 0
   m_Name: stone29
   m_TagString: Untagged
@@ -1276,6 +1322,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &238817951778520809
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238817951778520808}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4247178449953272631, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!1 &244530297094459892
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,6 +1495,9 @@ GameObject:
   - component: {fileID: 5412591022778160750}
   - component: {fileID: 31783515089659956}
   - component: {fileID: 5368766932638112144}
+  - component: {fileID: 418088721668913446}
+  - component: {fileID: 418088721668913445}
+  - component: {fileID: 418088721668913444}
   m_Layer: 0
   m_Name: catridge
   m_TagString: Untagged
@@ -1442,6 +1505,71 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &418088721668913444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418088721668913443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a41b40c58ab129449bb50def8b0870d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFocusable: 1
+  itemStats: {fileID: 11400000, guid: a5670ef7ac4e6d34dbb1c8dcf8eb34d2, type: 2}
+  isCurrentItem: 0
+--- !u!114 &418088721668913445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418088721668913443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  scrollPos: {x: 0, y: 0}
+  variablesScrollPos: {x: 0, y: 0}
+  variablesExpanded: 1
+  blockViewHeight: 400
+  zoom: 1
+  scrollViewRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  selectedBlocks: []
+  selectedCommands: []
+  variables: []
+  description: 
+  stepPause: 0
+  colorCommands: 1
+  hideComponents: 1
+  saveSelection: 1
+  localizationId: 
+  showLineNumbers: 0
+  hideCommands: []
+  luaEnvironment: {fileID: 0}
+  luaBindingName: flowchart
+--- !u!65 &418088721668913446
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418088721668913443}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20.089163, y: 12.411194, z: 3.4958503}
+  m_Center: {x: 0.00012111664, y: 0, z: 0.00045835972}
 --- !u!4 &421716540885857176
 Transform:
   m_ObjectHideFlags: 0
@@ -1669,6 +1797,7 @@ GameObject:
   - component: {fileID: 1244087368237292110}
   - component: {fileID: 8287644573643205417}
   - component: {fileID: 2560276384321818086}
+  - component: {fileID: 566188595221844299}
   m_Layer: 0
   m_Name: heartplant6
   m_TagString: Untagged
@@ -1676,6 +1805,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &566188595221844299
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566188595221844298}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -6455135368415595521, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!33 &570765432649015674
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1781,6 +1924,7 @@ GameObject:
   - component: {fileID: 807434281627605830}
   - component: {fileID: 5904015494108392698}
   - component: {fileID: 8621426884673262368}
+  - component: {fileID: 665289179053267602}
   m_Layer: 0
   m_Name: stone21
   m_TagString: Untagged
@@ -1788,6 +1932,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &665289179053267602
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665289179053267601}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 245429776589889196, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!1 &690426463305087168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1843,6 +2001,7 @@ GameObject:
   - component: {fileID: 7667511725718930892}
   - component: {fileID: 6803722397742260088}
   - component: {fileID: 6298706072805837854}
+  - component: {fileID: 759227925139321874}
   m_Layer: 0
   m_Name: bottom
   m_TagString: Untagged
@@ -1850,6 +2009,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &759227925139321874
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759227925139321873}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -3008368232230080613, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!4 &769211961088217633
 Transform:
   m_ObjectHideFlags: 0
@@ -1903,6 +2076,7 @@ GameObject:
   - component: {fileID: 7792654849466398944}
   - component: {fileID: 4769192491259160351}
   - component: {fileID: 9191979252795228322}
+  - component: {fileID: 793978186037039345}
   m_Layer: 0
   m_Name: heartplant1
   m_TagString: Untagged
@@ -1910,6 +2084,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &793978186037039345
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793978186037039344}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 3943663082367803651, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!1 &800760631197999403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1921,6 +2109,7 @@ GameObject:
   - component: {fileID: 3461246833842212781}
   - component: {fileID: 2064011002847343047}
   - component: {fileID: 4837337068438864658}
+  - component: {fileID: 800760631197999404}
   m_Layer: 0
   m_Name: toolshed
   m_TagString: Untagged
@@ -1928,6 +2117,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &800760631197999404
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800760631197999403}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 2373617384909068173, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!1 &805207815840877626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1939,6 +2142,7 @@ GameObject:
   - component: {fileID: 9206175569007545833}
   - component: {fileID: 1051642939069374034}
   - component: {fileID: 7314247880138001596}
+  - component: {fileID: 805207815840877627}
   m_Layer: 0
   m_Name: flower1
   m_TagString: Untagged
@@ -1946,6 +2150,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &805207815840877627
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805207815840877626}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -4728887496425296429, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!4 &807434281627605830
 Transform:
   m_ObjectHideFlags: 0
@@ -2252,6 +2470,7 @@ GameObject:
   - component: {fileID: 2968351684115148251}
   - component: {fileID: 8001842782284144784}
   - component: {fileID: 8521017583455240644}
+  - component: {fileID: 1228912740154515023}
   m_Layer: 0
   m_Name: stone30
   m_TagString: Untagged
@@ -2259,6 +2478,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &1228912740154515023
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228912740154515022}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -9173106764183875784, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!1 &1233245163840088831
 GameObject:
   m_ObjectHideFlags: 0
@@ -2317,6 +2550,7 @@ GameObject:
   - component: {fileID: 3062301922559482623}
   - component: {fileID: 6779055539845089862}
   - component: {fileID: 1828892011923008701}
+  - component: {fileID: 1263660987079296072}
   m_Layer: 0
   m_Name: stone22
   m_TagString: Untagged
@@ -2324,6 +2558,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &1263660987079296072
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263660987079296071}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -7761027076532986729, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!33 &1306313996173112321
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2545,6 +2793,7 @@ GameObject:
   - component: {fileID: 8609278482111970959}
   - component: {fileID: 5641118849272298130}
   - component: {fileID: 5472823828553371978}
+  - component: {fileID: 1435078238920452145}
   m_Layer: 0
   m_Name: heartplant3
   m_TagString: Untagged
@@ -2552,6 +2801,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &1435078238920452145
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435078238920452144}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -761078637301962178, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!23 &1435434780431385106
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2769,6 +3032,7 @@ GameObject:
   - component: {fileID: 4199739142701011194}
   - component: {fileID: 4653925066175151398}
   - component: {fileID: 5069937194489729137}
+  - component: {fileID: 1571067680681925852}
   m_Layer: 0
   m_Name: stone7
   m_TagString: Untagged
@@ -2776,6 +3040,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &1571067680681925852
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571067680681925851}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 6869500304094030284, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!23 &1591481770727125749
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2983,6 +3261,7 @@ GameObject:
   - component: {fileID: 5587018728148134179}
   - component: {fileID: 1736726108028663578}
   - component: {fileID: 9052913364985471249}
+  - component: {fileID: 1722333144709372679}
   m_Layer: 0
   m_Name: stone31
   m_TagString: Untagged
@@ -2990,6 +3269,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &1722333144709372679
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722333144709372678}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 1285434157911915407, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!33 &1736726108028663578
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3452,6 +3745,7 @@ GameObject:
   - component: {fileID: 7672412415483802863}
   - component: {fileID: 4222835167564045156}
   - component: {fileID: 6328132771336802015}
+  - component: {fileID: 2283921507068399501}
   m_Layer: 0
   m_Name: heartplant4
   m_TagString: Untagged
@@ -3459,6 +3753,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &2283921507068399501
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2283921507068399500}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 5984791925775838801, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!4 &2291320849046926688
 Transform:
   m_ObjectHideFlags: 0
@@ -3535,6 +3843,7 @@ GameObject:
   - component: {fileID: 3171539195670135157}
   - component: {fileID: 5192651829356338240}
   - component: {fileID: 1548499414280542836}
+  - component: {fileID: 2343194043524063925}
   m_Layer: 0
   m_Name: stone11
   m_TagString: Untagged
@@ -3542,6 +3851,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &2343194043524063925
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2343194043524063924}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 6603829863240848980, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!1 &2347749426711788071
 GameObject:
   m_ObjectHideFlags: 0
@@ -4156,6 +4479,7 @@ GameObject:
   - component: {fileID: 3143842236212414419}
   - component: {fileID: 1763328517507033908}
   - component: {fileID: 7139644775414464280}
+  - component: {fileID: 2787676318197448128}
   m_Layer: 0
   m_Name: stone18
   m_TagString: Untagged
@@ -4163,6 +4487,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &2787676318197448128
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2787676318197448127}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -7813627871100344079, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!4 &2817690762348378172
 Transform:
   m_ObjectHideFlags: 0
@@ -4430,6 +4768,7 @@ GameObject:
   - component: {fileID: 2291320849046926688}
   - component: {fileID: 2620461343052463079}
   - component: {fileID: 298338339074209239}
+  - component: {fileID: 2937855914580000593}
   m_Layer: 0
   m_Name: heartplant
   m_TagString: Untagged
@@ -4437,6 +4776,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &2937855914580000593
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2937855914580000592}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -6444580037438643386, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!4 &2968351684115148251
 Transform:
   m_ObjectHideFlags: 0
@@ -5520,6 +5873,7 @@ GameObject:
   - component: {fileID: 4371498837975277550}
   - component: {fileID: 1507493510880693629}
   - component: {fileID: 7900505776281597654}
+  - component: {fileID: 3616140546899746532}
   m_Layer: 0
   m_Name: heartplant2
   m_TagString: Untagged
@@ -5527,6 +5881,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &3616140546899746532
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3616140546899746531}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 7502230521113843151, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!1 &3631124772614687789
 GameObject:
   m_ObjectHideFlags: 0
@@ -5538,6 +5906,7 @@ GameObject:
   - component: {fileID: 2897476633138309866}
   - component: {fileID: 3885374111920165905}
   - component: {fileID: 4220777383540086188}
+  - component: {fileID: 3631124772614687790}
   m_Layer: 0
   m_Name: stone9
   m_TagString: Untagged
@@ -5545,6 +5914,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &3631124772614687790
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3631124772614687789}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -7813305250236158563, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!23 &3637249887061529088
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5858,6 +6241,7 @@ GameObject:
   - component: {fileID: 2482827227358002028}
   - component: {fileID: 3209201815389191877}
   - component: {fileID: 6291567562240474470}
+  - component: {fileID: 3803771804658774638}
   m_Layer: 0
   m_Name: stone25
   m_TagString: Untagged
@@ -5865,6 +6249,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &3803771804658774638
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3803771804658774637}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -1903857297082295109, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!4 &3830273723326710957
 Transform:
   m_ObjectHideFlags: 0
@@ -5972,6 +6370,7 @@ GameObject:
   - component: {fileID: 424831565402315602}
   - component: {fileID: 354639257557062003}
   - component: {fileID: 8820705904934591489}
+  - component: {fileID: 3892474211830570599}
   m_Layer: 0
   m_Name: stone2
   m_TagString: Untagged
@@ -5979,6 +6378,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &3892474211830570599
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3892474211830570598}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 7300272611442923109, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!33 &3918874041192343849
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6134,6 +6547,7 @@ GameObject:
   - component: {fileID: 5547946412489051422}
   - component: {fileID: 71735230843714465}
   - component: {fileID: 9138092922568412706}
+  - component: {fileID: 3983001361117035872}
   m_Layer: 0
   m_Name: stone6
   m_TagString: Untagged
@@ -6141,6 +6555,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &3983001361117035872
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3983001361117035871}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -6534125274491238079, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!4 &4012349142986523327
 Transform:
   m_ObjectHideFlags: 0
@@ -6422,6 +6850,7 @@ GameObject:
   - component: {fileID: 7052389274805536086}
   - component: {fileID: 8928403038485536066}
   - component: {fileID: 9069481895446343679}
+  - component: {fileID: 4152325313701683855}
   m_Layer: 0
   m_Name: flower
   m_TagString: Untagged
@@ -6429,6 +6858,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &4152325313701683855
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4152325313701683854}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 1008960924111066175, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!1 &4185563933805925207
 GameObject:
   m_ObjectHideFlags: 0
@@ -6440,6 +6883,7 @@ GameObject:
   - component: {fileID: 2191090417014949421}
   - component: {fileID: 587917466705803990}
   - component: {fileID: 5344602197144344454}
+  - component: {fileID: 4185563933805925208}
   m_Layer: 0
   m_Name: heartplant8
   m_TagString: Untagged
@@ -6447,6 +6891,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &4185563933805925208
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4185563933805925207}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 331925225072336045, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!4 &4199739142701011194
 Transform:
   m_ObjectHideFlags: 0
@@ -6686,6 +7144,7 @@ GameObject:
   - component: {fileID: 3238565517715336226}
   - component: {fileID: 1306313996173112321}
   - component: {fileID: 2181846696964336406}
+  - component: {fileID: 4383416122008660785}
   m_Layer: 0
   m_Name: stone32
   m_TagString: Untagged
@@ -6693,6 +7152,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &4383416122008660785
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4383416122008660784}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -7443634882155640621, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!4 &4386439345641168372
 Transform:
   m_ObjectHideFlags: 0
@@ -6897,6 +7370,7 @@ GameObject:
   - component: {fileID: 775830682373156558}
   - component: {fileID: 968184028756411617}
   - component: {fileID: 7097895750741767956}
+  - component: {fileID: 4456141508928317736}
   m_Layer: 0
   m_Name: stone16
   m_TagString: Untagged
@@ -6904,6 +7378,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &4456141508928317736
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4456141508928317735}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 7973469987011244345, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!1 &4467108947562502197
 GameObject:
   m_ObjectHideFlags: 0
@@ -6915,6 +7403,7 @@ GameObject:
   - component: {fileID: 884327091825712980}
   - component: {fileID: 1702417154987628519}
   - component: {fileID: 2686107833361884456}
+  - component: {fileID: 4467108947562502198}
   m_Layer: 0
   m_Name: stone4
   m_TagString: Untagged
@@ -6922,6 +7411,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &4467108947562502198
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4467108947562502197}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 2195920322184661039, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!1 &4472963188755664545
 GameObject:
   m_ObjectHideFlags: 0
@@ -7993,6 +8496,7 @@ GameObject:
   - component: {fileID: 8797798833231108950}
   - component: {fileID: 4389765125510750075}
   - component: {fileID: 9162458360132958891}
+  - component: {fileID: 5163825388673413615}
   m_Layer: 0
   m_Name: flower3
   m_TagString: Untagged
@@ -8000,6 +8504,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &5163825388673413615
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5163825388673413614}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -5194966681787493129, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!33 &5166068862740546407
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8088,6 +8606,7 @@ GameObject:
   - component: {fileID: 793485000700994056}
   - component: {fileID: 4488717285132312528}
   - component: {fileID: 8326299715335835737}
+  - component: {fileID: 5248863727889995076}
   m_Layer: 0
   m_Name: stone34
   m_TagString: Untagged
@@ -8095,6 +8614,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &5248863727889995076
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5248863727889995075}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 7341220527104258842, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!23 &5254842128171947289
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8225,6 +8758,7 @@ GameObject:
   - component: {fileID: 769211961088217633}
   - component: {fileID: 9027209450455820951}
   - component: {fileID: 4844025230296756481}
+  - component: {fileID: 5325431520862510585}
   m_Layer: 0
   m_Name: heartplant10
   m_TagString: Untagged
@@ -8232,6 +8766,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &5325431520862510585
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5325431520862510584}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -915996881176124172, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!23 &5344602197144344454
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8323,7 +8871,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
+  - {fileID: 2100000, guid: 92dfe3ca6ca94a744a67b39d76dff483, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8392,6 +8940,7 @@ GameObject:
   - component: {fileID: 5969304878548152561}
   - component: {fileID: 4950101599899956599}
   - component: {fileID: 6346596397257717304}
+  - component: {fileID: 5456878745675139916}
   m_Layer: 0
   m_Name: Entrance
   m_TagString: Untagged
@@ -8399,6 +8948,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &5456878745675139916
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5456878745675139915}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -8548174756391177993, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!23 &5472823828553371978
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8546,6 +9109,7 @@ GameObject:
   - component: {fileID: 8650616807740938836}
   - component: {fileID: 287449903672225818}
   - component: {fileID: 3065969622264588777}
+  - component: {fileID: 5562041473554289228}
   m_Layer: 0
   m_Name: flower5
   m_TagString: Untagged
@@ -8553,6 +9117,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &5562041473554289228
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5562041473554289227}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4689669543602011996, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!1 &5562395851687121966
 GameObject:
   m_ObjectHideFlags: 0
@@ -8564,6 +9142,7 @@ GameObject:
   - component: {fileID: 3830273723326710957}
   - component: {fileID: 1448797516071406789}
   - component: {fileID: 5011635120833744944}
+  - component: {fileID: 5562395851687121967}
   m_Layer: 0
   m_Name: heartplant11
   m_TagString: Untagged
@@ -8571,6 +9150,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &5562395851687121967
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5562395851687121966}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 7250443630321397936, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!33 &5567532087842463259
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8620,6 +9213,7 @@ GameObject:
   - component: {fileID: 6852864454583540878}
   - component: {fileID: 7012736637214921143}
   - component: {fileID: 5217950727320535130}
+  - component: {fileID: 5657688658768424456}
   m_Layer: 0
   m_Name: stone38
   m_TagString: Untagged
@@ -8627,6 +9221,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &5657688658768424456
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5657688658768424455}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 8402769548583011863, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!1 &5681780878723232986
 GameObject:
   m_ObjectHideFlags: 0
@@ -8762,6 +9370,7 @@ GameObject:
   - component: {fileID: 8638084155000413480}
   - component: {fileID: 8476932584827382398}
   - component: {fileID: 5110676458731558881}
+  - component: {fileID: 5783288271910746715}
   m_Layer: 0
   m_Name: stone13
   m_TagString: Untagged
@@ -8769,6 +9378,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &5783288271910746715
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5783288271910746714}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 1988525129020427961, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!23 &5795307212918895567
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9043,6 +9666,7 @@ GameObject:
   - component: {fileID: 2777106224158186435}
   - component: {fileID: 303265929802183879}
   - component: {fileID: 455334265125665570}
+  - component: {fileID: 6038377105094218426}
   m_Layer: 0
   m_Name: stone8
   m_TagString: Untagged
@@ -9050,6 +9674,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &6038377105094218426
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6038377105094218425}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -4412325269345834306, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!1 &6044559689740222595
 GameObject:
   m_ObjectHideFlags: 0
@@ -9061,6 +9699,7 @@ GameObject:
   - component: {fileID: 6317655583568857699}
   - component: {fileID: 7688331168871742931}
   - component: {fileID: 8978614003530723613}
+  - component: {fileID: 6044559689740222596}
   m_Layer: 0
   m_Name: door
   m_TagString: Untagged
@@ -9068,6 +9707,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &6044559689740222596
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6044559689740222595}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -1229220571188012565, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!33 &6057692874182407271
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -9349,6 +10002,7 @@ GameObject:
   - component: {fileID: 4798307378051773848}
   - component: {fileID: 5531819020071612599}
   - component: {fileID: 2562446821996407869}
+  - component: {fileID: 6295823085623790134}
   m_Layer: 0
   m_Name: stone14
   m_TagString: Untagged
@@ -9356,6 +10010,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &6295823085623790134
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6295823085623790133}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 2605797519723923135, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!23 &6298706072805837854
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9522,6 +10190,7 @@ GameObject:
   - component: {fileID: 1477034366382717897}
   - component: {fileID: 8938158730424705813}
   - component: {fileID: 3779097288437646999}
+  - component: {fileID: 6369926518102329765}
   m_Layer: 0
   m_Name: stone3
   m_TagString: Untagged
@@ -9529,6 +10198,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &6369926518102329765
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6369926518102329764}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -49471444183400055, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!4 &6392809640282803093
 Transform:
   m_ObjectHideFlags: 0
@@ -9713,6 +10396,7 @@ GameObject:
   - component: {fileID: 3406128846498660278}
   - component: {fileID: 4260118207450412178}
   - component: {fileID: 8808501222191496263}
+  - component: {fileID: 6431876542313839855}
   m_Layer: 0
   m_Name: stone37
   m_TagString: Untagged
@@ -9720,6 +10404,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &6431876542313839855
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6431876542313839854}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -6436996587382800170, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!1 &6467527435506679685
 GameObject:
   m_ObjectHideFlags: 0
@@ -9838,6 +10536,7 @@ GameObject:
   - component: {fileID: 8354559885900122531}
   - component: {fileID: 1702510575087009952}
   - component: {fileID: 2521558448641659327}
+  - component: {fileID: 6493582087322803810}
   m_Layer: 0
   m_Name: flower4
   m_TagString: Untagged
@@ -9845,6 +10544,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &6493582087322803810
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6493582087322803809}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 8787677143704934631, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!4 &6502807472122956762
 Transform:
   m_ObjectHideFlags: 0
@@ -9974,6 +10687,7 @@ GameObject:
   - component: {fileID: 7531836502886518341}
   - component: {fileID: 2352378308073079494}
   - component: {fileID: 8749091587183765475}
+  - component: {fileID: 6661138324737185946}
   m_Layer: 0
   m_Name: stone5
   m_TagString: Untagged
@@ -9981,6 +10695,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &6661138324737185946
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6661138324737185945}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -3462971808584621048, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!4 &6683082197245688384
 Transform:
   m_ObjectHideFlags: 0
@@ -10178,6 +10906,7 @@ GameObject:
   - component: {fileID: 3682130713031826291}
   - component: {fileID: 828419392633507518}
   - component: {fileID: 3470798054083485216}
+  - component: {fileID: 6880891279420393599}
   m_Layer: 0
   m_Name: stone1
   m_TagString: Untagged
@@ -10185,6 +10914,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &6880891279420393599
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6880891279420393598}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 7941049218214575744, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!1 &6886891809876424421
 GameObject:
   m_ObjectHideFlags: 0
@@ -10344,6 +11087,7 @@ GameObject:
   - component: {fileID: 2632925025875609492}
   - component: {fileID: 1494503605781418439}
   - component: {fileID: 9106618212816294321}
+  - component: {fileID: 7034932632556890374}
   m_Layer: 0
   m_Name: stone
   m_TagString: Untagged
@@ -10351,6 +11095,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &7034932632556890374
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7034932632556890373}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -8134003407345992923, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!4 &7052389274805536086
 Transform:
   m_ObjectHideFlags: 0
@@ -11061,6 +11819,7 @@ GameObject:
   - component: {fileID: 2857471002395898226}
   - component: {fileID: 3204858439709000776}
   - component: {fileID: 3702845271674437591}
+  - component: {fileID: 7611444637728883302}
   m_Layer: 0
   m_Name: stone17
   m_TagString: Untagged
@@ -11068,6 +11827,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &7611444637728883302
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7611444637728883301}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 7982759956027630162, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!1 &7620694895405632369
 GameObject:
   m_ObjectHideFlags: 0
@@ -11079,6 +11852,7 @@ GameObject:
   - component: {fileID: 3103658797224666601}
   - component: {fileID: 7912432387471455886}
   - component: {fileID: 3007263170372559953}
+  - component: {fileID: 7620694895405632370}
   m_Layer: 0
   m_Name: tv_set 1
   m_TagString: Untagged
@@ -11086,6 +11860,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &7620694895405632370
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7620694895405632369}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 1396960942240691537, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!4 &7636942376733117884
 Transform:
   m_ObjectHideFlags: 0
@@ -11439,6 +12227,7 @@ GameObject:
   - component: {fileID: 6807992320986381883}
   - component: {fileID: 944631753389591081}
   - component: {fileID: 3306203680652795145}
+  - component: {fileID: 7848695860847088059}
   m_Layer: 0
   m_Name: stone19
   m_TagString: Untagged
@@ -11446,6 +12235,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &7848695860847088059
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7848695860847088058}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -8116037956210765242, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!1 &7855556481728970017
 GameObject:
   m_ObjectHideFlags: 0
@@ -11546,6 +12349,7 @@ GameObject:
   - component: {fileID: 6837935625126474685}
   - component: {fileID: 3739788189215537527}
   - component: {fileID: 4121574566795284822}
+  - component: {fileID: 7879611674726743459}
   m_Layer: 0
   m_Name: flower6
   m_TagString: Untagged
@@ -11553,6 +12357,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &7879611674726743459
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7879611674726743458}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -5676243984448837720, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!23 &7884118991101120191
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11750,6 +12568,7 @@ GameObject:
   - component: {fileID: 9058237063494308426}
   - component: {fileID: 2909930026870255705}
   - component: {fileID: 1323369449385772995}
+  - component: {fileID: 7980195382864088345}
   m_Layer: 0
   m_Name: Waterfall_Cave
   m_TagString: Untagged
@@ -11757,6 +12576,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &7980195382864088345
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7980195382864088344}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4039615893398582703, guid: 49bedcc8afbe5a84b908cf4e41caa6ee, type: 3}
 --- !u!1 &7992193093480246197
 GameObject:
   m_ObjectHideFlags: 0
@@ -11768,6 +12601,7 @@ GameObject:
   - component: {fileID: 8605935308209658788}
   - component: {fileID: 3537055036583421130}
   - component: {fileID: 3190350260794807421}
+  - component: {fileID: 7992193093480246198}
   m_Layer: 0
   m_Name: flower2
   m_TagString: Untagged
@@ -11775,6 +12609,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &7992193093480246198
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7992193093480246197}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 8279230708524882657, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!33 &8001842782284144784
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11794,6 +12642,7 @@ GameObject:
   - component: {fileID: 3750135534822759290}
   - component: {fileID: 5969281245438063862}
   - component: {fileID: 3243585327109006251}
+  - component: {fileID: 8016872760922694795}
   m_Layer: 0
   m_Name: stone15
   m_TagString: Untagged
@@ -11801,6 +12650,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &8016872760922694795
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8016872760922694794}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -4830050941664422561, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!23 &8036593613633308937
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12035,6 +12898,7 @@ GameObject:
   - component: {fileID: 8296535773242268512}
   - component: {fileID: 8454540308331085984}
   - component: {fileID: 5367407246071464358}
+  - component: {fileID: 8166331396292332076}
   m_Layer: 0
   m_Name: heartplant9
   m_TagString: Untagged
@@ -12042,6 +12906,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &8166331396292332076
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8166331396292332075}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -4999953941097024147, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!1 &8237012401952646463
 GameObject:
   m_ObjectHideFlags: 0
@@ -12166,6 +13044,7 @@ GameObject:
   - component: {fileID: 3593956057191337116}
   - component: {fileID: 6334226475759437783}
   - component: {fileID: 7947936908590798781}
+  - component: {fileID: 8298605048216374032}
   m_Layer: 0
   m_Name: stone28
   m_TagString: Untagged
@@ -12173,6 +13052,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &8298605048216374032
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8298605048216374031}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -2503472219764635077, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!1 &8312732802472036778
 GameObject:
   m_ObjectHideFlags: 0
@@ -12688,6 +13581,7 @@ GameObject:
   - component: {fileID: 4494640949912156178}
   - component: {fileID: 5489978314415705222}
   - component: {fileID: 3784934294356615179}
+  - component: {fileID: 8621109679537468244}
   m_Layer: 0
   m_Name: heartplant7
   m_TagString: Untagged
@@ -12695,6 +13589,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &8621109679537468244
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8621109679537468243}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 5523227379534956054, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!23 &8621426884673262368
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12804,6 +13712,7 @@ GameObject:
   - component: {fileID: 5009745008916107401}
   - component: {fileID: 5647710637284212396}
   - component: {fileID: 2264260177137059919}
+  - component: {fileID: 8684327030126573522}
   m_Layer: 0
   m_Name: stone27
   m_TagString: Untagged
@@ -12811,6 +13720,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &8684327030126573522
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8684327030126573521}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 8808623638107273981, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!33 &8689964746651096397
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13144,6 +14067,7 @@ GameObject:
   - component: {fileID: 7779024864440992996}
   - component: {fileID: 3144807127744255084}
   - component: {fileID: 1336324039890583853}
+  - component: {fileID: 8823606625885806558}
   m_Layer: 0
   m_Name: stone36
   m_TagString: Untagged
@@ -13151,6 +14075,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &8823606625885806558
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8823606625885806557}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 2707426591533385745, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!4 &8828649887373541355
 Transform:
   m_ObjectHideFlags: 0
@@ -13176,6 +14114,7 @@ GameObject:
   - component: {fileID: 1946801121861066347}
   - component: {fileID: 287601106938411301}
   - component: {fileID: 9111052565212596529}
+  - component: {fileID: 8843534791576874075}
   m_Layer: 0
   m_Name: flower7
   m_TagString: Untagged
@@ -13183,6 +14122,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &8843534791576874075
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8843534791576874074}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -365502967516352947, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!1 &8851005525423029726
 GameObject:
   m_ObjectHideFlags: 0
@@ -13194,6 +14147,7 @@ GameObject:
   - component: {fileID: 7437560619650915148}
   - component: {fileID: 6956852588264923203}
   - component: {fileID: 1615572041731857088}
+  - component: {fileID: 8851005525423029727}
   m_Layer: 0
   m_Name: stone26
   m_TagString: Untagged
@@ -13201,6 +14155,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &8851005525423029727
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8851005525423029726}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 3941815265500038175, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!4 &8858041583274214089
 Transform:
   m_ObjectHideFlags: 0
@@ -13744,6 +14712,7 @@ GameObject:
   - component: {fileID: 2118700637969959090}
   - component: {fileID: 4350568897846471435}
   - component: {fileID: 2924034970364922913}
+  - component: {fileID: 9138758777601683345}
   m_Layer: 0
   m_Name: stone35
   m_TagString: Untagged
@@ -13751,6 +14720,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &9138758777601683345
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9138758777601683344}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 5819655487735659450, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!23 &9140784468136367087
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13873,6 +14856,7 @@ GameObject:
   - component: {fileID: 6303004257917675243}
   - component: {fileID: 1678507124131178099}
   - component: {fileID: 8080547117250513662}
+  - component: {fileID: 9189561193564540043}
   m_Layer: 0
   m_Name: stone10
   m_TagString: Untagged
@@ -13880,6 +14864,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &9189561193564540043
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9189561193564540042}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -632077638051305185, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!23 &9191979252795228322
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13928,6 +14926,7 @@ GameObject:
   - component: {fileID: 104926639993290667}
   - component: {fileID: 285516573596004250}
   - component: {fileID: 8491800796732217080}
+  - component: {fileID: 9197034029571358104}
   m_Layer: 0
   m_Name: stone33
   m_TagString: Untagged
@@ -13935,6 +14934,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &9197034029571358104
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9197034029571358103}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 7660883146475875454, guid: b03699273e7a2bb46963e2cbe79a4a70, type: 3}
 --- !u!4 &9206175569007545833
 Transform:
   m_ObjectHideFlags: 0
