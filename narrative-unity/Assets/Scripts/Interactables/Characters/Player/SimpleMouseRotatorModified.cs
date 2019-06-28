@@ -35,7 +35,11 @@ namespace UnityStandardAssets.Utility
 
         private void Update()
         {
-            if (GameManager.GLOBAL.isPaused || GameManager.GLOBAL.inventoryManager.isOpen)
+            // Prevent any movement if it's not allowed
+            if (GameManager.GLOBAL.isPaused || GameManager.GLOBAL.inventory.isOpen)
+                return;
+
+            if (GameManager.GLOBAL.player.IsLocked())
                 return;
 
             // we make initial calculations from the original local rotation

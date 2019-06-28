@@ -5,9 +5,11 @@ using Fungus;
 
 [RequireComponent(typeof(Flowchart))]
 [RequireComponent(typeof(Item))]
+[RequireComponent(typeof(Animator))]
 public class Cellphone : MonoBehaviour
 {
     Flowchart flowchart;
+    Animator animator;
     Item cellphoneItem;
     int messageIntensity = 0;
 
@@ -27,6 +29,7 @@ public class Cellphone : MonoBehaviour
     {
         flowchart = GetComponent<Flowchart>();
         cellphoneItem = GetComponent<Item>();
+        animator = GetComponent<Animator>();
 
         lastMessageReadTime = Time.time;
     }
@@ -40,6 +43,9 @@ public class Cellphone : MonoBehaviour
      */
     bool SendNewIntervalMessage()
     {
+        if (Input.GetKeyDown(KeyCode.G))
+            TriggerNewMessage();
+
         // Exit if player is still in a message
         if (!canTriggerNewMessage)
             return false;
@@ -64,8 +70,6 @@ public class Cellphone : MonoBehaviour
             float timeUntilNextMessage = Time.time - (lastMessageReadTime + nextMessageInterval);
             timeUntilNextMessage = Mathf.Abs(timeUntilNextMessage);
 
-            Debug.Log("Next text message in " + timeUntilNextMessage + " seconds");
-
             return false;
         }
 
@@ -79,6 +83,7 @@ public class Cellphone : MonoBehaviour
     public void TriggerNewMessage()
     {
         flowchart.SetIntegerVariable("messageIntensity", messageIntensity);
+        AnimateScreen(true);
 
         if (!flowchart.ExecuteIfHasBlock("NewMessage"))
         {
@@ -92,11 +97,13 @@ public class Cellphone : MonoBehaviour
 
     /*
      * Disable new texts until the player has finished the dialogue
-     * TODO: also use global player locked state
      */
     void WaitForPlayerRead()
     {
         canTriggerNewMessage = false;
+
+        // Prevent any player movement or interaction
+        GameManager.GLOBAL.player.Lock();
 
         StartCoroutine(CheckPlayerRead());
     }
@@ -110,5 +117,14 @@ public class Cellphone : MonoBehaviour
         // Enable new texts from this point on
         lastMessageReadTime = Time.time;
         canTriggerNewMessage = true;
+
+        GameManager.GLOBAL.player.Unlock();
+
+        AnimateScreen(false);
+    }
+
+    void AnimateScreen(bool screenOn = true)
+    {
+        animator.SetBool("hasScreenOn", screenOn);
     }
 }

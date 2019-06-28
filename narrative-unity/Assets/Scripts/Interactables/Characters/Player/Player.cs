@@ -8,11 +8,15 @@ public class Player : CharacterWithDialogue
 {
     public Camera thirdPersonCamera;
     public TeleportPlayer teleportPlayer;
+    PlayerMovement playerMovement;
 
     [HideInInspector]
-    public bool isLocked = false;
+    protected bool isLocked = false;
 
-    protected override void StartFunctions() { }
+    protected override void StartFunctions()
+    {
+        playerMovement = GetComponent<PlayerMovement>();
+    }
 
     protected override void GetAllComponents() => GetFlowchart();
 
@@ -27,4 +31,14 @@ public class Player : CharacterWithDialogue
         Block wrongItemBlock = flowchart.FindBlock("WrongItem");
         flowchart.ExecuteBlock(wrongItemBlock);
     }
+
+    public bool IsLocked() => isLocked;
+
+    public void Lock()
+    {
+        isLocked = true;
+        playerMovement.StopMoving();
+    }
+
+    public void Unlock() => isLocked = false;
 }

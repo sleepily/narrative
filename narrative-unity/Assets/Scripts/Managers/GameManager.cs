@@ -10,8 +10,9 @@ public class GameManager : MonoBehaviour
     public bool isPaused = false;
     
     [Header("Managers")]
-    public InventoryManager inventoryManager;
+    public InventoryManager inventory;
     public SceneLoader sceneLoader;
+    public DialogueManager dialogue;
 
     [Header("Global References")]
     public SayDialog interactableSayDialog;

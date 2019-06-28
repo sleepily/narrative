@@ -8,7 +8,6 @@ public class InteractableWithDialogue : Interactable
 {
     [Header("Dialogue")]
     protected Flowchart flowchart;
-    protected bool isInDialogue;
 
     protected override void GetAllComponents()
     {
@@ -30,7 +29,12 @@ public class InteractableWithDialogue : Interactable
         if (!GetFlowchart())
             return false;
 
-        return isInDialogue = flowchart.HasExecutingBlocks();
+        /*
+        if (GameManager.GLOBAL.player.IsLocked())
+            return true;
+        */
+
+        return flowchart.HasExecutingBlocks();
     }
 
     /*
@@ -42,6 +46,7 @@ public class InteractableWithDialogue : Interactable
             return;
 
         flowchart.ExecuteBlock("Start");
+        GameManager.GLOBAL.dialogue.WaitForPlayerRead(flowchart);
         return;
     }
 
@@ -54,7 +59,7 @@ public class InteractableWithDialogue : Interactable
             return false;
 
         if (!item)
-            item = GameManager.GLOBAL.inventoryManager.GetCurrentItem();
+            item = GameManager.GLOBAL.inventory.GetCurrentItem();
 
         if (!item)
         {
@@ -69,14 +74,21 @@ public class InteractableWithDialogue : Interactable
             Block wrongItemBlock = flowchart.FindBlock("WrongItem");
 
             if (wrongItemBlock)
+            {
                 flowchart.ExecuteBlock(wrongItemBlock);
+                GameManager.GLOBAL.dialogue.WaitForPlayerRead(flowchart);
+            }
             else
+            {
                 GameManager.GLOBAL.player.WrongItemDialogue();
+                GameManager.GLOBAL.dialogue.WaitForPlayerRead(GameManager.GLOBAL.player.flowchart);
+            }
 
             return false;
         }
 
         flowchart.ExecuteBlock(itemBlock);
+        GameManager.GLOBAL.dialogue.WaitForPlayerRead(flowchart);
         return true;
     }
     public override void Interact() => TriggerDialogue();

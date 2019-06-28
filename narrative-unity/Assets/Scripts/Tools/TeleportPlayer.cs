@@ -37,7 +37,7 @@ public class TeleportPlayer : MonoBehaviour
     public void TeleportIntoLevel(TeleportLocation destination, bool loseItems = true)
     {
         if (loseItems)
-            GameManager.GLOBAL.inventoryManager.ClearInventory();
+            GameManager.GLOBAL.inventory.ClearInventory();
 
         Teleport(destination);
         GameManager.GLOBAL.sceneLoader.LoadScene((int)destination.levelIndex);

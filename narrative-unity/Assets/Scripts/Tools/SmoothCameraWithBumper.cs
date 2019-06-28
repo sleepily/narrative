@@ -53,7 +53,7 @@ public class SmoothCameraWithBumper : MonoBehaviour
 
     void CameraOperations()
     {
-        if (GameManager.GLOBAL.inventoryManager.isOpen)
+        if (GameManager.GLOBAL.inventory.isOpen)
             return;
 
         SetVariables();

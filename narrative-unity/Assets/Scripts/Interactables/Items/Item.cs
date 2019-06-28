@@ -50,17 +50,12 @@ public class Item : InteractableWithDialogue
 
         SetGlowColor(Color.clear, true);
 
-        GameManager.GLOBAL.inventoryManager.ToggleInventory();
+        GameManager.GLOBAL.inventory.ToggleInventory(true);
 
         TriggerDialogue();
     }
 
-    public void UseItem()
-    {
-        Debug.Log("Using " + itemStats.ID);
-        // EventManager.Global.TriggerEvent("Inventory_Remove", gameObject, itemStats.ID);
-        GameManager.GLOBAL.inventoryManager.Remove(gameObject, itemStats.ID);
-    }
+    public void UseItem() => GameManager.GLOBAL.inventory.Remove(gameObject, itemStats.ID);
 
     protected override void UpdateFunctions()
     {
@@ -79,7 +74,7 @@ public class Item : InteractableWithDialogue
 
         float itemScale = 1f;
 
-        if (GameManager.GLOBAL.inventoryManager.isOpen)
+        if (GameManager.GLOBAL.inventory.isOpen)
         {
             if (isCurrentItem)
                 itemScale = itemStats.inventoryInspectionScale;
@@ -106,7 +101,7 @@ public class Item : InteractableWithDialogue
             return;
 
         // Inventory isn't open
-        if (!GameManager.GLOBAL.inventoryManager.isOpen)
+        if (!GameManager.GLOBAL.inventory.isOpen)
             return;
 
         // Prevent mouse interaction advancing dialogue

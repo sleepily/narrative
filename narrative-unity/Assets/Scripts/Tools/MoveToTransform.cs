@@ -8,6 +8,8 @@ public class MoveToTransform : MonoBehaviour
 
     public void Move()
     {
+        gameObject.SetActive(true);
+
         transform.parent = newParent;
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.Euler(Vector3.zero);

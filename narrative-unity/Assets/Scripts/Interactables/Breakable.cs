@@ -8,7 +8,7 @@ public class Breakable : Interactable
 
     public override void Use()
     {
-        ItemStats itemUsed = GameManager.GLOBAL.inventoryManager.GetCurrentItem().itemStats;
+        ItemStats itemUsed = GameManager.GLOBAL.inventory.GetCurrentItem().itemStats;
 
         if (itemUsed.isWeapon)
             return;

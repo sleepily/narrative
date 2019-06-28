@@ -34,6 +34,8 @@ public class InventoryManager : MonoBehaviour
     [HideInInspector]
     public List<Item> items;
 
+    bool logVerbose = false;
+
     string stringItemAdded = "<color=lime>InventoryManager:</color> Added item {0}.";
     string stringItemRemoved = "<color=cyan>InventoryManager:</color> Removed item {0}.";
     string stringItemSelected = "<color=cyan>InventoryManager:</color> Currently selected Item is {0}.";
@@ -58,7 +60,8 @@ public class InventoryManager : MonoBehaviour
 
         if (items.Contains(itemToAdd))
         {
-            Debug.Log(string.Format(stringItemAlreadyInInventory, itemToAdd.itemStats.ID));
+            if (logVerbose)
+                Debug.Log(string.Format(stringItemAlreadyInInventory, itemToAdd.itemStats.ID));
             return;
         }
 
@@ -66,7 +69,8 @@ public class InventoryManager : MonoBehaviour
 
         SetCurrentItem(itemToAdd);
 
-        Debug.Log(string.Format(stringItemAdded, itemToAdd.itemStats.ID));
+        if (logVerbose)
+            Debug.Log(string.Format(stringItemAdded, itemToAdd.itemStats.ID));
     }
 
     public void Remove(GameObject sender, string parameter = "")
@@ -84,7 +88,8 @@ public class InventoryManager : MonoBehaviour
 
         items.Remove(itemToRemove);
 
-        Debug.Log(string.Format(stringItemRemoved, parameter));
+        if (logVerbose)
+            Debug.Log(string.Format(stringItemRemoved, parameter));
     }
 
     bool GetItemInInventory(string itemID, out Item itemOut)
@@ -126,10 +131,23 @@ public class InventoryManager : MonoBehaviour
         UseScrollDeltaToChangeCurrentItem();
     }
 
-    public void ToggleInventory()
+    /*
+     * Toggle Inventory on/off.
+     * Picking up items should call with forceOpen = true.
+     */
+    public void ToggleInventory(bool forceOpen = false)
     {
-        isOpen = !isOpen;
+        if (!forceOpen)
+            isOpen = !isOpen;
+        else
+            isOpen = true;
+
         CursorLock.SetCursorLock(!isOpen);
+
+        if (isOpen)
+            GameManager.GLOBAL.player.Lock();
+        else
+            GameManager.GLOBAL.player.Unlock();
 
         currentItemParent = isOpen ? itemInspectionParent : itemHotCornerParent;
 

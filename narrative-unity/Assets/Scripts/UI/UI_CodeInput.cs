@@ -48,7 +48,7 @@ public class UI_CodeInput : MonoBehaviour
      */
     public void SubmitAnswer()
     {
-        if (codeType == Interactable_CodeInput.CodeType.digits || codeType == Interactable_CodeInput.CodeType.date)
+        if (codeType == Interactable_CodeInput.CodeType.digits || codeType == Interactable_CodeInput.CodeType.DeskDrawer)
         {
             string formattedString = "";
 
@@ -68,7 +68,7 @@ public class UI_CodeInput : MonoBehaviour
             EventManager.Global.TriggerEvent(GetReceiverID(), gameObject, formattedString);
         }
 
-        if (codeType == Interactable_CodeInput.CodeType.HELP || codeType == Interactable_CodeInput.CodeType.ILOVEYOU)
+        if (codeType == Interactable_CodeInput.CodeType.MILK || codeType == Interactable_CodeInput.CodeType.TAYLOR)
         {
             string formattedString = "";
 
