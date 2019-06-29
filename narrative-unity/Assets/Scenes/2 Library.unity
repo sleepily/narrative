@@ -1776,9 +1776,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSolved: 0
-  animators:
-  - {fileID: 907255844}
-  itemsToPickUp: []
   solution: 17072019
 --- !u!114 &387767554
 MonoBehaviour:
@@ -5816,9 +5813,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSolved: 0
-  animators:
-  - {fileID: 1170377103835624691}
-  itemsToPickUp: []
   solution: 10011010
   isPlaying: 0
 --- !u!114 &1046477875
@@ -6880,8 +6874,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSolved: 0
-  animators: []
-  itemsToPickUp: []
   solution: 63 28 1547
   bookDistance: 0.1
 --- !u!114 &1081062260
@@ -7439,9 +7431,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSolved: 0
-  animators:
-  - {fileID: 1287091749}
-  itemsToPickUp: []
   solution: MILK
 --- !u!114 &1287091737
 MonoBehaviour:
@@ -22347,8 +22336,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSolved: 0
-  animators: []
-  itemsToPickUp: []
   solution: 
 --- !u!114 &8296172667440730770
 MonoBehaviour:
@@ -23306,9 +23293,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSolved: 0
-  animators:
-  - {fileID: 8296172669043255501}
-  itemsToPickUp: []
   solution: TAYLOR
 --- !u!114 &8296172669043255489
 MonoBehaviour:

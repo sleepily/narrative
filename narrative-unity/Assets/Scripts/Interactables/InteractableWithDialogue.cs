@@ -49,6 +49,21 @@ public class InteractableWithDialogue : Interactable
         GameManager.GLOBAL.dialogue.WaitForPlayerRead(flowchart);
         return;
     }
+    /*
+     * Trigger a specified block instead of Start
+     */
+    public virtual void TriggerDialogue(string blockID)
+    {
+        if (IsInDialogueCheck())
+            return;
+
+        if (!flowchart.HasBlock(blockID))
+            return;
+
+        flowchart.ExecuteBlock(blockID);
+        GameManager.GLOBAL.dialogue.WaitForPlayerRead(flowchart);
+        return;
+    }
 
     /*
      * Trigger character dialogue using an item and jump to the block with the item's ID

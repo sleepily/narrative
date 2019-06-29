@@ -38,10 +38,7 @@ public class UI_CodeInput : MonoBehaviour
     /*
      * Invoke execution of SubmitAnswer because TMPro doesn't process the input in the same frame
      */
-    public void InvokeSubmitAnswer()
-    {
-        Invoke("SubmitAnswer", .02f);
-    }
+    public void InvokeSubmitAnswer() => Invoke("SubmitAnswer", .02f);
 
     /*
      * Format the answer and submit it to the puzzle
@@ -68,6 +65,26 @@ public class UI_CodeInput : MonoBehaviour
             EventManager.Global.TriggerEvent(GetReceiverID(), gameObject, formattedString);
         }
 
+        if (codeType == Interactable_CodeInput.CodeType.RadioFrequency)
+        {
+            string formattedString = "";
+
+            int charIndex = 0;
+            foreach (char letter in inputField.text.ToCharArray())
+            {
+                if (!char.IsNumber(letter))
+                    continue;
+
+                charIndex++;
+                formattedString += letter;
+            }
+
+            if (charIndex < inputLength)
+                return;
+
+            FindObjectOfType<Interactable_Radio>().CheckTime(formattedString);
+        }
+
         if (codeType == Interactable_CodeInput.CodeType.MILK || codeType == Interactable_CodeInput.CodeType.TAYLOR)
         {
             string formattedString = "";
@@ -90,20 +107,11 @@ public class UI_CodeInput : MonoBehaviour
         Invoke("Hide", lastCharDelay);
     }
 
-    string GetReceiverID()
-    {
-        return "Puzzle_CodeInput " + codeType.ToString();
-    }
+    string GetReceiverID() => "Puzzle_CodeInput " + codeType.ToString();
 
-    void Show()
-    {
-        ToggleVisibility(true);
-    }
+    void Show() => ToggleVisibility(true);
 
-    void Hide()
-    {
-        ToggleVisibility(false);
-    }
+    void Hide() => ToggleVisibility(false);
 
     public void ToggleVisibility(bool setVisible = true)
     {

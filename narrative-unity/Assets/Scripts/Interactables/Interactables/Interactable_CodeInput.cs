@@ -12,7 +12,8 @@ public class Interactable_CodeInput : Interactable
         DeskDrawer,
         MILK,
         TAYLOR,
-        Toolbox
+        Toolbox,
+        RadioFrequency
     }
 
     public CodeType codeType;
