@@ -34,11 +34,24 @@ public class Player : CharacterWithDialogue
 
     public bool IsLocked() => isLocked;
 
+    public void SetLocked(bool locked)
+    {
+        if (locked)
+            Lock();
+        else
+            Unlock();
+    }
+
     public void Lock()
     {
         isLocked = true;
         playerMovement.StopMoving();
+        Debug.Log("Lock Player");
     }
 
-    public void Unlock() => isLocked = false;
+    public void Unlock()
+    {
+        Debug.Log("Unlock Player");
+        isLocked = false;
+    }
 }

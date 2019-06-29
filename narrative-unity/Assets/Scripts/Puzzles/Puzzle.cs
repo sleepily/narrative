@@ -9,8 +9,6 @@ public class Puzzle : MonoBehaviour
     public bool isSolved = false;
 
     protected Flowchart flowchart;
-    public List<Animator> animators;
-    public List<Item> itemsToPickUp;
 
     [Tooltip("Puzzle solution. Book: BookIDs, Xylophone Keys: 1/0, Code: answer")]
     public string solution = "";
@@ -74,14 +72,6 @@ public class Puzzle : MonoBehaviour
 
         flowchart.SetBooleanVariable("isSolved", true);
         TriggerDialogue();
-
-        foreach (Item item in itemsToPickUp)
-            if (item)
-                item.PickupItem();
-
-        foreach (Animator animator in animators)
-            if (animator)
-                animator.SetTrigger("isSolved");
     }
 
     public virtual void PuzzleSolvedReminder() { }

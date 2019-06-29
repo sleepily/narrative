@@ -144,10 +144,7 @@ public class InventoryManager : MonoBehaviour
 
         CursorLock.SetCursorLock(!isOpen);
 
-        if (isOpen)
-            GameManager.GLOBAL.player.Lock();
-        else
-            GameManager.GLOBAL.player.Unlock();
+        GameManager.GLOBAL.player.SetLocked(isOpen);
 
         currentItemParent = isOpen ? itemInspectionParent : itemHotCornerParent;
 

@@ -5,7 +5,6 @@ using Fungus;
 
 [RequireComponent(typeof(MeshRenderer))]
 [RequireComponent(typeof(Collider))]
-[RequireComponent(typeof(Flowchart))]
 public class Interactable : MonoBehaviour
 {
     [Header("Color Glow Components")]
@@ -27,10 +26,7 @@ public class Interactable : MonoBehaviour
 
     private void OnMouseOver() => MouseButtonCheck();
 
-    private void OnMouseExit()
-    {
-        Unfocus();
-    }
+    private void OnMouseExit() => Unfocus();
 
     /*
      * Manual mouse button check, since the collider's OnMouse() function

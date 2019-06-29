@@ -40,6 +40,10 @@ public class Item : InteractableWithDialogue
         base.Use();
     }
 
+    /*
+     * Add the item to inventory and show its flavor text
+     * TODO: Fix player locking
+     */
     public void PickupItem()
     {
         if (!itemStats.canBePickedUp)
