@@ -1542,7 +1542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 8565007891227663161}
+  selectedFlowchart: {fileID: 8554143493655935464}
 --- !u!4 &991689762
 Transform:
   m_ObjectHideFlags: 1
@@ -20357,7 +20357,6 @@ GameObject:
   - component: {fileID: 8554143493655935471}
   - component: {fileID: 8554143493655935470}
   - component: {fileID: 8554143493655935469}
-  - component: {fileID: 8554143493655935474}
   - component: {fileID: 8554143493655935475}
   m_Layer: 0
   m_Name: Clock
@@ -20392,8 +20391,7 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 8554143493655935470}
-  selectedCommands:
-  - {fileID: 8554143493655935474}
+  selectedCommands: []
   variables:
   - {fileID: 8554143493655935475}
   description: 
@@ -20420,7 +20418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFocusable: 1
   startHours: 16
-  startMinutes: 2
+  startMinutes: 20
 --- !u!65 &8554143493655935466
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20540,7 +20538,6 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 8554143493655935469}
-  - {fileID: 8554143493655935474}
 --- !u!114 &8554143493655935471
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -20610,71 +20607,6 @@ MonoBehaviour:
     stringVal: 
   startIndex: 0
   callMode: 0
---- !u!114 &8554143493655935474
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8554143493655935463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 7
-  indentLevel: 0
-  description: 
-  delay: 0
-  invokeType: 0
-  staticEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8554143493655935465}
-        m_MethodName: AddMinutes
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  booleanParameter:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  booleanEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Fungus.InvokeEvent+BooleanEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  integerParameter:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  integerEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Fungus.InvokeEvent+IntegerEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  floatParameter:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  floatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Fungus.InvokeEvent+FloatEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  stringParameter:
-    stringRef: {fileID: 0}
-    stringVal: 
-  stringEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Fungus.InvokeEvent+StringEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &8554143493655935475
 MonoBehaviour:
   m_ObjectHideFlags: 2
