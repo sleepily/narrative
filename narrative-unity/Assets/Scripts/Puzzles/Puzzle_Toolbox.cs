@@ -32,8 +32,6 @@ public class Puzzle_Toolbox : Puzzle
             if (!int.TryParse(digit.ToString(), out intToAdd))
                 intToAdd = 0;
 
-            Debug.Log(intToAdd);
-
             solutionArray[index] = intToAdd;
             index++;
         }

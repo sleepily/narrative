@@ -46,12 +46,12 @@ public class Player : CharacterWithDialogue
     {
         isLocked = true;
         playerMovement.StopMoving();
-        Debug.Log("Lock Player");
+        // Debug.Log("Lock Player");
     }
 
     public void Unlock()
     {
-        Debug.Log("Unlock Player");
+        // Debug.Log("Unlock Player");
         isLocked = false;
     }
 }
