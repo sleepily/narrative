@@ -1440,11 +1440,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPaused: 0
-  inventoryManager: {fileID: 305249803}
+  inventory: {fileID: 0}
   sceneLoader: {fileID: 0}
-  player: {fileID: 0}
+  dialogue: {fileID: 0}
   interactableSayDialog: {fileID: 0}
   characterSayDialog: {fileID: 0}
+  player: {fileID: 0}
 --- !u!4 &1466319568
 Transform:
   m_ObjectHideFlags: 0
@@ -2811,6 +2812,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7674100016900746684, guid: 910f5d7b3bc44e5449b40034316d338f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 25bf6083429a81849be4eff6f9098471, type: 2}
     - target: {fileID: 518741801, guid: 910f5d7b3bc44e5449b40034316d338f, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
