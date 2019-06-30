@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Interactable_Radio : InteractableWithDialogue
+public class Puzzle_Radio : Puzzle_CodeInput
 {
+    [Tooltip("Use clock's time as solution rather than a set one.")]
     public Interactable_Clock clock;
 
-    public void CheckTime(string timeInput)
+    public override bool PuzzleCheck(string playerInput) => CheckTime(playerInput);
+
+    public bool CheckTime(string timeInput)
     {
         Debug.Log("Checking for input " + timeInput);
 
@@ -40,16 +43,16 @@ public class Interactable_Radio : InteractableWithDialogue
         if (!isCorrect)
         {
             TriggerDialogue("Wrong");
-            return;
+            return false;
         }
 
-        CorrectTime();
+        return CorrectTime();
     }
 
-    void CorrectTime()
+    bool CorrectTime()
     {
-        Debug.Log("time correct");
         flowchart.SetBooleanVariable("isSolved", true);
         TriggerDialogue();
+        return true;
     }
 }

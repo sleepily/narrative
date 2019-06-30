@@ -38,9 +38,7 @@ public class InventoryManager : MonoBehaviour
 
     string stringItemAdded = "<color=lime>InventoryManager:</color> Added item {0}.";
     string stringItemRemoved = "<color=cyan>InventoryManager:</color> Removed item {0}.";
-    string stringItemSelected = "<color=cyan>InventoryManager:</color> Currently selected Item is {0}.";
     string stringItemNotFound = "<color=cyan>InventoryManager:</color> Couldn't find item {0}.";
-    string stringInventoryEmpty = "<color=orange>InventoryManager:</color> Inventory is empty.";
     string stringItemAlreadyInInventory = "<color=orange>InventoryManager:</color> Item {0} already in inventory.";
 
     private void OnEnable()

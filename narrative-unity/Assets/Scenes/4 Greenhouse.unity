@@ -549,7 +549,7 @@ MonoBehaviour:
   inputLength: 4
   lastCharDelay: 0.4
   popupLerpTime: 0.1
-  codeType: 5
+  puzzle: {fileID: 8565007891227663162}
   textFieldEvent:
     m_PersistentCalls:
       m_Calls:
@@ -19305,7 +19305,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSolved: 0
+  flowchart: {fileID: 0}
   solution: 1234
+  codeType: 0
+  playerInput: 
 --- !u!1 &8106025803034544032
 GameObject:
   m_ObjectHideFlags: 0
@@ -20724,7 +20727,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40112bb7c0a31014eb4f1850b58442b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFocusable: 1
+  isSolved: 0
+  solution: 
+  codeType: 5
   clock: {fileID: 8554143493655935465}
 --- !u!64 &8565007891227663163
 MeshCollider:
@@ -21050,7 +21055,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &8565007891227663174
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

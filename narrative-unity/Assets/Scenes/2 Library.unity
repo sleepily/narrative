@@ -1722,7 +1722,6 @@ GameObject:
   m_Component:
   - component: {fileID: 387767552}
   - component: {fileID: 387767554}
-  - component: {fileID: 387767553}
   - component: {fileID: 387767560}
   - component: {fileID: 387767559}
   - component: {fileID: 387767558}
@@ -1740,6 +1739,7 @@ GameObject:
   - component: {fileID: 387767563}
   - component: {fileID: 387767570}
   - component: {fileID: 387767571}
+  - component: {fileID: 387767553}
   m_Layer: 0
   m_Name: Table with Taylor's letter
   m_TagString: Untagged
@@ -1774,11 +1774,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 387767551}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6ecab09556ed584e9b5155339a75762, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d11e7b1d67b1a64c9c92f402f7127ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isSolved: 0
   solution: 17072019
+  codeType: 1
 --- !u!114 &387767554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2255,7 +2256,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 391
     y: 104
-    width: 150.8
+    width: 150
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2310,7 +2311,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &387767571
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4806,7 +4807,7 @@ GameObject:
   - component: {fileID: 619731928}
   - component: {fileID: 619731929}
   m_Layer: 8
-  m_Name: ILOVEYOU
+  m_Name: TAYLOR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4908,7 +4909,7 @@ MonoBehaviour:
   inputLength: 6
   lastCharDelay: 0.4
   popupLerpTime: 0.1
-  codeType: 3
+  puzzle: {fileID: 8296172669043255488}
   textFieldEvent:
     m_PersistentCalls:
       m_Calls:
@@ -5518,7 +5519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
-  puzzle: {fileID: 387767553}
+  puzzle: {fileID: 0}
   codeType: 1
   codeInput: {fileID: 1968862676}
 --- !u!114 &907255846
@@ -6076,8 +6077,8 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 1046477877}
   - {fileID: 1046477879}
+  - {fileID: 1046477877}
 --- !u!114 &1046477872
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6154,7 +6155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -221, y: 4}
+  scrollPos: {x: -100, y: 31}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -6166,8 +6167,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 1046477881}
-  selectedCommands: []
+  - {fileID: 1046477871}
+  selectedCommands:
+  - {fileID: 1046477879}
   variables:
   - {fileID: 1046477872}
   - {fileID: 1046477868}
@@ -6280,6 +6282,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1170377103835624691}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: isSolved
           m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -7486,7 +7499,7 @@ MonoBehaviour:
   inputLength: 4
   lastCharDelay: 0.4
   popupLerpTime: 0.1
-  codeType: 2
+  puzzle: {fileID: 1287091736}
   textFieldEvent:
     m_PersistentCalls:
       m_Calls:
@@ -7754,11 +7767,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1287091734}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee99748a48a8a914b8a3b3cac20cfa9d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d11e7b1d67b1a64c9c92f402f7127ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isSolved: 0
   solution: MILK
+  codeType: 0
 --- !u!114 &1287091737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7785,8 +7799,7 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 1287091745}
-  selectedCommands:
-  - {fileID: 1287091750}
+  selectedCommands: []
   variables:
   - {fileID: 1287091744}
   description: 
@@ -7949,7 +7962,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 359
     y: 64
-    width: 134
+    width: 133
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -12623,7 +12636,7 @@ MonoBehaviour:
   inputLength: 8
   lastCharDelay: 0.4
   popupLerpTime: 0.1
-  codeType: 1
+  puzzle: {fileID: 387767553}
   textFieldEvent:
     m_PersistentCalls:
       m_Calls:
@@ -14261,7 +14274,6 @@ GameObject:
   - component: {fileID: 1170377104056170218}
   - component: {fileID: 1170377104056170217}
   - component: {fileID: 1170377104056170216}
-  - component: {fileID: 1170377104056170215}
   - component: {fileID: 1170377104056170214}
   - component: {fileID: 1170377104056170221}
   - component: {fileID: 1170377104056170222}
@@ -14271,9 +14283,9 @@ GameObject:
   - component: {fileID: 1170377104056170230}
   - component: {fileID: 1170377104056170229}
   - component: {fileID: 1170377104056170228}
-  - component: {fileID: 1170377104056170227}
   - component: {fileID: 1170377104056170226}
   - component: {fileID: 1170377104056170225}
+  - component: {fileID: 1170377104056170215}
   m_Layer: 0
   m_Name: key lock
   m_TagString: Untagged
@@ -14309,7 +14321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -74.18211, y: -33.045452}
+  scrollPos: {x: -34.4094, y: 60.136375}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 291
@@ -14363,7 +14375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 3
-  indentLevel: 1
+  indentLevel: 0
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 1170377104056170211}
   startLabel:
@@ -14413,8 +14425,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 390
-    y: 46
+    x: 384.31824
+    y: -21.045464
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -14426,6 +14438,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 1170377104056170221}
   - {fileID: 1170377104056170222}
+  - {fileID: 1170377104056170215}
 --- !u!114 &1170377104056170212
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -14451,13 +14464,10 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 1170377104056170227}
   - {fileID: 1170377104056170216}
   - {fileID: 1170377104056170214}
-  - {fileID: 1170377104056170215}
-  - {fileID: 1170377104056170209}
   - {fileID: 1170377104056170226}
-  - {fileID: 1170377104056170225}
+  - {fileID: 1170377104056170209}
 --- !u!114 &1170377104056170213
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -14498,9 +14508,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 10
-  indentLevel: 2
+  indentLevel: 1
   targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 1170377104056170218}
+  targetBlock: {fileID: 1170377104056170225}
   startLabel:
     stringRef: {fileID: 0}
     stringVal: 
@@ -14508,18 +14518,31 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1170377104056170215
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170377104056170205}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 9
-  indentLevel: 1
+  itemId: 22
+  indentLevel: 0
+  storyText: I don't think I can do anything else with this lock
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!114 &1170377104056170216
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -14533,7 +14556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 8
-  indentLevel: 1
+  indentLevel: 0
   compareOperator: 0
   variable: {fileID: 1170377104056170220}
   booleanData:
@@ -14619,8 +14642,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 426.36365
-    y: 125.13636
+    x: 403.63654
+    y: 153.54552
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -14830,24 +14853,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1170377104056170205}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 20
-  indentLevel: 0
-  storyText: I don't think I can do anything else with this lock
+  nodeRect:
+    serializedVersion: 2
+    x: 427.59116
+    y: 70.54543
+    width: 135.22726
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 21
+  blockName: Already Open
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
+  eventHandler: {fileID: 0}
+  commandList: []
 --- !u!114 &1170377104056170226
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -14862,70 +14883,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 19
   indentLevel: 0
---- !u!114 &1170377104056170227
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1170377104056170205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 18
-  indentLevel: 0
-  compareOperator: 0
-  variable: {fileID: 1170377104056170229}
-  booleanData:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  integerData:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  floatData:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  stringData:
-    stringRef: {fileID: 0}
-    stringVal: 
-  animatorData:
-    animatorRef: {fileID: 0}
-    animatorVal: {fileID: 0}
-  audioSourceData:
-    audioSourceRef: {fileID: 0}
-    audioSourceVal: {fileID: 0}
-  colorData:
-    colorRef: {fileID: 0}
-    colorVal: {r: 0, g: 0, b: 0, a: 0}
-  gameObjectData:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 0}
-  materialData:
-    materialRef: {fileID: 0}
-    materialVal: {fileID: 0}
-  objectData:
-    objectRef: {fileID: 0}
-    objectVal: {fileID: 0}
-  rigidbody2DData:
-    rigidbody2DRef: {fileID: 0}
-    rigidbody2DVal: {fileID: 0}
-  spriteData:
-    spriteRef: {fileID: 0}
-    spriteVal: {fileID: 0}
-  textureData:
-    textureRef: {fileID: 0}
-    textureVal: {fileID: 0}
-  transformData:
-    transformRef: {fileID: 0}
-    transformVal: {fileID: 0}
-  vector2Data:
-    vector2Ref: {fileID: 0}
-    vector2Val: {x: 0, y: 0}
-  vector3Data:
-    vector3Ref: {fileID: 0}
-    vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &1170377104056170228
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -15036,16 +14993,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1170377104056170206}
-        m_MethodName: Solve
-        m_Mode: 1
+      - m_Target: {fileID: 1854778912}
+        m_MethodName: SetFocusable
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1462371668}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: isSolved
+          m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -23663,9 +23631,9 @@ GameObject:
   - component: {fileID: 8296172669043255500}
   - component: {fileID: 8296172669043255499}
   - component: {fileID: 8296172669043255501}
-  - component: {fileID: 8296172669043255488}
   - component: {fileID: 8296172669043255502}
   - component: {fileID: 8296172669043255503}
+  - component: {fileID: 8296172669043255488}
   m_Layer: 0
   m_Name: Chest with Picture
   m_TagString: Untagged
@@ -23682,11 +23650,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8296172669043255487}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40f15ddc77705b74a8a43b974b7c7a7d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d11e7b1d67b1a64c9c92f402f7127ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isSolved: 0
-  solution: TAYLOR
+  solution: taylor
+  codeType: 3
 --- !u!114 &8296172669043255489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23892,7 +23861,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 366
     y: 60
-    width: 128.35051
+    width: 135.56702
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -26456,7 +26425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
-  puzzle: {fileID: 8296172669043255488}
+  puzzle: {fileID: 0}
   codeType: 3
   codeInput: {fileID: 619731928}
 --- !u!114 &9101430577587994717

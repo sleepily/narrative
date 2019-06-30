@@ -4,18 +4,7 @@ using UnityEngine;
 
 public class Puzzle_CodeInput : Puzzle
 {
-    protected string codeType = "";
-    string playerInput;
-
-    private void OnEnable()
-    {
-        OnEnableFunctions();
-    }
-
-    protected virtual void OnEnableFunctions()
-    {
-        EventManager.Global.StartListening("Puzzle_CodeInput " + codeType, EventFunction);
-    }
+    public Interactable_CodeInput.CodeType codeType;
 
     protected override void StartFunctions()
     {
@@ -24,21 +13,11 @@ public class Puzzle_CodeInput : Puzzle
         solution = solution.Trim();
     }
 
-    public void SetPlayerInput(string inputString)
+    public override bool PuzzleCheck(string playerInput)
     {
-        playerInput = inputString.Trim();
-    }
+        playerInput = playerInput.Trim();
 
-    public void EventFunction(GameObject sender, string playerAnswer = "")
-    {
-        SetPlayerInput(playerAnswer);
-        PuzzleCheck();
-    }
-
-    public override bool PuzzleCheck()
-    {
         bool answerIsCorrect = playerInput.Equals(solution);
-        // Debug.Log(string.Format("Comparing {0} with {1}", playerInput, solution));
 
         if (answerIsCorrect)
             PuzzleSolved();

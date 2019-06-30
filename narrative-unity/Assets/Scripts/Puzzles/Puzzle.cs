@@ -43,16 +43,23 @@ public class Puzzle : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        if (!GetFlowchart())
-        {
-            Debug.LogWarning(name + ": Cannot trigger dialogue, Flowchart missing.");
-            return;
-        }
-
         if (IsInDialogueCheck())
             return;
 
         flowchart.ExecuteBlock("Start");
+        GameManager.GLOBAL.dialogue.WaitForPlayerRead(flowchart);
+    }
+
+    public void TriggerDialogue(string blockID = "Start")
+    {
+        if (IsInDialogueCheck())
+            return;
+
+        if (!flowchart.HasBlock(blockID))
+            return;
+
+        flowchart.ExecuteBlock(blockID);
+        GameManager.GLOBAL.dialogue.WaitForPlayerRead(flowchart);
     }
 
     private void Update() => UpdateFunctions();
@@ -65,6 +72,7 @@ public class Puzzle : MonoBehaviour
     public virtual void PuzzleReset() { }
 
     public virtual bool PuzzleCheck() => false;
+    public virtual bool PuzzleCheck(string playerInput) => false;
 
     public virtual void PuzzleSolved()
     {

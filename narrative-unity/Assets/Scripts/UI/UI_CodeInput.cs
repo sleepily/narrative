@@ -22,7 +22,7 @@ public class UI_CodeInput : MonoBehaviour
     Vector3 localScale;
     bool isVisible = true;
 
-    public Interactable_CodeInput.CodeType codeType;
+    public Puzzle_CodeInput puzzle;
 
     public UnityEvent textFieldEvent;
 
@@ -45,10 +45,12 @@ public class UI_CodeInput : MonoBehaviour
      */
     public void SubmitAnswer()
     {
-        if (codeType == Interactable_CodeInput.CodeType.digits || codeType == Interactable_CodeInput.CodeType.DeskDrawer)
-        {
-            string formattedString = "";
+        string answer = "";
 
+        if (puzzle.codeType == Interactable_CodeInput.CodeType.digits
+            || puzzle.codeType == Interactable_CodeInput.CodeType.DeskDrawer
+            || puzzle.codeType == Interactable_CodeInput.CodeType.RadioFrequency)
+        {
             int charIndex = 0;
             foreach (char letter in inputField.text.ToCharArray())
             {
@@ -56,58 +58,32 @@ public class UI_CodeInput : MonoBehaviour
                     continue;
 
                 charIndex++;
-                formattedString += letter;
+                answer += letter;
             }
 
             if (charIndex < inputLength)
                 return;
-
-            EventManager.Global.TriggerEvent(GetReceiverID(), gameObject, formattedString);
         }
 
-        if (codeType == Interactable_CodeInput.CodeType.RadioFrequency)
+        if (puzzle.codeType == Interactable_CodeInput.CodeType.MILK
+            || puzzle.codeType == Interactable_CodeInput.CodeType.TAYLOR)
         {
-            string formattedString = "";
-
-            int charIndex = 0;
-            foreach (char letter in inputField.text.ToCharArray())
-            {
-                if (!char.IsNumber(letter))
-                    continue;
-
-                charIndex++;
-                formattedString += letter;
-            }
-
-            if (charIndex < inputLength)
-                return;
-
-            FindObjectOfType<Interactable_Radio>().CheckTime(formattedString);
-        }
-
-        if (codeType == Interactable_CodeInput.CodeType.MILK || codeType == Interactable_CodeInput.CodeType.TAYLOR)
-        {
-            string formattedString = "";
-
             // Only include letters, not spacings or symbols
             foreach (char letter in inputField.text.ToCharArray())
                 if (char.IsLetter(letter))
-                    formattedString += char.ToUpper(letter);
+                    answer += char.ToUpper(letter);
 
-            formattedString.ToUpper();
+            answer.ToUpper();
 
-            int length = formattedString.Length;
+            int length = answer.Length;
 
             if (length < inputLength)
                 return;
-
-            EventManager.Global.TriggerEvent(GetReceiverID(), gameObject, formattedString);
         }
 
+        puzzle.PuzzleCheck(answer);
         Invoke("Hide", lastCharDelay);
     }
-
-    string GetReceiverID() => "Puzzle_CodeInput " + codeType.ToString();
 
     void Show() => ToggleVisibility(true);
 
@@ -116,6 +92,9 @@ public class UI_CodeInput : MonoBehaviour
     public void ToggleVisibility(bool setVisible = true)
     {
         isVisible = setVisible;
+
+        if (isVisible)
+            GameManager.GLOBAL.player.SetLocked(isVisible);
 
         // When the UI is shown, get focus and reset text
         if (isVisible)
