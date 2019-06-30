@@ -31,8 +31,6 @@ public class Item : InteractableWithDialogue
         if (isInInventory)
             return;
 
-        base.Interact();
-
         PickupItem();
     }
 

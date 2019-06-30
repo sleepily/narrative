@@ -2514,21 +2514,6 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
---- !u!114 &436314754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8296172669349751948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a41b40c58ab129449bb50def8b0870d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isFocusable: 1
-  itemStats: {fileID: 11400000, guid: 33547da7ebafd074e8eb7a29c6c660f6, type: 2}
-  isCurrentItem: 0
 --- !u!64 &436314755
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -24205,7 +24190,6 @@ GameObject:
   - component: {fileID: 7718390322500687952}
   - component: {fileID: 436314755}
   - component: {fileID: 436314753}
-  - component: {fileID: 436314754}
   - component: {fileID: 436314757}
   - component: {fileID: 436314758}
   - component: {fileID: 436314759}
@@ -24271,6 +24255,7 @@ GameObject:
   - component: {fileID: 8296172669349751982}
   - component: {fileID: 8296172669349751981}
   - component: {fileID: 8296172669349751971}
+  - component: {fileID: 8296172669349751992}
   m_Layer: 0
   m_Name: Baby Bottle
   m_TagString: Untagged
@@ -25708,6 +25693,19 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &8296172669349751992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669349751948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bc800bb9363277478ab6d805bf9ed39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFocusable: 1
 --- !u!1 &8296172669388293499
 GameObject:
   m_ObjectHideFlags: 0

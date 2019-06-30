@@ -32,6 +32,8 @@ public class DialogueManager : MonoBehaviour
     public bool dialogueInProgress { get; private set; } = false;
     Queue<DialoguePair> queue = new Queue<DialoguePair>();
 
+    bool logVerbose = false;
+
     /*
      * Enqueue a dialogue pair to be executed
      */
@@ -45,7 +47,8 @@ public class DialogueManager : MonoBehaviour
     {
         queue.Enqueue(pair);
 
-        Debug.Log($"Enqueued Dialogue from {pair.flowchart.gameObject.name}");
+        if (logVerbose)
+            Debug.Log($"Enqueued Dialogue from {pair.flowchart.gameObject.name}");
 
         if (!dialogueInProgress)
             ExecuteNextDialoguePair();
@@ -57,8 +60,20 @@ public class DialogueManager : MonoBehaviour
             return false;
 
         DialoguePair dialoguePair = queue.Dequeue();
-        
-        dialoguePair.flowchart.ExecuteBlock(dialoguePair.block);
+
+        if (logVerbose)
+            Debug.Log($"Trying to execute {dialoguePair.flowchart.gameObject.name}:{dialoguePair.block.BlockName}");
+
+        if (!dialoguePair.flowchart.ExecuteIfHasBlock(dialoguePair.block.BlockName))
+        {
+            Debug.Log("Cannot execute block. Skipping.");
+            return ExecuteNextDialoguePair();
+        }
+
+        if (logVerbose)
+            Debug.Log($"Executing {dialoguePair.flowchart.gameObject.name}:{dialoguePair.block.BlockName}...");
+
+        SpecialChecksBefore(dialoguePair.flowchart);
         WaitForDialogue(dialoguePair.flowchart);
         return true;
     }
@@ -77,19 +92,36 @@ public class DialogueManager : MonoBehaviour
         while (flowchart.HasExecutingBlocks())
             yield return null;
 
+        if (logVerbose)
+            Debug.Log($"Finished Flowchart on {flowchart.gameObject.name}.");
+
         dialogueInProgress = false;
 
+        SpecialChecksAfter(flowchart);
 
         // Keep the chain of queued up dialogue pairs running
-        // Unlock the player if the queue's final flowchart belongs to a puzzle
+        // Execute final special checks if this is the last queued flowchart
         if (!ExecuteNextDialoguePair())
-            if (CheckForPuzzle(flowchart))
-                GameManager.GLOBAL.player.SetMovementLock(false);
+            SpecialChecksFinal(flowchart);
     }
 
-    /*
-     * Fix player not being unlocked after trying to solve a puzzle
-     */
-    bool CheckForPuzzle(Flowchart flowchart) =>
-        flowchart.gameObject.GetComponent<Puzzle>() ?? false;
+    void SpecialChecksBefore(Flowchart flowchart)
+    {
+        flowchart.gameObject.GetComponent<Cellphone>()?.EnablePhoneScreen(true);
+    }
+
+    void SpecialChecksAfter(Flowchart flowchart)
+    {
+        flowchart.gameObject.GetComponent<Cellphone>()?.EnablePhoneScreen(false);
+    }
+
+    void SpecialChecksFinal(Flowchart flowchart)
+    {
+        // Unlock the player if the queue's final flowchart did not belong to an item
+        if (!flowchart.gameObject.GetComponent<Item>())
+            GameManager.GLOBAL.player.SetMovementLock(false);
+
+        if (flowchart.gameObject.GetComponent<Cellphone>())
+            GameManager.GLOBAL.player.SetMovementLock(false);
+    }
 }

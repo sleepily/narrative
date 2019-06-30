@@ -83,48 +83,23 @@ public class Cellphone : MonoBehaviour
     public void TriggerNewMessage()
     {
         flowchart.SetIntegerVariable("messageIntensity", messageIntensity);
-        AnimateScreen(true);
 
-        if (!flowchart.ExecuteIfHasBlock("NewMessage"))
-        {
-            Debug.Log("Couldn't trigger cellphone message. Block \"NewMessage\" missing?");
-            return;
-        }
-
-        Debug.Log("Triggered cellphone with intensity level " + messageIntensity);
-        WaitForPlayerRead();
+        // Queue message and take care of animator in dialogue manager
+        GameManager.GLOBAL.dialogue.QueueForRead(flowchart, "NewMessage");
     }
 
     /*
-     * Disable new texts until the player has finished the dialogue
+     * Enable phone screen and dismiss messages
+     * Disable phone screen and allow messages
      */
-    void WaitForPlayerRead()
-    {
-        canTriggerNewMessage = false;
-
-        // Prevent any player movement or interaction
-        GameManager.GLOBAL.player.LockMovement();
-
-        StartCoroutine(CheckPlayerRead());
-    }
-
-    IEnumerator CheckPlayerRead()
-    {
-        // Wait for the player to end all dialogue
-        while (flowchart.HasExecutingBlocks())
-            yield return null;
-
-        // Enable new texts from this point on
-        lastMessageReadTime = Time.time;
-        canTriggerNewMessage = true;
-
-        GameManager.GLOBAL.player.UnlockMovement();
-
-        AnimateScreen(false);
-    }
-
-    void AnimateScreen(bool screenOn = true)
+    public void EnablePhoneScreen(bool screenOn = true)
     {
         animator.SetBool("hasScreenOn", screenOn);
+        canTriggerNewMessage = !screenOn;
+
+        if (!screenOn)
+            lastMessageReadTime = Time.time;
+
+        // canTriggerNewMessage = screenOn ? true : canTriggerNewMessage;
     }
 }

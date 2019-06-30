@@ -38,30 +38,16 @@ public class InteractableWithDialogue : Interactable
     }
 
     /*
-     * Execute Start block, which will handle conditions and jumps
+     * Queue executing Start block, which will handle conditions and jumps
      */
-    public virtual void TriggerDialogue()
-    {
-        if (IsInDialogueCheck())
-            return;
-
+    public virtual void TriggerDialogue() =>
         GameManager.GLOBAL.dialogue.QueueForRead(flowchart);
-        return;
-    }
+
     /*
-     * Trigger a specified block instead of Start
+     * Queue triggering a specified block
      */
-    public virtual void TriggerDialogue(string blockID)
-    {
-        if (IsInDialogueCheck())
-            return;
-
-        if (!flowchart.HasBlock(blockID))
-            return;
-
+    public virtual void TriggerDialogue(string blockID) =>
         GameManager.GLOBAL.dialogue.QueueForRead(flowchart, blockID);
-        return;
-    }
 
     /*
      * Trigger character dialogue at block of itemID
@@ -97,7 +83,11 @@ public class InteractableWithDialogue : Interactable
         GameManager.GLOBAL.dialogue.QueueForRead(flowchart, itemBlock);
         return true;
     }
-    public override void Interact() => TriggerDialogue();
+    public override void Interact()
+    {
+        if (!GameManager.GLOBAL.dialogue.dialogueInProgress)
+            TriggerDialogue();
+    }
 
     public override void Use() => TriggerItemDialogue();
 }
