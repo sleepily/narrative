@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 518741803}
   m_Layer: 5
   m_Name: InteractableSayDialog
-  m_TagString: Item
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2016,7 +2016,6 @@ MonoBehaviour:
   dampingTime: 0
   autoZeroVerticalOnMobile: 1
   autoZeroHorizontalOnMobile: 0
-  relative: 1
 --- !u!1 &8163109732509056083
 GameObject:
   m_ObjectHideFlags: 0

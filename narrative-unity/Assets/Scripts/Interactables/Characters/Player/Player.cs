@@ -11,47 +11,32 @@ public class Player : CharacterWithDialogue
     PlayerMovement playerMovement;
 
     [HideInInspector]
-    protected bool isLocked = false;
+    public bool hasLockedMovement { get; private set; } = false;
 
-    protected override void StartFunctions()
+    protected override void GetAllComponents()
     {
         playerMovement = GetComponent<PlayerMovement>();
+        GetFlowchart();
     }
-
-    protected override void GetAllComponents() => GetFlowchart();
 
     protected override void UpdateFunctions() { }
 
-    public void WrongItemDialogue()
-    {
-        if (IsInDialogueCheck())
-            return;
+    public void WrongItemDialogue() =>
+        GameManager.GLOBAL.dialogue.QueueForRead(flowchart, "WrongItem");
 
-        // TODO: Add randomization
-        Block wrongItemBlock = flowchart.FindBlock("WrongItem");
-        flowchart.ExecuteBlock(wrongItemBlock);
-    }
-
-    public bool IsLocked() => isLocked;
-
-    public void SetLocked(bool locked)
+    public void SetMovementLock(bool locked)
     {
         if (locked)
-            Lock();
+            LockMovement();
         else
-            Unlock();
+            UnlockMovement();
     }
 
-    public void Lock()
+    public void LockMovement()
     {
-        isLocked = true;
+        hasLockedMovement = true;
         playerMovement.StopMoving();
-        // Debug.Log("Lock Player");
     }
 
-    public void Unlock()
-    {
-        // Debug.Log("Unlock Player");
-        isLocked = false;
-    }
+    public void UnlockMovement() => hasLockedMovement = false;
 }

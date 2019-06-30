@@ -61,12 +61,12 @@ public class SceneLoader : MonoBehaviour
             yield return null;
 
         hasFinishedLoading = false;
-        GameManager.GLOBAL.player.Lock();
+        GameManager.GLOBAL.player.LockMovement();
 
         yield return SceneManager.LoadSceneAsync(sceneBuildIndex, loadSceneMode);
 
         hasFinishedLoading = true;
-        GameManager.GLOBAL.player.Unlock();
+        GameManager.GLOBAL.player.UnlockMovement();
 
         if (teleportPlayer)
             GameManager.GLOBAL.player.teleportPlayer.Teleport(levelTeleportLocations[sceneBuildIndex - 1]);
@@ -78,11 +78,11 @@ public class SceneLoader : MonoBehaviour
             yield return null;
 
         hasFinishedLoading = false;
-        GameManager.GLOBAL.player.Lock();
+        GameManager.GLOBAL.player.LockMovement();
 
         yield return SceneManager.UnloadSceneAsync(sceneBuildIndex);
 
         hasFinishedLoading = true;
-        GameManager.GLOBAL.player.Unlock();
+        GameManager.GLOBAL.player.UnlockMovement();
     }
 }

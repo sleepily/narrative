@@ -46,8 +46,7 @@ public class Puzzle : MonoBehaviour
         if (IsInDialogueCheck())
             return;
 
-        flowchart.ExecuteBlock("Start");
-        GameManager.GLOBAL.dialogue.WaitForPlayerRead(flowchart);
+        GameManager.GLOBAL.dialogue.QueueForRead(flowchart);
     }
 
     public void TriggerDialogue(string blockID = "Start")
@@ -56,10 +55,12 @@ public class Puzzle : MonoBehaviour
             return;
 
         if (!flowchart.HasBlock(blockID))
+        {
+            Debug.Log($"Block {blockID} doesn't exist, executing block \"Start\".");
             return;
+        }
 
-        flowchart.ExecuteBlock(blockID);
-        GameManager.GLOBAL.dialogue.WaitForPlayerRead(flowchart);
+        GameManager.GLOBAL.dialogue.QueueForRead(flowchart, blockID);
     }
 
     private void Update() => UpdateFunctions();

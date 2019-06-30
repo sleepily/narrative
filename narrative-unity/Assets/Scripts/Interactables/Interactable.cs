@@ -92,6 +92,9 @@ public class Interactable : MonoBehaviour
         if (lerpIsFinished)
             return;
 
+        if (!meshRenderer)
+            return;
+
         currentGlowColor = Color.Lerp
         (
             currentGlowColor,
@@ -114,7 +117,9 @@ public class Interactable : MonoBehaviour
             return;
 
         currentGlowColor = desiredGlowColor;
-        meshRenderer.material.SetColor("_GlowColor", desiredGlowColor);
+
+        if (meshRenderer)
+            meshRenderer.material.SetColor("_GlowColor", desiredGlowColor);
     }
 
     /*

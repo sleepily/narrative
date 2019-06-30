@@ -103,7 +103,7 @@ public class Cellphone : MonoBehaviour
         canTriggerNewMessage = false;
 
         // Prevent any player movement or interaction
-        GameManager.GLOBAL.player.Lock();
+        GameManager.GLOBAL.player.LockMovement();
 
         StartCoroutine(CheckPlayerRead());
     }
@@ -118,7 +118,7 @@ public class Cellphone : MonoBehaviour
         lastMessageReadTime = Time.time;
         canTriggerNewMessage = true;
 
-        GameManager.GLOBAL.player.Unlock();
+        GameManager.GLOBAL.player.UnlockMovement();
 
         AnimateScreen(false);
     }

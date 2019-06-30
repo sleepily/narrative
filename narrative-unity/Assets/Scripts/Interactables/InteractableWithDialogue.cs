@@ -45,8 +45,7 @@ public class InteractableWithDialogue : Interactable
         if (IsInDialogueCheck())
             return;
 
-        flowchart.ExecuteBlock("Start");
-        GameManager.GLOBAL.dialogue.WaitForPlayerRead(flowchart);
+        GameManager.GLOBAL.dialogue.QueueForRead(flowchart);
         return;
     }
     /*
@@ -60,13 +59,12 @@ public class InteractableWithDialogue : Interactable
         if (!flowchart.HasBlock(blockID))
             return;
 
-        flowchart.ExecuteBlock(blockID);
-        GameManager.GLOBAL.dialogue.WaitForPlayerRead(flowchart);
+        GameManager.GLOBAL.dialogue.QueueForRead(flowchart, blockID);
         return;
     }
 
     /*
-     * Trigger character dialogue using an item and jump to the block with the item's ID
+     * Trigger character dialogue at block of itemID
      */
     public virtual bool TriggerItemDialogue(Item item = null)
     {
@@ -78,7 +76,7 @@ public class InteractableWithDialogue : Interactable
 
         if (!item)
         {
-            Debug.Log(string.Format("<color=orange>{0}:</color> No item for dialogue.", name));
+            Debug.Log($"<color=orange>{name}:</color> No item for dialogue.");
             return false;
         }
 
@@ -89,21 +87,14 @@ public class InteractableWithDialogue : Interactable
             Block wrongItemBlock = flowchart.FindBlock("WrongItem");
 
             if (wrongItemBlock)
-            {
-                flowchart.ExecuteBlock(wrongItemBlock);
-                GameManager.GLOBAL.dialogue.WaitForPlayerRead(flowchart);
-            }
+                GameManager.GLOBAL.dialogue.QueueForRead(flowchart, wrongItemBlock);
             else
-            {
                 GameManager.GLOBAL.player.WrongItemDialogue();
-                GameManager.GLOBAL.dialogue.WaitForPlayerRead(GameManager.GLOBAL.player.flowchart);
-            }
 
             return false;
         }
 
-        flowchart.ExecuteBlock(itemBlock);
-        GameManager.GLOBAL.dialogue.WaitForPlayerRead(flowchart);
+        GameManager.GLOBAL.dialogue.QueueForRead(flowchart, itemBlock);
         return true;
     }
     public override void Interact() => TriggerDialogue();

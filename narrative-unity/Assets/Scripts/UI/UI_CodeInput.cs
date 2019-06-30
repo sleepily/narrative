@@ -95,7 +95,7 @@ public class UI_CodeInput : MonoBehaviour
         isVisible = setVisible;
 
         if (isVisible)
-            GameManager.GLOBAL.player.SetLocked(isVisible);
+            GameManager.GLOBAL.player.SetMovementLock(isVisible);
 
         // When the UI is shown, get focus and reset text
         if (isVisible)

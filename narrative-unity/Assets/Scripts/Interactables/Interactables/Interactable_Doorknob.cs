@@ -10,6 +10,14 @@ public class Interactable_Doorknob : Interactable
 
     Puzzle_DoorWithKnobs puzzle;
 
+    void FormatStep()
+    {
+        while (rotationStep < 0)
+            rotationStep += puzzle.rotationSteps;
+
+        rotationStep %= puzzle.rotationSteps;
+    }
+
     public override void Interact()
     {
         base.Interact();
@@ -31,5 +39,11 @@ public class Interactable_Doorknob : Interactable
             rotationStep = 0;
     }
 
-    public void SetPuzzle(Puzzle_DoorWithKnobs puzzle) => this.puzzle = puzzle;
+    public void SetPuzzle(Puzzle_DoorWithKnobs puzzle)
+    {
+        this.puzzle = puzzle;
+
+        FormatStep();
+        RotateForward();
+    }
 }

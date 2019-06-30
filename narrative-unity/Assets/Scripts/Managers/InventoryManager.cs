@@ -119,7 +119,12 @@ public class InventoryManager : MonoBehaviour
     void GetInput()
     {
         if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (GameManager.GLOBAL.dialogue.dialogueInProgress)
+                return;
+
             ToggleInventory();
+        }
 
         // Allow reading item text again with RMB
         if (Input.GetMouseButtonDown(1))
@@ -142,7 +147,7 @@ public class InventoryManager : MonoBehaviour
 
         CursorLock.SetCursorLock(!isOpen);
 
-        GameManager.GLOBAL.player.SetLocked(isOpen);
+        GameManager.GLOBAL.player.SetMovementLock(isOpen);
 
         currentItemParent = isOpen ? itemInspectionParent : itemHotCornerParent;
 

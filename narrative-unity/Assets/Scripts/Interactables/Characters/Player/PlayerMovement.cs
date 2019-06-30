@@ -22,10 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start() => GetAllComponents();
 
-    void GetAllComponents()
-    {
-        controller = GetComponent<CharacterController>();
-    }
+    void GetAllComponents() => controller = GetComponent<CharacterController>();
 
     void Update()
     {
@@ -40,8 +37,12 @@ public class PlayerMovement : MonoBehaviour
     {
         bool allowMovement = true;
 
-        // Don't allow movement when player is giving input/in dialogue
-        if (GameManager.GLOBAL.player.IsLocked())
+        // Don't allow movement when locked
+        if (GameManager.GLOBAL.player.hasLockedMovement)
+            allowMovement = false;
+
+        // Don't allow movement when in dialogue
+        if (GameManager.GLOBAL.dialogue.dialogueInProgress)
             allowMovement = false;
 
         if (!GameManager.GLOBAL.sceneLoader.HasFinishedLoading())

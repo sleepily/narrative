@@ -5965,6 +5965,7 @@ GameObject:
   - component: {fileID: 864941891790055775}
   - component: {fileID: 864941891790055777}
   - component: {fileID: 864941891790055778}
+  - component: {fileID: 864941891790055779}
   m_Layer: 0
   m_Name: vase
   m_TagString: Untagged
@@ -6084,6 +6085,7 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 864941891790055767}
+  - {fileID: 864941891790055779}
 --- !u!114 &864941891790055770
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6177,9 +6179,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 864941891790055771}
+  - {fileID: 864941891790055769}
   selectedCommands:
-  - {fileID: 864941891790055776}
+  - {fileID: 864941891790055779}
   variables: []
   description: 
   stepPause: 0
@@ -6389,6 +6391,33 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Fungus.InvokeEvent+StringEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &864941891790055779
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864941891790055766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 9
+  indentLevel: 0
+  storyText: you already got the item hehehe
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!4 &865960268966060585
 Transform:
   m_ObjectHideFlags: 0
