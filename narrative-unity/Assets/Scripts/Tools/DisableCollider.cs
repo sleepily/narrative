@@ -8,11 +8,17 @@ public class DisableCollider : MonoBehaviour
 
     public void Disable()
     {
+        if (!colliderToDisable)
+            return;
+
         colliderToDisable.enabled = false;
     }
 
     public void Reenable()
     {
+        if (!colliderToDisable)
+            return;
+
         colliderToDisable.enabled = true;
     }
 }

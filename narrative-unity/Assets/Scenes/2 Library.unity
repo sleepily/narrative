@@ -696,7 +696,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 360, y: 80}
+  m_SizeDelta: {x: 270, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &314843677
 MonoBehaviour:
@@ -1740,6 +1740,7 @@ GameObject:
   - component: {fileID: 387767570}
   - component: {fileID: 387767571}
   - component: {fileID: 387767553}
+  - component: {fileID: 387767572}
   m_Layer: 0
   m_Name: Table with Taylor's letter
   m_TagString: Untagged
@@ -1934,8 +1935,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 400
-    y: 62
+    x: 399
+    y: 50
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1945,6 +1946,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 387767572}
   - {fileID: 387767571}
   - {fileID: 387767561}
   - {fileID: 387767562}
@@ -2337,7 +2339,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: IsSolved
+          m_StringArgument: isSolved
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -2374,6 +2376,33 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Fungus.InvokeEvent+StringEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &387767572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387767551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 15
+  indentLevel: 0
+  storyText: '*click*'
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1001 &398957626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4831,7 +4860,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 1.5}
-  m_SizeDelta: {x: 3.6, y: 0.8}
+  m_SizeDelta: {x: 2.7, y: 0.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &619731925
 MonoBehaviour:
@@ -5519,7 +5548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
-  puzzle: {fileID: 0}
+  puzzle: {fileID: 387767553}
   codeType: 1
   codeInput: {fileID: 1968862676}
 --- !u!114 &907255846
@@ -7772,7 +7801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSolved: 0
   solution: MILK
-  codeType: 0
+  codeType: 2
 --- !u!114 &1287091737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11102,7 +11131,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: XXXXXXXX
+  m_text: XXXXXX
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e8ed566d1a81bc047a8e1671a4a2fd08, type: 2}
   m_sharedMaterial: {fileID: 3652730560346887625, guid: e8ed566d1a81bc047a8e1671a4a2fd08,
@@ -11172,7 +11201,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1663258154}
-    characterCount: 8
+    characterCount: 6
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -23654,7 +23683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSolved: 0
-  solution: taylor
+  solution: TAYLOR
   codeType: 3
 --- !u!114 &8296172669043255489
 MonoBehaviour:
@@ -24015,7 +24044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9616f6f6323220946ae34d1814f204ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colliderToDisable: {fileID: 9101430577587994718}
+  colliderToDisable: {fileID: 9101430577587994719}
 --- !u!114 &8296172669043255503
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -24055,7 +24084,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: IsSolved
+          m_StringArgument: isSolved
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -26402,7 +26431,6 @@ GameObject:
   - component: {fileID: 6954650326376550364}
   - component: {fileID: 9065546718799335566}
   - component: {fileID: 9101430577587994717}
-  - component: {fileID: 9101430577587994718}
   - component: {fileID: 9101430577587994716}
   - component: {fileID: 9101430577587994719}
   m_Layer: 0
@@ -26425,7 +26453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
-  puzzle: {fileID: 0}
+  puzzle: {fileID: 8296172669043255488}
   codeType: 3
   codeInput: {fileID: 619731928}
 --- !u!114 &9101430577587994717
@@ -26465,20 +26493,6 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
---- !u!64 &9101430577587994718
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9101430577587994715}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 3369316746193770658, guid: b0dafd48e50165540a9b94a148f8ac4f, type: 3}
 --- !u!65 &9101430577587994719
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26490,7 +26504,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 103.681175, y: 53.13605, z: 95.01916}
+  m_Size: {x: 110, y: 53.13605, z: 100}
   m_Center: {x: 0.36588404, y: 12.030643, z: -44.800346}
 --- !u!1 &9101430578990097096
 GameObject:

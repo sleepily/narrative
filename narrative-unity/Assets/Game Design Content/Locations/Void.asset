@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Void
   m_EditorClassIdentifier: 
   levelIndex: 6
-  location: {x: 100, y: 5, z: 0}
+  location: {x: 100, y: 13, z: 0}
