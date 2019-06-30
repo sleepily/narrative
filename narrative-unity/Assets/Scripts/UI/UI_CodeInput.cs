@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.EventSystems;
 using UnityEngine.Events;
+using CodeType = Interactable_CodeInput.CodeType;
 
 public class UI_CodeInput : MonoBehaviour
 {
@@ -47,9 +47,9 @@ public class UI_CodeInput : MonoBehaviour
     {
         string answer = "";
 
-        if (puzzle.codeType == Interactable_CodeInput.CodeType.digits
-            || puzzle.codeType == Interactable_CodeInput.CodeType.DeskDrawer
-            || puzzle.codeType == Interactable_CodeInput.CodeType.RadioFrequency)
+        if (puzzle.codeType == CodeType.digits
+            || puzzle.codeType == CodeType.DeskDrawer
+            || puzzle.codeType == CodeType.RadioFrequency)
         {
             int charIndex = 0;
             foreach (char letter in inputField.text.ToCharArray())
@@ -65,8 +65,9 @@ public class UI_CodeInput : MonoBehaviour
                 return;
         }
 
-        if (puzzle.codeType == Interactable_CodeInput.CodeType.MILK
-            || puzzle.codeType == Interactable_CodeInput.CodeType.TAYLOR)
+        if (puzzle.codeType == CodeType.MILK
+            || puzzle.codeType == CodeType.TAYLOR
+            || puzzle.codeType == CodeType.HEART)
         {
             // Only include letters, not spacings or symbols
             foreach (char letter in inputField.text.ToCharArray())

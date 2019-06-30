@@ -26,4 +26,14 @@ public class Puzzle_CodeInput : Puzzle
 
         return answerIsCorrect;
     }
+
+    /*
+     * TODO: do this in base class
+     */
+    public override void PuzzleSolved()
+    {
+        isSolved = true;
+
+        TriggerDialogue("Solved");
+    }
 }

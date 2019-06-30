@@ -40,10 +40,7 @@ public class SceneLoader : MonoBehaviour
 
         // Debug.Log("Loading scene " + sceneBuildIndex + " with mode " + loadSceneMode.ToString());
 
-        StartCoroutine(Coroutine_LoadScene(sceneBuildIndex, loadSceneMode));
-
-        if (teleportPlayer)
-            GameManager.GLOBAL.player.teleportPlayer.Teleport(levelTeleportLocations[sceneBuildIndex - 1]);
+        StartCoroutine(Coroutine_LoadScene(sceneBuildIndex, loadSceneMode, teleportPlayer));
 
         SetCurrentLevel(sceneBuildIndex);
 
@@ -58,7 +55,7 @@ public class SceneLoader : MonoBehaviour
 
     public bool HasFinishedLoading() => hasFinishedLoading;
 
-    IEnumerator Coroutine_LoadScene(int sceneBuildIndex, LoadSceneMode loadSceneMode)
+    IEnumerator Coroutine_LoadScene(int sceneBuildIndex, LoadSceneMode loadSceneMode, bool teleportPlayer = true)
     {
         if (!hasFinishedLoading)
             yield return null;
@@ -70,6 +67,9 @@ public class SceneLoader : MonoBehaviour
 
         hasFinishedLoading = true;
         GameManager.GLOBAL.player.Unlock();
+
+        if (teleportPlayer)
+            GameManager.GLOBAL.player.teleportPlayer.Teleport(levelTeleportLocations[sceneBuildIndex - 1]);
     }
 
     IEnumerator Coroutine_UnloadScene(int sceneBuildIndex)

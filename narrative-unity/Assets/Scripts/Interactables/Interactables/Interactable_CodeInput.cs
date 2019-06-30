@@ -13,7 +13,8 @@ public class Interactable_CodeInput : Interactable
         MILK,
         TAYLOR,
         Toolbox,
-        RadioFrequency
+        RadioFrequency,
+        HEART
     }
 
     public CodeType codeType;

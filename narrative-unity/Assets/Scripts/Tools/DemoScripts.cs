@@ -31,18 +31,18 @@ public class DemoScripts : MonoBehaviour
         if (Input.GetKeyDown(reloadKey))
             GameManager.GLOBAL.sceneLoader.ReloadScene();
 
-        int teleport = -1;
+        int teleportIndex = -1;
 
         if (Input.GetKeyDown(KeyCode.Z))
-            teleport = 0;
+            teleportIndex = 0;
         if (Input.GetKeyDown(KeyCode.X))
-            teleport = 1;
+            teleportIndex = 1;
         if (Input.GetKeyDown(KeyCode.C))
-            teleport = 2;
+            teleportIndex = 2;
 
-        if (teleport >= 0)
+        if (teleportIndex >= 0)
         {
-            TeleportLocation destination = teleportLocations[teleport];
+            TeleportLocation destination = teleportLocations[teleportIndex];
             GameManager.GLOBAL.player.teleportPlayer.TeleportIntoLevel(destination);
         }
 
