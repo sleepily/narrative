@@ -82,8 +82,8 @@ public class InventoryManager : MonoBehaviour
         }
 
         SetCurrentItem(NextItem());
-        itemToRemove.gameObject.SetActive(false);
 
+        itemToRemove.RemoveFromInventory();
         items.Remove(itemToRemove);
 
         if (logVerbose)

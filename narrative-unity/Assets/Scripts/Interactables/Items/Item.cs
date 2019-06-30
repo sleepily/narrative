@@ -9,12 +9,19 @@ public class Item : InteractableWithDialogue
 
     public bool isInInventory { get; protected set; } = false;
     public bool isCurrentItem = false;
+    bool canBePickedUp;
 
     [Header("Item inspection")]
     float rotationSpeed = 14f;
     float scrollSpeed = 24f;
     float zoomDistance = 1.6f;
 
+    protected override void StartFunctions()
+    {
+        base.StartFunctions();
+
+        canBePickedUp = itemStats.canBePickedUp;
+    }
 
     /*
      * Pick up item when clicked.
@@ -41,12 +48,17 @@ public class Item : InteractableWithDialogue
     }
 
     /*
+     * Overwrite the item's PU state
+     */
+    public void SetPU(bool canBePickedUp) => this.canBePickedUp = canBePickedUp;
+
+    /*
      * Add the item to inventory and show its flavor text
      * TODO: Fix player locking
      */
     public void PickupItem()
     {
-        if (!itemStats.canBePickedUp)
+        if (!canBePickedUp)
             return;
 
         EventManager.Global.TriggerEvent("Inventory_Add", gameObject, itemStats.ID);
@@ -59,7 +71,21 @@ public class Item : InteractableWithDialogue
         TriggerDialogue();
     }
 
-    public void UseItem() => GameManager.GLOBAL.inventory.Remove(gameObject, itemStats.ID);
+    public void UseItem() => UseItem(setInactive: true);
+
+    void UseItem(bool setInactive)
+    {
+        GameManager.GLOBAL.inventory.Remove(gameObject, itemStats.ID);
+
+        if (setInactive)
+            gameObject.SetActive(false);
+    }
+
+    public void RemoveFromInventory()
+    {
+        isInInventory = false;
+        isCurrentItem = false;
+    }
 
     protected override void UpdateFunctions()
     {
