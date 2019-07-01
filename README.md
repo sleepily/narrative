@@ -19,7 +19,7 @@ Scroll - Cycle through items
 TAB - reload from the current checkpoint.
 Z, X and C - teleport to level 1, 2, and 3, respectively.
 
-### Walkthrough:
+## Walkthrough:
 #### Library
 1. Get red key hanging from cradle toy
 
