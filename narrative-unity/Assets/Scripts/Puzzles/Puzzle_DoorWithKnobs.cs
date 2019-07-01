@@ -6,9 +6,11 @@ using System.Linq;
 public class Puzzle_DoorWithKnobs : Puzzle
 {
     public int rotationSteps = 8;
-    public GameObject doorKnobParent;
+    public Transform doorKnobParent;
+    public Transform fallingBooksParent;
 
     List<Interactable_Doorknob> doorknobs;
+    List<FallingBook> fallingBooks;
     int[] solutionArray;
 
     protected override void GetAllComponents()
@@ -17,6 +19,8 @@ public class Puzzle_DoorWithKnobs : Puzzle
 
         SetUpDoorknobs();
         solutionArray = FormatSolution();
+
+        SetUpBooks();
     }
 
     void SetUpDoorknobs()
@@ -26,6 +30,16 @@ public class Puzzle_DoorWithKnobs : Puzzle
 
         foreach (Interactable_Doorknob knob in doorknobs)
             knob.SetPuzzle(this);
+    }
+
+    void SetUpBooks()
+    {
+        fallingBooks = fallingBooksParent.GetComponentsInChildren<FallingBook>().ToList();
+        fallingBooks = fallingBooks.OrderBy(book => book.name).ToList();
+
+        for (int i = 0; i < fallingBooks.Count; i++)
+            fallingBooks[i].transform.localEulerAngles +=
+                Vector3.left * (360f / rotationSteps) * solutionArray[i];
     }
 
     int[] FormatSolution()

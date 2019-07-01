@@ -15823,7 +15823,7 @@ GameObject:
   - component: {fileID: 3024542512288017855}
   - component: {fileID: 947690652}
   m_Layer: 0
-  m_Name: L_Cupboard
+  m_Name: bookshelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

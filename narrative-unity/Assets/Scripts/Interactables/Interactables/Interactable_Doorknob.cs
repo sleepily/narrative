@@ -7,6 +7,8 @@ public class Interactable_Doorknob : Interactable
     public int rotationStep = 0;
 
     Vector3 rotationAxis = Vector3.forward;
+    Vector3 fallingBookRotationAxis = Vector3.right;
+    float fallingBookRotationOffset = 90f;
 
     Puzzle_DoorWithKnobs puzzle;
 
@@ -21,6 +23,9 @@ public class Interactable_Doorknob : Interactable
     public override void Interact()
     {
         base.Interact();
+
+        if (puzzle.isSolved)
+            return;
 
         IncreaseStep();
         RotateForward();
