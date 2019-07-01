@@ -1808,8 +1808,7 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 387767558}
-  selectedCommands:
-  - {fileID: 387767573}
+  selectedCommands: []
   variables:
   - {fileID: 387767559}
   - {fileID: 387767569}
@@ -2260,7 +2259,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 391
     y: 104
-    width: 150.8
+    width: 150
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2407,7 +2406,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &387767573
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3571,6 +3570,7 @@ GameObject:
   - component: {fileID: 505322432}
   - component: {fileID: 505322431}
   - component: {fileID: 505322436}
+  - component: {fileID: 505322437}
   m_Layer: 0
   m_Name: Taylor's letter
   m_TagString: Untagged
@@ -3665,7 +3665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -237, y: -88}
+  scrollPos: {x: -288, y: -67}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -3677,9 +3677,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 505322406}
+  - {fileID: 505322430}
   selectedCommands:
-  - {fileID: 505322436}
+  - {fileID: 505322431}
   variables:
   - {fileID: 505322415}
   - {fileID: 505322416}
@@ -3723,7 +3723,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 549
     y: 55
-    width: 150
+    width: 151
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3750,7 +3750,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 371
     y: 17
-    width: 139.6
+    width: 140
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3870,7 +3870,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 381
     y: 102
-    width: 153.2
+    width: 155
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4460,7 +4460,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 388
     y: 179
-    width: 383.6
+    width: 386
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4471,6 +4471,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 505322435}
   - {fileID: 505322434}
+  - {fileID: 505322437}
   - {fileID: 505322433}
   - {fileID: 505322432}
   - {fileID: 505322431}
@@ -4570,8 +4571,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 38
   indentLevel: 0
-  storyText: Diego's parents wouldn't have the best reaction to a relationship. So
-    Diego told Taylor they should stop seeing each other.
+  storyText: 'Diego''s knew his parents wouldn''t have the best reaction to their
+    relationship. '
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -4677,6 +4678,33 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Fungus.InvokeEvent+StringEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &505322437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505322397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 43
+  indentLevel: 0
+  storyText: So he told Taylor they should stop seeing each other for a while.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1 &521100783
 GameObject:
   m_ObjectHideFlags: 0
@@ -5683,11 +5711,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 288.95737, y: 78.13314}
+  scrollPos: {x: 173.91362, y: 55.932003}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.46
+  zoom: 0.49
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -8766,7 +8794,8 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 1356308072}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1356308073}
   variables: []
   description: 
   stepPause: 0
@@ -9285,8 +9314,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 1407375668}
-  selectedCommands: []
+  - {fileID: 1407375664}
+  selectedCommands:
+  - {fileID: 1407375665}
   variables:
   - {fileID: 1407375660}
   description: 
@@ -9509,7 +9539,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 3
   indentLevel: 0
-  storyText: I remember he used to love baseball...
+  storyText: I remember he used to love baseball, he had been playing since he was
+    a llittle boy...
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -10433,6 +10464,9 @@ GameObject:
   - component: {fileID: 1613803577}
   - component: {fileID: 1613803576}
   - component: {fileID: 1613803575}
+  - component: {fileID: 1613803585}
+  - component: {fileID: 1613803587}
+  - component: {fileID: 1613803586}
   m_Layer: 0
   m_Name: Trophies
   m_TagString: Untagged
@@ -10489,7 +10523,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1613803566}
   selectedCommands:
-  - {fileID: 1613803579}
+  - {fileID: 1613803587}
   variables:
   - {fileID: 1613803565}
   - {fileID: 1613803574}
@@ -10611,6 +10645,9 @@ MonoBehaviour:
   - {fileID: 1613803584}
   - {fileID: 1613803571}
   - {fileID: 1613803570}
+  - {fileID: 1613803585}
+  - {fileID: 1613803587}
+  - {fileID: 1613803586}
   - {fileID: 1613803583}
   - {fileID: 1613803569}
   - {fileID: 1613803568}
@@ -11194,6 +11231,88 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &1613803585
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613803559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 16
+  indentLevel: 2
+  storyText: I remember Diego didnt always have the flashiest role, but he was really
+    good at what he did
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1613803586
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613803559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 18
+  indentLevel: 2
+  storyText: Altough I doubt this will help me right now
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1613803587
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613803559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 17
+  indentLevel: 2
+  storyText: so he gained the respect of his teammates really quickly
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1 &1663258152
 GameObject:
   m_ObjectHideFlags: 0
@@ -12422,11 +12541,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 589.7213, y: 159.03848}
+  scrollPos: {x: 301.9572, y: 36.95523}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.37000045
+  zoom: 0.6100004
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -12435,7 +12554,8 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 8296172667346810649}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 8296172667346810650}
   variables:
   - {fileID: 8296172667346810651}
   description: 
@@ -14667,7 +14787,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1170377104056170215
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -15599,7 +15719,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 41f48b2dfaa638d45bf91952e8ce18c1, type: 2}
+  - {fileID: 2100000, guid: c07b50494ea85d949bd097586d885194, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18758,11 +18878,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 0, y: 0}
+  scrollPos: {x: 13.886608, y: 1.2989678}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.97
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -22567,8 +22687,6 @@ GameObject:
   - component: {fileID: 8296172667346810649}
   - component: {fileID: 8296172667346810648}
   - component: {fileID: 8296172667346810647}
-  - component: {fileID: 8296172667346810646}
-  - component: {fileID: 8296172667346810645}
   - component: {fileID: 8296172667346810651}
   - component: {fileID: 8296172667346810650}
   m_Layer: 0
@@ -22578,60 +22696,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &8296172667346810645
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8296172667346810644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 5
-  indentLevel: 0
-  storyText: It didn't really work
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &8296172667346810646
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8296172667346810644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 4
-  indentLevel: 0
-  storyText: Diego bought this only to fit in with the group
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!114 &8296172667346810647
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -22646,7 +22710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 3
   indentLevel: 0
-  storyText: '...Because normal bottles don''t work suddenly when doing sports'
+  storyText: '...Because normal bottles don''t work when doing sports all of a sudden'
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -22713,8 +22777,6 @@ MonoBehaviour:
   commandList:
   - {fileID: 8296172667346810648}
   - {fileID: 8296172667346810647}
-  - {fileID: 8296172667346810646}
-  - {fileID: 8296172667346810645}
   - {fileID: 8296172667346810650}
 --- !u!114 &8296172667346810650
 MonoBehaviour:
@@ -22860,7 +22922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -198, y: 9}
+  scrollPos: {x: -354, y: -27}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -22872,8 +22934,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 8296172667440730790}
-  selectedCommands: []
+  - {fileID: 8296172667440730782}
+  selectedCommands:
+  - {fileID: 8296172667440730779}
   variables:
   - {fileID: 8296172667440730783}
   description: 
@@ -24276,7 +24339,6 @@ GameObject:
   - component: {fileID: 8296172669167351011}
   - component: {fileID: 8296172669167351017}
   - component: {fileID: 8296172669167351016}
-  - component: {fileID: 8296172669167351015}
   - component: {fileID: 8296172669167351012}
   - component: {fileID: 8296172669167351010}
   - component: {fileID: 8296172669167351052}
@@ -24317,6 +24379,21 @@ GameObject:
   - component: {fileID: 8296172669167351057}
   - component: {fileID: 8296172669167351056}
   - component: {fileID: 8296172669167351055}
+  - component: {fileID: 8296172669167351067}
+  - component: {fileID: 8296172669167351068}
+  - component: {fileID: 8296172669167351069}
+  - component: {fileID: 8296172669167351066}
+  - component: {fileID: 8296172669167351065}
+  - component: {fileID: 8296172669167351064}
+  - component: {fileID: 8296172669167351063}
+  - component: {fileID: 8296172669167351062}
+  - component: {fileID: 8296172669167351061}
+  - component: {fileID: 8296172669167351015}
+  - component: {fileID: 8296172669167351059}
+  - component: {fileID: 8296172669167351060}
+  - component: {fileID: 8296172669167351058}
+  - component: {fileID: 8296172669167351071}
+  - component: {fileID: 8296172669167351070}
   m_Layer: 0
   m_Name: Aries
   m_TagString: Untagged
@@ -24351,11 +24428,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 38.265495, y: -122.525894}
+  scrollPos: {x: -152.45319, y: -22.885849}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.75999975
+  zoom: 0.6100004
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -24363,8 +24440,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 8296172669167351050}
-  selectedCommands: []
+  - {fileID: 8296172669167351060}
+  selectedCommands:
+  - {fileID: 8296172669167351070}
   variables:
   - {fileID: 8296172669167351020}
   description: 
@@ -24414,7 +24492,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 255.06525
     y: 4.2678504
-    width: 141.57898
+    width: 141.80322
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -24527,22 +24605,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 8296172669167351007}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 418.86057
-    y: 168.87341
-    width: 120
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 4
-  blockName: Q1
+  itemId: 54
+  indentLevel: 0
+  text: Play football
   description: 
-  eventHandler: {fileID: 0}
-  commandList: []
+  targetBlock: {fileID: 8296172669167351058}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
 --- !u!114 &8296172669167351016
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -24567,7 +24645,18 @@ MonoBehaviour:
   blockName: Right Item
   description: 
   eventHandler: {fileID: 0}
-  commandList: []
+  commandList:
+  - {fileID: 8296172669167351069}
+  - {fileID: 8296172669167351068}
+  - {fileID: 8296172669167351067}
+  - {fileID: 8296172669167351066}
+  - {fileID: 8296172669167351065}
+  - {fileID: 8296172669167351064}
+  - {fileID: 8296172669167351063}
+  - {fileID: 8296172669167351062}
+  - {fileID: 8296172669167351061}
+  - {fileID: 8296172669167351059}
+  - {fileID: 8296172669167351015}
 --- !u!114 &8296172669167351017
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -24582,9 +24671,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 382.5517
-    y: 84
-    width: 120.52634
+    x: 341.45578
+    y: 68.931526
+    width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -25508,7 +25597,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 131.20932
     y: 352.34653
-    width: 146.84213
+    width: 140.16388
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -25573,7 +25662,7 @@ MonoBehaviour:
   - {fileID: 8296172669167351049}
 --- !u!114 &8296172669167351053
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -25637,7 +25726,7 @@ MonoBehaviour:
     vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &8296172669167351054
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -25664,7 +25753,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &8296172669167351055
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -25691,7 +25780,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &8296172669167351056
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -25719,7 +25808,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &8296172669167351057
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -25734,6 +25823,381 @@ MonoBehaviour:
   storyText: What's this supposed to do? Maybe you are as useless as Diego and I
   description: 
   character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8296172669167351058
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 362.28912
+    y: 217.96771
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 57
+  blockName: Q1 wrong
+  description: 
+  eventHandler: {fileID: 0}
+  commandList: []
+--- !u!114 &8296172669167351059
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 55
+  indentLevel: 0
+  text: Play baseball
+  description: 
+  targetBlock: {fileID: 8296172669167351060}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &8296172669167351060
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 411.46942
+    y: 134.36119
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 56
+  blockName: Q1 correct
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 8296172669167351071}
+  - {fileID: 8296172669167351070}
+--- !u!114 &8296172669167351061
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 53
+  indentLevel: 0
+  text: Run
+  description: 
+  targetBlock: {fileID: 8296172669167351058}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &8296172669167351062
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 52
+  indentLevel: 0
+  storyText: Yes I do! he used to...
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8296172669167351063
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 51
+  indentLevel: 0
+  storyText: I bet you don't even know what sport he used to do
+  description: 
+  character: {fileID: 8296172669167351013}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8296172669167351064
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 50
+  indentLevel: 0
+  storyText: ' All you do all day is shout "that will kill you" at anything Diego
+    thinks about. Did you ever pay attention to any of it?'
+  description: 
+  character: {fileID: 8296172669167351013}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8296172669167351065
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 49
+  indentLevel: 0
+  storyText: I'm not surprised you didn't know that though.
+  description: 
+  character: {fileID: 8296172669167351013}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8296172669167351066
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 47
+  indentLevel: 0
+  storyText: Yes, but he wanted to help people as a {b} doctor {/b}. He couldn't even
+    do that right
+  description: 
+  character: {fileID: 8296172669167351013}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8296172669167351067
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 44
+  indentLevel: 0
+  storyText: Diego is a nurse, he lives to help people. How could you say he's useless
+    after seeing this?
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8296172669167351068
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 45
+  indentLevel: 0
+  storyText: This picture...
+  description: 
+  character: {fileID: 8296172669167351013}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8296172669167351069
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 46
+  indentLevel: 0
+  storyText: Here take a look at this
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8296172669167351070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 59
+  indentLevel: 0
+  storyText: Anyone could know that
+  description: 
+  character: {fileID: 8296172669167351013}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8296172669167351071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 58
+  indentLevel: 0
+  storyText: Ok well, that doesn't prove anything...
+  description: 
+  character: {fileID: 8296172669167351013}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1

@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Red
+  m_Name: Blue 2
   m_Shader: {fileID: -6465566751694194690, guid: 7d249fc12aa62ca4fa906df9ab6afa3b,
     type: 3}
   m_ShaderKeywords: 
@@ -89,7 +89,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _Albedo: {r: 1, g: 0.019191489, b: 0, a: 1}
+    - _Albedo: {r: 0.24230155, g: 0.2748927, b: 0.9339623, a: 1}
     - _BaseColor: {r: 1, g: 0, b: 0, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
