@@ -12,6 +12,8 @@ public class Interactable_Book : Interactable
     Puzzle_BookArray puzzle;
     int bookID = -1;
 
+    public int debugNumber = 0;
+
     protected override void StartFunctions()
     {
         base.StartFunctions();
@@ -19,6 +21,16 @@ public class Interactable_Book : Interactable
         GetBookID();
     }
 
+    /*
+     * Debugging the book order
+     
+    void OnDrawGizmos()
+    {
+        if (debugNumber < 0)
+            return;
+        Handles.Label(transform.position, debugNumber.ToString());
+    }
+    */
     public int GetBookID()
     {
         if (bookID >= 0)

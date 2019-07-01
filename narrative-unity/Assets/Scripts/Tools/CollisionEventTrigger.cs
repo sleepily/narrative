@@ -16,17 +16,17 @@ public class CollisionEventTrigger : MonoBehaviour
 
     void CheckTrigger(Collider collider)
     {
+        // Check if the player is colliding, otherwise ignore
         Player player = collider.GetComponent<Player>();
 
-        Debug.Log("Checking for player");
         if (!player)
             return;
 
-        Debug.Log("Checking trigger count");
+        // Check trigger conditions
         if (onlyOnce && triggerCounter > 0)
             return;
 
-        Debug.Log("Invoke trigger");
+        // Invoke the event
         triggerCounter++;
         invokeOnTrigger.Invoke();
     }

@@ -22,10 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start() => GetAllComponents();
 
-    void GetAllComponents()
-    {
-        controller = GetComponent<CharacterController>();
-    }
+    void GetAllComponents() => controller = GetComponent<CharacterController>();
 
     void Update()
     {
@@ -38,9 +35,28 @@ public class PlayerMovement : MonoBehaviour
      */
     void DoPlayerMovement()
     {
+        bool allowMovement = true;
+
+        // Don't allow movement when locked
+        if (GameManager.GLOBAL.player.hasLockedMovement)
+            allowMovement = false;
+
+        // Don't allow movement when in dialogue
+        if (GameManager.GLOBAL.dialogue.dialogueInProgress)
+            allowMovement = false;
+
+        if (!GameManager.GLOBAL.sceneLoader.HasFinishedLoading())
+            allowMovement = false;
+
         // Don't allow player movement when the inventory is open
-        if (GameManager.GLOBAL.inventoryManager.isOpen)
+        if (GameManager.GLOBAL.inventory.isOpen)
+            allowMovement = false;
+
+        if (!allowMovement)
+        {
+            OverrideAnimator(0f);
             return;
+        }
 
         GetInputAxis();
 
@@ -50,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         // Only apply gravity if there is no input 
         if (!movementInput)
         {
-            controller.Move(Physics.gravity);
+            controller.Move(Physics.gravity * Time.deltaTime);
             movementSpeed = 0f;
             return;
         }
@@ -119,6 +135,14 @@ public class PlayerMovement : MonoBehaviour
     void UpdateAnimator()
     {
         float walkingSpeed = ExtensionMethods.Map01(movementSpeed, 0f, movementSettings.walkingSpeed);
-        animator.SetFloat("walkingSpeed", walkingSpeed);
+        OverrideAnimator(walkingSpeed);
+    }
+
+    void OverrideAnimator(float newWalkingSpeed) => animator.SetFloat("walkingSpeed", newWalkingSpeed);
+
+    public void StopMoving()
+    {
+        movementSpeed = 0f;
+        OverrideAnimator(0f);
     }
 }

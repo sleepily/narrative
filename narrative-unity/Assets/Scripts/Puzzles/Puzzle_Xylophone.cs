@@ -55,7 +55,7 @@ public class Puzzle_Xylophone : Puzzle
         {
             if (solutionArray[keyIndex] != keys[keyIndex].selected)
             {
-                Debug.Log("Wrong key at position " + keyIndex);
+                // Debug.Log("Wrong key at position " + keyIndex);
                 PuzzleReset();
                 return false;
             }

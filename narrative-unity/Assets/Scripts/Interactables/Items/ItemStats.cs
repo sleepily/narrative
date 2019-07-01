@@ -8,6 +8,8 @@ public class ItemStats : ScriptableObject
 {
     public string ID;
     public bool canBePickedUp = true;
+    public bool isWeapon = false;
+
     public float inventoryInspectionScale = 1f;
     public float handheldScale = 1f;
 }

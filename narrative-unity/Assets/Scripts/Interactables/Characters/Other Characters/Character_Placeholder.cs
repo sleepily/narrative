@@ -8,7 +8,7 @@ public class Character_Placeholder : CharacterWithDialogue
 
     public override void Use()
     {
-        TriggerItemDialogue(GameManager.GLOBAL.inventoryManager.GetCurrentItem());
+        TriggerItemDialogue(GameManager.GLOBAL.inventory.GetCurrentItem());
     }
 
     public override bool TriggerItemDialogue(Item item = null)

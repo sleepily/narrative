@@ -34,11 +34,11 @@ public class InventoryManager : MonoBehaviour
     [HideInInspector]
     public List<Item> items;
 
+    bool logVerbose = false;
+
     string stringItemAdded = "<color=lime>InventoryManager:</color> Added item {0}.";
     string stringItemRemoved = "<color=cyan>InventoryManager:</color> Removed item {0}.";
-    string stringItemSelected = "<color=cyan>InventoryManager:</color> Currently selected Item is {0}.";
     string stringItemNotFound = "<color=cyan>InventoryManager:</color> Couldn't find item {0}.";
-    string stringInventoryEmpty = "<color=orange>InventoryManager:</color> Inventory is empty.";
     string stringItemAlreadyInInventory = "<color=orange>InventoryManager:</color> Item {0} already in inventory.";
 
     private void OnEnable()
@@ -58,7 +58,8 @@ public class InventoryManager : MonoBehaviour
 
         if (items.Contains(itemToAdd))
         {
-            Debug.Log(string.Format(stringItemAlreadyInInventory, itemToAdd.itemStats.ID));
+            if (logVerbose)
+                Debug.Log(string.Format(stringItemAlreadyInInventory, itemToAdd.itemStats.ID));
             return;
         }
 
@@ -66,7 +67,8 @@ public class InventoryManager : MonoBehaviour
 
         SetCurrentItem(itemToAdd);
 
-        Debug.Log(string.Format(stringItemAdded, itemToAdd.itemStats.ID));
+        if (logVerbose)
+            Debug.Log(string.Format(stringItemAdded, itemToAdd.itemStats.ID));
     }
 
     public void Remove(GameObject sender, string parameter = "")
@@ -80,11 +82,12 @@ public class InventoryManager : MonoBehaviour
         }
 
         SetCurrentItem(NextItem());
-        itemToRemove.gameObject.SetActive(false);
 
+        itemToRemove.RemoveFromInventory();
         items.Remove(itemToRemove);
 
-        Debug.Log(string.Format(stringItemRemoved, parameter));
+        if (logVerbose)
+            Debug.Log(string.Format(stringItemRemoved, parameter));
     }
 
     bool GetItemInInventory(string itemID, out Item itemOut)
@@ -100,26 +103,51 @@ public class InventoryManager : MonoBehaviour
         return false;
     }
 
-    private void Update()
+    public void ClearInventory()
     {
-        GetInput();
+        if (IsEmpty())
+            return;
+
+        items.Clear();
+
+        Item nullItem = null;
+        SetCurrentItem(nullItem);
     }
+
+    private void Update() => GetInput();
 
     void GetInput()
     {
         if (Input.GetKeyDown(KeyCode.E))
-            ToggleInventory();
+        {
+            if (GameManager.GLOBAL.dialogue.dialogueInProgress)
+                return;
 
+            ToggleInventory();
+        }
+
+        // Allow reading item text again with RMB
         if (Input.GetMouseButtonDown(1))
             ShowCurrentItemDescription();
 
+        // Allow item switching with scroll wheel
         UseScrollDeltaToChangeCurrentItem();
     }
 
-    public void ToggleInventory()
+    /*
+     * Toggle Inventory on/off.
+     * Picking up items should call with forceOpen = true.
+     */
+    public void ToggleInventory(bool forceOpen = false)
     {
-        isOpen = !isOpen;
+        if (!forceOpen)
+            isOpen = !isOpen;
+        else
+            isOpen = true;
+
         CursorLock.SetCursorLock(!isOpen);
+
+        GameManager.GLOBAL.player.SetMovementLock(isOpen);
 
         currentItemParent = isOpen ? itemInspectionParent : itemHotCornerParent;
 
@@ -133,12 +161,13 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    /*
+     * Hide Objects such as the cursor when opening the inventory
+     */
     void HideObjects()
     {
         foreach (GameObject gameObject in objectsToHide)
-        {
             gameObject.SetActive(!isOpen);
-        }
     }
 
     bool ShowCurrentItemDescription()
@@ -191,24 +220,7 @@ public class InventoryManager : MonoBehaviour
         return items[newItemIndex];
     }
 
-    bool IsEmpty => (items == null || items.Count == 0);
-
-    /*
-     * Find the item reference first if only a string is present
-     */
-    bool SetCurrentItem(string itemID)
-    {
-        Item foundItem;
-
-        if (!GetItemInInventory(itemID, out foundItem))
-        {
-            Debug.Log(string.Format(stringItemNotFound, itemID));
-            return false;
-        }
-
-        SetCurrentItem(foundItem);
-        return true;
-    }
+    bool IsEmpty() => (items == null || items.Count == 0);
 
     /*
      * Set item as current Item

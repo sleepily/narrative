@@ -39,10 +39,6 @@ public class Puzzle_BookArray : Puzzle
         // Trim the string in case there are spaces before/after contents
         solution.Trim(' ');
 
-        // In case the solution string is the wrong length, use default solution
-        if (solution.Length != 10)
-            solution = "12 34 5678";
-
         foreach (char letter in solution)
         {
             if (letter == ' ')

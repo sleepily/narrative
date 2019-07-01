@@ -9,9 +9,12 @@ public class Interactable_CodeInput : Interactable
     public enum CodeType
     {
         digits,
-        date,
-        HELP,
-        ILOVEYOU
+        DeskDrawer,
+        MILK,
+        TAYLOR,
+        Toolbox,
+        RadioFrequency,
+        HEART
     }
 
     public CodeType codeType;

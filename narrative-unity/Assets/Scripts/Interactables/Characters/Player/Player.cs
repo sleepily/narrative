@@ -7,20 +7,36 @@ using Fungus;
 public class Player : CharacterWithDialogue
 {
     public Camera thirdPersonCamera;
+    public TeleportPlayer teleportPlayer;
+    PlayerMovement playerMovement;
 
-    protected override void StartFunctions() { }
+    [HideInInspector]
+    public bool hasLockedMovement { get; private set; } = false;
 
-    protected override void GetAllComponents() => GetFlowchart();
+    protected override void GetAllComponents()
+    {
+        playerMovement = GetComponent<PlayerMovement>();
+        GetFlowchart();
+    }
 
     protected override void UpdateFunctions() { }
 
-    public void WrongItemDialogue()
-    {
-        if (IsInDialogueCheck())
-            return;
+    public void WrongItemDialogue() =>
+        GameManager.GLOBAL.dialogue.QueueForRead(flowchart, "WrongItem");
 
-        // TODO: Add randomization
-        Block wrongItemBlock = flowchart.FindBlock("WrongItem");
-        flowchart.ExecuteBlock(wrongItemBlock);
+    public void SetMovementLock(bool locked)
+    {
+        if (locked)
+            LockMovement();
+        else
+            UnlockMovement();
     }
+
+    public void LockMovement()
+    {
+        hasLockedMovement = true;
+        playerMovement.StopMoving();
+    }
+
+    public void UnlockMovement() => hasLockedMovement = false;
 }

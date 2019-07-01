@@ -7,13 +7,21 @@ public class Item : InteractableWithDialogue
     [Header("General")]
     public ItemStats itemStats;
 
-    protected bool isInInventory = false;
+    public bool isInInventory { get; protected set; } = false;
     public bool isCurrentItem = false;
+    bool canBePickedUp;
 
     [Header("Item inspection")]
     float rotationSpeed = 14f;
     float scrollSpeed = 24f;
     float zoomDistance = 1.6f;
+
+    protected override void StartFunctions()
+    {
+        base.StartFunctions();
+
+        canBePickedUp = itemStats.canBePickedUp;
+    }
 
     /*
      * Pick up item when clicked.
@@ -22,8 +30,6 @@ public class Item : InteractableWithDialogue
     {
         if (isInInventory)
             return;
-
-        base.Interact();
 
         PickupItem();
     }
@@ -39,9 +45,18 @@ public class Item : InteractableWithDialogue
         base.Use();
     }
 
+    /*
+     * Overwrite the item's PU state
+     */
+    public void SetPU(bool canBePickedUp) => this.canBePickedUp = canBePickedUp;
+
+    /*
+     * Add the item to inventory and show its flavor text
+     * TODO: Fix player locking
+     */
     public void PickupItem()
     {
-        if (!itemStats.canBePickedUp)
+        if (!canBePickedUp)
             return;
 
         EventManager.Global.TriggerEvent("Inventory_Add", gameObject, itemStats.ID);
@@ -49,15 +64,25 @@ public class Item : InteractableWithDialogue
 
         SetGlowColor(Color.clear, true);
 
-        GameManager.GLOBAL.inventoryManager.ToggleInventory();
+        GameManager.GLOBAL.inventory.ToggleInventory(true);
 
         TriggerDialogue();
     }
 
-    public void UseItem()
+    public void UseItem() => UseItem(setInactive: true);
+
+    void UseItem(bool setInactive)
     {
-        Debug.Log("Using " + itemStats.ID);
-        EventManager.Global.TriggerEvent("Inventory_Remove", gameObject, itemStats.ID);
+        GameManager.GLOBAL.inventory.Remove(gameObject, itemStats.ID);
+
+        if (setInactive)
+            gameObject.SetActive(false);
+    }
+
+    public void RemoveFromInventory()
+    {
+        isInInventory = false;
+        isCurrentItem = false;
     }
 
     protected override void UpdateFunctions()
@@ -77,7 +102,7 @@ public class Item : InteractableWithDialogue
 
         float itemScale = 1f;
 
-        if (GameManager.GLOBAL.inventoryManager.isOpen)
+        if (GameManager.GLOBAL.inventory.isOpen)
         {
             if (isCurrentItem)
                 itemScale = itemStats.inventoryInspectionScale;
@@ -104,7 +129,7 @@ public class Item : InteractableWithDialogue
             return;
 
         // Inventory isn't open
-        if (!GameManager.GLOBAL.inventoryManager.isOpen)
+        if (!GameManager.GLOBAL.inventory.isOpen)
             return;
 
         // Prevent mouse interaction advancing dialogue

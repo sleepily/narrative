@@ -8,7 +8,6 @@ public class InteractableWithDialogue : Interactable
 {
     [Header("Dialogue")]
     protected Flowchart flowchart;
-    protected bool isInDialogue;
 
     protected override void GetAllComponents()
     {
@@ -30,23 +29,28 @@ public class InteractableWithDialogue : Interactable
         if (!GetFlowchart())
             return false;
 
-        return isInDialogue = flowchart.HasExecutingBlocks();
+        /*
+        if (GameManager.GLOBAL.player.IsLocked())
+            return true;
+        */
+
+        return flowchart.HasExecutingBlocks();
     }
 
     /*
-     * Execute Start block, which will handle conditions and jumps
+     * Queue executing Start block, which will handle conditions and jumps
      */
-    public virtual void TriggerDialogue()
-    {
-        if (IsInDialogueCheck())
-            return;
-
-        flowchart.ExecuteBlock("Start");
-        return;
-    }
+    public virtual void TriggerDialogue() =>
+        GameManager.GLOBAL.dialogue.QueueForRead(flowchart);
 
     /*
-     * Trigger character dialogue using an item and jump to the block with the item's ID
+     * Queue triggering a specified block
+     */
+    public virtual void TriggerDialogue(string blockID) =>
+        GameManager.GLOBAL.dialogue.QueueForRead(flowchart, blockID);
+
+    /*
+     * Trigger character dialogue at block of itemID
      */
     public virtual bool TriggerItemDialogue(Item item = null)
     {
@@ -54,11 +58,11 @@ public class InteractableWithDialogue : Interactable
             return false;
 
         if (!item)
-            item = GameManager.GLOBAL.inventoryManager.GetCurrentItem();
+            item = GameManager.GLOBAL.inventory.GetCurrentItem();
 
         if (!item)
         {
-            Debug.Log(string.Format("<color=orange>{0}:</color> No item for dialogue.", name));
+            Debug.Log($"<color=orange>{name}:</color> No item for dialogue.");
             return false;
         }
 
@@ -69,17 +73,21 @@ public class InteractableWithDialogue : Interactable
             Block wrongItemBlock = flowchart.FindBlock("WrongItem");
 
             if (wrongItemBlock)
-                flowchart.ExecuteBlock(wrongItemBlock);
+                GameManager.GLOBAL.dialogue.QueueForRead(flowchart, wrongItemBlock);
             else
                 GameManager.GLOBAL.player.WrongItemDialogue();
 
             return false;
         }
 
-        flowchart.ExecuteBlock(itemBlock);
+        GameManager.GLOBAL.dialogue.QueueForRead(flowchart, itemBlock);
         return true;
     }
-    public override void Interact() => TriggerDialogue();
+    public override void Interact()
+    {
+        if (!GameManager.GLOBAL.dialogue.dialogueInProgress)
+            TriggerDialogue();
+    }
 
     public override void Use() => TriggerItemDialogue();
 }

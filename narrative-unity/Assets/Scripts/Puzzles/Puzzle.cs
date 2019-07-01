@@ -9,8 +9,6 @@ public class Puzzle : MonoBehaviour
     public bool isSolved = false;
 
     protected Flowchart flowchart;
-    public List<Animator> animators;
-    public List<Item> itemsToPickUp;
 
     [Tooltip("Puzzle solution. Book: BookIDs, Xylophone Keys: 1/0, Code: answer")]
     public string solution = "";
@@ -45,16 +43,24 @@ public class Puzzle : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        if (!GetFlowchart())
-        {
-            Debug.LogWarning(name + ": Cannot trigger dialogue, Flowchart missing.");
-            return;
-        }
-
         if (IsInDialogueCheck())
             return;
 
-        flowchart.ExecuteBlock("Start");
+        GameManager.GLOBAL.dialogue.QueueForRead(flowchart);
+    }
+
+    public void TriggerDialogue(string blockID = "Start")
+    {
+        if (IsInDialogueCheck())
+            return;
+
+        if (!flowchart.HasBlock(blockID))
+        {
+            Debug.Log($"Block {blockID} doesn't exist, executing block \"Start\".");
+            return;
+        }
+
+        GameManager.GLOBAL.dialogue.QueueForRead(flowchart, blockID);
     }
 
     private void Update() => UpdateFunctions();
@@ -67,6 +73,7 @@ public class Puzzle : MonoBehaviour
     public virtual void PuzzleReset() { }
 
     public virtual bool PuzzleCheck() => false;
+    public virtual bool PuzzleCheck(string playerInput) => false;
 
     public virtual void PuzzleSolved()
     {
@@ -74,14 +81,6 @@ public class Puzzle : MonoBehaviour
 
         flowchart.SetBooleanVariable("isSolved", true);
         TriggerDialogue();
-
-        foreach (Item item in itemsToPickUp)
-            if (item)
-                item.PickupItem();
-
-        foreach (Animator animator in animators)
-            if (animator)
-                animator.SetTrigger("isSolved");
     }
 
     public virtual void PuzzleSolvedReminder() { }

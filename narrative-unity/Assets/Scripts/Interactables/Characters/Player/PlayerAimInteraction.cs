@@ -21,7 +21,7 @@ public class PlayerAimInteraction : MonoBehaviour
 
     public static bool IsFocusable(Interactable focus)
     {
-        if (GameManager.GLOBAL.inventoryManager.isOpen)
+        if (GameManager.GLOBAL.inventory.isOpen)
             return false;
 
         float distanceFromCamera = Vector3.Distance(thirdPersonCamera.transform.position, focus.transform.position);

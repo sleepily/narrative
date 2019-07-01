@@ -21,79 +21,76 @@ namespace UnityStandardAssets.Utility
         public float dampingTime = 0.2f;
         public bool autoZeroVerticalOnMobile = true;
         public bool autoZeroHorizontalOnMobile = false;
-        public bool relative = true;
         
         private Vector3 m_TargetAngles;
         private Vector3 m_FollowAngles;
         private Vector3 m_FollowVelocity;
         private Quaternion m_OriginalRotation;
 
-        private void Start()
-        {
-            m_OriginalRotation = transform.localRotation;
-        }
+        private void Start() => m_OriginalRotation = transform.localRotation;
 
-        private void Update()
+        private void Update() => CheckIfUpdateAllowed();
+
+        void CheckIfUpdateAllowed()
         {
-            if (GameManager.GLOBAL.isPaused || GameManager.GLOBAL.inventoryManager.isOpen)
+            // Prevent any movement if it's not allowed
+            if (GameManager.GLOBAL.isPaused || GameManager.GLOBAL.inventory.isOpen)
                 return;
 
+            if (GameManager.GLOBAL.player.hasLockedMovement)
+                return;
+
+            if (GameManager.GLOBAL.dialogue.dialogueInProgress)
+                return;
+
+            Calculate();
+        }
+
+        void Calculate()
+        {
             // we make initial calculations from the original local rotation
             transform.localRotation = m_OriginalRotation;
 
             // read input from mouse or mobile controls
-            float inputH;
-            float inputV;
-            if (relative)
+            float inputH = CrossPlatformInputManager.GetAxis("Mouse X");
+            float inputV = CrossPlatformInputManager.GetAxis("Mouse Y");
+
+            // wrap values to avoid springing quickly the wrong way from positive to negative
+            if (m_TargetAngles.y > 180)
             {
-                inputH = CrossPlatformInputManager.GetAxis("Mouse X");
-                inputV = CrossPlatformInputManager.GetAxis("Mouse Y");
-
-                // wrap values to avoid springing quickly the wrong way from positive to negative
-                if (m_TargetAngles.y > 180)
-                {
-                    m_TargetAngles.y -= 360;
-                    m_FollowAngles.y -= 360;
-                }
-                if (m_TargetAngles.x > 180)
-                {
-                    m_TargetAngles.x -= 360;
-                    m_FollowAngles.x -= 360;
-                }
-                if (m_TargetAngles.y < -180)
-                {
-                    m_TargetAngles.y += 360;
-                    m_FollowAngles.y += 360;
-                }
-                if (m_TargetAngles.x < -180)
-                {
-                    m_TargetAngles.x += 360;
-                    m_FollowAngles.x += 360;
-                }
-                
-                // with mouse input, we have direct control with no springback required.
-                m_TargetAngles.y += inputH*rotationSpeed;
-                m_TargetAngles.x += inputV*rotationSpeed;
-
-                // clamp values to allowed range
-                m_TargetAngles.y = Mathf.Clamp(m_TargetAngles.y, (-rotationRange.y * 0.5f) - rotationRangeOffset.y, (rotationRange.y * 0.5f) - rotationRangeOffset.y);
-                m_TargetAngles.x = Mathf.Clamp(m_TargetAngles.x, (-rotationRange.x * 0.5f) - rotationRangeOffset.x, (rotationRange.x * 0.5f) - rotationRangeOffset.x);
+                m_TargetAngles.y -= 360;
+                m_FollowAngles.y -= 360;
             }
-            else
+            if (m_TargetAngles.x > 180)
             {
-                inputH = Input.mousePosition.x;
-                inputV = Input.mousePosition.y;
-
-                // set values to allowed range
-                m_TargetAngles.y = Mathf.Lerp((-rotationRange.y*0.5f) - rotationRangeOffset.y, (rotationRange.y*0.5f) - rotationRangeOffset.y, inputH/Screen.width);
-                m_TargetAngles.x = Mathf.Lerp((-rotationRange.x*0.5f) - rotationRangeOffset.x, (rotationRange.x*0.5f) - rotationRangeOffset.x, inputV /Screen.height);
+                m_TargetAngles.x -= 360;
+                m_FollowAngles.x -= 360;
             }
+            if (m_TargetAngles.y < -180)
+            {
+                m_TargetAngles.y += 360;
+                m_FollowAngles.y += 360;
+            }
+            if (m_TargetAngles.x < -180)
+            {
+                m_TargetAngles.x += 360;
+                m_FollowAngles.x += 360;
+            }
+
+            // with mouse input, we have direct control with no springback required.
+            m_TargetAngles.y += inputH * rotationSpeed;
+            m_TargetAngles.x += inputV * rotationSpeed;
+
+            // clamp values to allowed range
+            m_TargetAngles.y = Mathf.Clamp(m_TargetAngles.y, (-rotationRange.y * 0.5f) - rotationRangeOffset.y, (rotationRange.y * 0.5f) - rotationRangeOffset.y);
+            m_TargetAngles.x = Mathf.Clamp(m_TargetAngles.x, (-rotationRange.x * 0.5f) - rotationRangeOffset.x, (rotationRange.x * 0.5f) - rotationRangeOffset.x);
+            
 
             // smoothly interpolate current values to target angles
             m_FollowAngles = Vector3.SmoothDamp(m_FollowAngles, m_TargetAngles, ref m_FollowVelocity, dampingTime);
 
             // update the actual gameobject's rotation
-            transform.localRotation = m_OriginalRotation*Quaternion.Euler(-m_FollowAngles.x, m_FollowAngles.y, 0);
+            transform.localRotation = m_OriginalRotation * Quaternion.Euler(-m_FollowAngles.x, m_FollowAngles.y, 0);
         }
     }
 }

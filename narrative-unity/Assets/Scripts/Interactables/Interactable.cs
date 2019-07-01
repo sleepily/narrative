@@ -5,7 +5,6 @@ using Fungus;
 
 [RequireComponent(typeof(MeshRenderer))]
 [RequireComponent(typeof(Collider))]
-[RequireComponent(typeof(Flowchart))]
 public class Interactable : MonoBehaviour
 {
     [Header("Color Glow Components")]
@@ -27,10 +26,7 @@ public class Interactable : MonoBehaviour
 
     private void OnMouseOver() => MouseButtonCheck();
 
-    private void OnMouseExit()
-    {
-        Unfocus();
-    }
+    private void OnMouseExit() => Unfocus();
 
     /*
      * Manual mouse button check, since the collider's OnMouse() function
@@ -96,6 +92,9 @@ public class Interactable : MonoBehaviour
         if (lerpIsFinished)
             return;
 
+        if (!meshRenderer)
+            return;
+
         currentGlowColor = Color.Lerp
         (
             currentGlowColor,
@@ -118,7 +117,9 @@ public class Interactable : MonoBehaviour
             return;
 
         currentGlowColor = desiredGlowColor;
-        meshRenderer.material.SetColor("_GlowColor", desiredGlowColor);
+
+        if (meshRenderer)
+            meshRenderer.material.SetColor("_GlowColor", desiredGlowColor);
     }
 
     /*

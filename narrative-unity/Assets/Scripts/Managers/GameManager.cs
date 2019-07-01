@@ -10,15 +10,20 @@ public class GameManager : MonoBehaviour
     public bool isPaused = false;
     
     [Header("Managers")]
-    public InventoryManager inventoryManager;
+    public InventoryManager inventory;
     public SceneLoader sceneLoader;
+    public DialogueManager dialogue;
 
     [Header("Global References")]
+    public SayDialog interactableSayDialog;
+    public SayDialog characterSayDialog;
+
+    [HideInInspector]
     public Player player;
-    public SayDialog interactableSayDialog, characterSayDialog;
 
     private void Awake()
     {
         GLOBAL = this;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 }
