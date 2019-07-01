@@ -2534,7 +2534,7 @@ MonoBehaviour:
   soundEffect: {fileID: 0}
   portraits: []
   portraitsFace: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 518741806}
   description: 
 --- !u!114 &1777237338
 MonoBehaviour:

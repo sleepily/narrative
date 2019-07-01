@@ -32,7 +32,7 @@ public class DialogueManager : MonoBehaviour
     public bool dialogueInProgress { get; private set; } = false;
     Queue<DialoguePair> queue = new Queue<DialoguePair>();
 
-    bool logVerbose = false;
+    bool logVerbose = true;
 
     /*
      * Enqueue a dialogue pair to be executed
