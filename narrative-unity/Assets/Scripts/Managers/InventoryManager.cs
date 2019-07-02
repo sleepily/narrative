@@ -34,7 +34,7 @@ public class InventoryManager : MonoBehaviour
     [HideInInspector]
     public List<Item> items;
 
-    bool logVerbose = false;
+    bool logVerbose = true;
 
     string stringItemAdded = "<color=lime>InventoryManager:</color> Added item {0}.";
     string stringItemRemoved = "<color=cyan>InventoryManager:</color> Removed item {0}.";
@@ -81,10 +81,10 @@ public class InventoryManager : MonoBehaviour
             return;
         }
 
-        SetCurrentItem(NextItem());
-
         itemToRemove.RemoveFromInventory();
         items.Remove(itemToRemove);
+
+        SetCurrentItem(NextItem());
 
         if (logVerbose)
             Debug.Log(string.Format(stringItemRemoved, parameter));
@@ -199,6 +199,9 @@ public class InventoryManager : MonoBehaviour
 
     Item GetItemRelativeToCurrent(int indexOffset)
     {
+        if (IsEmpty())
+            return null;
+
         // If there is no item currently selected
         if (!currentItem)
             return null;

@@ -1095,7 +1095,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &207637082
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6737,7 +6737,7 @@ MeshCollider:
   m_Mesh: {fileID: 6099800089077584851, guid: 263f08b122a36054dac5a3595e73baf9, type: 3}
 --- !u!114 &2446055628015358229
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
