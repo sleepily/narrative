@@ -5,13 +5,17 @@ using UnityEngine.Events;
 
 public class CollisionEventTrigger : MonoBehaviour
 {
+    public bool enabledByDefault = false;
     public bool onlyOnce = true;
     public UnityEvent invokeOnTrigger;
     int triggerCounter = 0;
 
+    public void Enable() => enabledByDefault = true;
+
     private void OnTriggerEnter(Collider collider)
     {
-        CheckTrigger(collider);
+        if (enabledByDefault)
+            CheckTrigger(collider);
     }
 
     void CheckTrigger(Collider collider)
