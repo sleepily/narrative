@@ -34,7 +34,7 @@ public class DialogueManager : MonoBehaviour
 
     Queue<DialoguePair> queue = new Queue<DialoguePair>();
 
-    bool logVerbose = true;
+    bool logVerbose = false;
 
     /*
      * Enqueue a dialogue pair to be executed
