@@ -76,7 +76,13 @@ MonoBehaviour:
   - Platform: 20
     Value: 32
   Plugins: []
-  MasterBanks: []
-  Banks: []
+  MasterBanks:
+  - Master
+  Banks:
+  - Greenhouse
+  - Library
+  - Sound Effects
+  - Stairs (All)
+  - Void
   BanksToLoad: []
   LiveUpdatePort: 9264

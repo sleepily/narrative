@@ -596,11 +596,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 2.9806216, y: -131.86781}
+  scrollPos: {x: -121.0659, y: -198.07582}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.64000034
+  zoom: 1
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -610,7 +610,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1266146559}
   selectedCommands:
-  - {fileID: 1266146574}
+  - {fileID: 1266146575}
   variables: []
   description: 
   stepPause: 0
@@ -693,7 +693,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: '{i}Someone knocks on the door.{/i}'
   description: 
-  character: {fileID: 0}
+  character: {fileID: 384464924859733353}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -759,10 +759,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 16
   indentLevel: 0
-  storyText: "How should I prepare for the party? \u2026 I don\u2019t even know that
-    much huh, I really am useless."
+  storyText: "How should I prepare for the party? I don\u2019t even know that much
+    huh, I really am useless..."
   description: 
-  character: {fileID: 0}
+  character: {fileID: 384464924859733354}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -789,7 +789,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "My team is having a party today, maybe I should drop by\u2026"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 384464924859733354}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -816,7 +816,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: '{i}Diego sighs and thinks to himself:{/i}'
   description: 
-  character: {fileID: 0}
+  character: {fileID: 384464924859733353}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -844,7 +844,7 @@ MonoBehaviour:
   storyText: '{i} He looks at his phone, the screen lights up his face. This is the
     brightest light source in the room.{/i}'
   description: 
-  character: {fileID: 0}
+  character: {fileID: 384464924859733353}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -872,7 +872,7 @@ MonoBehaviour:
   storyText: '{i}Diego hears his mother''s footsteps get quieter, as she gets farther
     and farther away from his room''s door.{/i}'
   description: 
-  character: {fileID: 0}
+  character: {fileID: 384464924859733353}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -927,7 +927,7 @@ MonoBehaviour:
   storyText: "Well if you need anything your father and I bought some more groceries,
     we didn\u2019t know you would be back."
   description: 
-  character: {fileID: 0}
+  character: {fileID: 384464923797286794}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -979,8 +979,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 24
   indentLevel: 0
-  storyText: "You\u2019re going to have to tell us what happened at some point, you
-    can\u2019t keep missing work like this."
+  storyText: You're going to have to tell us what happened at some point, you can't
+    keep missing work like this.
   description: 
   character: {fileID: 384464923797286794}
   portrait: {fileID: 0}
@@ -1089,10 +1089,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 28
   indentLevel: 0
-  storyText: "{i}Even as an outsider you\x19d be able to tell he hasn\x19t taken care
-    of himself for some time.{/i}"
+  storyText: "{i}Even as an outsider you'\x19d be able to tell he hasn'\x19t taken
+    care of himself for some time.{/i}"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 384464924859733353}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1120,7 +1120,7 @@ MonoBehaviour:
   storyText: '{i}The air in the room is stuffy, and the floor is littered with food
     packaging and old clothes.{/i}'
   description: 
-  character: {fileID: 0}
+  character: {fileID: 384464924859733353}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1148,7 +1148,7 @@ MonoBehaviour:
   storyText: '{i}Diego wakes up, light is shining in through the cracks of his window
     blinds.{/i}'
   description: 
-  character: {fileID: 0}
+  character: {fileID: 384464924859733353}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1286,3 +1286,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57fecdd5d37889845a0e31925407fab3, type: 3}
+--- !u!114 &384464924859733353 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5923794260168593744, guid: 57fecdd5d37889845a0e31925407fab3,
+    type: 3}
+  m_PrefabInstance: {fileID: 384464924859733352}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &384464924859733354 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4793938404350967394, guid: 57fecdd5d37889845a0e31925407fab3,
+    type: 3}
+  m_PrefabInstance: {fileID: 384464924859733352}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

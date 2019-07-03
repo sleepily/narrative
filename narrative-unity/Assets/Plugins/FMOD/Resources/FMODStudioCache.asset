@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7335194983144615366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Sound Effects.bank
+  m_EditorClassIdentifier: 
+  Path: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\Build\Desktop\Sound
+    Effects.bank
+  SubDir: 
+  lastModified: 636977889652023836
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 470
+  Exists: 1
+--- !u!114 &-6734117384930127056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Void.bank
+  m_EditorClassIdentifier: 
+  Path: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\Build\Desktop\Void.bank
+  SubDir: 
+  lastModified: 636977889652044064
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 470
+  Exists: 1
+--- !u!114 &-6313446992295099450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Stairs (All).bank
+  m_EditorClassIdentifier: 
+  Path: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\Build\Desktop\Stairs
+    (All).bank
+  SubDir: 
+  lastModified: 636977889652033799
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 470
+  Exists: 1
 --- !u!114 &-4805576623128706259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14,12 +76,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\Build\Desktop\Master.bank
   SubDir: 
-  lastModified: 636977797033061737
+  lastModified: 636977889652003889
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 1000
   Exists: 1
+--- !u!114 &-3295300596408003712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rooms/Library
+  m_EditorClassIdentifier: 
+  Path: event:/Rooms/Library
+  guid: 322b57bddaefac4cb9a4a65510f91f1a
+  Banks:
+  - {fileID: 7325544714503715512}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 342796
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35,14 +120,62 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: 3603693318738745984}
   - {fileID: -4805576623128706259}
-  EditorEvents: []
+  - {fileID: 1145506695093828809}
+  - {fileID: 7325544714503715512}
+  - {fileID: -7335194983144615366}
+  - {fileID: -6313446992295099450}
+  - {fileID: -6734117384930127056}
+  EditorEvents:
+  - {fileID: -3295300596408003712}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4805576623128706259}
   StringsBanks:
   - {fileID: 3603693318738745984}
-  stringsBankWriteTime: 636977797033071370
+  stringsBankWriteTime: 636977889652013867
   cacheVersion: 3
+--- !u!114 &450013951570580158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Library
+  m_EditorClassIdentifier: 
+  Path: event:/Library
+  guid: 322b57bddaefac4cb9a4a65510f91f1a
+  Banks: []
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 234796
+--- !u!114 &1145506695093828809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Greenhouse.bank
+  m_EditorClassIdentifier: 
+  Path: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\Build\Desktop\Greenhouse.bank
+  SubDir: 
+  lastModified: 636977889651575026
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 470
+  Exists: 1
 --- !u!114 &3603693318738745984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,9 +190,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\Build\Desktop\Master.strings.bank
   SubDir: 
-  lastModified: 636977797033071370
+  lastModified: 636977889652013867
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 688
+    Value: 962
+  Exists: 1
+--- !u!114 &7325544714503715512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Library.bank
+  m_EditorClassIdentifier: 
+  Path: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\Build\Desktop\Library.bank
+  SubDir: 
+  lastModified: 636977889651983913
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 5475328
   Exists: 1

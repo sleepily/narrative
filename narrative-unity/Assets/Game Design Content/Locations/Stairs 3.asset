@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Stairs 3
   m_EditorClassIdentifier: 
   levelIndex: 5
-  location: {x: 78, y: 9, z: 0}
+  location: {x: 78, y: 0, z: 0}
