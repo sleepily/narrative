@@ -26,4 +26,6 @@ public class GameManager : MonoBehaviour
         GLOBAL = this;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
+
+    public static void SetCursorLock(bool isLocked) => CursorLock.SetCursorLock(isLocked);
 }

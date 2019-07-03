@@ -43,6 +43,9 @@ namespace UnityStandardAssets.Utility
             if (GameManager.GLOBAL.dialogue.dialogueInProgress)
                 return;
 
+            if (GameManager.GLOBAL.dialogue.menuInProgress)
+                return;
+
             Calculate();
         }
 

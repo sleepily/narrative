@@ -30,6 +30,8 @@ public class DialogueManager : MonoBehaviour
     }
 
     public bool dialogueInProgress { get; private set; } = false;
+    public bool menuInProgress { get; private set; } = false;
+
     Queue<DialoguePair> queue = new Queue<DialoguePair>();
 
     bool logVerbose = true;
@@ -76,6 +78,30 @@ public class DialogueManager : MonoBehaviour
         SpecialChecksBefore(dialoguePair.flowchart);
         WaitForDialogue(dialoguePair.flowchart);
         return true;
+    }
+
+    public void SetMenuInProgress(bool inProgress)
+    {
+        menuInProgress = inProgress;
+
+        // Unlock the cursor when the player has to make a choice
+        if (menuInProgress)
+            StartCoroutine(CheckForMenuOver());
+    }
+
+    IEnumerator CheckForMenuOver()
+    {
+        // A choice menu is presented to the player
+        CursorLock.SetCursorLock(false);
+
+        yield return new WaitForSeconds(.1f);
+
+        // Wait until the choice block is activated
+        while (!dialogueInProgress)
+            yield return null;
+
+        // Lock the player again
+        menuInProgress = false;
     }
 
     void WaitForDialogue(Flowchart flowchart)

@@ -18,8 +18,8 @@ public class CharacterWithDialogue : InteractableWithDialogue
     /*
      * Override UpdateFunctions to prevent glow lerping
      */
-    protected override void UpdateFunctions()
-    {
+    protected override void UpdateFunctions() { }
 
-    }
+    public void SetMenuInProgress(bool inProgress) =>
+        GameManager.GLOBAL.dialogue.SetMenuInProgress(inProgress);
 }

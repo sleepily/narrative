@@ -24,6 +24,10 @@ public class PlayerAimInteraction : MonoBehaviour
         if (GameManager.GLOBAL.inventory.isOpen)
             return false;
 
+        // Prevent player from interacting with characters while in a menu
+        if (GameManager.GLOBAL.dialogue.menuInProgress)
+            return false;
+
         float distanceFromCamera = Vector3.Distance(thirdPersonCamera.transform.position, focus.transform.position);
 
         // object to focus is inside dead zone
