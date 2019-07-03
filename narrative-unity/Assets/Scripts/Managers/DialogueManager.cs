@@ -12,7 +12,7 @@ public class DialogueManager : MonoBehaviour
 
         public DialoguePair(Flowchart flowchart, string blockID)
         {
-            if (blockID == null)
+            if (blockID == null || string.IsNullOrWhiteSpace(blockID))
                 blockID = "Start";
 
             this.flowchart = flowchart;

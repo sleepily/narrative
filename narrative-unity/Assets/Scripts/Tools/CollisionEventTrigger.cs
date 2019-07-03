@@ -32,6 +32,8 @@ public class CollisionEventTrigger : MonoBehaviour
 
         // Invoke the event
         triggerCounter++;
-        invokeOnTrigger.Invoke();
+        InvokeEvent();
     }
+
+    public void InvokeEvent() => invokeOnTrigger.Invoke();
 }
