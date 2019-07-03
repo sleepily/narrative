@@ -123,6 +123,9 @@ public class InventoryManager : MonoBehaviour
             if (GameManager.GLOBAL.dialogue.dialogueInProgress)
                 return;
 
+            if (GameManager.GLOBAL.dialogue.menuInProgress)
+                return;
+
             ToggleInventory();
         }
 

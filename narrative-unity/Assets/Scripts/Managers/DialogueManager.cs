@@ -91,10 +91,11 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator CheckForMenuOver()
     {
+        // Wait for some time to prevent weird things
+        yield return new WaitForSeconds(.6f);
+
         // A choice menu is presented to the player
         CursorLock.SetCursorLock(false);
-
-        yield return new WaitForSeconds(.1f);
 
         // Wait until the choice block is activated
         while (!dialogueInProgress)
