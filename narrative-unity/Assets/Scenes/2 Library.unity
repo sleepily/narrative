@@ -5193,20 +5193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e07b6c7f0b373c5448628085bd7bc35c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!64 &668636680
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8296172667619685153}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4068373912626513877, guid: 516f54631283ac44286bfd3a1c8604f2, type: 3}
 --- !u!1001 &690331811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18487,7 +18473,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172669349751948}
   m_LocalRotation: {x: 0.15361187, y: -0.6902198, z: 0.15361187, w: -0.6902198}
-  m_LocalPosition: {x: 1.1910007, y: 0.659, z: 1.7030005}
+  m_LocalPosition: {x: 1.1910007, y: 0.723, z: 1.7030005}
   m_LocalScale: {x: 0.010000006, y: 0.0100000035, z: 0.010000004}
   m_Children: []
   m_Father: {fileID: 1742160810}
@@ -18693,7 +18679,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172667619685153}
   m_LocalRotation: {x: -0, y: -0.32536837, z: -0, w: -0.94558734}
-  m_LocalPosition: {x: 1.4250008, y: 0.20900011, z: 2.0880013}
+  m_LocalPosition: {x: 1.4250008, y: 0.27300024, z: 2.0880013}
   m_LocalScale: {x: 0.013000011, y: 0.013, z: 0.013000011}
   m_Children: []
   m_Father: {fileID: 19576832}
@@ -23775,7 +23761,7 @@ GameObject:
   - component: {fileID: 5006512736915439922}
   - component: {fileID: 4044710142676007684}
   - component: {fileID: 7718390322011867133}
-  - component: {fileID: 668636680}
+  - component: {fileID: 8296172667619685154}
   m_Layer: 0
   m_Name: Sofa Chair
   m_TagString: Untagged
@@ -23783,6 +23769,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &8296172667619685154
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172667619685153}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 107.38134, y: 47.47318, z: 114.47658}
+  m_Center: {x: 0.04474012, y: -0.1400113, z: -0.0000000023737252}
 --- !u!1 &8296172667921126765
 GameObject:
   m_ObjectHideFlags: 0
