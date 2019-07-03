@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -267,7 +267,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &525216868
 GameObject:
@@ -530,14 +530,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1219545212 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 384464923644419348, guid: 57fecdd5d37889845a0e31925407fab3,
-    type: 3}
-  m_PrefabInstance: {fileID: 384464924859733352}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1266146552
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,7 +693,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: '{i}Someone knocks on the door.{/i}'
   description: 
-  character: {fileID: 8953335073324402201}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -768,7 +762,7 @@ MonoBehaviour:
   storyText: "How should I prepare for the party? \u2026 I don\u2019t even know that
     much huh, I really am useless."
   description: 
-  character: {fileID: 8642974383696545591}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -795,7 +789,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "My team is having a party today, maybe I should drop by\u2026"
   description: 
-  character: {fileID: 8642974383696545591}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -822,7 +816,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: 'Diego sighs and thinks to himself:'
   description: 
-  character: {fileID: 8953335073324402201}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -850,7 +844,7 @@ MonoBehaviour:
   storyText: '{i} He looks at his phone, the screen lights up his face. This is the
     brightest light source in the room.{/i}'
   description: 
-  character: {fileID: 8953335073324402201}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -878,7 +872,7 @@ MonoBehaviour:
   storyText: '{i}Diego hears his mother''s footsteps get quieter, as she gets farther
     and farther away from his room''s door.{/i}'
   description: 
-  character: {fileID: 8953335073324402201}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1098,7 +1092,7 @@ MonoBehaviour:
   storyText: "{i}Even as an outsider you\x19d be able to tell he hasn\x19t taken care
     of himself for some time.{/i}"
   description: 
-  character: {fileID: 8953335073324402201}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1126,7 +1120,7 @@ MonoBehaviour:
   storyText: '{i}The air in the room is stuffy, and the floor is littered with food
     packaging and old clothes.{/i}'
   description: 
-  character: {fileID: 8953335073324402201}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1154,7 +1148,7 @@ MonoBehaviour:
   storyText: '{i}Diego wakes up, light is shining in through the cracks of his window
     blinds.{/i}'
   description: 
-  character: {fileID: 8953335073324402201}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1196,9 +1190,8 @@ Transform:
   - {fileID: 525216869}
   - {fileID: 97285959}
   - {fileID: 599204023}
-  - {fileID: 1219545212}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &384464923372820569 stripped
 MonoBehaviour:
@@ -1229,7 +1222,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1754223751}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 384464923644419347, guid: 57fecdd5d37889845a0e31925407fab3,
         type: 3}
@@ -1254,17 +1247,17 @@ PrefabInstance:
     - target: {fileID: 384464923644419348, guid: 57fecdd5d37889845a0e31925407fab3,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 384464923644419348, guid: 57fecdd5d37889845a0e31925407fab3,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 384464923644419348, guid: 57fecdd5d37889845a0e31925407fab3,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 384464923644419348, guid: 57fecdd5d37889845a0e31925407fab3,
         type: 3}
@@ -1274,7 +1267,7 @@ PrefabInstance:
     - target: {fileID: 384464923644419348, guid: 57fecdd5d37889845a0e31925407fab3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 384464923644419348, guid: 57fecdd5d37889845a0e31925407fab3,
         type: 3}
@@ -1293,27 +1286,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57fecdd5d37889845a0e31925407fab3, type: 3}
---- !u!114 &8642974383696545591 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8642974383696545591, guid: 57fecdd5d37889845a0e31925407fab3,
-    type: 3}
-  m_PrefabInstance: {fileID: 384464924859733352}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8953335073324402201 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8953335073324402201, guid: 57fecdd5d37889845a0e31925407fab3,
-    type: 3}
-  m_PrefabInstance: {fileID: 384464924859733352}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
