@@ -24552,7 +24552,8 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
-  selectedBlocks: []
+  selectedBlocks:
+  - {fileID: 8296172669167351014}
   selectedCommands: []
   variables:
   - {fileID: 8296172669167351020}
@@ -24869,7 +24870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scope: 2
   key: Firsttalkdone
-  value: 1
+  value: 0
 --- !u!114 &8296172669167351021
 MonoBehaviour:
   m_ObjectHideFlags: 2
