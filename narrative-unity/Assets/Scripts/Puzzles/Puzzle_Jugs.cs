@@ -21,17 +21,11 @@ public class Puzzle_Jugs : Puzzle
     {
         swap.Add(jug);
 
-        Debug.Log($"Added jug {jug.maxCapacity}");
-
         if (swap.Count >= 2)
             Refill();
     }
 
-    public void RemoveJug(Interactable_Jug jug)
-    {
-        Debug.Log($"Removed jug {jug.maxCapacity}");
-        swap.Remove(jug);
-    }
+    public void RemoveJug(Interactable_Jug jug) => swap.Remove(jug);
 
     void Refill()
     {
