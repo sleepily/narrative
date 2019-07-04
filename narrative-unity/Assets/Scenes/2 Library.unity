@@ -1083,6 +1083,98 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 1026121007192441316, guid: 91993bf4c0bad5344b58da8ab6fdcfc3, type: 3}
+--- !u!1 &355977504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 355977505}
+  - component: {fileID: 355977508}
+  - component: {fileID: 355977507}
+  - component: {fileID: 355977506}
+  m_Layer: 0
+  m_Name: Funyarinpa picture
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &355977505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355977504}
+  m_LocalRotation: {x: 0.70702565, y: 0.010711533, z: 0.010711533, w: 0.70702565}
+  m_LocalPosition: {x: 0.6502632, y: 12.353462, z: 1.7557144}
+  m_LocalScale: {x: 5.858184, y: 6.9624224, z: 8.41438}
+  m_Children: []
+  m_Father: {fileID: 7866524681169306511}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 102.17999, y: -90, z: -90}
+--- !u!64 &355977506
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355977504}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &355977507
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355977504}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: ebe1b29f3bc2acb468bfc9bc61139e00, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &355977508
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355977504}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &363079130
 GameObject:
   m_ObjectHideFlags: 0
@@ -2619,11 +2711,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 1026.6123, y: 419.01923}
+  scrollPos: {x: 1320.0521, y: 480.6364}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 419
-  zoom: 1
+  zoom: 0.67000026
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -2631,8 +2723,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 8296172669349751967}
-  selectedCommands: []
+  - {fileID: 436314801}
+  selectedCommands:
+  - {fileID: 8296172669349751988}
   variables:
   - {fileID: 8296172669349751951}
   - {fileID: 8296172669349751953}
@@ -2678,7 +2771,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1197.63
     y: -256.56354
-    width: 154
+    width: 147.0149
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2710,9 +2803,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -1172.648
-    y: -189.37901
-    width: 125
+    x: -1171.4285
+    y: -188.1595
+    width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2789,6 +2882,7 @@ MonoBehaviour:
   - {fileID: 436314769}
   - {fileID: 436314815}
   - {fileID: 436314814}
+  - {fileID: 8296172669349751995}
   - {fileID: 436314813}
   - {fileID: 8296172669349751991}
 --- !u!114 &436314763
@@ -3129,7 +3223,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172669349751948}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
@@ -3138,7 +3232,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: The word "MILK" is written on the bottle...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3165,7 +3259,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1000.7696
     y: -323.47446
-    width: 164
+    width: 151.4925
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3176,6 +3270,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 436314802}
   - {fileID: 436314800}
+  - {fileID: 8296172669349751988}
 --- !u!114 &436314802
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3190,9 +3285,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 50
   indentLevel: 0
-  storyText: I can see something written on the bottle now!
+  storyText: The milk contrasting with the black paint...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3331,7 +3426,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: But I can also see some gaps on the paint...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3356,9 +3451,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 37
   indentLevel: 0
-  storyText: It looks like it was painted black for some reason
+  storyText: It looks like it was painted black.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3383,9 +3478,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 36
   indentLevel: 0
-  storyText: What a weird baby bottle
+  storyText: What a weird baby bottle.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3640,6 +3735,8 @@ GameObject:
   - component: {fileID: 505322431}
   - component: {fileID: 505322436}
   - component: {fileID: 505322437}
+  - component: {fileID: 505322439}
+  - component: {fileID: 505322438}
   m_Layer: 0
   m_Name: Taylor's letter
   m_TagString: Untagged
@@ -3655,7 +3752,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505322397}
   m_LocalRotation: {x: 0.5393243, y: -0.40336543, z: -0.3760206, w: -0.636423}
-  m_LocalPosition: {x: 0.63, y: 0.924, z: 0.844}
+  m_LocalPosition: {x: 1.262, y: 0.924, z: 0.042}
   m_LocalScale: {x: 100.00011, y: 100.00022, z: 100.00017}
   m_Children: []
   m_Father: {fileID: 387767552}
@@ -3734,11 +3831,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -253.29414, y: -83.64049}
+  scrollPos: {x: -213.3674, y: -5.705043}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.97
+  zoom: 0.79000014
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -3746,8 +3843,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 505322430}
-  selectedCommands: []
+  - {fileID: 505322404}
+  selectedCommands:
+  - {fileID: 505322410}
   variables:
   - {fileID: 505322415}
   - {fileID: 505322416}
@@ -3791,7 +3889,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 549
     y: 55
-    width: 154.12372
+    width: 163.92404
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3801,6 +3899,7 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 505322411}
+  - {fileID: 505322438}
   - {fileID: 505322410}
 --- !u!114 &505322405
 MonoBehaviour:
@@ -3818,7 +3917,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 371
     y: 17
-    width: 142.78351
+    width: 153.79745
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3828,6 +3927,7 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 505322414}
+  - {fileID: 505322439}
   - {fileID: 505322413}
 --- !u!114 &505322406
 MonoBehaviour:
@@ -3884,7 +3984,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: I feel like I've seen these symbols somewhere...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3909,9 +4009,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 31
   indentLevel: 0
-  storyText: It's some sort of letter written with weird symbols
+  storyText: It's some sort of letter written with weird symbols.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3938,7 +4038,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 379.9691
     y: 102
-    width: 158.24742
+    width: 167.7215
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3963,9 +4063,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 29
   indentLevel: 0
-  storyText: I don't think I can figure out what it says just yet
+  storyText: I don't think I can figure out what they mean just yet.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3983,7 +4083,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505322397}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
@@ -4025,7 +4125,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505322397}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
@@ -4052,7 +4152,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505322397}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
@@ -4526,9 +4626,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 388
-    y: 179
-    width: 396.39175
+    x: 385.46835
+    y: 180.26582
+    width: 415.82272
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4763,6 +4863,60 @@ MonoBehaviour:
   storyText: So he told Taylor they should stop seeing each other for a while.
   description: 
   character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &505322438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505322397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 45
+  indentLevel: 0
+  storyText: This letter has some weird symbols on it...
+  description: 
+  character: {fileID: 792129613}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &505322439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505322397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 44
+  indentLevel: 0
+  storyText: This letter has some weird symbols on it...
+  description: 
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -5633,6 +5787,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 768324136}
   m_CullTransparentMesh: 0
+--- !u!114 &792129613 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 384464923679477551, guid: 57fecdd5d37889845a0e31925407fab3,
+    type: 3}
+  m_PrefabInstance: {fileID: 22550835}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &883922893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6465,7 +6631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -100, y: 31}
+  scrollPos: {x: -202.2521, y: -13.626366}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -6477,9 +6643,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 1046477871}
+  - {fileID: 1046477864}
   selectedCommands:
-  - {fileID: 1046477879}
+  - {fileID: 1046477878}
   variables:
   - {fileID: 1046477872}
   - {fileID: 1046477868}
@@ -6525,7 +6691,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Something happened to that book over there...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -6550,9 +6716,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 12
   indentLevel: 0
-  storyText: I don't think I need to play anymore.
+  storyText: I don't think I need to play with this anymore.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -6714,7 +6880,7 @@ MonoBehaviour:
   indentLevel: 1
   storyText: These 8 keys.. when I select them they turn from white into red...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -6868,7 +7034,7 @@ MonoBehaviour:
   itemId: 15
   indentLevel: 0
   storyText: Select the keys and then interacting with the baton to play the highlighted
-    keys
+    keys.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -8108,7 +8274,7 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 1287091745}
+  - {fileID: 1287091743}
   selectedCommands: []
   variables:
   - {fileID: 1287091744}
@@ -8270,8 +8436,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 359
-    y: 64
+    x: 361
+    y: 65
     width: 133
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -8370,7 +8536,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: That doesn't seem to be the code...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -8397,7 +8563,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Yes! Knew it!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -10509,6 +10675,7 @@ GameObject:
   - component: {fileID: 1613803585}
   - component: {fileID: 1613803587}
   - component: {fileID: 1613803586}
+  - component: {fileID: 1613803588}
   m_Layer: 0
   m_Name: Trophies
   m_TagString: Untagged
@@ -10551,7 +10718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 8, y: -7}
+  scrollPos: {x: -21, y: -32}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -10565,7 +10732,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1613803566}
   selectedCommands:
-  - {fileID: 1613803587}
+  - {fileID: 1613803576}
   variables:
   - {fileID: 1613803565}
   - {fileID: 1613803574}
@@ -10688,6 +10855,7 @@ MonoBehaviour:
   - {fileID: 1613803571}
   - {fileID: 1613803570}
   - {fileID: 1613803585}
+  - {fileID: 1613803588}
   - {fileID: 1613803587}
   - {fileID: 1613803586}
   - {fileID: 1613803583}
@@ -10733,7 +10901,7 @@ MonoBehaviour:
   storyText: There are 8 trophies colored white and blue, I also see something else
     there, what's that?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -10772,10 +10940,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 2
-  storyText: There are 8 trophies colored white and blue. Now what do I do with this
-    info?
+  storyText: There are 8 trophies colored white and blue.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -10924,7 +11091,7 @@ MonoBehaviour:
   storyText: I used the trophies to activate play the xylophone, I don't think I can
     do anything else with them
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -10979,7 +11146,7 @@ MonoBehaviour:
   indentLevel: 2
   storyText: I wonder if they're connected...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -11004,9 +11171,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 9
   indentLevel: 2
-  storyText: There's something else colored white and blue besides this trophies.
+  storyText: There's something else colored white and blue besides these trophies.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -11280,17 +11447,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1613803559}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 16
   indentLevel: 2
-  storyText: I remember Diego didnt always have the flashiest role, but he was really
-    good at what he did
+  storyText: ' Now what do I do with this info?'
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -11315,9 +11481,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 18
   indentLevel: 2
-  storyText: Altough I doubt this will help me right now
+  storyText: Altough I doubt this will help me right now...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -11342,9 +11508,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 17
   indentLevel: 2
-  storyText: so he gained the respect of his teammates really quickly
+  storyText: so he gained the respect of his teammates really quickly.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1613803588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613803559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 19
+  indentLevel: 2
+  storyText: I remember Diego didn't always have the flashiest role, but he was really
+    good at what he did.
+  description: 
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -11781,7 +11975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 8296172669167351009}
+  selectedFlowchart: {fileID: 5232488858034587450}
 --- !u!4 &1705705785
 Transform:
   m_ObjectHideFlags: 1
@@ -12598,7 +12792,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 8296172667346810649}
   selectedCommands:
-  - {fileID: 8296172667346810650}
+  - {fileID: 8296172667346810648}
   variables:
   - {fileID: 8296172667346810651}
   description: 
@@ -13130,6 +13324,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 2089102381474410138, guid: d16cd79d451d43546a9d8b0adf5ed509, type: 3}
+--- !u!114 &2128933154 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5923794260168593744, guid: 57fecdd5d37889845a0e31925407fab3,
+    type: 3}
+  m_PrefabInstance: {fileID: 22550835}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &8771247614166406
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14199,7 +14405,8 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 1170377103835624697}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1170377103835624700}
   variables:
   - {fileID: 1170377103835624699}
   description: 
@@ -14228,7 +14435,7 @@ MonoBehaviour:
   indentLevel: 1
   storyText: Oh wait there's something inside it,  baby formula?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -14255,7 +14462,7 @@ MonoBehaviour:
   indentLevel: 1
   storyText: Let's see, what does this book say?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -14394,9 +14601,9 @@ MonoBehaviour:
   itemId: 7
   indentLevel: 1
   storyText: I got a packet of baby formula from this book, I should leave it alone
-    now
+    now.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -14580,7 +14787,6 @@ GameObject:
   - component: {fileID: 1170377104056170211}
   - component: {fileID: 1170377104056170210}
   - component: {fileID: 1170377104056170209}
-  - component: {fileID: 1170377104056170213}
   - component: {fileID: 1170377104056170220}
   - component: {fileID: 1170377104056170219}
   - component: {fileID: 1170377104056170218}
@@ -14598,6 +14804,7 @@ GameObject:
   - component: {fileID: 1170377104056170226}
   - component: {fileID: 1170377104056170225}
   - component: {fileID: 1170377104056170215}
+  - component: {fileID: 1170377104056170213}
   m_Layer: 0
   m_Name: key lock
   m_TagString: Untagged
@@ -14633,11 +14840,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -34.4094, y: 60.136375}
+  scrollPos: {x: -198.98386, y: -58.02856}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 291
-  zoom: 0.8800001
+  zoom: 0.7600002
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -14647,7 +14854,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1170377104056170218}
   selectedCommands:
-  - {fileID: 1170377104056170230}
+  - {fileID: 1170377104056170213}
   variables:
   - {fileID: 1170377104056170220}
   - {fileID: 1170377104056170229}
@@ -14720,7 +14927,6 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 1170377104056170213}
   - {fileID: 1170377104056170219}
   - {fileID: 1170377104056170217}
 --- !u!114 &1170377104056170211
@@ -14737,8 +14943,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 384.31824
-    y: -21.045464
+    x: 455.90912
+    y: -33.545464
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -14750,7 +14956,6 @@ MonoBehaviour:
   commandList:
   - {fileID: 1170377104056170221}
   - {fileID: 1170377104056170222}
-  - {fileID: 1170377104056170215}
 --- !u!114 &1170377104056170212
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -14782,7 +14987,7 @@ MonoBehaviour:
   - {fileID: 1170377104056170209}
 --- !u!114 &1170377104056170213
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -14792,11 +14997,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 4
+  itemId: 24
   indentLevel: 0
-  storyText: '*click*'
+  storyText: '{i}click{/i}'
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2128933154}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -14830,7 +15035,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1170377104056170215
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -14840,11 +15045,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 22
+  itemId: 23
   indentLevel: 0
   storyText: I don't think I can do anything else with this lock
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -14954,7 +15159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 403.63654
+    x: 407.5839
     y: 153.54552
     width: 120
     height: 40
@@ -14965,6 +15170,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 1170377104056170213}
   - {fileID: 1170377104056170224}
   - {fileID: 1170377104056170230}
   - {fileID: 1170377104056170223}
@@ -15064,7 +15270,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: This is... a heart shaped lock?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 0
@@ -15091,7 +15297,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: I probably need a key to open it...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 0
@@ -15109,7 +15315,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170377104056170205}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
@@ -15145,7 +15351,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: It worked!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -15170,9 +15376,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 427.59116
-    y: 70.54543
-    width: 135.22726
+    x: 448.0457
+    y: 70.545425
+    width: 121.05261
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -15180,7 +15386,8 @@ MonoBehaviour:
   blockName: Already Open
   description: 
   eventHandler: {fileID: 0}
-  commandList: []
+  commandList:
+  - {fileID: 1170377104056170215}
 --- !u!114 &1170377104056170226
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -18128,7 +18335,8 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 4749387626527434010}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 4749387626527434014}
   variables: []
   description: 
   stepPause: 0
@@ -18196,9 +18404,9 @@ MonoBehaviour:
   itemId: 9
   indentLevel: 0
   storyText: '"Easy to make nutrition for the dearest in your life, just mix with
-    water"'
+    water."'
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -18223,11 +18431,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 8
   indentLevel: 0
-  storyText: 'It''s a little packet of baby formula
+  storyText: 'It''s a little packet of baby formula.
 
 '
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -18895,6 +19103,8 @@ GameObject:
   - component: {fileID: 5232488858034587459}
   - component: {fileID: 5232488858034587458}
   - component: {fileID: 5232488858034587457}
+  - component: {fileID: 5232488858034587460}
+  - component: {fileID: 5232488858034587461}
   m_Layer: 0
   m_Name: picture frame
   m_TagString: Untagged
@@ -18936,7 +19146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -83.020645, y: 4.391751}
+  scrollPos: {x: -165.49487, y: -40.969097}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -18948,9 +19158,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 5232488858034587458}
+  - {fileID: 5232488858034587454}
   selectedCommands:
-  - {fileID: 5232488858034587457}
+  - {fileID: 5232488858034587461}
   variables: []
   description: 
   stepPause: 0
@@ -19022,8 +19232,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 335.5985
-    y: 113.13406
+    x: 331.47476
+    y: 109.01036
     width: 142.78351
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -19034,6 +19244,8 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 5232488858034587464}
+  - {fileID: 5232488858034587460}
+  - {fileID: 5232488858034587461}
   - {fileID: 5232488858034587463}
   - {fileID: 5232488858034587459}
 --- !u!114 &5232488858034587455
@@ -19050,8 +19262,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 159.30927
-    y: 113.13402
+    x: 156.21648
+    y: 106.94845
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -19165,8 +19377,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 548.99976
-    y: 111.07224
+    x: 540.7524
+    y: 106.94853
     width: 155.15463
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -19198,7 +19410,7 @@ MonoBehaviour:
     stringVal: 
   startIndex: 0
   callMode: 0
---- !u!114 &5232488858034587463
+--- !u!114 &5232488858034587460
 MonoBehaviour:
   m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19206,6 +19418,60 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5232488858034587448}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 18
+  indentLevel: 0
+  storyText: Maybe I can see its meaning better if I set it straight?
+  description: 
+  character: {fileID: 792129613}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &5232488858034587461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5232488858034587448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 19
+  indentLevel: 0
+  storyText: Oh wow, this is...
+  description: 
+  character: {fileID: 792129613}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &5232488858034587463
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5232488858034587448}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
@@ -19239,9 +19505,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  storyText: It's a painting.
+  storyText: What a weird abstract painting.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 0
@@ -19883,8 +20149,17 @@ GameObject:
   - component: {fileID: 5696618981039580961}
   - component: {fileID: 5696618981039580960}
   - component: {fileID: 5696618981039580959}
-  - component: {fileID: 5696618981039580958}
   - component: {fileID: 5696618981039580962}
+  - component: {fileID: 5696618981039580963}
+  - component: {fileID: 5696618981039580958}
+  - component: {fileID: 5696618981039580972}
+  - component: {fileID: 5696618981039580971}
+  - component: {fileID: 5696618981039580970}
+  - component: {fileID: 5696618981039580969}
+  - component: {fileID: 5696618981039580968}
+  - component: {fileID: 5696618981039580965}
+  - component: {fileID: 5696618981039580964}
+  - component: {fileID: 5696618981039580966}
   m_Layer: 0
   m_Name: magazine
   m_TagString: Untagged
@@ -19920,11 +20195,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 0, y: -1}
+  scrollPos: {x: -63.958767, y: 31.948452}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.97
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -19933,8 +20208,10 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 5696618981039580960}
-  selectedCommands: []
-  variables: []
+  selectedCommands:
+  - {fileID: 5696618981039580962}
+  variables:
+  - {fileID: 5696618981039580958}
   description: 
   stepPause: 0
   colorCommands: 1
@@ -19968,24 +20245,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5696618981039580954}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 3
-  indentLevel: 0
-  storyText: A magazine with the top ten countries for studying medicine...
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
+  scope: 0
+  key: firstinteraction
+  value: 0
 --- !u!114 &5696618981039580959
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -19999,7 +20264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 2
-  indentLevel: 0
+  indentLevel: 1
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 5696618981039580960}
   startLabel:
@@ -20021,9 +20286,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 334
-    y: 41
-    width: 140
+    x: 290
+    y: 34
+    width: 142.78351
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -20032,8 +20297,9 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 5696618981039580958}
+  - {fileID: 5696618981039580966}
   - {fileID: 5696618981039580962}
+  - {fileID: 5696618981039580969}
 --- !u!114 &5696618981039580961
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -20048,8 +20314,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 120
-    y: 60
+    x: 121
+    y: 62
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -20059,7 +20325,11 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 5696618981039580972}
   - {fileID: 5696618981039580959}
+  - {fileID: 5696618981039580971}
+  - {fileID: 5696618981039580968}
+  - {fileID: 5696618981039580970}
 --- !u!114 &5696618981039580962
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -20078,7 +20348,7 @@ MonoBehaviour:
     Australia; 6 \u2013 India; 7\u2013 The US; 8\u2013 Spain; 9\u2013 Japan; 10\u2013
     Russia\""
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -20089,6 +20359,293 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &5696618981039580963
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5696618981039580954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 288
+    y: 95
+    width: 166.49484
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 5
+  blockName: Further Interactions
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 5696618981039580965}
+  - {fileID: 5696618981039580964}
+--- !u!114 &5696618981039580964
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5696618981039580954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 33
+  indentLevel: 0
+  storyText: "\"1\u2013 Germany; 2\u2013 England; 3\u2013 Canada; 4\u2013 China; 5\u2013
+    Australia; 6 \u2013 India; 7\u2013 The US; 8\u2013 Spain; 9\u2013 Japan; 10\u2013
+    Russia\""
+  description: 
+  character: {fileID: 792129613}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &5696618981039580965
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5696618981039580954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 32
+  indentLevel: 0
+  storyText: A magazine with the top ten countries for studying medicine...
+  description: 
+  character: {fileID: 792129613}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &5696618981039580966
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5696618981039580954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 35
+  indentLevel: 0
+  storyText: A magazine with the top ten countries for studying medicine...
+  description: 
+  character: {fileID: 792129613}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &5696618981039580968
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5696618981039580954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 10
+  indentLevel: 1
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 5696618981039580963}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
+--- !u!114 &5696618981039580969
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5696618981039580954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 9
+  indentLevel: 0
+  variable: {fileID: 5696618981039580958}
+  setOperator: 0
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+  animatorData:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 0}
+  audioSourceData:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 0}
+  colorData:
+    colorRef: {fileID: 0}
+    colorVal: {r: 0, g: 0, b: 0, a: 0}
+  gameObjectData:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  materialData:
+    materialRef: {fileID: 0}
+    materialVal: {fileID: 0}
+  objectData:
+    objectRef: {fileID: 0}
+    objectVal: {fileID: 0}
+  rigidbody2DData:
+    rigidbody2DRef: {fileID: 0}
+    rigidbody2DVal: {fileID: 0}
+  spriteData:
+    spriteRef: {fileID: 0}
+    spriteVal: {fileID: 0}
+  textureData:
+    textureRef: {fileID: 0}
+    textureVal: {fileID: 0}
+  transformData:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 0}
+  vector2Data:
+    vector2Ref: {fileID: 0}
+    vector2Val: {x: 0, y: 0}
+  vector3Data:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &5696618981039580970
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5696618981039580954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 8
+  indentLevel: 0
+--- !u!114 &5696618981039580971
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5696618981039580954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fa968f01a7f9496bb50e13dfe16760d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 7
+  indentLevel: 0
+--- !u!114 &5696618981039580972
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5696618981039580954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 6
+  indentLevel: 0
+  compareOperator: 0
+  variable: {fileID: 5696618981039580958}
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+  animatorData:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 0}
+  audioSourceData:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 0}
+  colorData:
+    colorRef: {fileID: 0}
+    colorVal: {r: 0, g: 0, b: 0, a: 0}
+  gameObjectData:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  materialData:
+    materialRef: {fileID: 0}
+    materialVal: {fileID: 0}
+  objectData:
+    objectRef: {fileID: 0}
+    objectVal: {fileID: 0}
+  rigidbody2DData:
+    rigidbody2DRef: {fileID: 0}
+    rigidbody2DVal: {fileID: 0}
+  spriteData:
+    spriteRef: {fileID: 0}
+    spriteVal: {fileID: 0}
+  textureData:
+    textureRef: {fileID: 0}
+    textureVal: {fileID: 0}
+  transformData:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 0}
+  vector2Data:
+    vector2Ref: {fileID: 0}
+    vector2Val: {x: 0, y: 0}
+  vector3Data:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
 --- !u!33 &5722510580812219730
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20588,8 +21145,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 6318911020982505173}
-  selectedCommands: []
+  - {fileID: 6318911020982505165}
+  selectedCommands:
+  - {fileID: 6318911020982505175}
   variables:
   - {fileID: 6318911020982505170}
   description: 
@@ -20664,7 +21222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 342
+    x: 344
     y: 91
     width: 120
     height: 40
@@ -20871,7 +21429,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: This key came right off!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -20896,9 +21454,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  storyText: This hanging toy doesn't look like the other ones
+  storyText: This hanging toy doesn't look like the other ones.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -20982,9 +21540,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 14
   indentLevel: 0
-  storyText: Now I just need to find where to use it
+  storyText: Now I just need to find where to use it.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -21009,9 +21567,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 13
   indentLevel: 0
-  storyText: I picked up this key from the hanging chime
+  storyText: I picked up this key from the hanging chime.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -22656,7 +23214,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: 0.09101817, w: 0.99584925}
   m_LocalPosition: {x: -0, y: 0.4113333, z: -0.31155682}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
-  m_Children: []
+  m_Children:
+  - {fileID: 355977505}
   m_Father: {fileID: 5006512736550183043}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 10.444}
@@ -23013,9 +23572,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 3
   indentLevel: 0
-  storyText: '...Because normal bottles don''t work when doing sports all of a sudden'
+  storyText: '...Because normal bottles don''t work when doing sports all of a sudden.'
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -23040,9 +23599,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  storyText: It's one of those water bottles for sports
+  storyText: It's one of those water bottles for sports.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -23184,6 +23743,9 @@ GameObject:
   - component: {fileID: 8296172667440730773}
   - component: {fileID: 8296172667440730772}
   - component: {fileID: 8296172667440730771}
+  - component: {fileID: 8296172667440730782}
+  - component: {fileID: 8296172667440730781}
+  - component: {fileID: 8296172667440730780}
   m_Layer: 0
   m_Name: Picture Frame with Magazine
   m_TagString: Untagged
@@ -23218,18 +23780,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -179, y: 5}
+  scrollPos: {x: -387.14438, y: -39.718597}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.9100001
   scrollViewRect:
     serializedVersion: 2
     x: 0
     y: 0
     width: 0
     height: 0
-  selectedBlocks: []
+  selectedBlocks:
+  - {fileID: 8296172667440730775}
   selectedCommands: []
   variables:
   - {fileID: 8296172667440730783}
@@ -23356,9 +23919,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 9
   indentLevel: 0
-  storyText: It does look much better now.
+  storyText: Now that it's set straight I can see it better.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -23385,7 +23948,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 722
     y: 147
-    width: 163
+    width: 169.78021
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -23395,6 +23958,9 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 8296172667440730774}
+  - {fileID: 8296172667440730782}
+  - {fileID: 8296172667440730780}
+  - {fileID: 8296172667440730781}
 --- !u!114 &8296172667440730776
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -23430,9 +23996,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 25
   indentLevel: 0
-  storyText: I reach behind, only to find...
+  storyText: Maybe if I take a look behind it...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -23457,9 +24023,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 24
   indentLevel: 0
-  storyText: As I straighten it, it feels as if something was behind the frame.
+  storyText: '...It feels as if something was behind the frame.'
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -23534,6 +24100,87 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &8296172667440730780
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172667440730768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 33
+  indentLevel: 0
+  storyText: a Funyarinpa?
+  description: 
+  character: {fileID: 792129613}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 1
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8296172667440730781
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172667440730768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 32
+  indentLevel: 0
+  storyText: I mean, this totally looks like one... Here, and here...
+  description: 
+  character: {fileID: 792129613}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8296172667440730782
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172667440730768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 30
+  indentLevel: 0
+  storyText: I guess it looks like...
+  description: 
+  character: {fileID: 792129613}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!114 &8296172667440730783
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -23563,8 +24210,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 545
-    y: 108
+    x: 543
+    y: 109
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -23660,9 +24307,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 723
-    y: 73
-    width: 133
+    x: 722
+    y: 72
+    width: 139.01099
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -29317,9 +29964,6 @@ GameObject:
   - component: {fileID: 8296172669349751980}
   - component: {fileID: 8296172669349751979}
   - component: {fileID: 8296172669349751991}
-  - component: {fileID: 8296172669349751990}
-  - component: {fileID: 8296172669349751989}
-  - component: {fileID: 8296172669349751988}
   - component: {fileID: 8296172669349751987}
   - component: {fileID: 8296172669349751986}
   - component: {fileID: 8296172669349751985}
@@ -29329,6 +29973,12 @@ GameObject:
   - component: {fileID: 8296172669349751981}
   - component: {fileID: 8296172669349751971}
   - component: {fileID: 8296172669349751992}
+  - component: {fileID: 8296172669349751995}
+  - component: {fileID: 8296172669349751994}
+  - component: {fileID: 8296172669349751993}
+  - component: {fileID: 8296172669349751990}
+  - component: {fileID: 8296172669349751989}
+  - component: {fileID: 8296172669349751988}
   m_Layer: 0
   m_Name: Baby Bottle
   m_TagString: Untagged
@@ -29755,7 +30405,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -931.72504
     y: -428.231
-    width: 163
+    width: 152.98505
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -29770,9 +30420,10 @@ MonoBehaviour:
   - {fileID: 8296172669349751970}
   - {fileID: 8296172669349751965}
   - {fileID: 8296172669349751969}
-  - {fileID: 8296172669349751990}
+  - {fileID: 8296172669349751994}
+  - {fileID: 8296172669349751993}
   - {fileID: 8296172669349751989}
-  - {fileID: 8296172669349751988}
+  - {fileID: 8296172669349751990}
   - {fileID: 8296172669349751987}
 --- !u!114 &8296172669349751965
 MonoBehaviour:
@@ -29830,9 +30481,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -788.1942
-    y: -314.11322
-    width: 172
+    x: -751.6092
+    y: -386.06448
+    width: 158.95518
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -29955,11 +30606,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 97
   indentLevel: 1
-  storyText: 'It''s a baby bottle with baby formula inside of it
+  storyText: 'It''s a baby bottle with baby formula inside of it.
 
 '
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -30050,7 +30701,7 @@ MonoBehaviour:
   indentLevel: 1
   storyText: I probably need to put something else inside, too...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -30433,11 +31084,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 96
   indentLevel: 1
-  storyText: 'It''s a baby bottle with water inside
+  storyText: 'It''s a baby bottle with water inside.
 
 '
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -30464,7 +31115,7 @@ MonoBehaviour:
   indentLevel: 1
   storyText: I probably need to put something else inside, too...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -30647,7 +31298,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Maybe I should put something in here?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -30660,7 +31311,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &8296172669349751988
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -30670,11 +31321,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 89
+  itemId: 103
   indentLevel: 0
-  storyText: But I can also see some gaps on the paint...
+  storyText: Makes the word "MILK" now visible on the bottle.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -30687,19 +31338,19 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &8296172669349751989
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172669349751948}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 88
+  itemId: 102
   indentLevel: 0
-  storyText: It looks like it was painted black for some reason
+  storyText: ' for some reason'
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -30714,7 +31365,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &8296172669349751990
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -30724,11 +31375,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 87
+  itemId: 101
   indentLevel: 0
-  storyText: What a weird baby bottle
+  storyText: But I can also see some gaps on the paint...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -30746,7 +31397,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172669349751948}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
@@ -30779,6 +31430,87 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+--- !u!114 &8296172669349751993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669349751948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 100
+  indentLevel: 0
+  storyText: It looks like it was painted black.
+  description: 
+  character: {fileID: 792129613}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8296172669349751994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669349751948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 99
+  indentLevel: 0
+  storyText: What a weird baby bottle.
+  description: 
+  character: {fileID: 792129613}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8296172669349751995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669349751948}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 98
+  indentLevel: 0
+  storyText: ' for some reason'
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1 &8296172669388293499
 GameObject:
   m_ObjectHideFlags: 0

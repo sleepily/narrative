@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 384464923255392188}
   - component: {fileID: 384464923255392189}
   m_Layer: 0
-  m_Name: Fox
+  m_Name: Anxiety
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -459,7 +459,7 @@ GameObject:
   - component: {fileID: 384464923676200118}
   - component: {fileID: 384464923676200119}
   m_Layer: 0
-  m_Name: Bunny
+  m_Name: Fear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 384464923679477550}
   - component: {fileID: 384464923679477551}
   m_Layer: 0
-  m_Name: Inner Voice
+  m_Name: Inner Voice Anxiety
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: 
+  nameText: Anxiety (thinking)
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits: []
@@ -610,7 +610,7 @@ GameObject:
   - component: {fileID: 384464924615256607}
   - component: {fileID: 384464924615256592}
   m_Layer: 0
-  m_Name: Aries
+  m_Name: Anger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -761,7 +761,7 @@ GameObject:
   - component: {fileID: 384464925206169212}
   - component: {fileID: 384464925206169213}
   m_Layer: 0
-  m_Name: Mole
+  m_Name: Sadness
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
