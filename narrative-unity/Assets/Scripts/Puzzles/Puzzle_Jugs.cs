@@ -64,13 +64,6 @@ public class Puzzle_Jugs : Puzzle
 
     public override bool PuzzleCheck()
     {
-        string input = "";
-
-        foreach (Interactable_Jug jug in jugs)
-            input += $"jug {jug.maxCapacity}:{jug.currentCapacity}";
-
-        Debug.Log(input);
-
         bool hasSolutionCapacity = false;
 
         foreach (Interactable_Jug jug in jugs)
@@ -80,6 +73,6 @@ public class Puzzle_Jugs : Puzzle
         if (hasSolutionCapacity)
             PuzzleSolved();
 
-        return hasSolutionCapacity;
+        return false;
     }
 }
