@@ -37,3 +37,8 @@ sysinfo.txt
 *.unitypackage
 narrative-unity/Assets/Plugins/Fungus/Integrations/Spine/Fungus-Spine.unitypackage.meta
 narrative-unity/Assets/Plugins/Fungus/Integrations/Playmaker/Fungus-PlayMaker.unitypackage.meta
+
+# FMOD files
+Assets/Plugins/FMOD/Resources/FMODStudioCache.asset
+Assets/StreamingAssets/*.bank
+fmod_editor.log

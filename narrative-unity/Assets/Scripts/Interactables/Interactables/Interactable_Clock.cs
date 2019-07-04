@@ -20,15 +20,11 @@ public class Interactable_Clock : InteractableWithDialogue
         ChangeTime(startHours, startMinutes);
     }
 
-    public void ChangeTime(int hours, int minutes)
-    {
+    public void ChangeTime(int hours, int minutes) =>
         time = new DateTime(2019, 07, 17, hours, minutes, 00);
-    }
 
-    public void AddMinutes(int minutes)
-    {
+    public void AddMinutes(int minutes) =>
         time = time.AddMinutes(minutes);
-    }
 
     public override void Interact()
     {
