@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\Build\Desktop\Sound
     Effects.bank
   SubDir: 
-  lastModified: 636977889652023836
+  lastModified: 636978482744663877
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -35,7 +35,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\Build\Desktop\Void.bank
   SubDir: 
-  lastModified: 636977889652044064
+  lastModified: 636978482744693811
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -56,7 +56,7 @@ MonoBehaviour:
   Path: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\Build\Desktop\Stairs
     (All).bank
   SubDir: 
-  lastModified: 636977889652033799
+  lastModified: 636978482744683884
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\Build\Desktop\Master.bank
   SubDir: 
-  lastModified: 636977889652003889
+  lastModified: 636978482744644185
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -104,7 +104,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 342796
+  Length: 256500
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
   - {fileID: -4805576623128706259}
   StringsBanks:
   - {fileID: 3603693318738745984}
-  stringsBankWriteTime: 636977889652013867
+  stringsBankWriteTime: 636978482744653910
   cacheVersion: 3
 --- !u!114 &450013951570580158
 MonoBehaviour:
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\Build\Desktop\Greenhouse.bank
   SubDir: 
-  lastModified: 636977889651575026
+  lastModified: 636978482743985720
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\Build\Desktop\Master.strings.bank
   SubDir: 
-  lastModified: 636977889652013867
+  lastModified: 636978482744653910
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\Build\Desktop\Library.bank
   SubDir: 
-  lastModified: 636977889651983913
+  lastModified: 636978482744614023
   LoadResult: 0
   FileSizes:
   - Name: Desktop
