@@ -31,6 +31,7 @@ public class DialogueManager : MonoBehaviour
 
     public bool dialogueInProgress { get; private set; } = false;
     public bool menuInProgress { get; private set; } = false;
+    public bool codeInputInProgress { get; private set; } = false;
 
     Queue<DialoguePair> queue = new Queue<DialoguePair>();
 
@@ -79,6 +80,8 @@ public class DialogueManager : MonoBehaviour
         WaitForDialogue(dialoguePair.flowchart);
         return true;
     }
+
+    public void SetCodeInputInProgress(bool inProgress) => codeInputInProgress = inProgress;
 
     public void SetMenuInProgress(bool inProgress)
     {
