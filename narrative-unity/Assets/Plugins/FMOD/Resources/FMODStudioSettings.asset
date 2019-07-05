@@ -15,7 +15,7 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\narrative-fmod.fspro
+  sourceProjectPath: ..\narrative-fmod\narrative-fmod.fspro
   SourceProjectPathUnformatted: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\narrative-fmod.fspro
   SourceBankPathUnformatted: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\Build
   AutomaticEventLoading: 1
@@ -41,7 +41,7 @@ MonoBehaviour:
   - Platform: 1
     Value: 0
   - Platform: 2
-    Value: 1
+    Value: 0
   - Platform: 20
     Value: 0
   OverlaySettings:
@@ -79,6 +79,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - Master.strings
   - Rooms
   - Sound Effects
   - Stairs

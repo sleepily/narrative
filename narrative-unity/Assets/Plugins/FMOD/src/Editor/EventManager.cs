@@ -553,8 +553,16 @@ namespace FMODUnity
                     string subDir = dirName.Replace(bankSourceFolder, "");
                     bankRef.SubDir = subDir.TrimStart(Path.DirectorySeparatorChar);
 
-                    string sourcePath = bankSourceFolder + Path.DirectorySeparatorChar + bankRef.Name + ".bank";
-                    string targetPath = bankTargetFolder + Path.DirectorySeparatorChar + bankRef.Name + "." + bankTargetExension;
+                    // Get the bank's full path in case it is a relative path (not starting with a drive letter)
+                    if (bankSourceFolder[1] != ':')
+                        bankSourceFolder = Path.GetFullPath(bankSourceFolder);
+
+                    // Get file name since bank.Name sometimes is a full path
+                    string bankFileName = Path.GetFileName(bankRef.Name);
+
+                    // Build the correct source and target paths
+                    string sourcePath = bankSourceFolder + Path.DirectorySeparatorChar + bankFileName + ".bank";
+                    string targetPath = bankTargetFolder + Path.DirectorySeparatorChar + bankFileName + "." + bankTargetExension;
 
                     FileInfo sourceInfo = new FileInfo(sourcePath);
                     FileInfo targetInfo = new FileInfo(targetPath);
