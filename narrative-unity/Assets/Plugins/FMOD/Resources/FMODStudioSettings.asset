@@ -16,8 +16,8 @@ MonoBehaviour:
   HasSourceProject: 1
   HasPlatforms: 1
   sourceProjectPath: ..\narrative-fmod\narrative-fmod.fspro
-  SourceProjectPathUnformatted: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\narrative-fmod.fspro
-  SourceBankPathUnformatted: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\Build
+  SourceProjectPathUnformatted: ..\narrative-fmod\narrative-fmod.fspro
+  SourceBankPathUnformatted: ..\narrative-fmod\Build
   AutomaticEventLoading: 1
   BankLoadType: 0
   AutomaticSampleLoading: 0

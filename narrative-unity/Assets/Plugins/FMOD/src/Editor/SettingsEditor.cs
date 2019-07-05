@@ -422,7 +422,7 @@ namespace FMODUnity
                 if (EditorGUI.EndChangeCheck())
                 {
                     settings.SourceProjectPath = settings.SourceProjectPathUnformatted;
-                    settings.SourceProjectPathUnformatted = MakePathRelativeToProject(settings.SourceProjectPathUnformatted);
+                    // settings.SourceProjectPathUnformatted = MakePathRelativeToProject(settings.SourceProjectPathUnformatted);
                 }
 
                 if (GUILayout.Button("Browse", GUILayout.ExpandWidth(false)))
