@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: ded6b01c8336a7f43b53969b517782d6, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 6051f48b33f50fa4d8f6b8073f90a568, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1374,6 +1374,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1028559502 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 384464924765862544, guid: 57fecdd5d37889845a0e31925407fab3,
+    type: 3}
+  m_PrefabInstance: {fileID: 22550835}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1043448055
 GameObject:
   m_ObjectHideFlags: 0
@@ -6423,7 +6435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 145.63937, y: 12.175335}
+  scrollPos: {x: 159.04138, y: 187.4332}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 431
@@ -6436,7 +6448,8 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 1123397148893351206}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1123397148893351205}
   variables:
   - {fileID: 1123397148893351200}
   - {fileID: 1123397148893351181}
@@ -7309,7 +7322,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: test
   description: 
-  character: {fileID: 1123397148893351211}
+  character: {fileID: 1028559502}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -7362,7 +7375,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: aaa
   description: 
-  character: {fileID: 1123397148893351211}
+  character: {fileID: 1028559502}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -7537,7 +7550,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: intensity 1
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1028559502}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1

@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.48340157, g: 0.536159, b: 0.6698113, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 6051f48b33f50fa4d8f6b8073f90a568, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -232,6 +232,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57fecdd5d37889845a0e31925407fab3, type: 3}
+--- !u!114 &22550836 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 384464924615256592, guid: 57fecdd5d37889845a0e31925407fab3,
+    type: 3}
+  m_PrefabInstance: {fileID: 22550835}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &22550837 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 384464923255392189, guid: 57fecdd5d37889845a0e31925407fab3,
+    type: 3}
+  m_PrefabInstance: {fileID: 22550835}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &92050721
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1094,7 +1118,6 @@ GameObject:
   - component: {fileID: 355977505}
   - component: {fileID: 355977508}
   - component: {fileID: 355977507}
-  - component: {fileID: 355977506}
   m_Layer: 0
   m_Name: Funyarinpa picture
   m_TagString: Untagged
@@ -1116,20 +1139,6 @@ Transform:
   m_Father: {fileID: 7866524681169306511}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 102.17999, y: -90, z: -90}
---- !u!64 &355977506
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 355977504}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &355977507
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1903,6 +1912,7 @@ GameObject:
   - component: {fileID: 387767553}
   - component: {fileID: 387767572}
   - component: {fileID: 387767573}
+  - component: {fileID: 387767574}
   m_Layer: 0
   m_Name: Table with Taylor's letter
   m_TagString: Untagged
@@ -1969,7 +1979,8 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 387767558}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 387767571}
   variables:
   - {fileID: 387767559}
   - {fileID: 387767569}
@@ -2504,6 +2515,17 @@ MonoBehaviour:
           m_StringArgument: isSolved
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 387767574}
+        m_MethodName: TriggerParameters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   booleanParameter:
@@ -2629,6 +2651,25 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &387767574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387767551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters:
+  - Target: {fileID: 8296172669166054927}
+    Params:
+    - Name: letter - harps
+      Value: 1
+  TriggerEvent: 0
 --- !u!1001 &398957626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3737,6 +3778,8 @@ GameObject:
   - component: {fileID: 505322437}
   - component: {fileID: 505322439}
   - component: {fileID: 505322438}
+  - component: {fileID: 505322440}
+  - component: {fileID: 505322441}
   m_Layer: 0
   m_Name: Taylor's letter
   m_TagString: Untagged
@@ -3831,11 +3874,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -213.3674, y: -5.705043}
+  scrollPos: {x: -72.79769, y: 162.77602}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.79000014
+  zoom: 1
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -3843,9 +3886,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 505322404}
+  - {fileID: 505322405}
   selectedCommands:
-  - {fileID: 505322410}
+  - {fileID: 505322441}
   variables:
   - {fileID: 505322415}
   - {fileID: 505322416}
@@ -3889,7 +3932,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 549
     y: 55
-    width: 163.92404
+    width: 151
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3917,7 +3960,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 371
     y: 17
-    width: 153.79745
+    width: 140
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3926,6 +3969,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 505322441}
   - {fileID: 505322414}
   - {fileID: 505322439}
   - {fileID: 505322413}
@@ -4038,7 +4082,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 379.9691
     y: 102
-    width: 167.7215
+    width: 155
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4134,7 +4178,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: I can't make out what it says
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550837}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -4161,7 +4205,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: It's some sort of letter written with weird symbols
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550837}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -4628,13 +4672,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 385.46835
     y: 180.26582
-    width: 415.82272
+    width: 171
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 33
-  blockName: Flavor for open chest (I know most people won't read this)
-  description: 
+  blockName: Flavor for open chest
+  description: Most people won't read this
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 505322435}
@@ -4875,7 +4919,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &505322438
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4902,7 +4946,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &505322439
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4927,6 +4971,90 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &505322440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505322397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters:
+  - Target: {fileID: 8296172669166054927}
+    Params:
+    - Name: letter - strings
+      Value: 1
+  TriggerEvent: 0
+--- !u!114 &505322441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505322397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 46
+  indentLevel: 0
+  description: 
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 505322440}
+        m_MethodName: TriggerParameters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+BooleanEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+IntegerEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+FloatEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+StringEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &521100783
 GameObject:
   m_ObjectHideFlags: 0
@@ -6011,7 +6139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 173.91362, y: 55.932003}
+  scrollPos: {x: 488.1993, y: 215.11577}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -6282,6 +6410,7 @@ GameObject:
   - component: {fileID: 1046477884}
   - component: {fileID: 1046477883}
   - component: {fileID: 1046477882}
+  - component: {fileID: 1046477889}
   m_Layer: 0
   m_Name: Puzzle_Xylophone
   m_TagString: Untagged
@@ -6631,7 +6760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -202.2521, y: -13.626366}
+  scrollPos: {x: -147.2521, y: 182.37363}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -6643,9 +6772,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 1046477864}
+  - {fileID: 1046477871}
   selectedCommands:
-  - {fileID: 1046477878}
+  - {fileID: 1046477879}
   variables:
   - {fileID: 1046477872}
   - {fileID: 1046477868}
@@ -6769,6 +6898,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: isSolved
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1046477889}
+        m_MethodName: TriggerParameters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -7082,6 +7222,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 16
   indentLevel: 0
+--- !u!114 &1046477889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046477862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters:
+  - Target: {fileID: 8296172669166054927}
+    Params: []
+  TriggerEvent: 0
 --- !u!64 &1077230343
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11882,6 +12039,7 @@ GameObject:
   - component: {fileID: 1702450908}
   - component: {fileID: 1702450910}
   - component: {fileID: 1702450909}
+  - component: {fileID: 1702450911}
   m_Layer: 0
   m_Name: Door Closing Trigger
   m_TagString: Untagged
@@ -11915,7 +12073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a79f02893669a47885d9b66e71e7c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enabledByDefault: 0
+  enabledByDefault: 1
   onlyOnce: 1
   invokeOnTrigger:
     m_PersistentCalls:
@@ -11929,6 +12087,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: reset
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1702450911}
+        m_MethodName: TriggerParameters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -11946,6 +12115,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1702450911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702450907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters:
+  - Target: {fileID: 8296172669166054927}
+    Params:
+    - Name: letter - guitar
+      Value: 1
+    - Name: letter start
+      Value: 1
+  TriggerEvent: 0
 --- !u!1 &1705705783
 GameObject:
   m_ObjectHideFlags: 1
@@ -11975,7 +12165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 5232488858034587450}
+  selectedFlowchart: {fileID: 0}
 --- !u!4 &1705705785
 Transform:
   m_ObjectHideFlags: 1
@@ -25061,13 +25251,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/Rooms/Library
+  Event: event:/Rooms/Memory
   PlayEvent: 1
   StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
-  Params: []
+  Params:
+  - Name: letter - music box
+    Value: 1
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
@@ -25082,7 +25274,6 @@ GameObject:
   - component: {fileID: 5006512734822516428}
   - component: {fileID: 3166231813840726966}
   - component: {fileID: 8296172669167351008}
-  - component: {fileID: 8296172669167351013}
   - component: {fileID: 8296172669167351009}
   - component: {fileID: 8296172669167351019}
   - component: {fileID: 8296172669167351018}
@@ -25280,7 +25471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 142.78278, y: 82.846756}
+  scrollPos: {x: 292.78278, y: 146.84676}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 404
@@ -25292,8 +25483,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 8296172669167351014}
-  selectedCommands: []
+  - {fileID: 8296172669167351011}
+  selectedCommands:
+  - {fileID: 8296172669167351033}
   variables:
   - {fileID: 8296172669167351020}
   - {fileID: 8296172669167351078}
@@ -25388,7 +25580,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Oh not {i}you{/i} again
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -25399,25 +25591,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &8296172669167351013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8296172669167351007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: Anger, The Aries
-  nameColor: {r: 0.7264151, g: 0.09251513, b: 0.09251513, a: 1}
-  soundEffect: {fileID: 0}
-  portraits: []
-  portraitsFace: 0
-  setSayDialog: {fileID: 0}
-  description: 
 --- !u!114 &8296172669167351014
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -25717,7 +25890,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Maybe if we weren't so useless none of this would have happened
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -25772,7 +25945,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Why would you even want to talk with someone as utterly USELESS as me
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -25932,7 +26105,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: So, so useless
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -25959,7 +26132,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: We should have gotten angry sooner but noooo~
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -25986,7 +26159,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Diego and I, we really {i} are {/i} useless
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26013,7 +26186,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Because we are...
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26040,7 +26213,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: You really need to stop jumping to conclusions
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550837}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26067,7 +26240,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Oh what, because we're way too useless to fix anything by ourselves?
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26094,7 +26267,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: No, no. I was just sent here to try and fix stuff up
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550837}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26121,7 +26294,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: So what is it that you want, you here to make fun of me?
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26148,7 +26321,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: THAT'S MY JOB!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26175,7 +26348,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Oh please, you say that about everything!
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26203,7 +26376,7 @@ MonoBehaviour:
   storyText: Well I tried to warn you all that everything was going to go wrong. But
     did anyone listen?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550837}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26231,7 +26404,7 @@ MonoBehaviour:
   storyText: I HATE this. You know? none of this would have happened if Diego had
     just left sooner
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26258,7 +26431,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Hey Anger, nice to see you too
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550837}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26349,7 +26522,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Hate you...
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26376,7 +26549,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: I...
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26403,7 +26576,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: STOP IT, THAT HURTS
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26430,7 +26603,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: OW, ARE YOU CRAZY?
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26600,7 +26773,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: So tell me, what happened?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550837}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26682,7 +26855,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: What's this supposed to do? Maybe you are as useless as Diego and I
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26846,7 +27019,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: I bet you don't even know what sport he used to do
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26874,7 +27047,7 @@ MonoBehaviour:
   storyText: ' All you do all day is shout "that will kill you" at anything Diego
     thinks about. Did you ever pay attention to any of it?'
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26901,7 +27074,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: I'm not surprised you didn't know that though.
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26929,7 +27102,7 @@ MonoBehaviour:
   storyText: Yes, but he wanted to help people as a {b} doctor {/b}. He couldn't even
     do that right
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26984,7 +27157,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: This picture...
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27038,7 +27211,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Anyone could know that
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27065,7 +27238,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Ok well, that doesn't prove anything...
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27092,7 +27265,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: What about his passion?
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27119,7 +27292,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Ok, then what about his passion?
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27200,7 +27373,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: He used to play baseball
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27227,7 +27400,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Ha, you don't even know that?
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27314,7 +27487,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: In that case, I guess I could let you-
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27369,7 +27542,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Ok I guess you do know your stuff... As much as I hate to admit it
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27450,7 +27623,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: What? are you not excited to see your little brother again?
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27504,7 +27677,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: The answer to that question lies in the greenhouse.
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27633,7 +27806,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Is there something you wish to know?
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27719,7 +27892,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: But you're right, they were partners
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27746,7 +27919,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Well ex-partner now anyways...
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27980,8 +28153,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Please leave, I don't want to see your face around here anymore
   description: 
-  character: {fileID: 8296172669167351013}
-  portrait: {fileID: 0}
+  character: {fileID: 22550836}
+  portrait: {fileID: 21300000, guid: feeb82fa4a408384f846353b531e8aa6, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -28097,8 +28270,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Please, I don't want to see your face around here anymore
   description: 
-  character: {fileID: 8296172669167351013}
-  portrait: {fileID: 0}
+  character: {fileID: 22550836}
+  portrait: {fileID: 21300000, guid: feeb82fa4a408384f846353b531e8aa6, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -28124,8 +28297,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Look, just... leave
   description: 
-  character: {fileID: 8296172669167351013}
-  portrait: {fileID: 0}
+  character: {fileID: 22550836}
+  portrait: {fileID: 21300000, guid: feeb82fa4a408384f846353b531e8aa6, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -28566,7 +28739,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: So...
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -28594,7 +28767,7 @@ MonoBehaviour:
   storyText: But I get it, you've got more important places to be. You probably want
     to see your little brother, Fear.
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -28623,8 +28796,8 @@ MonoBehaviour:
 
 '
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 22550837}
+  portrait: {fileID: 21300000, guid: 6d6a51415ee09cf458e6253a9244294f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -28767,7 +28940,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Hopefully not~!
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -28821,7 +28994,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Here, this door should now redirect you to the greenhouse
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -28901,7 +29074,7 @@ MonoBehaviour:
   storyText: '... I''m not entirely confident you care enough about Diego, or this
     place, or me...'
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29131,7 +29304,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: The door is open, leave
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29158,7 +29331,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: What are you staying here for?
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29282,7 +29455,7 @@ MonoBehaviour:
   storyText: Not surprised you don't know that. Even though you should have if you
     were any good at your job
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29351,7 +29524,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: So then let's talk about Taylor, the bastard that created this mess
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29379,7 +29552,7 @@ MonoBehaviour:
   storyText: He couldn't afford waiting a year so he needed to start working. This
     is why he applied for nursing
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29407,7 +29580,7 @@ MonoBehaviour:
   storyText: Right, he wanted to become a doctor. But he couldn't because those university
     board asshats rejected his application
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29435,7 +29608,7 @@ MonoBehaviour:
   storyText: That's what I like to hear! maybe you and I have more in common than
     I initally thought
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29463,7 +29636,7 @@ MonoBehaviour:
   storyText: The only reason the heart's a mess right now is because Diego and Taylor
     broke up just over a week ago
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29517,7 +29690,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: What were you doing this whole time to not even know that?
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29544,7 +29717,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: No, no. Taylor was Diego's partner
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29571,7 +29744,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: So yeah...
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29599,7 +29772,7 @@ MonoBehaviour:
   storyText: The only reason the heart's a mess right now is because Diego and Taylor
     broke up just over a week ago
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29668,7 +29841,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: So then let's talk about Taylor, the bastard that created this mess
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29696,7 +29869,7 @@ MonoBehaviour:
   storyText: He couldn't afford waiting a year so he needed to start working. This
     is why he applied for nursing
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29724,7 +29897,7 @@ MonoBehaviour:
   storyText: No uh, he wanted to become a doctor. But he couldn't because those university
     board asshats rejected his application
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29751,7 +29924,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Well it's true
   description: 
-  character: {fileID: 8296172669167351013}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1

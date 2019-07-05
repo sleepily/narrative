@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{32f9bd06-564c-4ba4-baa8-7b38d6e557b2}">
+		<property name="name">
+			<value>letter - harps</value>
+		</property>
+		<relationship name="folder">
+			<destination>{a39137d6-c813-41a4-9b8f-128e910e78f7}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{3aecd70f-fc4e-4ba5-8c7d-79ac45691414}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{3aecd70f-fc4e-4ba5-8c7d-79ac45691414}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

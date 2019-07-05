@@ -39,6 +39,9 @@ narrative-unity/Assets/Plugins/Fungus/Integrations/Spine/Fungus-Spine.unitypacka
 narrative-unity/Assets/Plugins/Fungus/Integrations/Playmaker/Fungus-PlayMaker.unitypackage.meta
 
 # FMOD files
-Assets/Plugins/FMOD/Resources/FMODStudioCache.asset
-Assets/StreamingAssets/*.bank
-fmod_editor.log
+narrative-unity/Assets/Plugins/FMOD/Resources/FMODStudioCache.asset
+# narrative-unity/Assets/StreamingAssets/*.bank
+narrative-unity/fmod_editor.log
+
+# FMOD assets
+narrative-fmod/Assets/*
