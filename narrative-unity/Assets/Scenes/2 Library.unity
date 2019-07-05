@@ -1966,7 +1966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -63.176468, y: 7.2352924}
+  scrollPos: {x: -103.17647, y: -13.764708}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -1980,7 +1980,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 387767558}
   selectedCommands:
-  - {fileID: 387767571}
+  - {fileID: 387767570}
   variables:
   - {fileID: 387767559}
   - {fileID: 387767569}
@@ -2107,7 +2107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 398
+    x: 400
     y: 51
     width: 120
     height: 40
@@ -2118,9 +2118,9 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 387767561}
   - {fileID: 387767572}
   - {fileID: 387767571}
-  - {fileID: 387767561}
   - {fileID: 387767562}
   - {fileID: 387767570}
   - {fileID: 387767563}
@@ -2185,9 +2185,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 5
   indentLevel: 0
-  storyText: Of course, I should have known
+  storyText: Of course, I should have known.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2212,9 +2212,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 6
   indentLevel: 0
-  storyText: this was the day we met
+  storyText: this was the day we met.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2473,7 +2473,7 @@ MonoBehaviour:
   storyText: It was right after a match. To believe such a beautiful being would talk
     to someone like me...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2574,7 +2574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 15
   indentLevel: 0
-  storyText: '*click*'
+  storyText: '{i}click{/i}'
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -3874,11 +3874,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -72.79769, y: 162.77602}
+  scrollPos: {x: -58.001072, y: -12.564688}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.8800001
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -3886,9 +3886,8 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 505322405}
-  selectedCommands:
-  - {fileID: 505322441}
+  - {fileID: 505322406}
+  selectedCommands: []
   variables:
   - {fileID: 505322415}
   - {fileID: 505322416}
@@ -3932,7 +3931,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 549
     y: 55
-    width: 151
+    width: 161.36362
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3960,7 +3959,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 371
     y: 17
-    width: 140
+    width: 148.86362
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4005,12 +4004,12 @@ MonoBehaviour:
   - {fileID: 505322422}
   - {fileID: 505322421}
   - {fileID: 505322420}
-  - {fileID: 505322419}
-  - {fileID: 505322418}
-  - {fileID: 505322417}
   - {fileID: 505322427}
   - {fileID: 505322429}
   - {fileID: 505322428}
+  - {fileID: 505322419}
+  - {fileID: 505322418}
+  - {fileID: 505322417}
   - {fileID: 505322436}
 --- !u!114 &505322407
 MonoBehaviour:
@@ -4082,7 +4081,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 379.9691
     y: 102
-    width: 155
+    width: 165.90907
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4244,7 +4243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scope: 2
-  key: DrawerisSolved
+  key: DrawerIsSolved
   value: 0
 --- !u!114 &505322417
 MonoBehaviour:
@@ -4672,7 +4671,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 385.46835
     y: 180.26582
-    width: 171
+    width: 182.95453
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4703,7 +4702,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Diego never gave them his address...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -4730,7 +4729,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: A really sweet move from Taylor, but...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -4756,9 +4755,9 @@ MonoBehaviour:
   itemId: 39
   indentLevel: 0
   storyText: After Taylor handed Diego the decryption key, these mysterious letters
-    started arriving at his place
+    started arriving at his place.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -4786,7 +4785,7 @@ MonoBehaviour:
   storyText: 'Diego''s knew his parents wouldn''t have the best reaction to their
     relationship. '
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -4812,9 +4811,9 @@ MonoBehaviour:
   itemId: 37
   indentLevel: 0
   storyText: Shortly after a few dates Diego's parents started getting suspicious
-    that something was going on
+    that something was going on.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -4906,7 +4905,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: So he told Taylor they should stop seeing each other for a while.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -4992,7 +4991,7 @@ MonoBehaviour:
   TriggerEvent: 0
 --- !u!114 &505322441
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6139,11 +6138,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 488.1993, y: 215.11577}
+  scrollPos: {x: 311.2452, y: 152.31918}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.49
+  zoom: 0.72999984
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -7861,7 +7860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 0, y: 0}
+  scrollPos: {x: -192, y: -52}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -7873,9 +7872,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 1081062258}
+  - {fileID: 1081062253}
   selectedCommands:
-  - {fileID: 1081062245}
+  - {fileID: 1081062250}
   variables:
   - {fileID: 1081062256}
   - {fileID: 1081062249}
@@ -9252,7 +9251,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1356308072}
   selectedCommands:
-  - {fileID: 1356308074}
+  - {fileID: 1356308073}
   variables: []
   description: 
   stepPause: 0
@@ -9366,7 +9365,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: That was so confusing!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -9392,9 +9391,9 @@ MonoBehaviour:
   itemId: 2
   indentLevel: 0
   storyText: I remember they gave this to us at the end of one of our dates without
-    explaining anything
+    explaining anything.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -9419,9 +9418,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: Oh yeah, this is how you translated those weird symbols
+  storyText: Oh yeah, this is how you translate those weird symbols.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -12165,7 +12164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 0}
+  selectedFlowchart: {fileID: 8296172669167351009}
 --- !u!4 &1705705785
 Transform:
   m_ObjectHideFlags: 1
@@ -24812,7 +24811,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 8296172669043255497}
   selectedCommands:
-  - {fileID: 8296172669043255503}
+  - {fileID: 8296172669043255500}
   variables:
   - {fileID: 8296172669043255495}
   description: 
@@ -25014,8 +25013,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 370
-    y: 122
+    x: 373.09277
+    y: 124.06186
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -25075,7 +25074,7 @@ MonoBehaviour:
 
 '
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -25102,7 +25101,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Oh, Taylor...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -25437,6 +25436,20 @@ GameObject:
   - component: {fileID: 8296172669167351170}
   - component: {fileID: 8296172669167351171}
   - component: {fileID: 8296172669167351174}
+  - component: {fileID: 8296172669167351181}
+  - component: {fileID: 8296172669167351180}
+  - component: {fileID: 8296172669167351179}
+  - component: {fileID: 8296172669167351178}
+  - component: {fileID: 8296172669167351177}
+  - component: {fileID: 8296172669167351176}
+  - component: {fileID: 8296172669167351175}
+  - component: {fileID: 8296172669167351173}
+  - component: {fileID: 8296172669167351172}
+  - component: {fileID: 8296172669167351013}
+  - component: {fileID: 8296172669167351185}
+  - component: {fileID: 8296172669167351184}
+  - component: {fileID: 8296172669167351183}
+  - component: {fileID: 8296172669167351182}
   m_Layer: 0
   m_Name: Aries
   m_TagString: Untagged
@@ -25471,11 +25484,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 292.78278, y: 146.84676}
+  scrollPos: {x: 181.24304, y: 4.3159494}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 404
-  zoom: 1
+  zoom: 0.75999975
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -25483,9 +25496,8 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 8296172669167351011}
-  selectedCommands:
-  - {fileID: 8296172669167351033}
+  - {fileID: 8296172669167351017}
+  selectedCommands: []
   variables:
   - {fileID: 8296172669167351020}
   - {fileID: 8296172669167351078}
@@ -25537,7 +25549,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 260.06525
     y: -43.232155
-    width: 140
+    width: 132.89476
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -25548,6 +25560,8 @@ MonoBehaviour:
   commandList:
   - {fileID: 8296172669167351012}
   - {fileID: 8296172669167351044}
+  - {fileID: 8296172669167351179}
+  - {fileID: 8296172669167351178}
   - {fileID: 8296172669167351054}
   - {fileID: 8296172669167351043}
   - {fileID: 8296172669167351042}
@@ -25578,7 +25592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 5
   indentLevel: 0
-  storyText: Oh not {i}you{/i} again
+  storyText: Oh not {i}you{/i} again.
   description: 
   character: {fileID: 22550836}
   portrait: {fileID: 0}
@@ -25586,6 +25600,33 @@ MonoBehaviour:
   showAlways: 1
   showCount: 1
   extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8296172669167351013
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 179
+  indentLevel: 0
+  storyText: ' This is why he applied for nursing.'
+  description: 
+  character: {fileID: 22550836}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 1
   fadeWhenDone: 1
   waitForClick: 1
   stopVoiceover: 1
@@ -25684,6 +25725,7 @@ MonoBehaviour:
   - {fileID: 8296172669167351066}
   - {fileID: 8296172669167351065}
   - {fileID: 8296172669167351064}
+  - {fileID: 8296172669167351175}
   - {fileID: 8296172669167351063}
   - {fileID: 8296172669167351062}
   - {fileID: 8296172669167351174}
@@ -25704,7 +25746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 281.45578
+    x: 277.37415
     y: 51.43153
     width: 120
     height: 40
@@ -25717,6 +25759,8 @@ MonoBehaviour:
   commandList:
   - {fileID: 8296172669167351057}
   - {fileID: 8296172669167351056}
+  - {fileID: 8296172669167351176}
+  - {fileID: 8296172669167351177}
   - {fileID: 8296172669167351055}
 --- !u!114 &8296172669167351018
 MonoBehaviour:
@@ -26048,9 +26092,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 29
   indentLevel: 0
-  storyText: I need some sort of proof that Diego is not useless
+  storyText: I need some sort of proof that Diego is not useless.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26075,10 +26119,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 28
   indentLevel: 0
-  storyText: I really want to ask what happened, but I doubt they'll answer in this
-    state
+  storyText: I really want to ask what happened, but I doubt he'll answer in this
+    state.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26103,14 +26147,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 26
   indentLevel: 0
-  storyText: So, so useless
+  storyText: '...So, so useless'
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
-  extendPrevious: 0
+  extendPrevious: 1
   fadeWhenDone: 1
   waitForClick: 1
   stopVoiceover: 1
@@ -26132,7 +26176,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: We should have gotten angry sooner but noooo~
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26204,7 +26248,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172669167351007}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
@@ -26265,7 +26309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 16
   indentLevel: 0
-  storyText: No, no. I was just sent here to try and fix stuff up
+  storyText: No, no. I was just sent here to try and fix stuff up.
   description: 
   character: {fileID: 22550837}
   portrait: {fileID: 0}
@@ -26285,7 +26329,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172669167351007}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
@@ -26312,7 +26356,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172669167351007}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
@@ -26339,7 +26383,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172669167351007}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
@@ -26366,7 +26410,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172669167351007}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
@@ -26394,7 +26438,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172669167351007}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
@@ -26429,7 +26473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 14
   indentLevel: 0
-  storyText: Hey Anger, nice to see you too
+  storyText: Hey Anger, nice to see you too.
   description: 
   character: {fileID: 22550837}
   portrait: {fileID: 0}
@@ -26574,9 +26618,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 11
   indentLevel: 0
-  storyText: STOP IT, THAT HURTS
+  storyText: STOP IT, THAT HURTS!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26603,7 +26647,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: OW, ARE YOU CRAZY?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26630,7 +26674,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 42.68474
     y: 376.93668
-    width: 143
+    width: 138.15793
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -26764,7 +26808,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172669167351007}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
@@ -26798,9 +26842,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 43
   indentLevel: 0
-  storyText: Find something to calm Anger down
+  storyText: Find something to calm Anger down.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26825,10 +26869,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 42
   indentLevel: 0
-  storyText: '*gasp* What if I am, and everyone secretly thinks that and they''r-
-    Not now, Anxiety, focus.'
+  storyText: '{i}gasp{/i} What if I am? '
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26853,9 +26896,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 41
   indentLevel: 0
-  storyText: What's this supposed to do? Maybe you are as useless as Diego and I
+  storyText: What's this supposed to do? Maybe you are as useless as Diego and I.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -26948,6 +26991,7 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 8296172669167351071}
+  - {fileID: 8296172669167351173}
   - {fileID: 8296172669167351070}
   - {fileID: 8296172669167351072}
   - {fileID: 8296172669167351114}
@@ -27017,7 +27061,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 51
   indentLevel: 0
-  storyText: I bet you don't even know what sport he used to do
+  storyText: Oh really? I bet you don't even know what sport he used to do.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -27044,10 +27088,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 50
   indentLevel: 0
-  storyText: ' All you do all day is shout "that will kill you" at anything Diego
-    thinks about. Did you ever pay attention to any of it?'
+  storyText: All you do all day is shout "that will kill you" at anything Diego thinks
+    about. Did you ever pay attention to any of it?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27074,7 +27118,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: I'm not surprised you didn't know that though.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27100,9 +27144,9 @@ MonoBehaviour:
   itemId: 47
   indentLevel: 0
   storyText: Yes, but he wanted to help people as a {b} doctor {/b}. He couldn't even
-    do that right
+    do that right.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27130,7 +27174,7 @@ MonoBehaviour:
   storyText: Diego is a nurse, he lives to help people. How could you say he's useless
     after seeing this?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550837}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27157,7 +27201,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: This picture...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27182,9 +27226,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 46
   indentLevel: 0
-  storyText: Here take a look at this
+  storyText: Here, take a look at this.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550837}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27209,9 +27253,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 59
   indentLevel: 0
-  storyText: Anyone could know that
+  storyText: Anyone could know that.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27238,7 +27282,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Ok well, that doesn't prove anything...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27265,7 +27309,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: What about his passion?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27292,7 +27336,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Ok, then what about his passion?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27319,7 +27363,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: (Oh God he can see right through me, can't he?)
   description: 
-  character: {fileID: 0}
+  character: {fileID: 792129613}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27344,9 +27388,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 62
   indentLevel: 0
-  storyText: Right, right. I knew that
+  storyText: Right, right. I knew that.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550837}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27371,9 +27415,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 61
   indentLevel: 0
-  storyText: He used to play baseball
+  storyText: He used to play baseball.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27400,7 +27444,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Ha, you don't even know that?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27457,7 +27501,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1277.8765
     y: 449.87457
-    width: 131
+    width: 125.00002
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -27487,7 +27531,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: In that case, I guess I could let you-
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27542,7 +27586,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Ok I guess you do know your stuff... As much as I hate to admit it
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27567,9 +27611,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 165
   indentLevel: 0
-  storyText: '... I don''t particularly like him...'
+  storyText: '... I don''t particularly like her...'
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550837}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27594,9 +27638,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 164
   indentLevel: 0
-  storyText: What? I don't even like him!
+  storyText: What? I don't even like her!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550837}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27621,9 +27665,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 103
   indentLevel: 0
-  storyText: What? are you not excited to see your little brother again?
+  storyText: What? are you not excited to see your little sister again?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27650,7 +27694,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Oh no, isn't that where Fear works?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550837}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27675,9 +27719,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 101
   indentLevel: 0
-  storyText: The answer to that question lies in the greenhouse.
+  storyText: The answer to that question lies in the florarium.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27779,7 +27823,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Yeah...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550837}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27806,7 +27850,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Is there something you wish to know?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27832,9 +27876,9 @@ MonoBehaviour:
   itemId: 94
   indentLevel: 0
   storyText: Hey wait a second now. You've been asking all of the questions around
-    here, now it's my turn
+    here, now it's my turn.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550837}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27861,7 +27905,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1208.35
     y: 387.25772
-    width: 138
+    width: 131.57898
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -27892,7 +27936,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: But you're right, they were partners
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27919,7 +27963,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Well ex-partner now anyways...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27946,7 +27990,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Diego is a nurse right now, but what did he want to become?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -28002,7 +28046,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 728.37787
     y: 380.62973
-    width: 130
+    width: 125.00002
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -28028,7 +28072,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 925.10736
     y: 223.49461
-    width: 121
+    width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -28151,7 +28195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 83
   indentLevel: 0
-  storyText: Please leave, I don't want to see your face around here anymore
+  storyText: Please leave, I don't want to see your face around here anymore.
   description: 
   character: {fileID: 22550836}
   portrait: {fileID: 21300000, guid: feeb82fa4a408384f846353b531e8aa6, type: 3}
@@ -28261,14 +28305,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172669167351007}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 80
   indentLevel: 0
-  storyText: Please, I don't want to see your face around here anymore
+  storyText: Please, I don't want to see your face around here anymore.
   description: 
   character: {fileID: 22550836}
   portrait: {fileID: 21300000, guid: feeb82fa4a408384f846353b531e8aa6, type: 3}
@@ -28324,7 +28368,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -227.35283
     y: 283.60977
-    width: 243
+    width: 228.94743
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -28334,6 +28378,8 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 8296172669167351109}
+  - {fileID: 8296172669167351180}
+  - {fileID: 8296172669167351181}
   - {fileID: 8296172669167351108}
   - {fileID: 8296172669167351107}
 --- !u!114 &8296172669167351111
@@ -28436,7 +28482,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 494.2292
     y: 236.29399
-    width: 130
+    width: 125.00002
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -28462,7 +28508,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 570.1256
     y: 112.519394
-    width: 121
+    width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -28692,6 +28738,7 @@ MonoBehaviour:
   - {fileID: 8296172669167351169}
   - {fileID: 8296172669167351168}
   - {fileID: 8296172669167351167}
+  - {fileID: 8296172669167351013}
   - {fileID: 8296172669167351166}
   - {fileID: 8296172669167351165}
 --- !u!114 &8296172669167351125
@@ -28721,6 +28768,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 8296172669167351156}
   - {fileID: 8296172669167351155}
+  - {fileID: 8296172669167351172}
   - {fileID: 8296172669167351154}
   - {fileID: 8296172669167351153}
 --- !u!114 &8296172669167351126
@@ -28739,7 +28787,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: So...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -28765,9 +28813,9 @@ MonoBehaviour:
   itemId: 134
   indentLevel: 0
   storyText: But I get it, you've got more important places to be. You probably want
-    to see your little brother, Fear.
+    to see your little sister, Fear.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -28792,12 +28840,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 133
   indentLevel: 0
-  storyText: 'I should probably talk to him before I give him anything
+  storyText: 'I should probably talk to him before I give him anything.
 
 '
   description: 
-  character: {fileID: 22550837}
-  portrait: {fileID: 21300000, guid: 6d6a51415ee09cf458e6253a9244294f, type: 3}
+  character: {fileID: 792129613}
+  portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -28823,7 +28871,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -0.6193085
     y: 19.265507
-    width: 220
+    width: 210.52637
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -28913,7 +28961,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Right...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550837}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -28940,7 +28988,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Hopefully not~!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -28967,7 +29015,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Alright, thanks Anger! See you later!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550837}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -28992,9 +29040,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 127
   indentLevel: 0
-  storyText: Here, this door should now redirect you to the greenhouse
+  storyText: Here, this door should now redirect you to the florarium.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29042,7 +29090,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1346.2814
     y: 533.4738
-    width: 154
+    width: 146.05267
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -29074,7 +29122,7 @@ MonoBehaviour:
   storyText: '... I''m not entirely confident you care enough about Diego, or this
     place, or me...'
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29302,9 +29350,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 113
   indentLevel: 0
-  storyText: The door is open, leave
+  storyText: The door is open, leave.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29331,7 +29379,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: What are you staying here for?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29358,7 +29406,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1529.2852
     y: 585.2823
-    width: 162
+    width: 153.9474
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -29427,7 +29475,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Hey rude!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550837}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29453,9 +29501,9 @@ MonoBehaviour:
   itemId: 146
   indentLevel: 0
   storyText: Not surprised you don't know that. Even though you should have if you
-    were any good at your job
+    were any good at your job.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29522,9 +29570,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 143
   indentLevel: 0
-  storyText: So then let's talk about Taylor, the bastard that created this mess
+  storyText: So then let's talk about Taylor, the one that created this mess.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29549,10 +29597,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 142
   indentLevel: 0
-  storyText: He couldn't afford waiting a year so he needed to start working. This
-    is why he applied for nursing
+  storyText: He couldn't afford waiting a year so he needed to start working.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29578,9 +29625,9 @@ MonoBehaviour:
   itemId: 141
   indentLevel: 0
   storyText: Right, he wanted to become a doctor. But he couldn't because those university
-    board asshats rejected his application
+    board asshats rejected his application.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29606,9 +29653,9 @@ MonoBehaviour:
   itemId: 162
   indentLevel: 0
   storyText: That's what I like to hear! maybe you and I have more in common than
-    I initally thought
+    I initally thought.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29634,9 +29681,9 @@ MonoBehaviour:
   itemId: 159
   indentLevel: 0
   storyText: The only reason the heart's a mess right now is because Diego and Taylor
-    broke up just over a week ago
+    broke up just over a week ago.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29663,7 +29710,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Tests had me worried...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550837}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29690,7 +29737,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: What were you doing this whole time to not even know that?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29715,9 +29762,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 156
   indentLevel: 0
-  storyText: No, no. Taylor was Diego's partner
+  storyText: No, no. Taylor was Diego's partner.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29744,7 +29791,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: So yeah...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29770,9 +29817,9 @@ MonoBehaviour:
   itemId: 154
   indentLevel: 0
   storyText: The only reason the heart's a mess right now is because Diego and Taylor
-    broke up just over a week ago
+    broke up just over a week ago.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29839,9 +29886,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 151
   indentLevel: 0
-  storyText: So then let's talk about Taylor, the bastard that created this mess
+  storyText: So then let's talk about Taylor, the one that created this mess.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29866,10 +29913,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 150
   indentLevel: 0
-  storyText: He couldn't afford waiting a year so he needed to start working. This
-    is why he applied for nursing
+  storyText: He couldn't afford waiting a year so he needed to start working.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29895,9 +29941,9 @@ MonoBehaviour:
   itemId: 149
   indentLevel: 0
   storyText: No uh, he wanted to become a doctor. But he couldn't because those university
-    board asshats rejected his application
+    board asshats rejected his application.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29922,9 +29968,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 148
   indentLevel: 0
-  storyText: Well it's true
+  storyText: Well it's true!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 22550836}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -29951,7 +29997,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 114.604996
     y: 144.47758
-    width: 134
+    width: 126.31581
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -29960,7 +30006,11 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 8296172669167351185}
   - {fileID: 8296172669167351171}
+  - {fileID: 8296172669167351184}
+  - {fileID: 8296172669167351183}
+  - {fileID: 8296172669167351182}
 --- !u!114 &8296172669167351171
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -29974,7 +30024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 167
-  indentLevel: 0
+  indentLevel: 1
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 8296172669167351016}
   startLabel:
@@ -29982,6 +30032,60 @@ MonoBehaviour:
     stringVal: 
   startIndex: 0
   callMode: 0
+--- !u!114 &8296172669167351172
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 178
+  indentLevel: 0
+  storyText: This is why he applied for nursing.
+  description: 
+  character: {fileID: 22550836}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 1
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8296172669167351173
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 177
+  indentLevel: 0
+  storyText: What do you mean it doesn't?
+  description: 
+  character: {fileID: 22550837}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!114 &8296172669167351174
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -30047,6 +30151,308 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Fungus.InvokeEvent+StringEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &8296172669167351175
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 176
+  indentLevel: 0
+  storyText: I did!
+  description: 
+  character: {fileID: 22550837}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8296172669167351176
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 175
+  indentLevel: 0
+  storyText: and everyone secretly thinks that
+  description: 
+  character: {fileID: 792129613}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 1
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8296172669167351177
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 174
+  indentLevel: 0
+  storyText: ' and they''r- Not now Anxiety, focus.'
+  description: 
+  character: {fileID: 792129613}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 1
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8296172669167351178
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 172
+  indentLevel: 0
+  storyText: ' You here to make fun of me?'
+  description: 
+  character: {fileID: 22550836}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 1
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8296172669167351179
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 171
+  indentLevel: 0
+  storyText: What are you doing here?
+  description: 
+  character: {fileID: 22550836}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8296172669167351180
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 170
+  indentLevel: 0
+  storyText: Please
+  description: 
+  character: {fileID: 22550836}
+  portrait: {fileID: 21300000, guid: feeb82fa4a408384f846353b531e8aa6, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8296172669167351181
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 169
+  indentLevel: 0
+  storyText: ', I don''t want to see your face around here anymore.'
+  description: 
+  character: {fileID: 22550836}
+  portrait: {fileID: 21300000, guid: feeb82fa4a408384f846353b531e8aa6, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8296172669167351182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 183
+  indentLevel: 0
+--- !u!114 &8296172669167351183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 182
+  indentLevel: 1
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 8296172669167351129}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
+--- !u!114 &8296172669167351184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fa968f01a7f9496bb50e13dfe16760d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 181
+  indentLevel: 0
+--- !u!114 &8296172669167351185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669167351007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 180
+  indentLevel: 0
+  compareOperator: 0
+  variable: {fileID: 8296172669167351020}
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+  animatorData:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 0}
+  audioSourceData:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 0}
+  colorData:
+    colorRef: {fileID: 0}
+    colorVal: {r: 0, g: 0, b: 0, a: 0}
+  gameObjectData:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  materialData:
+    materialRef: {fileID: 0}
+    materialVal: {fileID: 0}
+  objectData:
+    objectRef: {fileID: 0}
+    objectVal: {fileID: 0}
+  rigidbody2DData:
+    rigidbody2DRef: {fileID: 0}
+    rigidbody2DVal: {fileID: 0}
+  spriteData:
+    spriteRef: {fileID: 0}
+    spriteVal: {fileID: 0}
+  textureData:
+    textureRef: {fileID: 0}
+    textureVal: {fileID: 0}
+  transformData:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 0}
+  vector2Data:
+    vector2Ref: {fileID: 0}
+    vector2Val: {x: 0, y: 0}
+  vector3Data:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
 --- !u!1 &8296172669290677237
 GameObject:
   m_ObjectHideFlags: 0
