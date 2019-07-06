@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1371,7 +1371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1154132050}
+  selectedFlowchart: {fileID: 6044559689740222597}
 --- !u!4 &991689762
 Transform:
   m_ObjectHideFlags: 1
@@ -1828,7 +1828,7 @@ MonoBehaviour:
   value: 0
 --- !u!114 &1110219241
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2415,7 +2415,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1110219259
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2586,8 +2586,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 1154132056}
-  selectedCommands: []
+  - {fileID: 1154132066}
+  selectedCommands:
+  - {fileID: 1154132059}
   variables:
   - {fileID: 1154132054}
   description: 
@@ -2660,7 +2661,7 @@ MeshFilter:
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1154132054
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2732,7 +2733,7 @@ MonoBehaviour:
   - {fileID: 1154132057}
 --- !u!114 &1154132057
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2796,7 +2797,7 @@ MonoBehaviour:
     vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &1154132058
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2823,7 +2824,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1154132059
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2850,7 +2851,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1154132060
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2877,7 +2878,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1154132061
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2898,7 +2899,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1154132062
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2912,7 +2913,7 @@ MonoBehaviour:
   indentLevel: 0
 --- !u!114 &1154132063
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2926,7 +2927,7 @@ MonoBehaviour:
   indentLevel: 0
 --- !u!114 &1154132064
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2947,7 +2948,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1154132065
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6897,7 +6898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 124.85209, y: 161.98825}
+  scrollPos: {x: -45.14792, y: -38.01175}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 426
@@ -7607,7 +7608,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 191
     y: 147
-    width: 123
+    width: 121.2
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -16789,6 +16790,9 @@ GameObject:
   - component: {fileID: 6044559689740222613}
   - component: {fileID: 6044559689740222607}
   - component: {fileID: 6044559689740222618}
+  - component: {fileID: 6044559689740222621}
+  - component: {fileID: 6044559689740222619}
+  - component: {fileID: 6044559689740222620}
   m_Layer: 0
   m_Name: door
   m_TagString: Untagged
@@ -16823,7 +16827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 144, y: 108}
+  scrollPos: {x: -145, y: 21}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -16835,9 +16839,8 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 6044559689740222617}
-  selectedCommands:
-  - {fileID: 6044559689740222607}
+  - {fileID: 6044559689740222604}
+  selectedCommands: []
   variables:
   - {fileID: 6044559689740222598}
   description: 
@@ -16966,9 +16969,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 329
-    y: 171
-    width: 148
+    x: 333
+    y: 172
+    width: 149.2
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -16978,6 +16981,7 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 6044559689740222599}
+  - {fileID: 6044559689740222621}
   - {fileID: 6044559689740222615}
 --- !u!114 &6044559689740222601
 MonoBehaviour:
@@ -17014,7 +17018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 186
+    x: 183
     y: 171
     width: 120
     height: 40
@@ -17043,7 +17047,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 427
     y: 106
-    width: 128
+    width: 125.2
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -17051,7 +17055,8 @@ MonoBehaviour:
   blockName: Already Open
   description: 
   eventHandler: {fileID: 0}
-  commandList: []
+  commandList:
+  - {fileID: 6044559689740222620}
 --- !u!114 &6044559689740222604
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -17076,7 +17081,8 @@ MonoBehaviour:
   blockName: Closed
   description: 
   eventHandler: {fileID: 0}
-  commandList: []
+  commandList:
+  - {fileID: 6044559689740222619}
 --- !u!114 &6044559689740222605
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -17344,9 +17350,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 19
   indentLevel: 0
-  storyText: now i should be able to open it
+  storyText: It is!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 569354031}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -17371,9 +17377,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 14
   indentLevel: 0
-  storyText: i think this fits...
+  storyText: I think this fits here...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 569354031}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -17483,8 +17489,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 505
-    y: 170
+    x: 535
+    y: 172
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -17495,8 +17501,8 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 6044559689740222616}
-  - {fileID: 6044559689740222613}
   - {fileID: 6044559689740222607}
+  - {fileID: 6044559689740222613}
 --- !u!114 &6044559689740222618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17516,6 +17522,87 @@ MonoBehaviour:
     - Name: day - bass
       Value: 1
   TriggerEvent: 0
+--- !u!114 &6044559689740222619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6044559689740222595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 22
+  indentLevel: 0
+  storyText: I can't open this door, the doorhandle seems to be missing...
+  description: 
+  character: {fileID: 569354031}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &6044559689740222620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6044559689740222595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 23
+  indentLevel: 0
+  storyText: I don't think closing the door would be particularly useful.
+  description: 
+  character: {fileID: 335331735}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &6044559689740222621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6044559689740222595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 21
+  indentLevel: 0
+  storyText: No way, is this bunny thing a doorknob?
+  description: 
+  character: {fileID: 569354031}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!33 &6057692874182407271
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20758,6 +20845,8 @@ GameObject:
   - component: {fileID: 8237012401952646470}
   - component: {fileID: 8237012401952646468}
   - component: {fileID: 8237012401952646473}
+  - component: {fileID: 8237012401952646475}
+  - component: {fileID: 8237012401952646474}
   m_Layer: 0
   m_Name: hexagonal door handle
   m_TagString: Untagged
@@ -20804,7 +20893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -1, y: 0}
+  scrollPos: {x: 1, y: 0}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -20818,7 +20907,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 8237012401952646469}
   selectedCommands:
-  - {fileID: 8237012401952646468}
+  - {fileID: 8237012401952646474}
   variables:
   - {fileID: 8237012401952646473}
   description: 
@@ -20853,7 +20942,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8237012401952646463}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
@@ -20889,7 +20978,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 382
     y: 74
-    width: 123
+    width: 122
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -20900,6 +20989,8 @@ MonoBehaviour:
   commandList:
   - {fileID: 8237012401952646470}
   - {fileID: 8237012401952646468}
+  - {fileID: 8237012401952646475}
+  - {fileID: 8237012401952646474}
 --- !u!114 &8237012401952646470
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -20907,7 +20998,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8237012401952646463}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
@@ -20962,7 +21053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 174
+    x: 196
     y: 74
     width: 120
     height: 40
@@ -20989,6 +21080,60 @@ MonoBehaviour:
   scope: 0
   key: isOnDoor
   value: 0
+--- !u!114 &8237012401952646474
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8237012401952646463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 6
+  indentLevel: 0
+  storyText: ' No, I have no idea what this is.'
+  description: 
+  character: {fileID: 569354031}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 1
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &8237012401952646475
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8237012401952646463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 5
+  indentLevel: 0
+  storyText: Oh this seems to be...
+  description: 
+  character: {fileID: 569354031}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!4 &8254560597572656760
 Transform:
   m_ObjectHideFlags: 0
