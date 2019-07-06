@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -667,7 +667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 0, y: 1}
+  scrollPos: {x: -158, y: 0}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -867,8 +867,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 426
-    y: 85
+    x: 414
+    y: 88
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -993,9 +993,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 10
   indentLevel: 0
-  storyText: that's it!
+  storyText: That's it!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 569354031}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1006,6 +1006,86 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!1 &773783340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 773783344}
+  - component: {fileID: 773783343}
+  - component: {fileID: 773783342}
+  - component: {fileID: 773783341}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &773783341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773783340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1997211142, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ForceModuleActive: 0
+--- !u!114 &773783342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773783340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &773783343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773783340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 5
+--- !u!4 &773783344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773783340}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &913487110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1371,7 +1451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 6044559689740222597}
+  selectedFlowchart: {fileID: 6395281859496464955}
 --- !u!4 &991689762
 Transform:
   m_ObjectHideFlags: 1
@@ -16827,11 +16907,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -145, y: 21}
+  scrollPos: {x: -173.21278, y: -68.87233}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.94000006
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -16839,7 +16919,7 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 6044559689740222604}
+  - {fileID: 6044559689740222605}
   selectedCommands: []
   variables:
   - {fileID: 6044559689740222598}
@@ -16971,7 +17051,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 333
     y: 172
-    width: 149.2
+    width: 153.19148
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -17047,7 +17127,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 427
     y: 106
-    width: 125.2
+    width: 129.78723
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -17071,8 +17151,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 429
-    y: 32
+    x: 430.06384
+    y: 35.19149
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -17524,7 +17604,7 @@ MonoBehaviour:
   TriggerEvent: 0
 --- !u!114 &6044559689740222619
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -17551,7 +17631,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &6044559689740222620
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -17578,7 +17658,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &6044559689740222621
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -18227,7 +18307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 0, y: 0}
+  scrollPos: {x: -3.871684, y: 2.1265767}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -22111,11 +22191,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 8, y: -5}
+  scrollPos: {x: -170.53482, y: -3.2456567}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.8800001
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -22124,8 +22204,7 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 8554143493655935470}
-  selectedCommands:
-  - {fileID: 8554143493655935469}
+  selectedCommands: []
   variables:
   - {fileID: 8554143493655935475}
   description: 
@@ -22180,9 +22259,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 344
-    y: 75
-    width: 140
+    x: 349.68182
+    y: 77.27273
+    width: 148.86362
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -22260,9 +22339,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 541
-    y: 75
-    width: 159
+    x: 544.40906
+    y: 80.68181
+    width: 170.45453
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -22288,7 +22367,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: This seems to be a digital clock.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 569354031}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -22417,7 +22496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 14, y: -13}
+  scrollPos: {x: -293, y: -40}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 305
@@ -22429,8 +22508,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 8565007891227663172}
-  selectedCommands: []
+  - {fileID: 8565007891227663175}
+  selectedCommands:
+  - {fileID: 8565007891227663174}
   variables:
   - {fileID: 8565007891227663166}
   description: 
@@ -22783,7 +22863,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: No, this isn't right...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 569354031}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
