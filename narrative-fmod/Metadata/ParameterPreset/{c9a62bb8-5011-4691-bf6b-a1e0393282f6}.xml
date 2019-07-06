@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{c9a62bb8-5011-4691-bf6b-a1e0393282f6}">
+		<property name="name">
+			<value>recognition - reese</value>
+		</property>
+		<relationship name="folder">
+			<destination>{eb522cf1-108a-4a98-87d4-ee358aaf301d}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{12855f56-5a1b-4628-90e5-25bfd0d7d52b}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{12855f56-5a1b-4628-90e5-25bfd0d7d52b}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

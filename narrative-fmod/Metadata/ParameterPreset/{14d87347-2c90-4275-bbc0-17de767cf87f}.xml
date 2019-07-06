@@ -5,7 +5,7 @@
 			<value>letter start</value>
 		</property>
 		<relationship name="folder">
-			<destination>{a39137d6-c813-41a4-9b8f-128e910e78f7}</destination>
+			<destination>{4c634eae-8d1b-41d9-a123-31de1bdae35b}</destination>
 		</relationship>
 		<relationship name="parameter">
 			<destination>{4baeeb31-57f4-439b-bd12-05ba7c74ffc2}</destination>
