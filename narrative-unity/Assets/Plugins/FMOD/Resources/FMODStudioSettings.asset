@@ -79,7 +79,6 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
-  - Master.strings
   - Rooms
   - Sound Effects
   - Stairs
