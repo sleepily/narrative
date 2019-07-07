@@ -494,7 +494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: 
+  nameText: Fear, The Bunny
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits:
@@ -796,7 +796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: 
+  nameText: Sadness, The Mole
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits:
@@ -1709,6 +1709,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 384464923644419348}
     m_Modifications:
+    - target: {fileID: 7171252641869362791, guid: dc558dc91a80e6d4794c8a9bd41e4757,
+        type: 3}
+      propertyPath: m_Name
+      value: Emotion Character SayDialog
+      objectReference: {fileID: 0}
     - target: {fileID: 1188342799724298440, guid: dc558dc91a80e6d4794c8a9bd41e4757,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1813,11 +1818,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7171252641869362791, guid: dc558dc91a80e6d4794c8a9bd41e4757,
-        type: 3}
-      propertyPath: m_Name
-      value: Emotion Character SayDialog
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc558dc91a80e6d4794c8a9bd41e4757, type: 3}
