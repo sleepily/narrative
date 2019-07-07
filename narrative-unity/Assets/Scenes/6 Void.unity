@@ -1862,10 +1862,12 @@ GameObject:
   - component: {fileID: 578251873}
   - component: {fileID: 578251872}
   - component: {fileID: 578251871}
-  - component: {fileID: 578251870}
   - component: {fileID: 578251861}
+  - component: {fileID: 578251876}
+  - component: {fileID: 578251875}
+  - component: {fileID: 578251870}
   m_Layer: 0
-  m_Name: book (4) with cd
+  m_Name: book (6) with cd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1879,13 +1881,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 578251855}
   m_LocalRotation: {x: 0.000000007450581, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.64, y: -0.369, z: -0.33}
+  m_LocalPosition: {x: -2.707, y: -1.259, z: -0.534}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1705029700656931586}
   - {fileID: 1732531316}
   m_Father: {fileID: 926914579}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &578251857
 Rigidbody:
@@ -1993,19 +1995,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -85.64888, y: -14.989258}
+  scrollPos: {x: 139.93289, y: 182.97426}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.91000015
+  zoom: 1
   scrollViewRect:
     serializedVersion: 2
     x: 0
     y: 0
     width: 0
     height: 0
-  selectedBlocks:
-  - {fileID: 578251864}
+  selectedBlocks: []
   selectedCommands: []
   variables:
   - {fileID: 578251874}
@@ -2076,7 +2077,7 @@ MonoBehaviour:
   - {fileID: 578251872}
   - {fileID: 578251868}
   - {fileID: 578251871}
-  - {fileID: 578251870}
+  - {fileID: 578251875}
   - {fileID: 578251861}
 --- !u!114 &578251865
 MonoBehaviour:
@@ -2254,7 +2255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &578251870
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2264,8 +2265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 9
-  indentLevel: 1
+  itemId: 13
+  indentLevel: 0
   storyText: I don't think there's anything left for me to do with this book...
   description: 
   character: {fileID: 1493375461}
@@ -2436,6 +2437,53 @@ MonoBehaviour:
   scope: 0
   key: CDgiven
   value: 0
+--- !u!114 &578251875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578251855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 12
+  indentLevel: 1
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 578251876}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
+--- !u!114 &578251876
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578251855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 364.0671
+    y: 3.0257416
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 11
+  blockName: CD Given
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 578251870}
 --- !u!1 &578799040
 GameObject:
   m_ObjectHideFlags: 0
@@ -3413,9 +3461,9 @@ Transform:
   - {fileID: 895381513}
   - {fileID: 751882537}
   - {fileID: 1876488958}
-  - {fileID: 578251856}
-  - {fileID: 191890722}
   - {fileID: 1348905705}
+  - {fileID: 191890722}
+  - {fileID: 578251856}
   m_Father: {fileID: 1436608425}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4193,7 +4241,7 @@ GameObject:
   - component: {fileID: 1348905710}
   - component: {fileID: 1348905711}
   m_Layer: 0
-  m_Name: book (6)
+  m_Name: book (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4207,11 +4255,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1348905704}
   m_LocalRotation: {x: -0.000000029802322, y: -0.00000014901161, z: -0.06330863, w: 0.99799407}
-  m_LocalPosition: {x: -2.725, y: -1.187, z: -0.62}
+  m_LocalPosition: {x: -2.425, y: -0.36, z: -0.533}
   m_LocalScale: {x: 0.010000005, y: 0.009999999, z: 0.010000005}
   m_Children: []
   m_Father: {fileID: 926914579}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -7.2590003}
 --- !u!54 &1348905706
 Rigidbody:

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: PlayerMovementSettings
   m_EditorClassIdentifier: 
   isRunning: 1
+  mouseSpeed: 0.686
   walkingSpeed: 1.872
   runningSpeed: 3.178
   rotationSpeed: 0.045

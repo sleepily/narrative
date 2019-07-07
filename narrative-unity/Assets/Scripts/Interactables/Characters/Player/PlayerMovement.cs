@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Utility;
 using Tools;
 
 public class PlayerMovement : MonoBehaviour
@@ -9,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject playerModel;
 
     public Animator animator;
+
+    public SimpleMouseRotatorModified mouseRotator;
 
     public PlayerMovementSettings movementSettings;
 
@@ -22,7 +25,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start() => GetAllComponents();
 
-    void GetAllComponents() => controller = GetComponent<CharacterController>();
+    void GetAllComponents()
+    {
+        controller = GetComponent<CharacterController>();
+        SetMouseSpeed(movementSettings.mouseSpeed);
+    }
+
+    public void SetMouseSpeed(float speed = 1f)
+    {
+        if (speed == movementSettings.mouseSpeed)
+            return;
+
+        movementSettings.mouseSpeed = speed;
+        mouseRotator.mouseSpeed = movementSettings.mouseSpeed;
+    }
 
     void Update()
     {

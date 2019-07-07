@@ -18,7 +18,10 @@ namespace UnityStandardAssets.Utility
         public Vector2 rotationRange = new Vector3(70, 70);
         public Vector2 rotationRangeOffset = new Vector3(20, 0);
         public float rotationSpeed = 10;
+
+        [Range(.01f, .4f)]
         public float dampingTime = 0.2f;
+        public float mouseSpeed = 1f;
         public bool autoZeroVerticalOnMobile = true;
         public bool autoZeroHorizontalOnMobile = false;
         
@@ -55,8 +58,9 @@ namespace UnityStandardAssets.Utility
             transform.localRotation = m_OriginalRotation;
 
             // read input from mouse or mobile controls
-            float inputH = CrossPlatformInputManager.GetAxis("Mouse X");
-            float inputV = CrossPlatformInputManager.GetAxis("Mouse Y");
+            Vector2 input;
+            input.x = CrossPlatformInputManager.GetAxis("Mouse X");
+            input.y = CrossPlatformInputManager.GetAxis("Mouse Y");
 
             // wrap values to avoid springing quickly the wrong way from positive to negative
             if (m_TargetAngles.y > 180)
@@ -81,8 +85,8 @@ namespace UnityStandardAssets.Utility
             }
 
             // with mouse input, we have direct control with no springback required.
-            m_TargetAngles.y += inputH * rotationSpeed;
-            m_TargetAngles.x += inputV * rotationSpeed;
+            m_TargetAngles.y += input.x * mouseSpeed * rotationSpeed;
+            m_TargetAngles.x += input.y * mouseSpeed * rotationSpeed;
 
             // clamp values to allowed range
             m_TargetAngles.y = Mathf.Clamp(m_TargetAngles.y, (-rotationRange.y * 0.5f) - rotationRangeOffset.y, (rotationRange.y * 0.5f) - rotationRangeOffset.y);
