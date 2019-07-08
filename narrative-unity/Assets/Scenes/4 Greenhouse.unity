@@ -1661,7 +1661,7 @@ GameObject:
   - component: {fileID: 1061656251}
   - component: {fileID: 1061656250}
   m_Layer: 0
-  m_Name: Night Music Trigger
+  m_Name: Interlude/Night Music Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1742,7 +1742,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  onlyOnce: 1
+  onlyTriggerOnce: 1
 --- !u!114 &1061656252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5284,6 +5284,8 @@ GameObject:
   - component: {fileID: 418088721668913449}
   - component: {fileID: 418088721668913448}
   - component: {fileID: 418088721668913447}
+  - component: {fileID: 418088721668913454}
+  - component: {fileID: 418088721668913455}
   m_Layer: 0
   m_Name: catridge
   m_TagString: Untagged
@@ -5332,7 +5334,8 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 418088721668913453}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 418088721668913455}
   variables:
   - {fileID: 418088721668913448}
   description: 
@@ -5595,10 +5598,95 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 418088721668913452}
+  - {fileID: 418088721668913455}
   - {fileID: 418088721668913450}
   - {fileID: 418088721668913451}
   - {fileID: 418088721668913449}
   - {fileID: 418088721668913447}
+--- !u!114 &418088721668913454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418088721668913443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters:
+  - Target: {fileID: 1597737347}
+    Params:
+    - Name: game picked up
+      Value: 1
+  TriggerEvent: 0
+--- !u!114 &418088721668913455
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418088721668913443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 6
+  indentLevel: 0
+  description: 
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 418088721668913454}
+        m_MethodName: TriggerParameters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+BooleanEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+IntegerEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+FloatEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+StringEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!4 &421716540885857176
 Transform:
   m_ObjectHideFlags: 0
@@ -7018,7 +7106,7 @@ MonoBehaviour:
     vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &728887153393568135
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -7045,7 +7133,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &728887153393568136
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -7066,7 +7154,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &728887153393568137
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -7548,7 +7636,7 @@ MonoBehaviour:
   - {fileID: 728887153393568151}
 --- !u!114 &728887153393568155
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -7575,7 +7663,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &728887153393568156
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -15483,7 +15571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -96.13647, y: 1.7727213}
+  scrollPos: {x: -75.681946, y: 4.0454483}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -15497,7 +15585,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 2542313236548147968}
   selectedCommands:
-  - {fileID: 2542313236548147967}
+  - {fileID: 2542313236548147978}
   variables:
   - {fileID: 2542313236548147980}
   description: 
@@ -15710,6 +15798,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: isSolved
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2542313236548147991}
+        m_MethodName: TriggerParameters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -22171,7 +22270,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: edde77d80f2b01b4eb72081d42675dd9, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -22341,7 +22440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -197.29749, y: -20.577024}
+  scrollPos: {x: -115.479355, y: -10.349754}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -22355,7 +22454,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 6044559689740222617}
   selectedCommands:
-  - {fileID: 6044559689740222622}
+  - {fileID: 6044559689740222607}
   variables:
   - {fileID: 6044559689740222598}
   description: 

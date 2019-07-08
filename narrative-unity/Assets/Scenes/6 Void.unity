@@ -876,6 +876,7 @@ GameObject:
   - component: {fileID: 207637081}
   - component: {fileID: 207637080}
   - component: {fileID: 207637082}
+  - component: {fileID: 207637083}
   m_Layer: 0
   m_Name: radio
   m_TagString: Untagged
@@ -1193,6 +1194,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 207637083}
+        m_MethodName: TriggerParameters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   booleanParameter:
@@ -1227,6 +1239,25 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Fungus.InvokeEvent+StringEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &207637083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207637069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters:
+  - Target: {fileID: 1481539939}
+    Params:
+    - Name: recognition - spastics 2
+      Value: 1
+  TriggerEvent: 0
 --- !u!1 &277908538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,6 +1656,8 @@ GameObject:
   - component: {fileID: 506996098}
   - component: {fileID: 506996097}
   - component: {fileID: 506996096}
+  - component: {fileID: 506996101}
+  - component: {fileID: 506996100}
   m_Layer: 0
   m_Name: table with jugs
   m_TagString: Untagged
@@ -1692,7 +1725,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 506996098}
   selectedCommands:
-  - {fileID: 506996096}
+  - {fileID: 506996100}
   variables: []
   description: 
   stepPause: 0
@@ -1778,6 +1811,7 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 506996096}
+  - {fileID: 506996100}
 --- !u!114 &506996099
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1804,6 +1838,90 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 506996097}
+--- !u!114 &506996100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506996092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 4
+  indentLevel: 0
+  description: 
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 506996101}
+        m_MethodName: TriggerParameters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+BooleanEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+IntegerEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+FloatEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+StringEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &506996101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506996092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters:
+  - Target: {fileID: 1481539939}
+    Params:
+    - Name: void end
+      Value: 1
+  TriggerEvent: 0
 --- !u!1 &512283939
 GameObject:
   m_ObjectHideFlags: 0
@@ -1814,7 +1932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 512283940}
   m_Layer: 0
-  m_Name: radio
+  m_Name: radio for taylor's cd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1866,6 +1984,7 @@ GameObject:
   - component: {fileID: 578251876}
   - component: {fileID: 578251875}
   - component: {fileID: 578251870}
+  - component: {fileID: 578251877}
   m_Layer: 0
   m_Name: book (6) with cd
   m_TagString: Untagged
@@ -1995,7 +2114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 139.93289, y: 182.97426}
+  scrollPos: {x: 242.93289, y: 69.97426}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -2006,8 +2125,10 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 578251863}
+  selectedCommands:
+  - {fileID: 578251867}
   variables:
   - {fileID: 578251874}
   description: 
@@ -2034,7 +2155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 386
+    x: 385
     y: 85
     width: 120
     height: 40
@@ -2186,6 +2307,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 578251877}
+        m_MethodName: TriggerParameters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   booleanParameter:
@@ -2255,7 +2387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &578251870
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2439,7 +2571,7 @@ MonoBehaviour:
   value: 0
 --- !u!114 &578251875
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2484,6 +2616,25 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 578251870}
+--- !u!114 &578251877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578251855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters:
+  - Target: {fileID: 1481539939}
+    Params:
+    - Name: recognition - spastics
+      Value: 1
+  TriggerEvent: 0
 --- !u!1 &578799040
 GameObject:
   m_ObjectHideFlags: 0
@@ -2883,6 +3034,7 @@ GameObject:
   - component: {fileID: 809947575}
   - component: {fileID: 809947574}
   - component: {fileID: 809947576}
+  - component: {fileID: 809947577}
   m_Layer: 0
   m_Name: Tree with Lock
   m_TagString: Untagged
@@ -2948,7 +3100,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 809947573}
   selectedCommands:
-  - {fileID: 809947575}
+  - {fileID: 809947574}
   variables:
   - {fileID: 809947571}
   description: 
@@ -3060,6 +3212,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 809947577}
+        m_MethodName: TriggerParameters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   booleanParameter:
@@ -3148,6 +3311,25 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &809947577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809947567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters:
+  - Target: {fileID: 1481539939}
+    Params:
+    - Name: recognition - reese
+      Value: 1
+  TriggerEvent: 0
 --- !u!1 &837610473
 GameObject:
   m_ObjectHideFlags: 0
@@ -4006,6 +4188,7 @@ GameObject:
   - component: {fileID: 1222477647}
   - component: {fileID: 1222477646}
   - component: {fileID: 1222477648}
+  - component: {fileID: 1222477649}
   m_Layer: 0
   m_Name: door with doorknobs
   m_TagString: Untagged
@@ -4072,7 +4255,8 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 1222477647}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1222477646}
   variables: []
   description: 
   stepPause: 0
@@ -4128,6 +4312,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 926914582}
         m_MethodName: Enable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1222477649}
+        m_MethodName: TriggerParameters
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4225,6 +4420,25 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &1222477649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222477642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters:
+  - Target: {fileID: 1481539939}
+    Params:
+    - Name: recognition - low
+      Value: 1
+  TriggerEvent: 0
 --- !u!1 &1348905704
 GameObject:
   m_ObjectHideFlags: 0
@@ -5292,7 +5506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 578251862}
+  selectedFlowchart: {fileID: 207637072}
 --- !u!4 &2125456562
 Transform:
   m_ObjectHideFlags: 1
@@ -5607,6 +5821,7 @@ GameObject:
   - component: {fileID: 8783719841120030246}
   - component: {fileID: 9003883095213725602}
   - component: {fileID: 765364557963445891}
+  - component: {fileID: 499107974175279161}
   m_Layer: 0
   m_Name: b_light_8
   m_TagString: Untagged
@@ -5614,6 +5829,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &499107974175279161
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499107974175279160}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 8695320311115944031, guid: ed9a2e8d243fa024189d9c1a1125ac56, type: 3}
 --- !u!4 &516179721560040755
 Transform:
   m_ObjectHideFlags: 0
@@ -5938,6 +6167,7 @@ GameObject:
   - component: {fileID: 5237375066195714286}
   - component: {fileID: 7466516419513730621}
   - component: {fileID: 2621235997619838745}
+  - component: {fileID: 777868980657599550}
   m_Layer: 0
   m_Name: b_light_2
   m_TagString: Untagged
@@ -5945,6 +6175,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &777868980657599550
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777868980657599549}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 8598598807259026201, guid: ed9a2e8d243fa024189d9c1a1125ac56, type: 3}
 --- !u!33 &786734123870772902
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6660,6 +6904,7 @@ GameObject:
   - component: {fileID: 3393566364731354273}
   - component: {fileID: 4964523541339432208}
   - component: {fileID: 5412164062466191601}
+  - component: {fileID: 1710568991585003100}
   m_Layer: 0
   m_Name: b_light_1
   m_TagString: Untagged
@@ -6667,6 +6912,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &1710568991585003100
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710568991585003099}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -8084019852129958803, guid: ed9a2e8d243fa024189d9c1a1125ac56, type: 3}
 --- !u!1 &1712377764210433869
 GameObject:
   m_ObjectHideFlags: 0
@@ -7411,8 +7670,7 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 2446055628015358230}
-  selectedCommands:
-  - {fileID: 2446055628015358229}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -7901,6 +8159,7 @@ GameObject:
   - component: {fileID: 815757329357005608}
   - component: {fileID: 936300916465859657}
   - component: {fileID: 1502859588302275300}
+  - component: {fileID: 3077723641791488206}
   m_Layer: 0
   m_Name: b_light_4
   m_TagString: Untagged
@@ -7908,6 +8167,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &3077723641791488206
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3077723641791488205}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -7620932465927721505, guid: ed9a2e8d243fa024189d9c1a1125ac56, type: 3}
 --- !u!1 &3084186720215204266
 GameObject:
   m_ObjectHideFlags: 0
@@ -8098,6 +8371,7 @@ GameObject:
   - component: {fileID: 4524909636491601465}
   - component: {fileID: 776772983374501595}
   - component: {fileID: 6448977012244760610}
+  - component: {fileID: 3310578474108213159}
   m_Layer: 0
   m_Name: b_light_6
   m_TagString: Untagged
@@ -8105,6 +8379,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &3310578474108213159
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3310578474108213158}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 1030379940574945179, guid: ed9a2e8d243fa024189d9c1a1125ac56, type: 3}
 --- !u!23 &3357835637470901251
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9855,6 +10143,7 @@ GameObject:
   - component: {fileID: 3929592104817863555}
   - component: {fileID: 3276881094225528533}
   - component: {fileID: 6635484827708998778}
+  - component: {fileID: 5447974341433077728}
   m_Layer: 0
   m_Name: b_light_5
   m_TagString: Untagged
@@ -9862,6 +10151,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &5447974341433077728
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5447974341433077727}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 6782748971842914921, guid: ed9a2e8d243fa024189d9c1a1125ac56, type: 3}
 --- !u!4 &5471268898546450058
 Transform:
   m_ObjectHideFlags: 0
@@ -10628,6 +10931,7 @@ GameObject:
   - component: {fileID: 5410826506781490938}
   - component: {fileID: 7904733255759299529}
   - component: {fileID: 90929754961122705}
+  - component: {fileID: 6375743005708658867}
   m_Layer: 0
   m_Name: b_light_7
   m_TagString: Untagged
@@ -10635,6 +10939,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &6375743005708658867
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6375743005708658866}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 5418283228996116630, guid: ed9a2e8d243fa024189d9c1a1125ac56, type: 3}
 --- !u!33 &6428088312846289901
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -12371,6 +12689,7 @@ GameObject:
   - component: {fileID: 3726080104579894285}
   - component: {fileID: 1619632353948257750}
   - component: {fileID: 580537556172239093}
+  - component: {fileID: 8566474757169638099}
   m_Layer: 0
   m_Name: b_light_3
   m_TagString: Untagged
@@ -12378,6 +12697,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &8566474757169638099
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8566474757169638098}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 5291886051336799923, guid: ed9a2e8d243fa024189d9c1a1125ac56, type: 3}
 --- !u!33 &8573617766294399707
 MeshFilter:
   m_ObjectHideFlags: 0

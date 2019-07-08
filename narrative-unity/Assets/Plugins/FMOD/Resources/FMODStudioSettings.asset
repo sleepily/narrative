@@ -79,9 +79,10 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - FX
   - Master.strings
+  - Puzzles
   - Rooms
-  - Sound Effects
   - Stairs
   BanksToLoad: []
   LiveUpdatePort: 9264
