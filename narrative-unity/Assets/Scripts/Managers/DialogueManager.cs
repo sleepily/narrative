@@ -67,11 +67,13 @@ public class DialogueManager : MonoBehaviour
         if (logVerbose)
             Debug.Log($"Trying to execute {dialoguePair.flowchart.gameObject.name}:{dialoguePair.block.BlockName}");
 
-        if (!dialoguePair.flowchart.ExecuteIfHasBlock(dialoguePair.block.BlockName))
+        if (!dialoguePair.flowchart.HasBlock(dialoguePair.block.BlockName))
         {
             Debug.Log("Cannot execute block. Skipping.");
             return ExecuteNextDialoguePair();
         }
+
+        dialoguePair.flowchart.ExecuteBlock(dialoguePair.block.BlockName);
 
         if (logVerbose)
             Debug.Log($"Executing {dialoguePair.flowchart.gameObject.name}:{dialoguePair.block.BlockName}...");

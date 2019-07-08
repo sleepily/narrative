@@ -931,7 +931,7 @@ MonoBehaviour:
   soundEffect: {fileID: 0}
   portraits: []
   portraitsFace: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1022204197066795797}
   description: 
 --- !u!1 &1600210144355994996
 GameObject:
@@ -1489,7 +1489,7 @@ MonoBehaviour:
   soundEffect: {fileID: 0}
   portraits: []
   portraitsFace: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1022204197066795797}
   description: 
 --- !u!1 &9092769022247522873
 GameObject:
@@ -1680,6 +1680,11 @@ PrefabInstance:
     - target: {fileID: 3446993816334940521, guid: b6bc1daf5062e494c9a59b9298aa70d6,
         type: 3}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8158024171101661185, guid: b6bc1daf5062e494c9a59b9298aa70d6,
+        type: 3}
+      propertyPath: m_RenderMode
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -1503,7 +1503,7 @@ MonoBehaviour:
   rotationRangeOffset: {x: 10, y: 0}
   rotationSpeed: 5
   dampingTime: 0.1
-  mouseSpeed: 1
+  movementSettings: {fileID: 0}
   autoZeroVerticalOnMobile: 1
   autoZeroHorizontalOnMobile: 0
 --- !u!114 &4900498073639194903

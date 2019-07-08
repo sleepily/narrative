@@ -35,8 +35,11 @@ public class Cutscene : MonoBehaviour
     }
 
     public void StartCutscene() =>
-        GameManager.GLOBAL.dialogue.QueueForRead(flowchart, "Start");
+        StartCutsceneAtBlock("Start");
 
     public void StartCutsceneAtBlock(string blockID) =>
         GameManager.GLOBAL.dialogue.QueueForRead(flowchart, blockID);
+
+    public void FadeBlack(bool toBlack) =>
+        GameManager.GLOBAL.fade.FadeBlack(toBlack);
 }
