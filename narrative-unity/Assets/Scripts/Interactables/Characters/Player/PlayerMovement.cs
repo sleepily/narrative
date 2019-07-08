@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
 
     public PlayerMovementSettings movementSettings;
 
+    Player player;
+
     float movementSpeed;
 
     // Set forward so the player doesn't start laying on the ground
@@ -27,18 +29,14 @@ public class PlayerMovement : MonoBehaviour
 
     void GetAllComponents()
     {
+        player = GetComponent<Player>();
         controller = GetComponent<CharacterController>();
-        SetMouseSpeed(movementSettings.mouseSpeed);
+
+        GiveRotatorMovementSettings();
     }
 
-    public void SetMouseSpeed(float speed = 1f)
-    {
-        if (speed == movementSettings.mouseSpeed)
-            return;
-
-        movementSettings.mouseSpeed = speed;
-        mouseRotator.mouseSpeed = movementSettings.mouseSpeed;
-    }
+    public void GiveRotatorMovementSettings() =>
+        mouseRotator.movementSettings = movementSettings;
 
     void Update()
     {
@@ -108,8 +106,11 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 CalculatePlayerMove()
     {
         // Calculate desired movement from input and forward direction
-        Vector3 desiredForwardMotion = cameraArm.transform.forward * inputAxis.y;
-        Vector3 desiredSidewardMotion = cameraArm.transform.right * inputAxis.x;
+        Vector3 desiredForwardMotion = cameraArm.transform.forward;
+        Vector3 desiredSidewardMotion = cameraArm.transform.right;
+
+        desiredForwardMotion *= inputAxis.y;
+        desiredSidewardMotion *= inputAxis.x;
 
         Vector3 desiredMove = desiredForwardMotion + desiredSidewardMotion;
 

@@ -21,7 +21,11 @@ namespace UnityStandardAssets.Utility
 
         [Range(.01f, .4f)]
         public float dampingTime = 0.2f;
-        public float mouseSpeed = 1f;
+        float mouseSpeed = 1f;
+
+        [HideInInspector]
+        public PlayerMovementSettings movementSettings;
+
         public bool autoZeroVerticalOnMobile = true;
         public bool autoZeroHorizontalOnMobile = false;
         
@@ -84,9 +88,12 @@ namespace UnityStandardAssets.Utility
                 m_FollowAngles.x += 360;
             }
 
+            if (!movementSettings)
+                return;
+
             // with mouse input, we have direct control with no springback required.
-            m_TargetAngles.y += input.x * mouseSpeed * rotationSpeed;
-            m_TargetAngles.x += input.y * mouseSpeed * rotationSpeed;
+            m_TargetAngles.y += input.x * movementSettings.mouseSpeed * rotationSpeed;
+            m_TargetAngles.x += input.y * movementSettings.mouseSpeed * rotationSpeed;
 
             // clamp values to allowed range
             m_TargetAngles.y = Mathf.Clamp(m_TargetAngles.y, (-rotationRange.y * 0.5f) - rotationRangeOffset.y, (rotationRange.y * 0.5f) - rotationRangeOffset.y);

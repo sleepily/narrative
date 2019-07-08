@@ -158,12 +158,12 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -3034172930583308322}
-  - {fileID: -8062471699744855687}
-  - {fileID: 4195643082714035420}
-  - {fileID: -6326048169225321595}
-  - {fileID: -4519091648507255586}
-  - {fileID: -5526591922778757126}
+  - {fileID: -6232686250531853533}
+  - {fileID: 5450522988830663154}
+  - {fileID: 3066917590023684094}
+  - {fileID: -5535239984327424712}
+  - {fileID: 7492466736886095882}
+  - {fileID: -6501137945262454852}
   MinDistance: 0
   MaxDistance: 0
   Length: 234796
@@ -232,6 +232,23 @@ MonoBehaviour:
   m_Name: parameter:/Memory/letter - guitar
   m_EditorClassIdentifier: 
   Name: letter - guitar
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-8030202758458756155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Love/night
+  m_EditorClassIdentifier: 
+  Name: night
   Min: 0
   Max: 1
   Default: 0
@@ -413,6 +430,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &-6944095035329677814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Love/day - melody
+  m_EditorClassIdentifier: 
+  Name: day - melody
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-6834444243277871379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,6 +515,23 @@ MonoBehaviour:
   m_Name: parameter:/Recognition/recognition - low
   m_EditorClassIdentifier: 
   Name: recognition - low
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-6501137945262454852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Memory/letter - cello
+  m_EditorClassIdentifier: 
+  Name: letter - cello
   Min: 0
   Max: 1
   Default: 0
@@ -603,6 +654,23 @@ MonoBehaviour:
   - Name: Desktop
     Value: 470
   Exists: 1
+--- !u!114 &-6232686250531853533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Memory/letter start
+  m_EditorClassIdentifier: 
+  Name: letter start
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-6094705739739638475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -655,6 +723,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-5777271211237957298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Love/interlude
+  m_EditorClassIdentifier: 
+  Name: interlude
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-5655412801032223829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -685,6 +770,23 @@ MonoBehaviour:
   m_Name: parameter:/Memory/letter - guitar
   m_EditorClassIdentifier: 
   Name: letter - guitar
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-5535239984327424712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Memory/letter - strings
+  m_EditorClassIdentifier: 
+  Name: letter - strings
   Min: 0
   Max: 1
   Default: 0
@@ -743,14 +845,15 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -8557912846233834302}
-  - {fileID: 5350525446050140096}
-  - {fileID: 430651682987762812}
-  - {fileID: -8589602037322308328}
-  - {fileID: -6702786510253055069}
+  - {fileID: 4530371224381985623}
+  - {fileID: 476205103637590651}
+  - {fileID: 18372536746561553}
+  - {fileID: 3043512040546684609}
+  - {fileID: 3979171963359509990}
+  - {fileID: 6428805718267836302}
   MinDistance: 0
   MaxDistance: 0
-  Length: 57313
+  Length: 64477
 --- !u!114 &-5205865277612530054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1024,11 +1127,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ..\narrative-fmod\Build\Desktop\Master.strings.bank
   SubDir: 
-  lastModified: 636980134449802585
+  lastModified: 636981924541990670
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1696
+    Value: 1734
   Exists: 1
 --- !u!114 &-3402837344167182378
 MonoBehaviour:
@@ -1256,7 +1359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\Build\Desktop\Master.bank
   SubDir: 
-  lastModified: 636980134449792636
+  lastModified: 636981924541980671
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1529,8 +1632,25 @@ MonoBehaviour:
   - {fileID: -1848581065156021930}
   StringsBanks:
   - {fileID: -3737660868050091574}
-  stringsBankWriteTime: 636980134449802585
+  stringsBankWriteTime: 636981924541990670
   cacheVersion: 3
+--- !u!114 &18372536746561553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Recognition/recognition - reese
+  m_EditorClassIdentifier: 
+  Name: recognition - reese
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &24273918276403952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1649,6 +1769,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 234796
+--- !u!114 &476205103637590651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Recognition/recognition - spastics
+  m_EditorClassIdentifier: 
+  Name: recognition - spastics
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &548839363835118347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1751,7 +1888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\Build\Desktop\Rooms.bank
   SubDir: 
-  lastModified: 636980134485910917
+  lastModified: 636981924544564020
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1775,14 +1912,14 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -6321399095105358106}
-  - {fileID: 696216428625579820}
-  - {fileID: -5126502009248718047}
-  - {fileID: -4718056354357023982}
-  - {fileID: -7668821278349079944}
+  - {fileID: -5777271211237957298}
+  - {fileID: -6944095035329677814}
+  - {fileID: -8030202758458756155}
+  - {fileID: 1781288449545463016}
+  - {fileID: 1300545081116501087}
   MinDistance: 0
   MaxDistance: 0
-  Length: 268734
+  Length: 239552
 --- !u!114 &879462708139272858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1872,6 +2009,23 @@ MonoBehaviour:
   - Name: Desktop
     Value: 470
   Exists: 1
+--- !u!114 &1300545081116501087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Love/day - bass
+  m_EditorClassIdentifier: 
+  Name: day - bass
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &1313691572039752181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1956,6 +2110,23 @@ MonoBehaviour:
   m_Name: parameter:/Memory/letter - music box
   m_EditorClassIdentifier: 
   Name: letter - music box
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &1781288449545463016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Love/day - arp
+  m_EditorClassIdentifier: 
+  Name: day - arp
   Min: 0
   Max: 1
   Default: 0
@@ -2163,6 +2334,40 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &3043512040546684609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Recognition/recognition - spastics 2
+  m_EditorClassIdentifier: 
+  Name: recognition - spastics 2
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &3066917590023684094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Memory/letter - harps
+  m_EditorClassIdentifier: 
+  Name: letter - harps
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &3094019374213835764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2358,6 +2563,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &3979171963359509990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Recognition/void end
+  m_EditorClassIdentifier: 
+  Name: void end
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &3997219108404594097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2424,6 +2646,23 @@ MonoBehaviour:
   m_Name: parameter:/Love/day - bass
   m_EditorClassIdentifier: 
   Name: day - bass
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &4530371224381985623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Recognition/recognition - high
+  m_EditorClassIdentifier: 
+  Name: recognition - high
   Min: 0
   Max: 1
   Default: 0
@@ -2567,6 +2806,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &5450522988830663154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Memory/letter - guitar
+  m_EditorClassIdentifier: 
+  Name: letter - guitar
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &5522963440609132685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2602,7 +2858,7 @@ MonoBehaviour:
   Path: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\Build\Desktop\Sound
     Effects.bank
   SubDir: 
-  lastModified: 636980134485930558
+  lastModified: 636981924544584042
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -2687,6 +2943,23 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1108
+  Exists: 1
+--- !u!114 &6428805718267836302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Recognition/recognition - low
+  m_EditorClassIdentifier: 
+  Name: recognition - low
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 1
 --- !u!114 &6645006009874280152
 MonoBehaviour:
@@ -2822,6 +3095,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &7492466736886095882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Memory/letter - music box
+  m_EditorClassIdentifier: 
+  Name: letter - music box
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &7498431930440243983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2944,7 +3234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\Build\Desktop\Master.strings.bank
   SubDir: 
-  lastModified: 636980134449802585
+  lastModified: 636981924541990670
   LoadResult: 70
   FileSizes: []
   Exists: 1
@@ -3124,7 +3414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: X:\Files (Work, Uni etc)\GitHub\narrative\narrative-fmod\Build\Desktop\Stairs.bank
   SubDir: 
-  lastModified: 636980134485930558
+  lastModified: 636981924544593941
   LoadResult: 0
   FileSizes: []
   Exists: 1

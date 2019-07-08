@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52c94b371022f7948b9210809875f986, type: 3}
   m_Name: PlayerMovementSettings
   m_EditorClassIdentifier: 
-  isRunning: 1
-  mouseSpeed: 0.686
+  isRunning: 0
+  mouseSpeed: 0.8
   walkingSpeed: 1.872
   runningSpeed: 3.178
   rotationSpeed: 0.045

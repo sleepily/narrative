@@ -90,7 +90,7 @@ public class InventoryManager : MonoBehaviour
             Debug.Log(string.Format(stringItemRemoved, parameter));
     }
 
-    bool GetItemInInventory(string itemID, out Item itemOut)
+    public bool GetItemInInventory(string itemID, out Item itemOut)
     {
         foreach (Item item in items)
             if (item.itemStats.ID == itemID)
