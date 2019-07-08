@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -16758,7 +16758,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7980195382864088344}
-  m_Mesh: {fileID: 4039615893398582703, guid: 49bedcc8afbe5a84b908cf4e41caa6ee, type: 3}
+  m_Mesh: {fileID: 4039615893398582703, guid: 718fa2f391728cf44a747367829520a5, type: 3}
 --- !u!23 &2924034970364922913
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26629,7 +26629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 1, y: 0}
+  scrollPos: {x: -92, y: -39}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -26641,9 +26641,8 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 8237012401952646469}
-  selectedCommands:
-  - {fileID: 8237012401952646474}
+  - {fileID: 8237012401952646472}
+  selectedCommands: []
   variables:
   - {fileID: 8237012401952646473}
   description: 
@@ -26714,7 +26713,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 382
     y: 74
-    width: 122
+    width: 123
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -30380,7 +30379,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7980195382864088344}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 207.82278, z: -244.52322}
+  m_LocalPosition: {x: -146.3, y: 143, z: -251.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6392809640282803093}
