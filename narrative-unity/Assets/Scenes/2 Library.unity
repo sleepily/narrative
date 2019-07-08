@@ -1980,7 +1980,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 387767558}
   selectedCommands:
-  - {fileID: 387767570}
+  - {fileID: 387767571}
   variables:
   - {fileID: 387767559}
   - {fileID: 387767569}
@@ -2118,8 +2118,8 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 387767561}
   - {fileID: 387767572}
+  - {fileID: 387767561}
   - {fileID: 387767571}
   - {fileID: 387767562}
   - {fileID: 387767570}
@@ -2574,7 +2574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 15
   indentLevel: 0
-  storyText: '{i}click{/i}'
+  storyText: '{i}Click{/i}'
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -6454,7 +6454,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 477
     y: 144
-    width: 148
+    width: 151.03091
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6759,11 +6759,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -147.2521, y: 182.37363}
+  scrollPos: {x: -186.65417, y: -4.0181284}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.97
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -6771,9 +6771,8 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 1046477871}
-  selectedCommands:
-  - {fileID: 1046477879}
+  - {fileID: 1046477881}
+  selectedCommands: []
   variables:
   - {fileID: 1046477872}
   - {fileID: 1046477868}
@@ -10832,6 +10831,9 @@ GameObject:
   - component: {fileID: 1613803587}
   - component: {fileID: 1613803586}
   - component: {fileID: 1613803588}
+  - component: {fileID: 1613803591}
+  - component: {fileID: 1613803590}
+  - component: {fileID: 1613803589}
   m_Layer: 0
   m_Name: Trophies
   m_TagString: Untagged
@@ -10874,11 +10876,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -21, y: -32}
+  scrollPos: {x: 65.810104, y: -21.053413}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.6700003
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -10887,8 +10889,7 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 1613803566}
-  selectedCommands:
-  - {fileID: 1613803576}
+  selectedCommands: []
   variables:
   - {fileID: 1613803565}
   - {fileID: 1613803574}
@@ -11009,17 +11010,20 @@ MonoBehaviour:
   commandList:
   - {fileID: 1613803584}
   - {fileID: 1613803571}
+  - {fileID: 1613803590}
   - {fileID: 1613803570}
   - {fileID: 1613803585}
   - {fileID: 1613803588}
   - {fileID: 1613803587}
   - {fileID: 1613803586}
   - {fileID: 1613803583}
+  - {fileID: 1613803589}
   - {fileID: 1613803569}
   - {fileID: 1613803568}
   - {fileID: 1613803582}
   - {fileID: 1613803567}
   - {fileID: 1613803581}
+  - {fileID: 1613803591}
   - {fileID: 1613803580}
   - {fileID: 1613803579}
   - {fileID: 1613803578}
@@ -11095,7 +11099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 2
-  indentLevel: 2
+  indentLevel: 3
   storyText: There are 8 trophies colored white and blue.
   description: 
   character: {fileID: 792129613}
@@ -11327,7 +11331,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 9
   indentLevel: 2
-  storyText: There's something else colored white and blue besides these trophies.
+  storyText: There's something else colored white and blue besides these trophies
+    though.
   description: 
   character: {fileID: 792129613}
   portrait: {fileID: 0}
@@ -11481,7 +11486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 6
-  indentLevel: 2
+  indentLevel: 3
   variable: {fileID: 1613803574}
   setOperator: 2
   booleanData:
@@ -11609,7 +11614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 16
-  indentLevel: 2
+  indentLevel: 3
   storyText: ' Now what do I do with this info?'
   description: 
   character: {fileID: 792129613}
@@ -11636,7 +11641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 18
-  indentLevel: 2
+  indentLevel: 3
   storyText: Altough I doubt this will help me right now...
   description: 
   character: {fileID: 792129613}
@@ -11663,7 +11668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 17
-  indentLevel: 2
+  indentLevel: 3
   storyText: so he gained the respect of his teammates really quickly.
   description: 
   character: {fileID: 792129613}
@@ -11679,7 +11684,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1613803588
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -11690,9 +11695,114 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 19
-  indentLevel: 2
+  indentLevel: 3
   storyText: I remember Diego didn't always have the flashiest role, but he was really
     good at what he did.
+  description: 
+  character: {fileID: 792129613}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1613803589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613803559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 22
+  indentLevel: 2
+--- !u!114 &1613803590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613803559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 21
+  indentLevel: 2
+  compareOperator: 2
+  variable: {fileID: 1613803574}
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 3
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+  animatorData:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 0}
+  audioSourceData:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 0}
+  colorData:
+    colorRef: {fileID: 0}
+    colorVal: {r: 0, g: 0, b: 0, a: 0}
+  gameObjectData:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  materialData:
+    materialRef: {fileID: 0}
+    materialVal: {fileID: 0}
+  objectData:
+    objectRef: {fileID: 0}
+    objectVal: {fileID: 0}
+  rigidbody2DData:
+    rigidbody2DRef: {fileID: 0}
+    rigidbody2DVal: {fileID: 0}
+  spriteData:
+    spriteRef: {fileID: 0}
+    spriteVal: {fileID: 0}
+  textureData:
+    textureRef: {fileID: 0}
+    textureVal: {fileID: 0}
+  transformData:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 0}
+  vector2Data:
+    vector2Ref: {fileID: 0}
+    vector2Val: {x: 0, y: 0}
+  vector3Data:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &1613803591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613803559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 20
+  indentLevel: 2
+  storyText: There are 8 trophies colored white and blue.
   description: 
   character: {fileID: 792129613}
   portrait: {fileID: 0}
@@ -12164,7 +12274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 8296172669167351009}
+  selectedFlowchart: {fileID: 8296172667440730770}
 --- !u!4 &1705705785
 Transform:
   m_ObjectHideFlags: 1
@@ -14486,7 +14596,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1170377103835624697}
   selectedCommands:
-  - {fileID: 1170377103835624700}
+  - {fileID: 1170377103835624695}
   variables:
   - {fileID: 1170377103835624699}
   description: 
@@ -14513,7 +14623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 1
-  storyText: Oh wait there's something inside it,  baby formula?
+  storyText: Oh wait there's something inside it, baby formula?
   description: 
   character: {fileID: 792129613}
   portrait: {fileID: 0}
@@ -22667,10 +22777,11 @@ GameObject:
   - component: {fileID: 8296172667440730776}
   - component: {fileID: 8296172667440730773}
   - component: {fileID: 8296172667440730772}
-  - component: {fileID: 8296172667440730771}
   - component: {fileID: 8296172667440730782}
   - component: {fileID: 8296172667440730781}
   - component: {fileID: 8296172667440730780}
+  - component: {fileID: 8296172667440730771}
+  - component: {fileID: 8296172667440730784}
   m_Layer: 0
   m_Name: Picture Frame with Magazine
   m_TagString: Untagged
@@ -22717,8 +22828,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 8296172667440730775}
-  selectedCommands: []
+  - {fileID: 8296172667440730785}
+  selectedCommands:
+  - {fileID: 8296172667440730771}
   variables:
   - {fileID: 8296172667440730783}
   description: 
@@ -22733,17 +22845,17 @@ MonoBehaviour:
   luaBindingName: flowchart
 --- !u!114 &8296172667440730771
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172667440730768}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
+  m_Script: {fileID: 11500000, guid: 3fa968f01a7f9496bb50e13dfe16760d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 29
+  itemId: 34
   indentLevel: 0
 --- !u!114 &8296172667440730772
 MonoBehaviour:
@@ -22899,7 +23011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 26
-  indentLevel: 0
+  indentLevel: 1
   targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 8296172667440730790}
   startLabel:
@@ -22920,7 +23032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 25
-  indentLevel: 0
+  indentLevel: 1
   storyText: Maybe if I take a look behind it...
   description: 
   character: {fileID: 792129613}
@@ -22947,7 +23059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 24
-  indentLevel: 0
+  indentLevel: 1
   storyText: '...It feels as if something was behind the frame.'
   description: 
   character: {fileID: 792129613}
@@ -22974,7 +23086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 23
-  indentLevel: 0
+  indentLevel: 1
   variable: {fileID: 8296172667440730783}
   setOperator: 0
   booleanData:
@@ -23121,6 +23233,20 @@ MonoBehaviour:
   scope: 0
   key: isSolved
   value: 0
+--- !u!114 &8296172667440730784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172667440730768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 35
+  indentLevel: 0
 --- !u!114 &8296172667440730785
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -23153,6 +23279,7 @@ MonoBehaviour:
   - {fileID: 8296172667440730778}
   - {fileID: 8296172667440730777}
   - {fileID: 8296172667440730776}
+  - {fileID: 8296172667440730784}
 --- !u!114 &8296172667440730789
 MonoBehaviour:
   m_ObjectHideFlags: 2
