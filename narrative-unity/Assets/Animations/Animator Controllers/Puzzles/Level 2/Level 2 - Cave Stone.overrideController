@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Level 2 - Cave Stone
+  m_Controller: {fileID: 9100000, guid: f6981834c87c17d4aa8c394a9347595d, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 134ede8d61368764ba9a7e4935763d87, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: fc249dd4242839749b798e4734c5117a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 363e2472e7c29a543a34ad104f95edb6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: cf9c94cc221fcf5498f10d902642f699, type: 2}

@@ -188,16 +188,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5966162085322678373, guid: 57fecdd5d37889845a0e31925407fab3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 218401327041150269, guid: 57fecdd5d37889845a0e31925407fab3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57fecdd5d37889845a0e31925407fab3, type: 3}
 --- !u!4 &22550836 stripped
@@ -216,6 +206,8 @@ GameObject:
   m_Component:
   - component: {fileID: 419560852}
   - component: {fileID: 419560851}
+  - component: {fileID: 419560854}
+  - component: {fileID: 419560853}
   m_Layer: 0
   m_Name: InventoryManager
   m_TagString: Untagged
@@ -242,6 +234,8 @@ MonoBehaviour:
   objectsToHide:
   - {fileID: 8163109733439147199}
   items: []
+  openInventory: {fileID: 419560854}
+  closeInventory: {fileID: 419560853}
 --- !u!4 &419560852
 Transform:
   m_ObjectHideFlags: 0
@@ -256,6 +250,52 @@ Transform:
   m_Father: {fileID: 661370626}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &419560853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419560850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/FX/Inventory/Close Inventory
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &419560854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419560850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/FX/Inventory/Open Inventory
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &631728710
 GameObject:
   m_ObjectHideFlags: 0

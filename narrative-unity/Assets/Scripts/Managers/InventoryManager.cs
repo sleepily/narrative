@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Linq;
 using TMPro;
 using Fungus;
+using FMODUnity;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -33,6 +34,8 @@ public class InventoryManager : MonoBehaviour
     [Tooltip("All Items in the Inventory.")]
     [HideInInspector]
     public List<Item> items;
+
+    public StudioEventEmitter openInventory, closeInventory;
 
     bool logVerbose = true;
 
@@ -155,7 +158,12 @@ public class InventoryManager : MonoBehaviour
 
         GameManager.GLOBAL.player.SetMovementLock(isOpen);
 
+        // Display the item in Fox' hand or in inventory
         currentItemParent = isOpen ? itemInspectionParent : itemHotCornerParent;
+
+        // Get the correct sound event and play it
+        StudioEventEmitter soundEvent = isOpen ? openInventory : closeInventory;
+        soundEvent.Play();
 
         HideObjects();
 
