@@ -25,7 +25,6 @@ public class Item : InteractableWithDialogue
 
     private void Update()
     {
-        // TODO: lock player for 1 second, unlock if !dialogue.inProgress
         if (Input.GetMouseButtonDown(1))
             if (isCurrentItem && itemStats.isWeapon)
                 GameManager.GLOBAL.player.ItemAnimation(itemStats);
