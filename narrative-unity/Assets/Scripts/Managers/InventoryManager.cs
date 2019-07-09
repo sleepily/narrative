@@ -37,7 +37,7 @@ public class InventoryManager : MonoBehaviour
 
     public StudioEventEmitter openInventory, closeInventory;
 
-    bool logVerbose = true;
+    bool logVerbose = false;
 
     string stringItemAdded = "<color=lime>InventoryManager:</color> Added item {0}.";
     string stringItemRemoved = "<color=cyan>InventoryManager:</color> Removed item {0}.";

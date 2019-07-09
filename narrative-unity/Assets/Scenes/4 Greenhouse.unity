@@ -625,6 +625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   puzzle: {fileID: 8565007891227663162}
   codeType: 5
   codeInput: {fileID: 225721004}
@@ -1937,6 +1938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   itemStats: {fileID: 11400000, guid: 0a822737d41ff2f45b9c39262da782b4, type: 2}
   isCurrentItem: 0
 --- !u!114 &1110219232
@@ -2933,6 +2935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   itemStats: {fileID: 11400000, guid: b2d85f27722e1f046afc8a6d2dfbddc0, type: 2}
   isCurrentItem: 0
 --- !u!114 &1154132050
@@ -4473,6 +4476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   itemStats: {fileID: 11400000, guid: 892193d995fdb1846b1cefb58544c7d1, type: 2}
   isCurrentItem: 0
 --- !u!114 &2123733058
@@ -4607,6 +4611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
 --- !u!23 &2133704745
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5447,6 +5452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   itemStats: {fileID: 11400000, guid: a5670ef7ac4e6d34dbb1c8dcf8eb34d2, type: 2}
   isCurrentItem: 0
 --- !u!114 &418088721668913445
@@ -7094,6 +7100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
 --- !u!23 &728887153393568130
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8332,6 +8339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
 --- !u!114 &864941891790055773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9296,6 +9304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   itemStats: {fileID: 11400000, guid: d9aae61d36efbde4fb17388384024382, type: 2}
   isCurrentItem: 0
 --- !u!23 &1123397148893351175
@@ -15791,6 +15800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
 --- !u!114 &2542313236548147970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17803,6 +17813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   puzzle: {fileID: 646313835}
   rotationAxis: {x: 1, y: 0, z: 0}
   currentIcon: 0
@@ -19234,6 +19245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
 --- !u!65 &4077956268928137878
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19777,6 +19789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   puzzle: {fileID: 646313835}
   rotationAxis: {x: 1, y: 0, z: 0}
   currentIcon: 0
@@ -21312,6 +21325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   puzzle: {fileID: 646313835}
   rotationAxis: {x: 1, y: 0, z: 0}
   currentIcon: 0
@@ -22984,6 +22998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
 --- !u!114 &6044559689740222607
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -23641,6 +23656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   puzzle: {fileID: 646313835}
   rotationAxis: {x: 1, y: 0, z: 0}
   currentIcon: 0
@@ -24138,6 +24154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   itemStats: {fileID: 11400000, guid: f3ff66308c6adab47aab10f6f8246e90, type: 2}
   isCurrentItem: 0
 --- !u!114 &6395281859496464955
@@ -26913,6 +26930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   itemStats: {fileID: 11400000, guid: ad5b205f7d148c949899addd6dd08cbc, type: 2}
   isCurrentItem: 0
 --- !u!114 &8237012401952646468
@@ -27484,6 +27502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   itemStats: {fileID: 11400000, guid: 892193d995fdb1846b1cefb58544c7d1, type: 2}
   isCurrentItem: 0
 --- !u!64 &8369483232146875299
@@ -28156,6 +28175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   startHours: 4
   startMinutes: 20
 --- !u!65 &8554143493655935466
@@ -29995,6 +30015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   itemStats: {fileID: 11400000, guid: a5670ef7ac4e6d34dbb1c8dcf8eb34d2, type: 2}
   isCurrentItem: 0
 --- !u!114 &8788144815819838535

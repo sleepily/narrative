@@ -8,11 +8,15 @@ public class Interactable_XylophoneKey : Interactable
 {
     public bool selected = false;
 
+    float glowIntensity = 4f;
+
     int keyID = -1;
 
     protected override void StartFunctions()
     {
         base.StartFunctions();
+
+        colorLerpFactor = .016f;
 
         GetBookID();
     }

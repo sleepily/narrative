@@ -76,7 +76,7 @@ public class Item : InteractableWithDialogue
     void UseItem(bool setInactive)
     {
         GameManager.GLOBAL.inventory.Remove(gameObject, itemStats.ID);
-        Debug.Log($"Using and removing {name}");
+        // Debug.Log($"Using and removing {name}");
 
         GameManager.GLOBAL.player.ItemAnimation(itemStats);
 

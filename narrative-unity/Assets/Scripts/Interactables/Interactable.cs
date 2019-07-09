@@ -7,6 +7,7 @@ using Fungus;
 [RequireComponent(typeof(Collider))]
 public class Interactable : MonoBehaviour
 {
+
     [Header("Color Glow Components")]
     protected MeshRenderer meshRenderer;
     protected Color currentGlowColor, desiredGlowColor;
@@ -18,6 +19,7 @@ public class Interactable : MonoBehaviour
 
     [Tooltip("Deselect in case this interactable should not be focusable.")]
     public bool isFocusable = true;
+    public bool focusWhenPlayerIsNear = false;
 
     /*
      * OnMouse functions to determine whether to focus, unfocus, interact with or use an object
@@ -81,7 +83,23 @@ public class Interactable : MonoBehaviour
      */
     private void Update() => UpdateFunctions();
 
-    protected virtual void UpdateFunctions() => LerpGlowColor();
+    protected virtual void UpdateFunctions()
+    {
+        FocusIfNearPlayer();
+        LerpGlowColor();
+    }
+
+    void FocusIfNearPlayer()
+    {
+        if (!focusWhenPlayerIsNear)
+            return;
+
+        if (!isFocusable)
+            return;
+
+        if (PlayerAimInteraction.IsFocusable(this))
+            Focus();
+    }
 
     /*
      * Constantly lerps to the desired glow color

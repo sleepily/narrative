@@ -360,6 +360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
 --- !u!114 &92050724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,6 +537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
 --- !u!114 &233292857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1055,6 +1057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
 --- !u!114 &352774909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1284,6 +1287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
 --- !u!64 &364847906
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1362,6 +1366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   selected: 0
 --- !u!64 &364847912
 MeshCollider:
@@ -1427,6 +1432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   selected: 0
 --- !u!64 &364847915
 MeshCollider:
@@ -1492,6 +1498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   selected: 0
 --- !u!64 &364847918
 MeshCollider:
@@ -1557,6 +1564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   selected: 0
 --- !u!64 &364847921
 MeshCollider:
@@ -1622,6 +1630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   selected: 0
 --- !u!64 &364847924
 MeshCollider:
@@ -1687,6 +1696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   selected: 0
 --- !u!64 &364847927
 MeshCollider:
@@ -1752,6 +1762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   selected: 0
 --- !u!64 &364847930
 MeshCollider:
@@ -1780,6 +1791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   selected: 0
 --- !u!114 &364847932
 MonoBehaviour:
@@ -3543,6 +3555,7 @@ GameObject:
   - component: {fileID: 441937476}
   - component: {fileID: 441937478}
   - component: {fileID: 441937477}
+  - component: {fileID: 441937479}
   m_Layer: 0
   m_Name: Pentagon
   m_TagString: Untagged
@@ -3609,6 +3622,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 441937475}
   m_Mesh: {fileID: -7479817439732242351, guid: 8546f4efeff1c0749873db73dd36417e, type: 3}
+--- !u!114 &441937479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441937475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a020dbce86b07458290707b283d4c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAxis: {x: 0, y: 1, z: 0}
+  rotationSpeed: -10
 --- !u!1 &477038477
 GameObject:
   m_ObjectHideFlags: 0
@@ -3816,6 +3843,7 @@ GameObject:
   - component: {fileID: 504961898}
   - component: {fileID: 504961900}
   - component: {fileID: 504961899}
+  - component: {fileID: 504961901}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -3882,6 +3910,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504961897}
   m_Mesh: {fileID: 3921568967233161584, guid: 7e13b650b5f4335498c7868d5d0a76e2, type: 3}
+--- !u!114 &504961901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504961897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a020dbce86b07458290707b283d4c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAxis: {x: 0, y: 1, z: 0}
+  rotationSpeed: -16
 --- !u!1 &505322397
 GameObject:
   m_ObjectHideFlags: 0
@@ -4013,6 +4055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   itemStats: {fileID: 11400000, guid: 0a55594495db0da41834096e6cc99840, type: 2}
   isCurrentItem: 0
 --- !u!114 &505322402
@@ -5419,6 +5462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
 --- !u!114 &599328448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6275,6 +6319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   puzzle: {fileID: 387767553}
   codeType: 1
   codeInput: {fileID: 1968862676}
@@ -6340,6 +6385,7 @@ GameObject:
   - component: {fileID: 1002591229}
   - component: {fileID: 1002591231}
   - component: {fileID: 1002591230}
+  - component: {fileID: 1002591232}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -6406,6 +6452,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002591228}
   m_Mesh: {fileID: 2122681682525997855, guid: 8546f4efeff1c0749873db73dd36417e, type: 3}
+--- !u!114 &1002591232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002591228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a020dbce86b07458290707b283d4c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAxis: {x: 0, y: 1, z: 0}
+  rotationSpeed: 14
 --- !u!1 &1026296618
 GameObject:
   m_ObjectHideFlags: 0
@@ -8157,6 +8217,7 @@ GameObject:
   - component: {fileID: 1164875127}
   - component: {fileID: 1164875129}
   - component: {fileID: 1164875128}
+  - component: {fileID: 1164875130}
   m_Layer: 0
   m_Name: Star
   m_TagString: Untagged
@@ -8223,6 +8284,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164875126}
   m_Mesh: {fileID: 1881125385508326797, guid: 8546f4efeff1c0749873db73dd36417e, type: 3}
+--- !u!114 &1164875130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164875126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a020dbce86b07458290707b283d4c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAxis: {x: 0, y: 1, z: 0}
+  rotationSpeed: 10
 --- !u!114 &1166870635
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -8327,6 +8402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
 --- !u!114 &1166870638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9223,6 +9299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
 --- !u!114 &1288199353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9527,6 +9604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   itemStats: {fileID: 11400000, guid: 1438279a4f26c2342aa87a4cb18a8c44, type: 2}
   isCurrentItem: 0
 --- !u!114 &1356308068
@@ -9840,6 +9918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
 --- !u!114 &1360877603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10418,6 +10497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   itemStats: {fileID: 11400000, guid: 1daaca8efa4b71743a10b2bb8b9a9eef, type: 2}
   isCurrentItem: 0
 --- !u!65 &1407375673
@@ -10967,6 +11047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
 --- !u!64 &1527941355
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11223,6 +11304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
 --- !u!23 &1613803563
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11496,6 +11578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
 --- !u!114 &1613803573
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -12608,6 +12691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   debugNumber: -1
 --- !u!114 &1714950962
 MonoBehaviour:
@@ -12673,6 +12757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   debugNumber: -1
 --- !u!114 &1714950965
 MonoBehaviour:
@@ -12738,6 +12823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   debugNumber: 5
 --- !u!114 &1714950968
 MonoBehaviour:
@@ -12803,6 +12889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   debugNumber: 9
 --- !u!114 &1714950971
 MonoBehaviour:
@@ -12868,6 +12955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   debugNumber: 1
 --- !u!114 &1714950974
 MonoBehaviour:
@@ -12933,6 +13021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   debugNumber: 0
 --- !u!114 &1714950977
 MonoBehaviour:
@@ -12998,6 +13087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   debugNumber: 1
 --- !u!114 &1714950980
 MonoBehaviour:
@@ -13063,6 +13153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   debugNumber: 7
 --- !u!114 &1714950983
 MonoBehaviour:
@@ -13128,6 +13219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   debugNumber: 0
 --- !u!114 &1714950986
 MonoBehaviour:
@@ -13193,6 +13285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   debugNumber: 2
 --- !u!114 &1714950989
 MonoBehaviour:
@@ -13423,6 +13516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   itemStats: {fileID: 11400000, guid: f3646721b5de95343abfdc22e6470d92, type: 2}
   isCurrentItem: 0
 --- !u!64 &1854778913
@@ -13592,6 +13686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   puzzle: {fileID: 1287091736}
   codeType: 2
   codeInput: {fileID: 1221564394}
@@ -14870,6 +14965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 0
+  focusWhenPlayerIsNear: 0
 --- !u!114 &1170377103835624694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15316,6 +15412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   waterBottle: {fileID: 1854778912}
   glassAnimator: {fileID: 1462371668}
 --- !u!114 &1170377104056170207
@@ -16657,6 +16754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   angleIncrement: 36
   rotationSpeed: 1.4
 --- !u!114 &2368309173280022027
@@ -18023,6 +18121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   itemStats: {fileID: 11400000, guid: be168d9cbc1c2704cbb4e2a621a4e60d, type: 2}
   isCurrentItem: 0
 --- !u!114 &4428874558796470422
@@ -18255,6 +18354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   itemStats: {fileID: 11400000, guid: c303d23be30667e438e44ffaf69ee369, type: 2}
   isCurrentItem: 0
 --- !u!114 &4749387626527434008
@@ -19184,6 +19284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
 --- !u!114 &5232488858034587457
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -19927,6 +20028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 0
+  focusWhenPlayerIsNear: 0
   itemStats: {fileID: 11400000, guid: 6575d1c8c50b22a4995178a77cb93b17, type: 2}
   isCurrentItem: 0
 --- !u!114 &5696618981039580956
@@ -20669,6 +20771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   itemStats: {fileID: 11400000, guid: 2b65ff452b0a95543b3904c34c923e5a, type: 2}
   isCurrentItem: 0
 --- !u!114 &6318911020982505161
@@ -21860,6 +21963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   brokenObjectToSpawn: {fileID: 0}
 --- !u!4 &7332915501107751214
 Transform:
@@ -24872,6 +24976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
 --- !u!23 &8296172669167351019
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31106,6 +31211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
 --- !u!114 &8296172669349751993
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -31728,6 +31834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFocusable: 1
+  focusWhenPlayerIsNear: 0
   puzzle: {fileID: 8296172669043255488}
   codeType: 3
   codeInput: {fileID: 619731928}
