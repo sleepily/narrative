@@ -32,16 +32,6 @@ public class Puzzle_DoorWithKnobs : Puzzle
             knob.SetPuzzle(this);
     }
 
-    void SetUpBooks()
-    {
-        fallingBooks = fallingBooksParent.GetComponentsInChildren<FallingBook>().ToList();
-        fallingBooks = fallingBooks.OrderBy(book => book.name).ToList();
-
-        for (int i = 0; i < fallingBooks.Count; i++)
-            fallingBooks[i].transform.localEulerAngles +=
-                Vector3.left * (360f / rotationSteps) * solutionArray[i];
-    }
-
     int[] FormatSolution()
     {
         int[] output = new int[doorknobs.Count];
@@ -53,6 +43,16 @@ public class Puzzle_DoorWithKnobs : Puzzle
         }
 
         return output;
+    }
+
+    void SetUpBooks()
+    {
+        fallingBooks = fallingBooksParent.GetComponentsInChildren<FallingBook>().ToList();
+        fallingBooks = fallingBooks.OrderBy(book => book.name).ToList();
+
+        for (int i = 0; i < fallingBooks.Count; i++)
+            fallingBooks[i].transform.localEulerAngles +=
+                Vector3.left * (360f / rotationSteps) * solutionArray[i];
     }
 
     public override bool PuzzleCheck()

@@ -82,6 +82,7 @@ public class UI_CodeInput : MonoBehaviour
                 return;
         }
 
+        GameManager.GLOBAL.dialogue.SetCodeInputInProgress(false);
         puzzle.PuzzleCheck(answer);
         Invoke("Hide", lastCharDelay);
     }
@@ -96,6 +97,8 @@ public class UI_CodeInput : MonoBehaviour
 
         if (isVisible)
             GameManager.GLOBAL.player.SetMovementLock(isVisible);
+
+        GameManager.GLOBAL.dialogue.SetCodeInputInProgress(isVisible);
 
         // When the UI is shown, get focus and reset text
         if (isVisible)

@@ -12,6 +12,7 @@ public class Cellphone : MonoBehaviour
     Animator animator;
     Item cellphoneItem;
     int messageIntensity = 0;
+    bool alreadyQueuedMessage = false;
 
     [Header("Message sending")]
     public bool sendMessagesAutomatically = true;
@@ -82,7 +83,12 @@ public class Cellphone : MonoBehaviour
      */
     public void TriggerNewMessage()
     {
+        if (alreadyQueuedMessage)
+            return;
+
         flowchart.SetIntegerVariable("messageIntensity", messageIntensity);
+
+        alreadyQueuedMessage = true;
 
         // Queue message and take care of animator in dialogue manager
         GameManager.GLOBAL.dialogue.QueueForRead(flowchart, "NewMessage");
@@ -98,7 +104,10 @@ public class Cellphone : MonoBehaviour
         canTriggerNewMessage = !screenOn;
 
         if (!screenOn)
+        {
             lastMessageReadTime = Time.time;
+            alreadyQueuedMessage = false;
+        }
 
         // canTriggerNewMessage = screenOn ? true : canTriggerNewMessage;
     }

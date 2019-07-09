@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{90c33ec9-6046-428c-9360-bc0e9737a2a9}">
+		<property name="name">
+			<value>recognition - high</value>
+		</property>
+		<relationship name="folder">
+			<destination>{eb522cf1-108a-4a98-87d4-ee358aaf301d}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{0a0d8162-f7f2-4329-a1eb-abb4cafe8143}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{0a0d8162-f7f2-4329-a1eb-abb4cafe8143}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

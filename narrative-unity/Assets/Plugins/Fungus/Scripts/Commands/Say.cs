@@ -2,6 +2,7 @@
 // It is released for free under the MIT open source license (https://github.com/snozbot/fungus/blob/master/LICENSE)
 
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace Fungus
 {
@@ -102,6 +103,9 @@ namespace Fungus
                 Continue();
                 return;
             }
+
+            // Get the character portrait so it doesn't have to be set for every single Say command
+            GetPortrait();
     
             var flowchart = GetFlowchart();
 
@@ -128,6 +132,21 @@ namespace Fungus
             sayDialog.Say(subbedText, !extendPrevious, waitForClick, fadeWhenDone, stopVoiceover, waitForVO, voiceOverClip, delegate {
                 Continue();
             });
+        }
+
+        public void GetPortrait()
+        {
+            List<Sprite> portraitSprites = _Character?.Portraits;
+
+            if (portraitSprites == null)
+                return;
+
+            if (portraitSprites.Count == 0)
+                return;
+
+            Sprite portraitSprite = portraitSprites[0];
+
+            portrait = portraitSprite;
         }
 
         public override string GetSummary()

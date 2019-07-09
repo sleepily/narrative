@@ -21,17 +21,11 @@ public class Puzzle_Jugs : Puzzle
     {
         swap.Add(jug);
 
-        Debug.Log($"Added jug {jug.maxCapacity}");
-
         if (swap.Count >= 2)
             Refill();
     }
 
-    public void RemoveJug(Interactable_Jug jug)
-    {
-        Debug.Log($"Removed jug {jug.maxCapacity}");
-        swap.Remove(jug);
-    }
+    public void RemoveJug(Interactable_Jug jug) => swap.Remove(jug);
 
     void Refill()
     {
@@ -64,13 +58,6 @@ public class Puzzle_Jugs : Puzzle
 
     public override bool PuzzleCheck()
     {
-        string input = "";
-
-        foreach (Interactable_Jug jug in jugs)
-            input += $"jug {jug.maxCapacity}:{jug.currentCapacity}";
-
-        Debug.Log(input);
-
         bool hasSolutionCapacity = false;
 
         foreach (Interactable_Jug jug in jugs)
@@ -80,6 +67,6 @@ public class Puzzle_Jugs : Puzzle
         if (hasSolutionCapacity)
             PuzzleSolved();
 
-        return hasSolutionCapacity;
+        return false;
     }
 }

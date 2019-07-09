@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{77316584-72b8-4236-88b0-cd251298e680}">
+		<property name="name">
+			<value>interlude</value>
+		</property>
+		<relationship name="folder">
+			<destination>{faa3eca6-cd65-4501-b077-e23584ed1b14}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{5d060610-e671-4303-82ec-cca8b3aa9e5d}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{5d060610-e671-4303-82ec-cca8b3aa9e5d}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

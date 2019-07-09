@@ -1,7 +1,6 @@
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
-[Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
 
@@ -37,3 +36,8 @@ sysinfo.txt
 *.unitypackage
 narrative-unity/Assets/Plugins/Fungus/Integrations/Spine/Fungus-Spine.unitypackage.meta
 narrative-unity/Assets/Plugins/Fungus/Integrations/Playmaker/Fungus-PlayMaker.unitypackage.meta
+
+# FMOD files
+narrative-unity/Assets/Plugins/FMOD/Resources/*
+narrative-unity/fmod_editor.log
+narrative-fmod/Assets/*

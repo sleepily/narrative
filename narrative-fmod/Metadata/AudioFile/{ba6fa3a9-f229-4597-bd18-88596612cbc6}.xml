@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{ba6fa3a9-f229-4597-bd18-88596612cbc6}">
+		<property name="assetPath">
+			<value>Music/Love/interlude.flac</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>49.655170068027211</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ce986eea-2bea-4369-8a00-8e3a8b8c878a}</destination>
+		</relationship>
+	</object>
+</objects>

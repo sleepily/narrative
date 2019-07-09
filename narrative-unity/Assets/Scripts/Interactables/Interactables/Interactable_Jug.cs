@@ -37,10 +37,12 @@ public class Interactable_Jug : Interactable
             currentCapacity = maxCapacity;
     }
 
+#if UNITY_EDITOR
     /*
      * Draw currentCapacity in Gizmos
      */
     void OnDrawGizmos() => Handles.Label(transform.position, $"{maxCapacity.ToString()}:{currentCapacity.ToString()}");
+#endif
 
     /*
      * Prevent color glow change if book is selected for swap

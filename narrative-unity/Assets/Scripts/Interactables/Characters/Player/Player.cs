@@ -38,5 +38,9 @@ public class Player : CharacterWithDialogue
         playerMovement.StopMoving();
     }
 
-    public void UnlockMovement() => hasLockedMovement = false;
+    public void UnlockMovement()
+    {
+        hasLockedMovement = false;
+        CursorLock.SetCursorLock(true);
+    }
 }

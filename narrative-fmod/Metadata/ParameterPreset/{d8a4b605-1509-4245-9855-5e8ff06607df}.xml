@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{d8a4b605-1509-4245-9855-5e8ff06607df}">
+		<property name="name">
+			<value>letter - guitar</value>
+		</property>
+		<relationship name="folder">
+			<destination>{4c634eae-8d1b-41d9-a123-31de1bdae35b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{47b24f00-046b-4974-8b83-b870700fe510}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{47b24f00-046b-4974-8b83-b870700fe510}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

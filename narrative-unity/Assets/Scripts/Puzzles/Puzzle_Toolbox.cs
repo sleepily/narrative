@@ -13,14 +13,12 @@ public class Puzzle_Toolbox : Puzzle
     {
         base.StartFunctions();
 
-        GetDials();
+        dials = GetDials();
         CreateSolutionArray();
     }
 
-    void GetDials()
-    {
-        dials = dialsParent.GetComponentsInChildren<Interactable_ToolboxDial>();
-    }
+    Interactable_ToolboxDial[] GetDials() =>
+        dialsParent.GetComponentsInChildren<Interactable_ToolboxDial>();
 
     void CreateSolutionArray()
     {

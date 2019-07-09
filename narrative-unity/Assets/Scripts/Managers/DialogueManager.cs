@@ -12,7 +12,7 @@ public class DialogueManager : MonoBehaviour
 
         public DialoguePair(Flowchart flowchart, string blockID)
         {
-            if (blockID == null)
+            if (blockID == null || string.IsNullOrWhiteSpace(blockID))
                 blockID = "Start";
 
             this.flowchart = flowchart;
@@ -30,9 +30,12 @@ public class DialogueManager : MonoBehaviour
     }
 
     public bool dialogueInProgress { get; private set; } = false;
+    public bool menuInProgress { get; private set; } = false;
+    public bool codeInputInProgress { get; private set; } = false;
+
     Queue<DialoguePair> queue = new Queue<DialoguePair>();
 
-    bool logVerbose = true;
+    bool logVerbose = false;
 
     /*
      * Enqueue a dialogue pair to be executed
@@ -64,11 +67,13 @@ public class DialogueManager : MonoBehaviour
         if (logVerbose)
             Debug.Log($"Trying to execute {dialoguePair.flowchart.gameObject.name}:{dialoguePair.block.BlockName}");
 
-        if (!dialoguePair.flowchart.ExecuteIfHasBlock(dialoguePair.block.BlockName))
+        if (!dialoguePair.flowchart.HasBlock(dialoguePair.block.BlockName))
         {
             Debug.Log("Cannot execute block. Skipping.");
             return ExecuteNextDialoguePair();
         }
+
+        dialoguePair.flowchart.ExecuteBlock(dialoguePair.block.BlockName);
 
         if (logVerbose)
             Debug.Log($"Executing {dialoguePair.flowchart.gameObject.name}:{dialoguePair.block.BlockName}...");
@@ -76,6 +81,33 @@ public class DialogueManager : MonoBehaviour
         SpecialChecksBefore(dialoguePair.flowchart);
         WaitForDialogue(dialoguePair.flowchart);
         return true;
+    }
+
+    public void SetCodeInputInProgress(bool inProgress) => codeInputInProgress = inProgress;
+
+    public void SetMenuInProgress(bool inProgress)
+    {
+        menuInProgress = inProgress;
+
+        // Unlock the cursor when the player has to make a choice
+        if (menuInProgress)
+            StartCoroutine(CheckForMenuOver());
+    }
+
+    IEnumerator CheckForMenuOver()
+    {
+        // Wait for some time to prevent weird things
+        yield return new WaitForSeconds(.6f);
+
+        // A choice menu is presented to the player
+        CursorLock.SetCursorLock(false);
+
+        // Wait until the choice block is activated
+        while (!dialogueInProgress)
+            yield return null;
+
+        // Lock the player again
+        menuInProgress = false;
     }
 
     void WaitForDialogue(Flowchart flowchart)

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{804d1018-cb64-45a0-abd6-c05c0f92f8f8}">
+		<property name="name">
+			<value>recognition - spastics</value>
+		</property>
+		<relationship name="folder">
+			<destination>{eb522cf1-108a-4a98-87d4-ee358aaf301d}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{5d0f4e4c-4fc2-4824-9e27-d7fefadee730}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{5d0f4e4c-4fc2-4824-9e27-d7fefadee730}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

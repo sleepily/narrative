@@ -7,6 +7,9 @@ public class PlayerMovementSettings : ScriptableObject
 {
     public bool isRunning = false;
 
+    [Range(.3f, 2f)]
+    public float mouseSpeed = 1f;
+
     [Range(1.4f, 2.2f)]
     public float walkingSpeed = 1.8f;
 

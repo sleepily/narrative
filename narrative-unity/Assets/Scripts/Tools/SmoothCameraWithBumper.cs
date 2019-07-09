@@ -7,6 +7,7 @@ public class SmoothCameraWithBumper : MonoBehaviour
     [SerializeField]
     [Tooltip("Don't bump into items.")]
     bool ignoreItems = true;
+    bool ignorePlayer = true;
 
     [Range(0.02f, 4f)]
     [SerializeField]
@@ -96,8 +97,12 @@ public class SmoothCameraWithBumper : MonoBehaviour
                 return;
 
             Item bumpedItem = hitInfo.collider.gameObject.GetComponent<Item>();
+            Player bumpedPlayer = hitInfo.collider.gameObject.GetComponent<Player>();
 
             if (bumpedItem && ignoreItems)
+                return;
+
+            if (bumpedPlayer && ignorePlayer)
                 return;
 
             CalculateNewCameraPosition();

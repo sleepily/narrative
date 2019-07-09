@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{edffa017-e99a-412b-bd4b-de6788380b63}">
+		<property name="name">
+			<value>day - arp</value>
+		</property>
+		<relationship name="folder">
+			<destination>{faa3eca6-cd65-4501-b077-e23584ed1b14}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{75752c55-84d2-4ff3-96ad-be6887e066f4}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{75752c55-84d2-4ff3-96ad-be6887e066f4}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

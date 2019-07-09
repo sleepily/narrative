@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Utility;
 using Tools;
 
 public class PlayerMovement : MonoBehaviour
@@ -10,7 +11,11 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator animator;
 
+    public SimpleMouseRotatorModified mouseRotator;
+
     public PlayerMovementSettings movementSettings;
+
+    Player player;
 
     float movementSpeed;
 
@@ -22,7 +27,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start() => GetAllComponents();
 
-    void GetAllComponents() => controller = GetComponent<CharacterController>();
+    void GetAllComponents()
+    {
+        player = GetComponent<Player>();
+        controller = GetComponent<CharacterController>();
+
+        GiveRotatorMovementSettings();
+    }
+
+    public void GiveRotatorMovementSettings() =>
+        mouseRotator.movementSettings = movementSettings;
 
     void Update()
     {
@@ -92,8 +106,11 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 CalculatePlayerMove()
     {
         // Calculate desired movement from input and forward direction
-        Vector3 desiredForwardMotion = cameraArm.transform.forward * inputAxis.y;
-        Vector3 desiredSidewardMotion = cameraArm.transform.right * inputAxis.x;
+        Vector3 desiredForwardMotion = cameraArm.transform.forward;
+        Vector3 desiredSidewardMotion = cameraArm.transform.right;
+
+        desiredForwardMotion *= inputAxis.y;
+        desiredSidewardMotion *= inputAxis.x;
 
         Vector3 desiredMove = desiredForwardMotion + desiredSidewardMotion;
 

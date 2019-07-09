@@ -23,7 +23,7 @@ public class SceneLoader : MonoBehaviour
 
     public List<TeleportLocation> levelTeleportLocations;
 
-    bool hasFinishedLoading;
+    public bool hasFinishedLoading { get; private set; }
 
     private void Start() => ReloadScene();
 

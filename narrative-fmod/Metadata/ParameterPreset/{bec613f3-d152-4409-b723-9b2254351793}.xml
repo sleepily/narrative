@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{bec613f3-d152-4409-b723-9b2254351793}">
+		<property name="name">
+			<value>day - bass</value>
+		</property>
+		<relationship name="folder">
+			<destination>{faa3eca6-cd65-4501-b077-e23584ed1b14}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{ef4279c6-7785-4ae7-9cb7-0629c99e7e12}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{ef4279c6-7785-4ae7-9cb7-0629c99e7e12}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

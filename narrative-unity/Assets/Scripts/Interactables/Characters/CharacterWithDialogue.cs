@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
 
-[RequireComponent(typeof(Character))]
 public class CharacterWithDialogue : InteractableWithDialogue
 {
     Color characterGlowColorOverride = new Color(Color.yellow.r, Color.yellow.g, Color.yellow.b, .2f);
@@ -18,8 +17,8 @@ public class CharacterWithDialogue : InteractableWithDialogue
     /*
      * Override UpdateFunctions to prevent glow lerping
      */
-    protected override void UpdateFunctions()
-    {
+    protected override void UpdateFunctions() { }
 
-    }
+    public void SetMenuInProgress(bool inProgress) =>
+        GameManager.GLOBAL.dialogue.SetMenuInProgress(inProgress);
 }
