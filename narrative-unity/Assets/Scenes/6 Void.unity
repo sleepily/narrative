@@ -6314,7 +6314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 506996095}
+  selectedFlowchart: {fileID: 8296172668261042066}
 --- !u!4 &2125456562
 Transform:
   m_ObjectHideFlags: 1
@@ -9111,11 +9111,11 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172668261042051}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 55e02172755b89d40bacbeb6592e44fb, type: 3}
-  m_Controller: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 406dac8c632186f408e0293ae9802b88, type: 3}
+  m_Controller: {fileID: 9100000, guid: 340d95aa7439ee1449d8a0d46f7b2e9b, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
