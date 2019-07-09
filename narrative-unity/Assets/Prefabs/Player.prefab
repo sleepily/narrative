@@ -1923,6 +1923,10 @@ MonoBehaviour:
   isFocusable: 1
   thirdPersonCamera: {fileID: 8163109732585943100}
   teleportPlayer: {fileID: 6192654023941530913}
+  weapons:
+  - {fileID: 11400000, guid: 1daaca8efa4b71743a10b2bb8b9a9eef, type: 2}
+  - {fileID: 11400000, guid: 453eb40442419e640a4f9dee54acb627, type: 2}
+  - {fileID: 11400000, guid: 31c3eec764872a4459ce2c5232aa07e2, type: 2}
 --- !u!114 &8163109733526020025
 MonoBehaviour:
   m_ObjectHideFlags: 0

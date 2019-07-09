@@ -23,9 +23,14 @@ public class Item : InteractableWithDialogue
         canBePickedUp = itemStats.canBePickedUp;
     }
 
-    /*
-     * Pick up item when clicked.
-     */
+    private void Update()
+    {
+        // TODO: lock player for 1 second, unlock if !dialogue.inProgress
+        if (Input.GetMouseButtonDown(1))
+            if (isCurrentItem && itemStats.isWeapon)
+                GameManager.GLOBAL.player.ItemAnimation(itemStats);
+    }
+
     public override void Interact()
     {
         if (isInInventory)
@@ -34,9 +39,6 @@ public class Item : InteractableWithDialogue
         PickupItem();
     }
 
-    /*
-     * Don't trigger dialogue when using another item on this item
-     */
     public override void Use()
     {
         if (isInInventory)
@@ -64,6 +66,7 @@ public class Item : InteractableWithDialogue
 
         SetGlowColor(Color.clear, true);
 
+        GameManager.GLOBAL.player.PickupAndUseItemAnimation();
         GameManager.GLOBAL.inventory.ToggleInventory(true);
 
         TriggerDialogue();
@@ -75,6 +78,8 @@ public class Item : InteractableWithDialogue
     {
         GameManager.GLOBAL.inventory.Remove(gameObject, itemStats.ID);
         Debug.Log($"Using and removing {name}");
+
+        GameManager.GLOBAL.player.ItemAnimation(itemStats);
 
         if (setInactive)
             gameObject.SetActive(false);

@@ -9,6 +9,8 @@ public class Player : CharacterWithDialogue
     public Camera thirdPersonCamera;
     public TeleportPlayer teleportPlayer;
     PlayerMovement playerMovement;
+    Animator animator;
+    public ItemStats[] weapons;
 
     [HideInInspector]
     public bool hasLockedMovement { get; private set; } = false;
@@ -16,6 +18,7 @@ public class Player : CharacterWithDialogue
     protected override void GetAllComponents()
     {
         playerMovement = GetComponent<PlayerMovement>();
+        animator = GetComponentInChildren<Animator>();
         GetFlowchart();
     }
 
@@ -42,5 +45,23 @@ public class Player : CharacterWithDialogue
     {
         hasLockedMovement = false;
         CursorLock.SetCursorLock(true);
+    }
+
+    public void PickupAndUseItemAnimation() => animator.SetTrigger("UseItem");
+
+    public void ItemAnimation(ItemStats item)
+    {
+        if (!item.isWeapon)
+        {
+            PickupAndUseItemAnimation();
+            return;
+        }
+
+        if (weapons.Length == 0)
+            return;
+
+        foreach (ItemStats weapon in weapons)
+            if (weapon == item)
+                animator.SetTrigger(item.ID);
     }
 }

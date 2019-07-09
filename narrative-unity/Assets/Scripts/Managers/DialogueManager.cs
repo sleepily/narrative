@@ -155,5 +155,8 @@ public class DialogueManager : MonoBehaviour
 
         if (flowchart.gameObject.GetComponent<Cellphone>())
             GameManager.GLOBAL.player.SetMovementLock(false);
+
+        if (flowchart.gameObject.GetComponent<Item>())
+            GameManager.GLOBAL.inventory.ToggleInventory();
     }
 }

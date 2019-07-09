@@ -13,7 +13,7 @@ public class UI_CodeInput : MonoBehaviour
     public int inputLength = 4;
 
     [Tooltip("How long the code is shown after the input has been completed.")]
-    public float lastCharDelay = .4f;
+    float lastCharDelay = 0f;
 
     [Range(.01f, 1f)]
     public float popupLerpTime = .1f;

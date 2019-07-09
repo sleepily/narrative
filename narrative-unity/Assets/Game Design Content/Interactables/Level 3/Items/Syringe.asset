@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73ef49b875c7f5f438a18375c95578e8, type: 3}
-  m_Name: Baseball Bat
+  m_Name: Syringe
   m_EditorClassIdentifier: 
-  ID: BaseballBat
+  ID: Syringe
   canBePickedUp: 1
   isWeapon: 1
   inventoryInspectionScale: 1

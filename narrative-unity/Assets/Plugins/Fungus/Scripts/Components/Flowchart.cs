@@ -576,6 +576,8 @@ namespace Fungus
                 return false;
             }
 
+            Debug.Log($"Block {block.ItemId} {block.name} {block.BlockName}");
+
             if (((Block)block).gameObject != gameObject)
             {
                 Debug.LogError("Block must belong to the same gameobject as this Flowchart");

@@ -1403,6 +1403,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Characters
       objectReference: {fileID: 0}
+    - target: {fileID: 384464923644419347, guid: 57fecdd5d37889845a0e31925407fab3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 384464923644419348, guid: 57fecdd5d37889845a0e31925407fab3,
         type: 3}
       propertyPath: m_LocalPosition.x
