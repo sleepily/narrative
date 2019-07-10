@@ -12,7 +12,7 @@ public class Puzzle_Radio : Puzzle_CodeInput
 
     public bool CheckTime(string timeInput)
     {
-        Debug.Log("Checking for input " + timeInput);
+        // Debug.Log("Checking for input " + timeInput);
 
         string left = "";
         string right = "";

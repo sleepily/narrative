@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -145,10 +145,10 @@ MonoBehaviour:
     value: {x: 15.114391, y: 84.935}
   minLuminance:
     overrideState: 1
-    value: 0.48
+    value: -0.3
   maxLuminance:
     overrideState: 1
-    value: 1.7
+    value: 2.3
   keyValue:
     overrideState: 1
     value: 1
