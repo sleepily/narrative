@@ -7,6 +7,8 @@ public class CharacterWithDialogue : InteractableWithDialogue
 {
     Color characterGlowColorOverride = new Color(Color.yellow.r, Color.yellow.g, Color.yellow.b, .2f);
 
+    bool isDead = false;
+
     protected override void StartFunctions()
     {
         base.StartFunctions();
@@ -21,4 +23,22 @@ public class CharacterWithDialogue : InteractableWithDialogue
 
     public void SetMenuInProgress(bool inProgress) =>
         GameManager.GLOBAL.dialogue.SetMenuInProgress(inProgress);
+
+    public override void Interact()
+    {
+        if (isDead)
+            return;
+
+        base.Interact();
+    }
+
+    public override void Use()
+    {
+        if (isDead)
+            return;
+
+        base.Use();
+    }
+
+    public void Die() => isDead = true;
 }
