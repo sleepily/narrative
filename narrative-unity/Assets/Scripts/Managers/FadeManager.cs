@@ -5,7 +5,10 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class FadeManager : MonoBehaviour
 {
-    PostProcessVolume postProcessVolume;
+    public enum Exposures { Current, Black, Default, White }
+    float[] exposures = { -1f, 0f, 1f, 100f};
+
+    public PostProcessVolume postProcessVolume;
     AutoExposure autoExposure;
 
     public bool allowFadeOverride = true;
@@ -14,23 +17,45 @@ public class FadeManager : MonoBehaviour
 
     private void Start()
     {
-        GameManager.GLOBAL.postProcessVolume.profile.TryGetSettings(out autoExposure);
+        GetAllComponents();
 
         ResetFade();
     }
 
-    void ResetFade() => autoExposure.keyValue.value = 1f;
-
-    public void FadeBlack(bool toBlack)
+    void GetAllComponents()
     {
-        if (!allowFadeOverride)
-            if (fadeActive)
-                return;
+        if (!postProcessVolume)
+            postProcessVolume = GameManager.GLOBAL.postProcessVolume;
 
-        StartCoroutine(Coroutine_FadeToColor(toBlack));
+        if (!postProcessVolume.profile.TryGetSettings(out autoExposure))
+            Debug.Log($"Couldn't get AutoExposure from {postProcessVolume.profile.name}");
     }
 
-    IEnumerator Coroutine_FadeToColor(bool toBlack, float fadeTime = 1f)
+    void ResetFade() => autoExposure.keyValue.value = 1f;
+
+    public void Fade(Exposures from, Exposures to, float fadeTime = 1f) =>
+        Fade(exposures[(int)from], exposures[(int)to], fadeTime);
+
+    public void Fade(float fromExposure, float toExposure, float fadeTime = 1f)
+    {
+        if (fadeActive)
+        {
+            if (!allowFadeOverride)
+                return;
+            if (allowFadeOverride)
+                StopAllCoroutines();
+        }
+
+        fromExposure = (fromExposure < 0) ? autoExposure.keyValue.value : fromExposure;
+        toExposure = (toExposure < 0) ? autoExposure.keyValue.value : toExposure;
+
+        if (!autoExposure)
+            GetAllComponents();
+
+        StartCoroutine(Coroutine_Fade(fromExposure, toExposure, fadeTime));
+    }
+    
+    IEnumerator Coroutine_Fade(float fromExposure, float toExposure, float fadeTime = 1f)
     {
         fadeActive = true;
 
@@ -41,18 +66,32 @@ public class FadeManager : MonoBehaviour
 
         while (Time.time < endFade)
         {
-            float progress = Tools.ExtensionMethods.Map01(Time.time, startFade, endFade);
+            float newExposure = Tools.ExtensionMethods.Map(Time.time, startFade, endFade, fromExposure, toExposure);
+            float progress = Tools.ExtensionMethods.Map01(Time.time, startFade, endFade) * 100;
 
-            if (toBlack)
-                progress = 1 - progress;
-
-            autoExposure.keyValue.value = progress;
+            autoExposure.keyValue.value = newExposure;
+            // Debug.Log($"Fade: {progress}%");
 
             yield return null;
         }
 
-        autoExposure.keyValue.value = toBlack ? 0 : 1;
+        // Prevent rounding errors by overwriting after last iteration
+        autoExposure.keyValue.value = toExposure;
+
+        // Debug.Log($"Fade: 100%");
 
         fadeActive = false;
     }
+
+    public void FadeToBlack(float fadeTime = 1f) =>
+        Fade(Exposures.Current, Exposures.Black, fadeTime);
+
+    public void FadeFromBlack(float fadeTime = 1f) =>
+        Fade(Exposures.Black, Exposures.Default, fadeTime);
+
+    public void FadeToWhite(float fadeTime = 1f) =>
+        Fade(Exposures.Current, Exposures.White, fadeTime);
+
+    public void FadeFromWhite(float fadeTime = 1f) =>
+        Fade(Exposures.White, Exposures.Default, fadeTime);
 }
