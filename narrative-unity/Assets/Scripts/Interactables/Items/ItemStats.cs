@@ -13,4 +13,5 @@ public class ItemStats : ScriptableObject
 
     public float inventoryInspectionScale = 1f;
     public float handheldScale = 1f;
+    public Sprite sprite;
 }

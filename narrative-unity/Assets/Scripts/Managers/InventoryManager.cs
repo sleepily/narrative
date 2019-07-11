@@ -1,10 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
-using TMPro;
 using Fungus;
 using FMODUnity;
+using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -14,15 +13,18 @@ public class InventoryManager : MonoBehaviour
 
     Item currentItem;
 
-    [Header("References")]
+    [Header("3D References")]
     [Tooltip("Where the current Item is moved for inspection.")]
     public Transform itemInspectionParent;
+
     [Tooltip("Where the current Item is moved while the Inventory is closed.")]
     public Transform itemHotCornerParent;
+
     Transform currentItemParent;
 
-    [Tooltip("The SayDialog where Item text is displayed.")]
-    public SayDialog itemSayDialog;
+    [Header("UI References")]
+    public Image hudItemImage;
+    public Sprite missingItem;
 
     [Space]
 
@@ -35,7 +37,9 @@ public class InventoryManager : MonoBehaviour
     [HideInInspector]
     public List<Item> items;
 
-    public StudioEventEmitter openInventory, closeInventory;
+    [Header("Sound References")]
+    public StudioEventEmitter openInventory;
+    public StudioEventEmitter closeInventory;
 
     bool logVerbose = false;
 
@@ -261,6 +265,8 @@ public class InventoryManager : MonoBehaviour
         currentItem.transform.parent = currentItemParent;
         currentItem.transform.localPosition = Vector3.zero;
         currentItem.gameObject.SetActive(true);
+
+        hudItemImage.sprite = currentItem.itemStats.sprite ?? missingItem;
     }
 
     public Item GetCurrentItem() => currentItem;

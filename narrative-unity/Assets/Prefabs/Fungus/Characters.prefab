@@ -2592,6 +2592,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7478974499294136332, guid: dc558dc91a80e6d4794c8a9bd41e4757,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3806408296320375636, guid: dc558dc91a80e6d4794c8a9bd41e4757,
         type: 3}
       propertyPath: m_Color.r

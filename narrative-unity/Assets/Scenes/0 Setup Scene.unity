@@ -229,7 +229,8 @@ MonoBehaviour:
   isOpen: 0
   itemInspectionParent: {fileID: 4534179366980610807}
   itemHotCornerParent: {fileID: 1086388324447981038}
-  itemSayDialog: {fileID: 0}
+  hudItemImage: {fileID: 1030335681}
+  missingItem: {fileID: 21300000, guid: 7ac96be3a45eb4941b7f378a62dbfdaa, type: 3}
   objectsToHide:
   - {fileID: 8163109733439147199}
   items: []
@@ -649,46 +650,25 @@ Transform:
   m_Father: {fileID: 661370626}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1218550016 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8163109733526020030, guid: 910f5d7b3bc44e5449b40034316d338f,
+--- !u!114 &1030335681 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2922679235024501041, guid: 910f5d7b3bc44e5449b40034316d338f,
     type: 3}
   m_PrefabInstance: {fileID: 5248654216896492709}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1218550017
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1218550016}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 21
-  indentLevel: 0
-  storyText: I don't think that works...
-  description: 
-  character: {fileID: 384464923679477551}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!114 &1218550019 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1777237338, guid: 910f5d7b3bc44e5449b40034316d338f,
     type: 3}
   m_PrefabInstance: {fileID: 5248654216896492709}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1218550016}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
@@ -1107,9 +1087,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Act I
-
-    Memory'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8e1e76d0705777d49b4992352843b7e8, type: 2}
   m_sharedMaterial: {fileID: -5676010792028953565, guid: 8e1e76d0705777d49b4992352843b7e8,
@@ -1138,7 +1116,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 64.65
+  m_fontSize: 52.24
   m_fontSizeBase: 52.24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1179,13 +1157,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1848710911}
-    characterCount: 12
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 2
-    wordCount: 3
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 2
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -1345,18 +1323,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1777237338, guid: 910f5d7b3bc44e5449b40034316d338f, type: 3}
-      propertyPath: selectedBlocks.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777237339, guid: 910f5d7b3bc44e5449b40034316d338f, type: 3}
-      propertyPath: commandList.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777237339, guid: 910f5d7b3bc44e5449b40034316d338f, type: 3}
-      propertyPath: commandList.Array.data[0]
+    - target: {fileID: 1218550017, guid: 910f5d7b3bc44e5449b40034316d338f, type: 3}
+      propertyPath: character
       value: 
-      objectReference: {fileID: 1218550017}
+      objectReference: {fileID: 384464923679477551}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 910f5d7b3bc44e5449b40034316d338f, type: 3}
 --- !u!1 &8163109733439147199 stripped
