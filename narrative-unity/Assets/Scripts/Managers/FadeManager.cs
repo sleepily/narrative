@@ -8,6 +8,7 @@ public class FadeManager : MonoBehaviour
     public enum Exposures { Current, Black, Default, White }
     float[] exposures = { -1f, 0f, 1f, 100f};
 
+    [Tooltip("Will use Global PPV if null.")]
     public PostProcessVolume postProcessVolume;
     AutoExposure autoExposure;
 

@@ -10215,7 +10215,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1407375668}
   selectedCommands:
-  - {fileID: 1407375669}
+  - {fileID: 8296172667921126768}
   variables:
   - {fileID: 1407375660}
   description: 
@@ -10424,6 +10424,7 @@ MonoBehaviour:
   - {fileID: 1407375670}
   - {fileID: 1407375669}
   - {fileID: 1407375677}
+  - {fileID: 8296172667921126768}
 --- !u!114 &1407375669
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -10439,7 +10440,7 @@ MonoBehaviour:
   itemId: 3
   indentLevel: 0
   storyText: I remember he used to love baseball, he had been playing since he was
-    a llittle boy...
+    a little boy...
   description: 
   character: {fileID: 792129613}
   portrait: {fileID: 0}
@@ -10466,7 +10467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  storyText: It's Diego's baseball bat
+  storyText: It's Diego's baseball bat.
   description: 
   character: {fileID: 792129613}
   portrait: {fileID: 0}
@@ -23980,6 +23981,7 @@ GameObject:
   - component: {fileID: 1407375677}
   - component: {fileID: 8296172667921126766}
   - component: {fileID: 8296172667921126767}
+  - component: {fileID: 8296172667921126768}
   m_Layer: 0
   m_Name: Baseball Bat
   m_TagString: Untagged
@@ -24017,6 +24019,27 @@ MonoBehaviour:
   focusWhenPlayerIsNear: 0
   itemStats: {fileID: 11400000, guid: 1daaca8efa4b71743a10b2bb8b9a9eef, type: 2}
   isCurrentItem: 0
+--- !u!114 &8296172667921126768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172667921126765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 12
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 1407375664}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
 --- !u!1 &8296172668121832598
 GameObject:
   m_ObjectHideFlags: 0
