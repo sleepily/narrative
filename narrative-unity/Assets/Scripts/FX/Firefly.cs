@@ -16,7 +16,7 @@ public class Firefly : MonoBehaviour
     private void Awake()
     {
         material = GetComponent<MeshRenderer>().material;
-        StopMoving();
+        Hide();
     }
 
     public Firefly SetFireflies(Fireflies fireflies)
@@ -27,7 +27,7 @@ public class Firefly : MonoBehaviour
         return this;
     }
 
-    public void StartMoving()
+    public void Glow()
     {
         transform.localScale = Vector3.one * size;
 
@@ -38,7 +38,12 @@ public class Firefly : MonoBehaviour
         canMove = true;
     }
 
-    public void StopMoving()
+    void Hide()
+    {
+        transform.localScale = Vector3.zero;
+    }
+
+    public void Pause()
     {
         canMove = false;
 

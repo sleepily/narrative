@@ -42,13 +42,6 @@ public class FadeManager : MonoBehaviour
             Debug.Log($"Couldn't get AutoExposure from {postProcessVolume.profile.name}");
     }
 
-    private void Update()
-    {
-        // debug
-        if (Input.GetKeyDown(KeyCode.R))
-            FadeToTitle("Act I\nMemory");
-    }
-
     void ResetFade() => autoExposure.keyValue.value = 1f;
 
     public void Fade(Exposures from, Exposures to, float fadeTime = 1f) =>
@@ -122,7 +115,7 @@ public class FadeManager : MonoBehaviour
         yield return new WaitForSeconds(fadeTime);
 
         string formattedTitle = title.Replace('|', '\n');
-        titleText.SetText(formattedTitle);
+        titleText.text = formattedTitle;
 
         StartCoroutine(Coroutine_FadeCanvasGroup(0f, 1f, fadeTime));
         yield return new WaitForSeconds(fadeTime);

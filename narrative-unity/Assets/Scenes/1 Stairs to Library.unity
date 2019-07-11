@@ -803,7 +803,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 35
+  itemId: 61
   blockName: Fade From Black
   description: 
   eventHandler: {fileID: 0}

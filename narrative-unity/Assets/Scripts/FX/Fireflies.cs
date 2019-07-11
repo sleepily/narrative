@@ -7,6 +7,8 @@ public class Fireflies : MonoBehaviour
 {
     public Firefly firefly;
 
+    public bool glowFromStart = false;
+
     [Header("Spawn and Movement")]
     [Range(1, 50)]
     public int amount = 30;
@@ -40,7 +42,9 @@ public class Fireflies : MonoBehaviour
     private void Start()
     {
         SetupFireflies();
-        StartGlowing();
+
+        if (glowFromStart)
+            StartGlowing();
     }
 
     void SetupFireflies()
@@ -56,9 +60,11 @@ public class Fireflies : MonoBehaviour
             fireflies[i].transform.localPosition += Random.insideUnitSphere * spawnRadius;
 
             fireflies[i].size = Random.Range(size.x, size.y);
+
             fireflies[i].speed = speedRelativeToSize
                 ? Ex.Map(fireflies[i].size, size.x, size.y, speed.y, speed.x)
                 : Random.Range(speed.x, speed.y);
+
             fireflies[i].intensity = intensityRelativeToSpeed
                 ? Ex.Map(fireflies[i].speed, speed.x, speed.y, intensity.x, intensity.y)
                 : Random.Range(intensity.x, intensity.y);
@@ -71,7 +77,7 @@ public class Fireflies : MonoBehaviour
             SetupFireflies();
 
         for (int i = 0; i < fireflies.Length; i++)
-            fireflies[i].StartMoving();
+            fireflies[i].Glow();
     }
 
     public void StopGlowing()
@@ -80,6 +86,6 @@ public class Fireflies : MonoBehaviour
             SetupFireflies();
 
         for (int i = 0; i < fireflies.Length; i++)
-            fireflies[i].StopMoving();
+            fireflies[i].Pause();
     }
 }

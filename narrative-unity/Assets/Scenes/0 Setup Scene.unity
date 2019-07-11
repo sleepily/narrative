@@ -662,18 +662,6 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1218550019 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1777237338, guid: 910f5d7b3bc44e5449b40034316d338f,
-    type: 3}
-  m_PrefabInstance: {fileID: 5248654216896492709}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1329539784
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,6 +673,7 @@ GameObject:
   - component: {fileID: 1329539787}
   - component: {fileID: 1329539786}
   - component: {fileID: 1329539785}
+  - component: {fileID: 1329539788}
   m_Layer: 0
   m_Name: Rim Light
   m_TagString: Untagged
@@ -721,12 +710,12 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 0.87
-    m_Bias: 0.05
-    m_NormalBias: 0.4
+    m_Strength: 0
+    m_Bias: 1
+    m_NormalBias: 1
     m_NearPlane: 0.38
     m_CullingMatrixOverride:
       e00: 1
@@ -778,6 +767,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 146.595, y: 30, z: -0.000015258789}
+--- !u!114 &1329539788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329539784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UsePipelineSettings: 1
 --- !u!89 &1438793063
 Cubemap:
   m_ObjectHideFlags: 0
@@ -932,7 +934,7 @@ GameObject:
   - component: {fileID: 1697637682}
   - component: {fileID: 1697637684}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1217,7 +1219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1218550019}
+  selectedFlowchart: {fileID: 0}
 --- !u!4 &1923009414
 Transform:
   m_ObjectHideFlags: 1
@@ -1323,6 +1325,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 839896374844085727, guid: 910f5d7b3bc44e5449b40034316d338f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b6ce481000393944996c272249d9b0b2, type: 2}
     - target: {fileID: 1218550017, guid: 910f5d7b3bc44e5449b40034316d338f, type: 3}
       propertyPath: character
       value: 
