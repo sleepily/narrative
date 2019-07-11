@@ -34,8 +34,15 @@ public class TeleportPlayer : MonoBehaviour
         this.transform.position = destination.location;
     }
 
-    public void TeleportIntoLevel(TeleportLocation destination, bool loseItems = true)
+    public void TeleportIntoLevel(TeleportLocation destination, bool loseItems = true) =>
+        StartCoroutine(Coroutine_TeleportIntoLevel(destination, loseItems));
+
+    IEnumerator Coroutine_TeleportIntoLevel(TeleportLocation destination, bool loseItems)
     {
+        GameManager.GLOBAL.fade.FadeToTitle(destination.title, 1f);
+
+        yield return new WaitForSeconds(2f);
+
         if (loseItems)
             GameManager.GLOBAL.inventory.ClearInventory();
 
