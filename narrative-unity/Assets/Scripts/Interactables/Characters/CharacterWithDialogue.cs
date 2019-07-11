@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
 
+[RequireComponent(typeof(Attackable))]
 public class CharacterWithDialogue : InteractableWithDialogue
 {
     Color characterGlowColorOverride = new Color(Color.yellow.r, Color.yellow.g, Color.yellow.b, .2f);
@@ -38,6 +39,14 @@ public class CharacterWithDialogue : InteractableWithDialogue
             return;
 
         base.Use();
+    }
+
+    public void Attack()
+    {
+        if (isDead)
+            return;
+
+        TriggerDialogue("Attack");
     }
 
     public void Die() => isDead = true;

@@ -23,13 +23,6 @@ public class Item : InteractableWithDialogue
         canBePickedUp = itemStats.canBePickedUp;
     }
 
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(1))
-            if (isCurrentItem && itemStats.isWeapon)
-                GameManager.GLOBAL.player.ItemAnimation(itemStats);
-    }
-
     public override void Interact()
     {
         if (isInInventory)
@@ -105,6 +98,7 @@ public class Item : InteractableWithDialogue
         localRotation.eulerAngles = new Vector3(.2f, .3f, 0f);
         transform.localRotation = localRotation;
 
+        // TODO: implement this
         float itemScale = 1f;
 
         if (GameManager.GLOBAL.inventory.isOpen)
@@ -138,7 +132,7 @@ public class Item : InteractableWithDialogue
             return;
 
         // Prevent mouse interaction advancing dialogue
-        if (IsInDialogueCheck())
+        if (GameManager.GLOBAL.dialogue.dialogueInProgress)
             return;
 
         // Get mouse input

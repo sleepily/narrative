@@ -40,4 +40,4 @@ Material:
     - Color_51B51BFA: {r: 27.53272, g: 21.67823, b: 0, a: 1}
     - Color_9D90B658: {r: 1, g: 1, b: 1, a: 0}
     - _Albedo: {r: 1, g: 1, b: 1, a: 0}
-    - _GlowColor: {r: 41.73181, g: 38.017464, b: 0, a: 1}
+    - _GlowColor: {r: 0.7490196, g: 0.6862745, b: 0, a: 1}

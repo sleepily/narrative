@@ -34,7 +34,7 @@ public class Interactable : MonoBehaviour
      * Manual mouse button check, since the collider's OnMouse() function
      * only takes primary mouse button clicks into account
      */
-    void MouseButtonCheck()
+    public virtual void MouseButtonCheck()
     {
         if (!isFocusable)
             return;

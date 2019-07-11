@@ -4,7 +4,7 @@ using UnityEngine;
 using Fungus;
 
 [RequireComponent(typeof(CharacterController))]
-public class Player : CharacterWithDialogue
+public class Player : InteractableWithDialogue
 {
     public Camera thirdPersonCamera;
     public TeleportPlayer teleportPlayer;
