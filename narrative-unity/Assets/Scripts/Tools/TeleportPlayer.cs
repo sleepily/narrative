@@ -47,6 +47,6 @@ public class TeleportPlayer : MonoBehaviour
             GameManager.GLOBAL.inventory.ClearInventory();
 
         Teleport(destination);
-        GameManager.GLOBAL.sceneLoader.LoadScene((int)destination.levelIndex);
+        GameManager.GLOBAL.sceneLoader.LoadLevel((int)destination.levelIndex);
     }
 }

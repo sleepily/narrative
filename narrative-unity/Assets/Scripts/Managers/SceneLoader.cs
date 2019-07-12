@@ -25,6 +25,8 @@ public class SceneLoader : MonoBehaviour
 
     public bool hasFinishedLoading { get; private set; }
 
+    public bool hasFinishedUnloading { get; private set; }
+
     private void Start() => ReloadScene();
 
     int SetCurrentLevel(int index = 1)
@@ -43,6 +45,18 @@ public class SceneLoader : MonoBehaviour
         StartCoroutine(Coroutine_LoadScene(sceneBuildIndex, loadSceneMode, teleportPlayer));
 
         SetCurrentLevel(sceneBuildIndex);
+
+        return true;
+    }
+
+    public bool LoadLevel(int sceneBuildIndex = 0, bool teleportPlayer = true)
+    {
+        int sceneToUnload = SceneManager.GetActiveScene().buildIndex;
+
+        if (sceneBuildIndex <= 0)
+            sceneBuildIndex = SetCurrentLevel();
+
+        StartCoroutine(Coroutine_LoadUnloadScenes(sceneToUnload, sceneBuildIndex));
 
         return true;
     }
@@ -74,15 +88,27 @@ public class SceneLoader : MonoBehaviour
 
     IEnumerator Coroutine_UnloadScene(int sceneBuildIndex)
     {
-        if (!hasFinishedLoading)
+        if (!hasFinishedUnloading)
             yield return null;
 
-        hasFinishedLoading = false;
+        hasFinishedUnloading = false;
         GameManager.GLOBAL.player.LockMovement();
 
         yield return SceneManager.UnloadSceneAsync(sceneBuildIndex);
 
         hasFinishedLoading = true;
         GameManager.GLOBAL.player.UnlockMovement();
+    }
+
+    IEnumerator Coroutine_LoadUnloadScenes(int sceneToUnload, int newSceneIndex)
+    {
+        StartCoroutine(Coroutine_LoadScene(newSceneIndex, LoadSceneMode.Additive, teleportPlayer: true));
+
+        while (!hasFinishedLoading)
+            yield return null;
+
+        SetCurrentLevel(newSceneIndex);
+
+        StartCoroutine(Coroutine_UnloadScene(sceneToUnload));
     }
 }
