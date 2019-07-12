@@ -86,5 +86,5 @@ Material:
     m_Colors:
     - _BaseColor: {r: 0.65882355, g: 0.6431373, b: 0, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _EmissionColor: {r: 2.5559142, g: 1.4978846, b: 0, a: 1}
+    - _EmissionColor: {r: 2.270603, g: 1.331453, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}

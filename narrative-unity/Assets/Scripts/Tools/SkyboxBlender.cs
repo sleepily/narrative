@@ -9,6 +9,8 @@ public class SkyboxBlender : MonoBehaviour {
     [SerializeField] public enum BlendMode { Linear, Smoothstep, Maximum, Add, Substract, Multiply }
     [SerializeField] public enum ProbeResolution { _16, _32, _64, _128, _256, _512, _1024, _2048 }
 
+    [SerializeField] public Sun sun;
+
     //[Header("Input Skyboxes")]
     [SerializeField] public Material skyBox1;
     [SerializeField] public Material skyBox2;
@@ -89,6 +91,9 @@ public class SkyboxBlender : MonoBehaviour {
         // Rebing textures if this blend just got enabled
         if (enableBlend)
             BindTextures();
+
+        if (sun)
+            sun.AllowBlend(allowBlend);
     }
 
     public void IncreaseBlendStep()
@@ -99,10 +104,18 @@ public class SkyboxBlender : MonoBehaviour {
         float newTargetBlend = Tools.ExtensionMethods.Map01(currentBlendStep, 0, blendSteps);
 
         SetTargetBlend(newTargetBlend);
+
+        if (sun)
+            sun.currentBlendStep = currentBlendStep;
     }
 
-    public void SetTargetBlend(float targetBlend) =>
+    public void SetTargetBlend(float targetBlend)
+    {
         this.targetBlend = Mathf.Clamp01(targetBlend);
+
+        if (sun)
+            sun.SetTargetBlend(targetBlend);
+    }
 
     void LerpToBlend()
     {
