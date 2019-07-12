@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{cacb6684-23a7-4557-a8a3-362ae6adfa97}">
+		<property name="name">
+			<value>childhood - violin</value>
+		</property>
+		<relationship name="folder">
+			<destination>{4c634eae-8d1b-41d9-a123-31de1bdae35b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{265a3416-4ef7-4e92-b8ea-efeeecc6ec7b}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{265a3416-4ef7-4e92-b8ea-efeeecc6ec7b}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

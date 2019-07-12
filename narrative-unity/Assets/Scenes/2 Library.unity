@@ -443,8 +443,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065b6b871ec1a8647b3693c8cf485b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enableBlend: 0
   blend: 1
   lerpFactor: 3
+  blendSteps: 5
+  currentBlendStep: 0
 --- !u!108 &158494136
 Light:
   m_ObjectHideFlags: 0
@@ -2960,11 +2963,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 1320.0521, y: 480.6364}
+  scrollPos: {x: 1394.4254, y: 564.0248}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 419
-  zoom: 0.67000026
+  zoom: 1
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -2972,9 +2975,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 436314801}
+  - {fileID: 436314759}
   selectedCommands:
-  - {fileID: 8296172669349751988}
+  - {fileID: 8296172669349751996}
   variables:
   - {fileID: 8296172669349751951}
   - {fileID: 8296172669349751953}
@@ -3020,7 +3023,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1197.63
     y: -256.56354
-    width: 147.0149
+    width: 154
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3054,7 +3057,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1171.4285
     y: -188.1595
-    width: 120
+    width: 125
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3097,6 +3100,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 8296172669349751996}
   - {fileID: 436314808}
   - {fileID: 8296172669349751950}
   - {fileID: 8296172669349751977}
@@ -3508,7 +3512,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1000.7696
     y: -323.47446
-    width: 151.4925
+    width: 164
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7261,7 +7265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -186.65417, y: -4.0181284}
+  scrollPos: {x: -154.69536, y: 92.889084}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -7273,8 +7277,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 1046477881}
-  selectedCommands: []
+  - {fileID: 1046477871}
+  selectedCommands:
+  - {fileID: 1046477879}
   variables:
   - {fileID: 1046477872}
   - {fileID: 1046477868}
@@ -7737,7 +7742,9 @@ MonoBehaviour:
   CollisionTag: 
   Emitters:
   - Target: {fileID: 8296172669166054927}
-    Params: []
+    Params:
+    - Name: childhood - glockenspiel
+      Value: 1
   TriggerEvent: 0
 --- !u!64 &1077230343
 MeshCollider:
@@ -10459,7 +10466,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1407375668}
   selectedCommands:
-  - {fileID: 8296172667921126768}
+  - {fileID: 8296172667921126770}
   variables:
   - {fileID: 1407375660}
   description: 
@@ -10666,6 +10673,7 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1407375670}
+  - {fileID: 8296172667921126770}
   - {fileID: 1407375669}
   - {fileID: 1407375677}
   - {fileID: 8296172667921126768}
@@ -15528,6 +15536,7 @@ GameObject:
   - component: {fileID: 1170377103835624701}
   - component: {fileID: 1170377103835624700}
   - component: {fileID: 1170377103835624704}
+  - component: {fileID: 1170377103835624705}
   m_Layer: 0
   m_Name: book
   m_TagString: Untagged
@@ -15609,7 +15618,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1170377103835624697}
   selectedCommands:
-  - {fileID: 1170377103835624695}
+  - {fileID: 1170377103835624698}
   variables:
   - {fileID: 1170377103835624699}
   description: 
@@ -15731,6 +15740,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4749387626527434007}
         m_MethodName: PickupItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1170377103835624705}
+        m_MethodName: TriggerParameters
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15973,6 +15993,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 8
   indentLevel: 0
+--- !u!114 &1170377103835624705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170377103835624690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters:
+  - Target: {fileID: 8296172669166054927}
+    Params:
+    - Name: childhood - piccolo
+      Value: 1
+  TriggerEvent: 0
 --- !u!1 &1170377104056170205
 GameObject:
   m_ObjectHideFlags: 0
@@ -16008,6 +16047,7 @@ GameObject:
   - component: {fileID: 1170377104056170225}
   - component: {fileID: 1170377104056170215}
   - component: {fileID: 1170377104056170213}
+  - component: {fileID: 1170377104056170227}
   m_Layer: 0
   m_Name: key lock
   m_TagString: Untagged
@@ -16044,11 +16084,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -198.98386, y: -58.02856}
+  scrollPos: {x: 12.80568, y: 199.0768}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 291
-  zoom: 0.7600002
+  zoom: 1
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -16058,7 +16098,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1170377104056170218}
   selectedCommands:
-  - {fileID: 1170377104056170213}
+  - {fileID: 1170377104056170230}
   variables:
   - {fileID: 1170377104056170220}
   - {fileID: 1170377104056170229}
@@ -16582,7 +16622,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 448.0457
     y: 70.545425
-    width: 121.05261
+    width: 128
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -16606,6 +16646,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 19
   indentLevel: 0
+--- !u!114 &1170377104056170227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170377104056170205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters:
+  - Target: {fileID: 8296172669166054927}
+    Params:
+    - Name: childhood - violin
+      Value: 1
+  TriggerEvent: 0
 --- !u!114 &1170377104056170228
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -16736,6 +16795,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: isSolved
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1170377104056170227}
+        m_MethodName: TriggerParameters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -24561,6 +24631,8 @@ GameObject:
   - component: {fileID: 8296172667921126766}
   - component: {fileID: 8296172667921126767}
   - component: {fileID: 8296172667921126768}
+  - component: {fileID: 8296172667921126769}
+  - component: {fileID: 8296172667921126770}
   m_Layer: 0
   m_Name: Baseball Bat
   m_TagString: Untagged
@@ -24600,7 +24672,7 @@ MonoBehaviour:
   isCurrentItem: 0
 --- !u!114 &8296172667921126768
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -24619,6 +24691,90 @@ MonoBehaviour:
     stringVal: 
   startIndex: 0
   callMode: 0
+--- !u!114 &8296172667921126769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172667921126765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters:
+  - Target: {fileID: 8296172669166054927}
+    Params:
+    - Name: childhood - cello
+      Value: 1
+  TriggerEvent: 0
+--- !u!114 &8296172667921126770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172667921126765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 13
+  indentLevel: 0
+  description: 
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8296172667921126769}
+        m_MethodName: TriggerParameters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+BooleanEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+IntegerEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+FloatEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+StringEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &8296172668121832598
 GameObject:
   m_ObjectHideFlags: 0
@@ -25222,9 +25378,11 @@ MonoBehaviour:
   StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
-  Preload: 0
+  Preload: 1
   Params:
   - Name: letter - music box
+    Value: 1
+  - Name: childhood - piano
     Value: 1
   OverrideAttenuation: 0
   OverrideMinDistance: 0
@@ -31258,6 +31416,8 @@ GameObject:
   - component: {fileID: 8296172669349751990}
   - component: {fileID: 8296172669349751989}
   - component: {fileID: 8296172669349751988}
+  - component: {fileID: 8296172669349751997}
+  - component: {fileID: 8296172669349751996}
   m_Layer: 0
   m_Name: Baby Bottle
   m_TagString: Untagged
@@ -31684,7 +31844,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -931.72504
     y: -428.231
-    width: 152.98505
+    width: 163
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -31762,7 +31922,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -751.6092
     y: -386.06448
-    width: 158.95518
+    width: 172
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -32791,6 +32951,90 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &8296172669349751996
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669349751948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 105
+  indentLevel: 0
+  description: 
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8296172669349751997}
+        m_MethodName: TriggerParameters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+BooleanEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+IntegerEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+FloatEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+StringEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &8296172669349751997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669349751948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters:
+  - Target: {fileID: 8296172669166054927}
+    Params:
+    - Name: childhood - oboe
+      Value: 1
+  TriggerEvent: 0
 --- !u!1 &8296172669388293499
 GameObject:
   m_ObjectHideFlags: 0
@@ -33012,7 +33256,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947277581365467385}
-  m_Mesh: {fileID: 2089102381474410138, guid: d16cd79d451d43546a9d8b0adf5ed509, type: 3}
+  m_Mesh: {fileID: -9008780754836509112, guid: d16cd79d451d43546a9d8b0adf5ed509, type: 3}
 --- !u!1 &8729316370830734108
 GameObject:
   m_ObjectHideFlags: 0

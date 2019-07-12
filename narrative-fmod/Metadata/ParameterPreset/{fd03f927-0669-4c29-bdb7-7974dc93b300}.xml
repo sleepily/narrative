@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{fd03f927-0669-4c29-bdb7-7974dc93b300}">
+		<property name="name">
+			<value>childhood end</value>
+		</property>
+		<relationship name="folder">
+			<destination>{4c634eae-8d1b-41d9-a123-31de1bdae35b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{a6c24acb-6fb7-4f98-b6b5-4d4dabd049d6}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{a6c24acb-6fb7-4f98-b6b5-4d4dabd049d6}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
