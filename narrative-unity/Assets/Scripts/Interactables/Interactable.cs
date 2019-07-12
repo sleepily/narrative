@@ -10,6 +10,7 @@ public class Interactable : MonoBehaviour
 
     [Header("Color Glow Components")]
     protected MeshRenderer meshRenderer;
+    protected Material[] materials;
     protected Color currentGlowColor, desiredGlowColor;
 
     [Header("Color Glow Properties")]
@@ -75,6 +76,7 @@ public class Interactable : MonoBehaviour
     {
         // Get components needed for color glow on hover
         meshRenderer = GetComponent<MeshRenderer>();
+        materials = meshRenderer.materials;
         glowColor = meshRenderer.material.GetColor("_GlowColor");
     }
 
@@ -120,7 +122,8 @@ public class Interactable : MonoBehaviour
             Time.deltaTime / colorLerpFactor
         );
 
-        meshRenderer.material.SetColor("_GlowColor", currentGlowColor);
+        foreach (Material material in materials)
+            material.SetColor("_GlowColor", currentGlowColor);
 
         if (currentGlowColor.Equals(desiredGlowColor))
             lerpIsFinished = true;
@@ -136,8 +139,8 @@ public class Interactable : MonoBehaviour
 
         currentGlowColor = desiredGlowColor;
 
-        if (meshRenderer)
-            meshRenderer.material.SetColor("_GlowColor", desiredGlowColor);
+        foreach (Material material in materials)
+                material.SetColor("_GlowColor", desiredGlowColor);
     }
 
     /*

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Item_RedKey
+  m_Name: Interactable_HeartLock
   m_Shader: {fileID: -6465566751694194690, guid: 7d249fc12aa62ca4fa906df9ab6afa3b,
     type: 3}
   m_ShaderKeywords: 
@@ -39,5 +39,5 @@ Material:
     m_Colors:
     - Color_51B51BFA: {r: 27.53272, g: 21.67823, b: 0, a: 1}
     - Color_9D90B658: {r: 1, g: 1, b: 1, a: 0}
-    - _Albedo: {r: 0.8490566, g: 0.28217468, b: 0.1481844, a: 0}
-    - _GlowColor: {r: 27.53272, g: 25.082165, b: 0, a: 1}
+    - _Albedo: {r: 0.8207547, g: 0.15873085, b: 0.15873085, a: 0}
+    - _GlowColor: {r: 31.626795, g: 28.811846, b: 0, a: 1}
