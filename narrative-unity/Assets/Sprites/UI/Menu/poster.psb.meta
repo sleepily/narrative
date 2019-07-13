@@ -656,7 +656,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 58
     mosaicPosition: {x: 0, y: 0}
   - name: controls
@@ -677,7 +677,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 60
     mosaicPosition: {x: 0, y: 0}
   - name: window_music
@@ -698,7 +698,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 62
     mosaicPosition: {x: 0, y: 0}
   - name: window_team
@@ -719,7 +719,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 64
     mosaicPosition: {x: 0, y: 0}
   - name: window_options
@@ -740,7 +740,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 68
     mosaicPosition: {x: 0, y: 0}
   - name: lvl3
@@ -761,7 +761,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 70
     mosaicPosition: {x: 0, y: 0}
   - name: lvl2
