@@ -9,14 +9,18 @@ public class FadeManager : MonoBehaviour
     public enum Exposures { Current, Black, Default, White }
     float[] exposures = { -1f, 0f, 1f, 600f};
 
+    [Header("Scene")]
     [Tooltip("Will use Global PPV if null.")]
     public PostProcessVolume postProcessVolume;
     AutoExposure autoExposure;
 
+    [Space]
+    [Tooltip("Allow the interruption of one fade by another.")]
     public bool allowFadeOverride = true;
 
-    CanvasGroup canvasGroup;
+    [Header("Level")]
     public TextMeshProUGUI titleText;
+    CanvasGroup canvasGroup;
 
     bool fadeActive = false;
 

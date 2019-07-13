@@ -1,59 +1,85 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Fungus;
 using UnityEngine.SceneManagement;
 
-public class SaveManager : MonoBehaviour
+public class SaveManager
 {
-    bool isGlobal = false;
-
-    [SerializeField] List<Flowchart> flowcharts = new List<Flowchart>();
-
-    private void Awake()
+    /*
+     * Singleton instance to allow global use
+     */
+    private static SaveManager global;
+    public static SaveManager Global
     {
-        isGlobal = GetComponentInParent<GameManager>() ?? false;
+        get
+        {
+            if (global == null)
+                global = new SaveManager();
+
+            return global;
+        }
     }
 
-    private void Update()
+    int encryptionKey = 8573276;
+
+    public int sceneIndex = -1;
+    public int[] karma = { 0, 0, 0 };
+
+    public struct SavePoint
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-            CreateSavePoint();
+        public Vector3 position;
+        public int sceneIndex;
+        public int[] karma;
+
+        public SavePoint(Vector3 position, int sceneIndex, int[] karma)
+        {
+            this.position = position;
+            this.sceneIndex = sceneIndex;
+            this.karma = karma;
+        }
     }
 
     public void CreateSavePoint()
     {
-        string[] savePoint = new string[flowcharts.Count + 1];
+        Debug.Log($"Starting save...");
 
-        string playerSave = "";
-        playerSave += $"{GameManager.GLOBAL.player.transform.position}\n";
-        playerSave += $"{SceneManager.GetActiveScene().buildIndex}\n";
+        SavePoint save = new SavePoint(GameManager.GLOBAL.player.transform.position, sceneIndex, karma);
 
-        savePoint[0] = playerSave;
-        Debug.Log(savePoint[0]);
+        string decrypted = JsonUtility.ToJson(save);
+        string encrypted = EncryptDecrypt(decrypted, encryptionKey);
 
-        for (int i = 1; i < savePoint.Length; i++)
-        {
-            savePoint[i] = JsonUtility.ToJson(flowcharts[i - 1].Variables);
+        PlayerPrefs.SetString("save", encrypted);
+        PlayerPrefs.Save();
 
-            Debug.Log(savePoint[i]);
-        }
+        Debug.Log($"Saved.");
     }
 
     public void LoadSavePoint()
     {
+        string encrypted = PlayerPrefs.GetString("save");
+        string decrypted = EncryptDecrypt(encrypted, encryptionKey);
+        SavePoint loaded = JsonUtility.FromJson<SavePoint>(decrypted);
 
+        LoadSavePoint(loaded);
     }
 
-    // Receive Save Data from other SaveManagers
-    public void ReceiveSaveData()
+    public void LoadSavePoint(SavePoint savePoint)
     {
-
+        GameManager.GLOBAL.player.transform.position = savePoint.position;
+        sceneIndex = savePoint.sceneIndex;
+        karma = savePoint.karma;
     }
 
-    // Send Save Data to other SaveManagers after loading the correct scene
-    public void SendSaveData()
+    public string EncryptDecrypt(string input, int key)
     {
+        string output = "";
 
+        foreach (char letter in input.ToCharArray())
+        {
+            char coded = (char)(letter ^ key);
+            output += coded;
+        }
+
+        return output;
     }
 }

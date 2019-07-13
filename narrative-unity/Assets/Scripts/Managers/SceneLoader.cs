@@ -7,6 +7,7 @@ public class SceneLoader : MonoBehaviour
 {
     public enum SceneIndices
     {
+        Menu,
         Setup,
         Stairs1,
         Library,
@@ -32,6 +33,7 @@ public class SceneLoader : MonoBehaviour
     int SetCurrentLevel(int index = 1)
     {
         currentLevelIndex = (SceneIndices)index;
+        SaveManager.Global.sceneIndex = index;
         return index;
     }
 
