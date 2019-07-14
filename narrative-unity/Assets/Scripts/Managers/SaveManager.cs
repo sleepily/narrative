@@ -22,6 +22,7 @@ public class SaveManager
 
     int encryptionKey = 8573276;
 
+    public Vector3 position;
     public int sceneIndex = -1;
     public int[] karma = { 0, 0, 0 };
 
@@ -36,6 +37,16 @@ public class SaveManager
             this.position = position;
             this.sceneIndex = sceneIndex;
             this.karma = karma;
+        }
+
+        public bool IsEmpty()
+        {
+            if (position == null
+                || sceneIndex < 0
+                || karma == null)
+                return true;
+
+            return false;
         }
     }
 
@@ -54,20 +65,29 @@ public class SaveManager
         Debug.Log($"Saved.");
     }
 
-    public void LoadSavePoint()
+    public SavePoint LoadSavePoint()
     {
+        Debug.Log($"Getting PlayerPrefs...");
         string encrypted = PlayerPrefs.GetString("save");
+        Debug.Log($"Encrypting...");
         string decrypted = EncryptDecrypt(encrypted, encryptionKey);
+        Debug.Log($"Loading...");
         SavePoint loaded = JsonUtility.FromJson<SavePoint>(decrypted);
 
-        LoadSavePoint(loaded);
+        return LoadSavePoint(loaded);
     }
 
-    public void LoadSavePoint(SavePoint savePoint)
+    public SavePoint LoadSavePoint(SavePoint savePoint)
     {
-        GameManager.GLOBAL.player.transform.position = savePoint.position;
+        position = savePoint.position;
         sceneIndex = savePoint.sceneIndex;
         karma = savePoint.karma;
+
+        SceneLoader.SceneIndices index = (SceneLoader.SceneIndices)sceneIndex;
+
+        Debug.Log($"Loaded pos {position.ToString()} in scene {index.ToString()} with karma {karma[0]}:{karma[1]}:{karma[2]}.");
+
+        return savePoint;
     }
 
     public string EncryptDecrypt(string input, int key)

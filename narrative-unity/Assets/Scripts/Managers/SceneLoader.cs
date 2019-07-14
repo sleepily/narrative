@@ -112,5 +112,7 @@ public class SceneLoader : MonoBehaviour
         SetCurrentLevel(newSceneIndex);
 
         StartCoroutine(Coroutine_UnloadScene(sceneToUnload));
+
+        SaveManager.Global.CreateSavePoint();
     }
 }
