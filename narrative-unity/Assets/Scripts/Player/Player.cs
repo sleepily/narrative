@@ -12,7 +12,8 @@ public class Player : InteractableWithDialogue
     Animator animator;
     public ItemStats[] weapons;
 
-    [HideInInspector]
+    public GameObject cursor;
+
     public bool hasLockedMovement { get; private set; } = false;
 
     protected override void GetAllComponents()
@@ -77,5 +78,10 @@ public class Player : InteractableWithDialogue
 
         if (!GameManager.GLOBAL.dialogue.dialogueInProgress)
             UnlockMovement();
+    }
+
+    public void HideCursor(bool hide)
+    {
+        cursor.SetActive(!hide);
     }
 }

@@ -110,18 +110,18 @@ public class FadeManager : MonoBehaviour
     public void FadeFromWhite(float fadeTime = 1f) =>
         Fade(Exposures.White, Exposures.Default, fadeTime);
 
-    public void FadeToTitle(string title, float fadeTime = .6f) =>
-        StartCoroutine(Coroutine_FadeTitle(title, fadeTime, holdTime: 3f));
+    public void FadeToTitle(string title, float fadeInTime = 1f, float fadeTime = .6f) =>
+        StartCoroutine(Coroutine_FadeTitle(title, fadeInTime, fadeTime, holdTime: 3f));
 
-    IEnumerator Coroutine_FadeTitle(string title, float fadeTime, float holdTime)
+    IEnumerator Coroutine_FadeTitle(string title, float fadeInTime, float fadeTime, float holdTime)
     {
-        Fade(Exposures.Default, Exposures.White, fadeTime);
-        yield return new WaitForSeconds(fadeTime);
+        Fade(Exposures.Default, Exposures.White, fadeInTime);
+        yield return new WaitForSeconds(fadeInTime);
 
         string formattedTitle = title.Replace('|', '\n');
         titleText.text = formattedTitle;
 
-        StartCoroutine(Coroutine_FadeCanvasGroup(0f, 1f, fadeTime));
+        StartCoroutine(Coroutine_FadeCanvasGroup(0f, 1f, fadeInTime));
         yield return new WaitForSeconds(fadeTime);
 
         yield return new WaitForSeconds(holdTime);

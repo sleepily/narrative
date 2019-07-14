@@ -41,10 +41,13 @@ namespace UnityStandardAssets.Utility
         void CheckIfUpdateAllowed()
         {
             // Prevent any movement if it's not allowed
+            if (!GameManager.GLOBAL)
+                return;
+
             if (GameManager.GLOBAL.isPaused || GameManager.GLOBAL.inventory.isOpen)
                 return;
 
-            if (GameManager.GLOBAL.player.hasLockedMovement)
+            if (GameManager.GLOBAL.player?.hasLockedMovement ?? true)
                 return;
 
             if (GameManager.GLOBAL.dialogue.dialogueInProgress)

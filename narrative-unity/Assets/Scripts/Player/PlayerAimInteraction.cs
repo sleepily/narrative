@@ -21,7 +21,17 @@ public class PlayerAimInteraction : MonoBehaviour
 
     private void Start()
     {
-        player = GameManager.GLOBAL.player;
+        StartCoroutine(Coroutine_WaitForGameManager());
+    }
+
+    IEnumerator Coroutine_WaitForGameManager()
+    {
+        while (!player)
+        {
+            yield return null;
+            player = GameManager.GLOBAL.player;
+        }
+
         thirdPersonCamera = player.thirdPersonCamera;
     }
 

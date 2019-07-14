@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class MainMenuManager : MonoBehaviour
 {
+    public GameObject gameManagerPrefab;
+
     bool showTitle = true;
 
     public UnityEvent hideTitle;
@@ -15,8 +17,14 @@ public class MainMenuManager : MonoBehaviour
     [Tooltip("Same as above for level 3.")]
     public UnityEvent level3Save;
 
+    SceneLoader sceneLoader;
+    FadeManager fadeManager;
+
     private void Start()
     {
+        sceneLoader = GetComponentInChildren<SceneLoader>();
+        fadeManager = GetComponentInChildren<FadeManager>();
+
         CheckForSave();
     }
 
@@ -52,6 +60,11 @@ public class MainMenuManager : MonoBehaviour
 
         if (spaceEnter || mouse)
             HideTitle();
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            SaveManager.Global.CreateDummySavePoint();
+        }
     }
 
     void HideTitle()
@@ -62,5 +75,22 @@ public class MainMenuManager : MonoBehaviour
         showTitle = false;
 
         hideTitle.Invoke();
+    }
+
+    public void LoadStairs(TeleportLocation destination)
+    {
+        StartCoroutine(Coroutine_LoadStairs(destination));
+    }
+
+    IEnumerator Coroutine_LoadStairs(TeleportLocation destination)
+    {
+        Debug.Log($"Loading {destination.levelIndex.ToString()}");
+
+        fadeManager.FadeToWhite();
+
+        yield return new WaitForSeconds(1f);
+
+        GameManager gm = Instantiate(gameManagerPrefab).GetComponent<GameManager>();
+        gm.sceneLoader.SetCurrentLevel(destination);
     }
 }

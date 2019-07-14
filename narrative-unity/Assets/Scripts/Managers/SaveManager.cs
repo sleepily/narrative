@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class SaveManager
 {
@@ -37,6 +36,8 @@ public class SaveManager
             this.position = position;
             this.sceneIndex = sceneIndex;
             this.karma = karma;
+
+            Debug.Log($"Created SavePoint: POS {position}, S {sceneIndex}, K {karma[0] + " " + karma[1] + " " + karma[2]}");
         }
 
         public bool IsEmpty()
@@ -54,7 +55,28 @@ public class SaveManager
     {
         Debug.Log($"Starting save...");
 
-        SavePoint save = new SavePoint(GameManager.GLOBAL.player.transform.position, sceneIndex, karma);
+        if (!GameManager.GLOBAL?.player)
+        {
+            Debug.Log($"Player doesn't exist.");
+            return;
+        }
+
+        SavePoint save = new SavePoint(GameManager.GLOBAL.sceneLoader.currentLevel.location, sceneIndex, karma);
+
+        string decrypted = JsonUtility.ToJson(save);
+        string encrypted = EncryptDecrypt(decrypted, encryptionKey);
+
+        PlayerPrefs.SetString("save", encrypted);
+        PlayerPrefs.Save();
+
+        Debug.Log($"Saved.");
+    }
+
+    public void CreateDummySavePoint()
+    {
+        Debug.Log($"Starting dummy save...");
+
+        SavePoint save = new SavePoint(Vector3.zero, 5, karma);
 
         string decrypted = JsonUtility.ToJson(save);
         string encrypted = EncryptDecrypt(decrypted, encryptionKey);

@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         bool allowMovement = true;
 
         // Don't allow movement when locked
-        if (GameManager.GLOBAL.player.hasLockedMovement)
+        if (player.hasLockedMovement)
             allowMovement = false;
 
         // Don't allow movement when in dialogue

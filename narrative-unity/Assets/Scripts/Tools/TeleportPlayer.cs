@@ -29,17 +29,18 @@ public class TeleportPlayer : MonoBehaviour
         if (!destination)
             return;
 
-        // Debug.Log("Teleporting to " + destination.location);
-
         this.transform.position = destination.location;
     }
 
     public void TeleportIntoLevel(TeleportLocation destination, bool loseItems = true) =>
-        StartCoroutine(Coroutine_TeleportIntoLevel(destination, loseItems));
+        StartCoroutine(Coroutine_TeleportIntoLevel(destination, loseItems, 1f));
 
-    IEnumerator Coroutine_TeleportIntoLevel(TeleportLocation destination, bool loseItems)
+    public void TeleportIntoLevelFadeSkip(TeleportLocation destination) =>
+        StartCoroutine(Coroutine_TeleportIntoLevel(destination, true, 0f));
+
+    IEnumerator Coroutine_TeleportIntoLevel(TeleportLocation destination, bool loseItems, float fadeInTime)
     {
-        GameManager.GLOBAL.fade.FadeToTitle(destination.title, 1f);
+        GameManager.GLOBAL.fade.FadeToTitle(destination.title, fadeInTime, 1f);
 
         yield return new WaitForSeconds(2f);
 
@@ -47,6 +48,6 @@ public class TeleportPlayer : MonoBehaviour
             GameManager.GLOBAL.inventory.ClearInventory();
 
         Teleport(destination);
-        GameManager.GLOBAL.sceneLoader.LoadLevel((int)destination.levelIndex);
+        GameManager.GLOBAL.sceneLoader.LoadLevel(destination);
     }
 }

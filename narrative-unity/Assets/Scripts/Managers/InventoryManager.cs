@@ -169,7 +169,7 @@ public class InventoryManager : MonoBehaviour
         StudioEventEmitter soundEvent = isOpen ? openInventory : closeInventory;
         soundEvent.Play();
 
-        HideObjects();
+        HideShowObjects();
 
         if (GetCurrentItem())
         {
@@ -180,12 +180,11 @@ public class InventoryManager : MonoBehaviour
     }
 
     /*
-     * Hide Objects such as the cursor when opening the inventory
+     * Hide or show objects such as the cursor when opening the inventory
      */
-    void HideObjects()
+    void HideShowObjects()
     {
-        foreach (GameObject gameObject in objectsToHide)
-            gameObject.SetActive(!isOpen);
+        GameManager.GLOBAL.player.HideCursor(isOpen);
     }
 
     bool ShowCurrentItemDescription()
