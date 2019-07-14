@@ -29,7 +29,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 193a0cb108ea2ea4a8c36e1338c4e70c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -39,5 +39,5 @@ Material:
     m_Colors:
     - Color_51B51BFA: {r: 27.53272, g: 21.67823, b: 0, a: 1}
     - Color_9D90B658: {r: 1, g: 1, b: 1, a: 0}
-    - _Albedo: {r: 0.8490566, g: 0.28217468, b: 0.1481844, a: 0}
+    - _Albedo: {r: 1, g: 1, b: 1, a: 0}
     - _GlowColor: {r: 27.53272, g: 25.082165, b: 0, a: 1}
