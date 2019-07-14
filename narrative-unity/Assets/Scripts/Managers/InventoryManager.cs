@@ -23,8 +23,9 @@ public class InventoryManager : MonoBehaviour
     Transform currentItemParent;
 
     [Header("UI References")]
-    public Image hudItemImage;
     public Sprite missingItem;
+    [HideInInspector]
+    public Image hudItemImage;
 
     [Space]
 
@@ -265,7 +266,8 @@ public class InventoryManager : MonoBehaviour
         currentItem.transform.localPosition = Vector3.zero;
         currentItem.gameObject.SetActive(true);
 
-        hudItemImage.sprite = currentItem.itemStats.sprite ?? missingItem;
+        if (hudItemImage)
+            hudItemImage.sprite = currentItem.itemStats.sprite ?? missingItem;
     }
 
     public Item GetCurrentItem() => currentItem;

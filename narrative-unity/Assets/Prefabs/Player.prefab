@@ -2052,8 +2052,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1daaca8efa4b71743a10b2bb8b9a9eef, type: 2}
   - {fileID: 11400000, guid: 453eb40442419e640a4f9dee54acb627, type: 2}
   - {fileID: 11400000, guid: 31c3eec764872a4459ce2c5232aa07e2, type: 2}
+  hudItemImage: {fileID: 2922679235024501041}
+  itemHold: {fileID: 1086388323499015426}
+  itemInspection: {fileID: 4534179366033693211}
   cursor: {fileID: 8163109732509056083}
-  hasLockedMovement: 0
 --- !u!114 &8163109733526020025
 MonoBehaviour:
   m_ObjectHideFlags: 0

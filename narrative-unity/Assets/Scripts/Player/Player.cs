@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Fungus;
 
 [RequireComponent(typeof(CharacterController))]
@@ -12,6 +13,9 @@ public class Player : InteractableWithDialogue
     Animator animator;
     public ItemStats[] weapons;
 
+    public Image hudItemImage;
+    public Transform itemHold, itemInspection;
+
     public GameObject cursor;
 
     public bool hasLockedMovement { get; private set; } = false;
@@ -20,6 +24,9 @@ public class Player : InteractableWithDialogue
     {
         playerMovement = GetComponent<PlayerMovement>();
         animator = GetComponentInChildren<Animator>();
+        GameManager.GLOBAL.inventory.hudItemImage = hudItemImage;
+        GameManager.GLOBAL.inventory.itemHotCornerParent = itemHold;
+        GameManager.GLOBAL.inventory.itemInspectionParent = itemInspection;
         GetFlowchart();
     }
 
