@@ -9682,6 +9682,57 @@ Transform:
   m_Father: {fileID: 5006512734836399133}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &574774790
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 574774791}
+  - component: {fileID: 574774792}
+  m_Layer: 0
+  m_Name: tophy case handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &574774791
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574774790}
+  m_LocalRotation: {x: 0.01513651, y: -0.00898534, z: -0.0010865586, w: 0.99984455}
+  m_LocalPosition: {x: 0.066, y: 0.937, z: -0.088}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1462371664}
+  m_Father: {fileID: 1491737239}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 1.733, y: -1.0320001, z: -0.14}
+--- !u!95 &574774792
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574774790}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 886bd015dcc34cb408557d4a073ac0ff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &594046606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20420,9 +20471,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1462371664}
-  - component: {fileID: 1462371667}
   - component: {fileID: 1462371666}
-  - component: {fileID: 1462371668}
+  - component: {fileID: 1462371667}
   - component: {fileID: 1462371665}
   m_Layer: 0
   m_Name: trophy case doors
@@ -20438,13 +20488,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462371663}
-  m_LocalRotation: {x: -0.017062718, y: 0.5175141, z: -0.0084319245, w: 0.8554631}
-  m_LocalPosition: {x: 0.075, y: 0.658, z: -0.063}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalRotation: {x: -0.016362904, y: 0.52978003, z: -0.009720712, w: 0.8479215}
+  m_LocalPosition: {x: 0.006, y: -0.279, z: 0.072}
+  m_LocalScale: {x: 0.010000006, y: 0.009999998, z: 0.010000007}
   m_Children: []
-  m_Father: {fileID: 1491737239}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -1.1730001, y: 62.363003, z: -1.8390001}
+  m_Father: {fileID: 574774791}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -1, y: 64.011, z: -1.9390001}
 --- !u!64 &1462371665
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -20458,7 +20508,7 @@ MeshCollider:
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -3422434439679177164, guid: 6c74abd624a44ac4db023e0882fd0ea1, type: 3}
 --- !u!23 &1462371666
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20504,25 +20554,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462371663}
   m_Mesh: {fileID: -3422434439679177164, guid: 6c74abd624a44ac4db023e0882fd0ea1, type: 3}
---- !u!95 &1462371668
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1462371663}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 886bd015dcc34cb408557d4a073ac0ff, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1470207102
 GameObject:
   m_ObjectHideFlags: 0
@@ -20948,7 +20979,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2636797423808513159}
-  - {fileID: 1462371664}
+  - {fileID: 574774791}
   m_Father: {fileID: 1742160810}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29015,7 +29046,7 @@ MonoBehaviour:
   isFocusable: 1
   focusWhenPlayerIsNear: 0
   waterBottle: {fileID: 1854778912}
-  glassAnimator: {fileID: 1462371668}
+  glassAnimator: {fileID: 0}
 --- !u!114 &1170377104056170207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29029,7 +29060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 12.80568, y: 199.0768}
+  scrollPos: {x: 171.80568, y: -3.9232025}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 291
@@ -29731,7 +29762,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1462371668}
+      - m_Target: {fileID: 574774792}
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
