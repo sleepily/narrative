@@ -39,5 +39,12 @@ public class Attackable : MonoBehaviour
         eventToInvoke.Invoke();
     }
 
-    public void Break() => Destroy(gameObject, .5f);
+    public void Break() => StartCoroutine(Coroutine_Break());
+
+    IEnumerator Coroutine_Break()
+    {
+        yield return new WaitForSeconds(.5f);
+
+        gameObject.SetActive(false);
+    }
 }

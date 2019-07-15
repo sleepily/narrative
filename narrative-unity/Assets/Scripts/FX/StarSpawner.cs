@@ -60,6 +60,8 @@ public class StarSpawner : MonoBehaviour
 
     Star[] stars;
 
+    bool log = false;
+
     public struct Star
     {
         public GameObject go;
@@ -144,7 +146,9 @@ public class StarSpawner : MonoBehaviour
         // Calculate how many stars are drawn compared to how many could be
         // Essentially the value of the tween at this moment
         int effectiveness = (int)((easedBlend / blend) * 100) + 1;
-        Debug.Log($"Making {easedMax}:{max} stars visible ({effectiveness}%).");
+
+        if (log)
+            Debug.Log($"Making {easedMax}:{max} stars visible ({effectiveness}%).");
     }
 
     void GenerateStars()
