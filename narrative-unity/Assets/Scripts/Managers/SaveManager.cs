@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class SaveManager
 {
-    /*
-     * Singleton instance to allow global use
-     */
     private static SaveManager global;
     public static SaveManager Global
     {
@@ -89,11 +86,8 @@ public class SaveManager
 
     public SavePoint LoadSavePoint()
     {
-        Debug.Log($"Getting PlayerPrefs...");
         string encrypted = PlayerPrefs.GetString("save");
-        Debug.Log($"Encrypting...");
         string decrypted = EncryptDecrypt(encrypted, encryptionKey);
-        Debug.Log($"Loading...");
         SavePoint loaded = JsonUtility.FromJson<SavePoint>(decrypted);
 
         return LoadSavePoint(loaded);
@@ -107,7 +101,7 @@ public class SaveManager
 
         SceneLoader.SceneIndices index = (SceneLoader.SceneIndices)sceneIndex;
 
-        Debug.Log($"Loaded pos {position.ToString()} in scene {index.ToString()} with karma {karma[0]}:{karma[1]}:{karma[2]}.");
+        Debug.Log($"Loaded P {position.ToString()}, S {index.ToString()}, K {karma[0]}:{karma[1]}:{karma[2]}.");
 
         return savePoint;
     }

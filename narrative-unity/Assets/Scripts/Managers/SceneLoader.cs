@@ -138,9 +138,14 @@ public class SceneLoader : MonoBehaviour
         while (!hasFinishedLoading)
             yield return null;
 
+        yield return new WaitForSeconds(.1f);
+
         SetCurrentLevel(newSceneIndex);
 
         StartCoroutine(Coroutine_UnloadScene(sceneToUnload));
+
+        while (!hasFinishedUnloading)
+            yield return null;
 
         yield return new WaitForSeconds(.1f);
 
