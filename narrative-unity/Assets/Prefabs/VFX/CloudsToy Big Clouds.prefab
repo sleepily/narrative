@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2044363109472687289}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -58,20 +58,20 @@ MonoBehaviour:
   SoftClouds: 0
   SpreadDir: {x: -1, y: 0, z: 0}
   LengthSpread: 1.5
-  NumberClouds: 80
-  Side: {x: 200, y: 40, z: 200}
+  NumberClouds: 40
+  Side: {x: 60, y: 40, z: 120}
   MaximunVelocity: {x: -10, y: 0, z: 0}
   VelocityMultipier: 0.04
-  DisappearMultiplier: 1.24
+  DisappearMultiplier: 1
   PaintType: 1
-  CloudColor: {r: 1, g: 1, b: 1, a: 0.5529412}
-  MainColor: {r: 0.9528302, g: 0.9528302, b: 0.9528302, a: 0.3764706}
+  CloudColor: {r: 1, g: 1, b: 1, a: 0.73333335}
+  MainColor: {r: 0.9528302, g: 0.9528302, b: 0.9528302, a: 0.54509807}
   SecondColor: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
   TintStrength: 94
   offset: 0.368
-  MaxWidthCloud: 37
-  MaxHeightCloud: 10
-  MaxDepthCloud: 37
+  MaxWidthCloud: 31
+  MaxHeightCloud: 13
+  MaxDepthCloud: 36
   FixedSize: 0
   NumberOfShadows: 4
   CloudsTextAdd:

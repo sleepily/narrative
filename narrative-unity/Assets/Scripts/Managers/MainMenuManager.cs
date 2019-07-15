@@ -25,6 +25,8 @@ public class MainMenuManager : MonoBehaviour
         sceneLoader = GetComponentInChildren<SceneLoader>();
         fadeManager = GetComponentInChildren<FadeManager>();
 
+        fadeManager.FadeFromBlack(2.5f);
+
         CheckForSave();
     }
 
