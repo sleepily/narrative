@@ -22350,7 +22350,8 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 1613803566}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1613803576}
   variables:
   - {fileID: 1613803565}
   - {fileID: 1613803574}
@@ -22520,8 +22521,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 2
-  storyText: There are 8 trophies colored white and blue, I also see something else
-    there, what's that?
+  storyText: There are 8 trophies with ribbons colored white and blue, I also see
+    something else there, what's that?
   description: 
   character: {fileID: 792129613}
   portrait: {fileID: 0}
@@ -22562,7 +22563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 3
-  storyText: There are 8 trophies colored white and blue.
+  storyText: There are 8 trophies with ribbons colored white and blue.
   description: 
   character: {fileID: 792129613}
   portrait: {fileID: 0}
@@ -22794,8 +22795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 9
   indentLevel: 2
-  storyText: There's something else colored white and blue besides these trophies
-    though.
+  storyText: There's something else colored white and blue besides these ribbons though.
   description: 
   character: {fileID: 792129613}
   portrait: {fileID: 0}
@@ -23175,7 +23175,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1613803589
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -23189,7 +23189,7 @@ MonoBehaviour:
   indentLevel: 2
 --- !u!114 &1613803590
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -23253,7 +23253,7 @@ MonoBehaviour:
     vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &1613803591
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -23265,7 +23265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 20
   indentLevel: 2
-  storyText: There are 8 trophies colored white and blue.
+  storyText: There are 8 trophies with ribbons colored white and blue.
   description: 
   character: {fileID: 792129613}
   portrait: {fileID: 0}
@@ -24158,7 +24158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1407375659}
+  selectedFlowchart: {fileID: 1613803561}
 --- !u!4 &1705705785
 Transform:
   m_ObjectHideFlags: 1
