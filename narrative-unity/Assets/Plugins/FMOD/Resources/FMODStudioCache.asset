@@ -84,7 +84,7 @@ MonoBehaviour:
   Path: event:/FX/Inventory/Open Inventory
   guid: ec00d77bdc880b4a99c840a466501431
   Banks:
-  - {fileID: 1695377429580016614}
+  - {fileID: -2074715675457782752}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -485,23 +485,23 @@ MonoBehaviour:
   Path: event:/Rooms/Memory
   guid: 322b57bddaefac4cb9a4a65510f91f1a
   Banks:
-  - {fileID: 6009690465674852232}
+  - {fileID: -1142139053221192008}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 3324142637682062885}
-  - {fileID: -3937423815621261868}
-  - {fileID: 881345590956190312}
-  - {fileID: 546211530987551090}
-  - {fileID: -4327775854365878580}
-  - {fileID: -1202891080954537826}
-  - {fileID: 8224030585359881043}
-  - {fileID: -5375915840294294388}
-  - {fileID: -1777780084300802513}
-  - {fileID: 4591896463940938029}
-  - {fileID: 1433506661399211073}
-  - {fileID: 1030536994092737281}
+  - {fileID: -6344563814106995920}
+  - {fileID: -3354533742228415423}
+  - {fileID: -6705318866783385815}
+  - {fileID: 7620183724137565784}
+  - {fileID: -3385399622695316264}
+  - {fileID: 9011097961065038187}
+  - {fileID: -6643912175014497102}
+  - {fileID: 722574801477106322}
+  - {fileID: -4137424911207346685}
+  - {fileID: 4014714882213136673}
+  - {fileID: -1288314572688899546}
+  - {fileID: 5787513023164633983}
   MinDistance: 0
   MaxDistance: 0
   Length: 238500
@@ -556,6 +556,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-8382770867370002310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Love/day - melody
+  m_EditorClassIdentifier: 
+  Name: day - melody
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-8361381840239036013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1176,6 +1193,24 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &-7378308259227774362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Puzzles.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Alba\Desktop\Project Heart\narrative-fmod\Build\Desktop\Puzzles.bank
+  SubDir: 
+  lastModified: 636982682550365295
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-7335194983144615366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1559,6 +1594,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-6705318866783385815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Memory/letter - guitar
+  m_EditorClassIdentifier: 
+  Name: letter - guitar
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-6702786510253055069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1589,6 +1641,23 @@ MonoBehaviour:
   m_Name: parameter:/Recognition/recognition - spastics
   m_EditorClassIdentifier: 
   Name: recognition - spastics
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-6643912175014497102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Memory/letter - music box
+  m_EditorClassIdentifier: 
+  Name: letter - music box
   Min: 0
   Max: 1
   Default: 0
@@ -1755,6 +1824,23 @@ MonoBehaviour:
   m_Name: parameter:/Recognition/recognition - spastics 2
   m_EditorClassIdentifier: 
   Name: recognition - spastics 2
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-6344563814106995920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Memory/letter start
+  m_EditorClassIdentifier: 
+  Name: letter start
   Min: 0
   Max: 1
   Default: 0
@@ -1964,6 +2050,23 @@ MonoBehaviour:
   m_Name: parameter:/Memory/childhood - glockenspiel
   m_EditorClassIdentifier: 
   Name: childhood - glockenspiel
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-5961342260020923303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Love/night
+  m_EditorClassIdentifier: 
+  Name: night
   Min: 0
   Max: 1
   Default: 0
@@ -2258,12 +2361,12 @@ MonoBehaviour:
   Path: event:/FX/Items/Cellphone
   guid: 40369cf3caeff24f804a34b8f8e0a488
   Banks:
-  - {fileID: 1695377429580016614}
+  - {fileID: -2074715675457782752}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 1807068109026462329}
+  - {fileID: -4487248120600499496}
   MinDistance: 0
   MaxDistance: 0
   Length: 1045
@@ -2491,17 +2594,17 @@ MonoBehaviour:
   Path: event:/Rooms/Recognition
   guid: 6726c6325881c24caf78a916621bd0f9
   Banks:
-  - {fileID: 6009690465674852232}
+  - {fileID: -1142139053221192008}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -7331674209098901014}
-  - {fileID: 4878582573387372625}
-  - {fileID: 393850841195571833}
-  - {fileID: -6242916495986356366}
-  - {fileID: 2812781605194444980}
-  - {fileID: 49051678047724630}
+  - {fileID: 5938545599188516159}
+  - {fileID: 1292662731042527771}
+  - {fileID: -4532475602630958664}
+  - {fileID: -751526151798172421}
+  - {fileID: 2836799142172072999}
+  - {fileID: -3362444978179468808}
   MinDistance: 0
   MaxDistance: 0
   Length: 64477
@@ -2832,6 +2935,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-4532475602630958664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Recognition/recognition - reese
+  m_EditorClassIdentifier: 
+  Name: recognition - reese
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-4519091648507255586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2845,6 +2965,23 @@ MonoBehaviour:
   m_Name: parameter:/Memory/letter - music box
   m_EditorClassIdentifier: 
   Name: letter - music box
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-4487248120600499496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cellphone/cellphone long
+  m_EditorClassIdentifier: 
+  Name: cellphone long
   Min: 0
   Max: 1
   Default: 0
@@ -3002,6 +3139,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-4137424911207346685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Memory/letter - celli
+  m_EditorClassIdentifier: 
+  Name: letter - celli
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-4059044227005776144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3169,6 +3323,23 @@ MonoBehaviour:
   m_Name: parameter:/Recognition/recognition - reese
   m_EditorClassIdentifier: 
   Name: recognition - reese
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-3929952782617600826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Love/day - arp
+  m_EditorClassIdentifier: 
+  Name: day - arp
   Min: 0
   Max: 1
   Default: 0
@@ -3341,7 +3512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ..\narrative-fmod\Build\Desktop\Master.strings.bank
   SubDir: 
-  lastModified: 636985409109930890
+  lastModified: 636985685659359674
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -3452,6 +3623,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &-3385399622695316264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Memory/letter - strings
+  m_EditorClassIdentifier: 
+  Name: letter - strings
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-3381038941214486820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3469,6 +3657,40 @@ MonoBehaviour:
   lastModified: 636980997702031375
   LoadResult: 0
   FileSizes: []
+  Exists: 1
+--- !u!114 &-3362444978179468808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Recognition/recognition - low
+  m_EditorClassIdentifier: 
+  Name: recognition - low
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-3354533742228415423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Memory/childhood - violin
+  m_EditorClassIdentifier: 
+  Name: childhood - violin
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 1
 --- !u!114 &-3325371798119670872
 MonoBehaviour:
@@ -3526,6 +3748,24 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+  Exists: 1
+--- !u!114 &-3256902411226930987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Alba\Desktop\Project Heart\narrative-fmod\Build\Desktop\Master.bank
+  SubDir: 
+  lastModified: 636980997699110729
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
 --- !u!114 &-3251999739708907343
 MonoBehaviour:
@@ -3727,6 +3967,23 @@ MonoBehaviour:
   m_Name: parameter:/Memory/childhood - glockenspiel
   m_EditorClassIdentifier: 
   Name: childhood - glockenspiel
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-2910512904980636537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Love/interlude
+  m_EditorClassIdentifier: 
+  Name: interlude
   Min: 0
   Max: 1
   Default: 0
@@ -4108,6 +4365,24 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-2074715675457782752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/FX.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Alba\Desktop\Project Heart\narrative-fmod\Build\Desktop\FX.bank
+  SubDir: 
+  lastModified: 636983547505055487
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-2056447912787191674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4542,6 +4817,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &-1288314572688899546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Memory/childhood - piccolo
+  m_EditorClassIdentifier: 
+  Name: childhood - piccolo
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-1249364206383640982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4575,6 +4867,24 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+  Exists: 1
+--- !u!114 &-1142139053221192008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Rooms.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Alba\Desktop\Project Heart\narrative-fmod\Build\Desktop\Rooms.bank
+  SubDir: 
+  lastModified: 636985685661329828
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
 --- !u!114 &-1111493046202808520
 MonoBehaviour:
@@ -4725,6 +5035,23 @@ MonoBehaviour:
   m_Name: parameter:/Memory/letter - music box
   m_EditorClassIdentifier: 
   Name: letter - music box
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-751526151798172421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Recognition/recognition - spastics 2
+  m_EditorClassIdentifier: 
+  Name: recognition - spastics 2
   Min: 0
   Max: 1
   Default: 0
@@ -5038,6 +5365,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &-93463649272980169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Love/day - bass
+  m_EditorClassIdentifier: 
+  Name: day - bass
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-84930626958481240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5206,12 +5550,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -3737660868050091574}
-  - {fileID: 1695377429580016614}
-  - {fileID: -2041229892970609522}
-  - {fileID: -7692906184099061570}
-  - {fileID: -5824470158601380535}
-  - {fileID: 6009690465674852232}
-  - {fileID: -6205401309075219223}
+  - {fileID: -2074715675457782752}
+  - {fileID: -3256902411226930987}
+  - {fileID: 403080490135881637}
+  - {fileID: -7378308259227774362}
+  - {fileID: -1142139053221192008}
+  - {fileID: 2061326449186136263}
   EditorEvents:
   - {fileID: 853933335229819578}
   - {fileID: -8425950982936081479}
@@ -5223,10 +5567,10 @@ MonoBehaviour:
   - {fileID: -5576499793412606297}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -2041229892970609522}
+  - {fileID: -3256902411226930987}
   StringsBanks:
   - {fileID: -3737660868050091574}
-  stringsBankWriteTime: 636985409109930890
+  stringsBankWriteTime: 636985685659359674
   cacheVersion: 3
 --- !u!114 &18372536746561553
 MonoBehaviour:
@@ -5441,7 +5785,7 @@ MonoBehaviour:
   Path: event:/FX/Inventory/Close Inventory
   guid: 860d9fb3ddde0543a8d7538bb965302e
   Banks:
-  - {fileID: 1695377429580016614}
+  - {fileID: -2074715675457782752}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -5499,6 +5843,24 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+  Exists: 1
+--- !u!114 &403080490135881637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Alba\Desktop\Project Heart\narrative-fmod\Build\Desktop\Master.strings.bank
+  SubDir: 
+  lastModified: 636985685659359674
+  LoadResult: 70
+  FileSizes: []
   Exists: 1
 --- !u!114 &430651682987762812
 MonoBehaviour:
@@ -5798,6 +6160,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &722574801477106322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Memory/childhood - oboe
+  m_EditorClassIdentifier: 
+  Name: childhood - oboe
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &757739785567269443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5865,17 +6244,17 @@ MonoBehaviour:
   Path: event:/Rooms/Love
   guid: 318abda2d5a2c14ebcf463964f1f21cc
   Banks:
-  - {fileID: 6009690465674852232}
+  - {fileID: -1142139053221192008}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -1292357825415316131}
-  - {fileID: -8197737293267162199}
-  - {fileID: -3496560776670283344}
-  - {fileID: -5762331997126903857}
-  - {fileID: -4626102917640670210}
-  - {fileID: 5098811107468714883}
+  - {fileID: -2910512904980636537}
+  - {fileID: -8382770867370002310}
+  - {fileID: -5961342260020923303}
+  - {fileID: -3929952782617600826}
+  - {fileID: 5637295526733395703}
+  - {fileID: -93463649272980169}
   MinDistance: 0
   MaxDistance: 0
   Length: 267853
@@ -6066,6 +6445,23 @@ MonoBehaviour:
   m_Name: parameter:/Memory/letter - strings
   m_EditorClassIdentifier: 
   Name: letter - strings
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &1292662731042527771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Recognition/recognition - spastics
+  m_EditorClassIdentifier: 
+  Name: recognition - spastics
   Min: 0
   Max: 1
   Default: 0
@@ -6532,7 +6928,7 @@ MonoBehaviour:
   Path: event:/FX/Puzzles/Solve Puzzle
   guid: 4b9e9f4cd9f87b49ada4c29b391232cd
   Banks:
-  - {fileID: -5824470158601380535}
+  - {fileID: -7378308259227774362}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -6557,6 +6953,24 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &2061326449186136263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Stairs.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Alba\Desktop\Project Heart\narrative-fmod\Build\Desktop\Stairs.bank
+  SubDir: 
+  lastModified: 636980997702031375
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &2082665814958808517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6838,7 +7252,7 @@ MonoBehaviour:
   Path: event:/FX/Puzzles/Solve Puzzle Xylophone
   guid: 3131e03afe28ec46a83c980748a7efe4
   Banks:
-  - {fileID: -5824470158601380535}
+  - {fileID: -7378308259227774362}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -6989,6 +7403,23 @@ MonoBehaviour:
   Default: 0
   Exists: 1
 --- !u!114 &2812781605194444980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Recognition/void end
+  m_EditorClassIdentifier: 
+  Name: void end
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &2836799142172072999
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7762,6 +8193,23 @@ MonoBehaviour:
   m_Name: parameter:/Memory/letter - music box
   m_EditorClassIdentifier: 
   Name: letter - music box
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &4014714882213136673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Memory/childhood - cello
+  m_EditorClassIdentifier: 
+  Name: childhood - cello
   Min: 0
   Max: 1
   Default: 0
@@ -8643,6 +9091,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &5637295526733395703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Love/game picked up
+  m_EditorClassIdentifier: 
+  Name: game picked up
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &5674237093885673298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8711,6 +9176,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &5787513023164633983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Memory/childhood - glockenspiel
+  m_EditorClassIdentifier: 
+  Name: childhood - glockenspiel
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &5833341529322898798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8759,6 +9241,23 @@ MonoBehaviour:
   m_Name: parameter:/Love/day - arp
   m_EditorClassIdentifier: 
   Name: day - arp
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &5938545599188516159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Recognition/recognition - high
+  m_EditorClassIdentifier: 
+  Name: recognition - high
   Min: 0
   Max: 1
   Default: 0
@@ -9581,6 +10080,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &7620183724137565784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Memory/letter - harps
+  m_EditorClassIdentifier: 
+  Name: letter - harps
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &7709290730580831876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10367,6 +10883,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &9011097961065038187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Memory/childhood - piano
+  m_EditorClassIdentifier: 
+  Name: childhood - piano
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &9025100543788921959
 MonoBehaviour:
   m_ObjectHideFlags: 0
