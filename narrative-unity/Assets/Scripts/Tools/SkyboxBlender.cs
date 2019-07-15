@@ -10,6 +10,7 @@ public class SkyboxBlender : MonoBehaviour {
     [SerializeField] public enum ProbeResolution { _16, _32, _64, _128, _256, _512, _1024, _2048 }
 
     [SerializeField] public Sun sun;
+    [SerializeField] public StarSpawner stars;
 
     //[Header("Input Skyboxes")]
     [SerializeField] public Material skyBox1;
@@ -94,6 +95,7 @@ public class SkyboxBlender : MonoBehaviour {
 
         if (sun)
             sun.AllowBlend(allowBlend);
+
     }
 
     public void IncreaseBlendStep()
@@ -107,6 +109,9 @@ public class SkyboxBlender : MonoBehaviour {
 
         if (sun)
             sun.currentBlendStep = currentBlendStep;
+
+        if (stars)
+            stars.IncreaseBlendStep();
     }
 
     public void SetTargetBlend(float targetBlend)

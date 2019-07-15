@@ -32,13 +32,13 @@ RenderSettings:
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
-  m_DefaultReflectionMode: 1
+  m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 0.3
-  m_CustomReflection: {fileID: 816646014}
+  m_CustomReflection: {fileID: 878065045}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.009253409, g: 0.017364535, b: 0.049909994, a: 0.3}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0.3}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1979,7 +1979,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 458813893}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!89 &816646014
+--- !u!89 &878065045
 Cubemap:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

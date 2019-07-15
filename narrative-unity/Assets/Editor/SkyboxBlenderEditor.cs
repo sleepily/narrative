@@ -10,6 +10,7 @@ public class SkyboxBlenderEditor : Editor
     SerializedProperty skyBox2;
 
     SerializedProperty sun;
+    SerializedProperty stars;
 
     SerializedProperty blendedSkybox;
     SerializedProperty exposure;
@@ -33,6 +34,7 @@ public class SkyboxBlenderEditor : Editor
     private void OnEnable()
     {
         sun = serializedObject.FindProperty("sun");
+        stars = serializedObject.FindProperty("stars");
 
         skyBox1 = serializedObject.FindProperty("skyBox1");
         skyBox2 = serializedObject.FindProperty("skyBox2");
@@ -64,6 +66,7 @@ public class SkyboxBlenderEditor : Editor
         serializedObject.Update();
 
         EditorGUILayout.PropertyField(sun);
+        EditorGUILayout.PropertyField(stars);
 
         //Input skyboxes
         EditorGUILayout.BeginVertical("HelpBox");
