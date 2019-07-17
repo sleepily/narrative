@@ -24,6 +24,8 @@ public class FadeManager : MonoBehaviour
 
     bool fadeActive = false;
 
+    string lastTitle = "";
+
     private void Start()
     {
         GetAllComponents();
@@ -113,6 +115,13 @@ public class FadeManager : MonoBehaviour
     public void FadeToTitle(string title, float fadeInTime = 1f, float fadeTime = .6f) =>
         StartCoroutine(Coroutine_FadeTitle(title, fadeInTime, fadeTime, holdTime: 3f));
 
+    public void FadeTitleIn(string title, float fadeInTime = 1f, float fadeTime = .6f) =>
+        StartCoroutine(Coroutine_FadeTitleIn(title, fadeInTime, fadeTime));
+
+    public void FadeTitleOut(float fadeTime = .6f, float holdTime = 2f) =>
+        StartCoroutine(Coroutine_FadeTitleOut(fadeTime, holdTime));
+
+
     IEnumerator Coroutine_FadeTitle(string title, float fadeInTime, float fadeTime, float holdTime)
     {
         Fade(Exposures.Default, Exposures.White, fadeInTime);
@@ -130,6 +139,31 @@ public class FadeManager : MonoBehaviour
         yield return new WaitForSeconds(fadeTime);
 
         Fade(Exposures.White, Exposures.Default, fadeTime );
+        yield return new WaitForSeconds(fadeTime);
+    }
+
+    IEnumerator Coroutine_FadeTitleIn(string title, float fadeInTime, float fadeTime)
+    {
+        Fade(Exposures.Default, Exposures.White, fadeInTime);
+        yield return new WaitForSeconds(fadeInTime);
+
+        string formattedTitle = title.Replace('|', '\n');
+        titleText.text = lastTitle = formattedTitle;
+
+        StartCoroutine(Coroutine_FadeCanvasGroup(0f, 1f, fadeInTime));
+        yield return new WaitForSeconds(fadeTime);
+    }
+
+    IEnumerator Coroutine_FadeTitleOut(float fadeTime, float holdTime)
+    {
+        titleText.text = lastTitle;
+
+        yield return new WaitForSeconds(holdTime);
+
+        StartCoroutine(Coroutine_FadeCanvasGroup(1f, 0f, fadeTime));
+        yield return new WaitForSeconds(fadeTime);
+
+        Fade(Exposures.White, Exposures.Default, fadeTime);
         yield return new WaitForSeconds(fadeTime);
     }
 

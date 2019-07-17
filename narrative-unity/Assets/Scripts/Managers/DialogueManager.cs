@@ -92,6 +92,8 @@ public class DialogueManager : MonoBehaviour
         // Unlock the cursor when the player has to make a choice
         if (menuInProgress)
             StartCoroutine(CheckForMenuOver());
+        else
+            GameManager.GLOBAL.player.SetMovementLock(false);
     }
 
     IEnumerator CheckForMenuOver()

@@ -21,6 +21,9 @@ public class TeleportPlayer : MonoBehaviour
         if (!portal)
             return;
 
+        if (!portal.isEnabled)
+            return;
+
         TeleportIntoLevel(portal.destination);
     }
 
@@ -30,6 +33,8 @@ public class TeleportPlayer : MonoBehaviour
             return;
 
         this.transform.position = destination.location;
+
+        GameManager.GLOBAL.fade.FadeTitleOut(fadeTime: .6f);
     }
 
     public void TeleportIntoLevel(TeleportLocation destination, bool loseItems = true) =>
@@ -40,9 +45,10 @@ public class TeleportPlayer : MonoBehaviour
 
     IEnumerator Coroutine_TeleportIntoLevel(TeleportLocation destination, bool loseItems, float fadeInTime)
     {
-        GameManager.GLOBAL.fade.FadeToTitle(destination.title, fadeInTime, 1f);
+        float fadeTime = .6f;
+        GameManager.GLOBAL.fade.FadeTitleIn(destination.title, fadeInTime, fadeTime);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(fadeInTime + fadeTime);
 
         if (loseItems)
             GameManager.GLOBAL.inventory.ClearInventory();

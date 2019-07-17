@@ -34,7 +34,7 @@ public class SaveManager
             this.sceneIndex = sceneIndex;
             this.karma = karma;
 
-            Debug.Log($"Created SavePoint: POS {position}, S {sceneIndex}, K {karma[0] + " " + karma[1] + " " + karma[2]}");
+            Debug.Log($"Created SavePoint: {position}, Scene {sceneIndex}, Karma {karma[0] + ":" + karma[1] + ":" + karma[2]}.");
         }
 
         public bool IsEmpty()
@@ -50,8 +50,6 @@ public class SaveManager
 
     public void CreateSavePoint()
     {
-        Debug.Log($"Starting save...");
-
         if (!GameManager.GLOBAL?.player)
         {
             Debug.Log($"Player doesn't exist.");
@@ -65,8 +63,6 @@ public class SaveManager
 
         PlayerPrefs.SetString("save", encrypted);
         PlayerPrefs.Save();
-
-        Debug.Log($"Saved.");
     }
 
     public void CreateDummySavePoint()
@@ -80,8 +76,19 @@ public class SaveManager
 
         PlayerPrefs.SetString("save", encrypted);
         PlayerPrefs.Save();
+    }
 
-        Debug.Log($"Saved.");
+    public void ResetSave()
+    {
+        Debug.Log($"Resetting save...");
+
+        SavePoint save = new SavePoint(Vector3.zero, 0, karma = new int[] { 0, 0, 0 });
+
+        string decrypted = JsonUtility.ToJson(save);
+        string encrypted = EncryptDecrypt(decrypted, encryptionKey);
+
+        PlayerPrefs.SetString("save", encrypted);
+        PlayerPrefs.Save();
     }
 
     public SavePoint LoadSavePoint()

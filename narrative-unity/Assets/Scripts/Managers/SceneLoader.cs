@@ -25,9 +25,11 @@ public class SceneLoader : MonoBehaviour
 
     public TeleportLocation currentLevel;
 
-    public bool hasFinishedLoading { get; private set; }
+    public bool hasFinishedLoading { get; private set; } = true;
 
-    public bool hasFinishedUnloading { get; private set; }
+    public bool hasFinishedUnloading { get; private set; } = true;
+
+    public bool hasFinishedLevelLoading { get; private set; } = true;
 
     // private void Start() => ReloadScene();
 
@@ -57,6 +59,14 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadLevel(int sceneBuildIndex)
     {
+        if (!hasFinishedLevelLoading)
+        {
+            Debug.Log($"Level loading in progress. Cancelling...");
+            return;
+        }
+
+        hasFinishedLevelLoading = false;
+
         int sceneToUnload = SceneManager.GetActiveScene().buildIndex;
 
         if (sceneBuildIndex <= 0)
@@ -87,12 +97,17 @@ public class SceneLoader : MonoBehaviour
     IEnumerator Coroutine_LoadScene(int sceneBuildIndex, LoadSceneMode loadSceneMode, bool teleportPlayer = true)
     {
         if (!hasFinishedLoading)
-            yield return null;
+        {
+            // Debug.Log($"Previous scene has not been loaded yet. Cannot load scene {sceneBuildIndex}");
+            yield break;
+        }
 
         hasFinishedLoading = false;
 
         if (GameManager.GLOBAL.player)
             GameManager.GLOBAL.player.LockMovement();
+
+        // Debug.Log($"Attempting to load scene {sceneBuildIndex}:{loadSceneMode.ToString()}");
 
         yield return SceneManager.LoadSceneAsync(sceneBuildIndex, loadSceneMode);
 
@@ -108,16 +123,21 @@ public class SceneLoader : MonoBehaviour
     IEnumerator Coroutine_UnloadScene(int sceneBuildIndex)
     {
         if (!hasFinishedUnloading)
-            yield return null;
+        {
+            // Debug.Log($"Previous scene has not been unloaded yet. Cannot unload scene {sceneBuildIndex}");
+            yield break;
+        }
 
         hasFinishedUnloading = false;
 
         if (GameManager.GLOBAL.player)
             GameManager.GLOBAL.player.LockMovement();
 
+        // Debug.Log($"Attempting to unload scene {sceneBuildIndex}");
+
         yield return SceneManager.UnloadSceneAsync(sceneBuildIndex);
 
-        hasFinishedLoading = true;
+        hasFinishedUnloading = true;
 
         if (GameManager.GLOBAL.player)
             GameManager.GLOBAL.player.UnlockMovement();
@@ -147,10 +167,12 @@ public class SceneLoader : MonoBehaviour
         while (!hasFinishedUnloading)
             yield return null;
 
+        hasFinishedLevelLoading = true;
+
         yield return new WaitForSeconds(.1f);
 
         SaveManager.Global.CreateSavePoint();
 
-        GameManager.GLOBAL.player.teleportPlayer.Teleport(currentLevel);
+        // GameManager.GLOBAL.player.teleportPlayer.Teleport(currentLevel);
     }
 }

@@ -43,13 +43,13 @@ public class MainMenuManager : MonoBehaviour
 
         if (save.sceneIndex >= (int)SceneLoader.SceneIndices.Stairs2)
         {
-            Debug.Log("Found Level 2");
+            Debug.Log("Found Save Level 2");
             level2Save.Invoke();
         }
 
         if (save.sceneIndex >= (int)SceneLoader.SceneIndices.Stairs3)
         {
-            Debug.Log("Found Level 3");
+            Debug.Log("Found Save Level 3");
             level3Save.Invoke();
         }
     }
