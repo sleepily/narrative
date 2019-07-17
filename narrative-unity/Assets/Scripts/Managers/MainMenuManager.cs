@@ -62,11 +62,6 @@ public class MainMenuManager : MonoBehaviour
 
         if (spaceEnter || mouse)
             HideTitle();
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            SaveManager.Global.CreateDummySavePoint();
-        }
     }
 
     void HideTitle()
@@ -87,6 +82,9 @@ public class MainMenuManager : MonoBehaviour
     IEnumerator Coroutine_LoadStairs(TeleportLocation destination)
     {
         Debug.Log($"Loading {destination.levelIndex.ToString()}");
+
+        if (destination.levelIndex == SceneLoader.SceneIndices.Stairs1)
+            SaveManager.Global.ResetSave();
 
         fadeManager.FadeToWhite();
 

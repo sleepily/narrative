@@ -5,15 +5,42 @@ using UnityEngine.UI;
 
 public class FadeCanvasGroup : MonoBehaviour
 {
-    CanvasGroup canvasGroup;
+    Image[] images;
 
     private void Start()
     {
-        canvasGroup = GetComponent<CanvasGroup>();
+        images = GetComponentsInChildren<Image>();
     }
 
     public void FadeToAlpha(float alpha)
     {
-        canvasGroup.alpha = alpha;
+        StartCoroutine(Coroutine_Fade(1f, alpha, 1f));
+    }
+
+    IEnumerator Coroutine_Fade(float from, float to, float t)
+    {
+        float startTime = Time.time;
+        float endTime = startTime + t;
+
+        Color newColor;
+
+        while (Time.time < endTime)
+        {
+            float mapped = Tools.ExtensionMethods.Map(Time.time, startTime, endTime, from, to);
+
+            newColor = Color.white;
+            newColor.a = mapped;
+
+            foreach (Image image in images)
+                image.color = newColor;
+
+            yield return null;
+        }
+
+        newColor = Color.white;
+        newColor.a = to;
+
+        foreach (Image image in images)
+            image.color = newColor;
     }
 }

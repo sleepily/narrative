@@ -375,8 +375,8 @@ MonoBehaviour:
   isOpen: 0
   itemInspectionParent: {fileID: 0}
   itemHotCornerParent: {fileID: 0}
-  hudItemImage: {fileID: 0}
   missingItem: {fileID: 21300000, guid: 7ac96be3a45eb4941b7f378a62dbfdaa, type: 3}
+  hudItemImage: {fileID: 0}
   objectsToHide:
   - {fileID: 0}
   items: []
@@ -578,7 +578,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6017661369282609073}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2cc9b4653a4c9b478c4d1dcf3f6c4e1, type: 3}
   m_Name: 
