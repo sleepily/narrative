@@ -1077,7 +1077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 39
   indentLevel: 0
-  storyText: '{i} sniff sniff {/i} thins one''s not too bad.'
+  storyText: '{i} sniff sniff {/i} this one''s not too bad.'
   description: 
   character: {fileID: 22550836}
   portrait: {fileID: 0}
@@ -1702,7 +1702,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 320.03757
     y: 110.72716
-    width: 138
+    width: 133.56161
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1736,7 +1736,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 320.989
     y: 51.1978
-    width: 127
+    width: 122.60272
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1885,19 +1885,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 241.11609, y: 161.47054}
+  scrollPos: {x: -111.22431, y: -83.4803}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.7300002
   scrollViewRect:
     serializedVersion: 2
     x: 0
     y: 0
     width: 0
     height: 0
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 1876364859}
+  selectedCommands:
+  - {fileID: 1876364838}
   variables:
   - {fileID: 1876364864}
   - {fileID: 1876364863}
