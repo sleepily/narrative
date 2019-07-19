@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelIndex: 1
   location: {x: 0, y: 0, z: 0}
+  title: 

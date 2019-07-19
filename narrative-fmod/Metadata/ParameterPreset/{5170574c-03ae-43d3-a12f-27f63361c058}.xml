@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{5170574c-03ae-43d3-a12f-27f63361c058}">
+		<property name="name">
+			<value>childhood - piccolo</value>
+		</property>
+		<relationship name="folder">
+			<destination>{4c634eae-8d1b-41d9-a123-31de1bdae35b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{ee3363e4-26fd-4a66-93f2-bf8f301ddbec}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{ee3363e4-26fd-4a66-93f2-bf8f301ddbec}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

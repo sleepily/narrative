@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
-using TMPro;
 using Fungus;
+using FMODUnity;
+using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -13,15 +13,19 @@ public class InventoryManager : MonoBehaviour
 
     Item currentItem;
 
-    [Header("References")]
+    [Header("3D References")]
     [Tooltip("Where the current Item is moved for inspection.")]
     public Transform itemInspectionParent;
+
     [Tooltip("Where the current Item is moved while the Inventory is closed.")]
     public Transform itemHotCornerParent;
+
     Transform currentItemParent;
 
-    [Tooltip("The SayDialog where Item text is displayed.")]
-    public SayDialog itemSayDialog;
+    [Header("UI References")]
+    public Sprite missingItem;
+    [HideInInspector]
+    public Image hudItemImage;
 
     [Space]
 
@@ -34,7 +38,11 @@ public class InventoryManager : MonoBehaviour
     [HideInInspector]
     public List<Item> items;
 
-    bool logVerbose = true;
+    [Header("Sound References")]
+    public StudioEventEmitter openInventory;
+    public StudioEventEmitter closeInventory;
+
+    bool logVerbose = false;
 
     string stringItemAdded = "<color=lime>InventoryManager:</color> Added item {0}.";
     string stringItemRemoved = "<color=cyan>InventoryManager:</color> Removed item {0}.";
@@ -155,9 +163,14 @@ public class InventoryManager : MonoBehaviour
 
         GameManager.GLOBAL.player.SetMovementLock(isOpen);
 
+        // Display the item in Fox' hand or in inventory
         currentItemParent = isOpen ? itemInspectionParent : itemHotCornerParent;
 
-        HideObjects();
+        // Get the correct sound event and play it
+        StudioEventEmitter soundEvent = isOpen ? openInventory : closeInventory;
+        soundEvent.Play();
+
+        HideShowObjects();
 
         if (GetCurrentItem())
         {
@@ -168,12 +181,11 @@ public class InventoryManager : MonoBehaviour
     }
 
     /*
-     * Hide Objects such as the cursor when opening the inventory
+     * Hide or show objects such as the cursor when opening the inventory
      */
-    void HideObjects()
+    void HideShowObjects()
     {
-        foreach (GameObject gameObject in objectsToHide)
-            gameObject.SetActive(!isOpen);
+        GameManager.GLOBAL.player.HideCursor(isOpen);
     }
 
     bool ShowCurrentItemDescription()
@@ -253,6 +265,9 @@ public class InventoryManager : MonoBehaviour
         currentItem.transform.parent = currentItemParent;
         currentItem.transform.localPosition = Vector3.zero;
         currentItem.gameObject.SetActive(true);
+
+        if (hudItemImage)
+            hudItemImage.sprite = currentItem.itemStats.sprite ?? missingItem;
     }
 
     public Item GetCurrentItem() => currentItem;

@@ -7,8 +7,10 @@ using Fungus;
 [RequireComponent(typeof(Collider))]
 public class Interactable : MonoBehaviour
 {
+
     [Header("Color Glow Components")]
     protected MeshRenderer meshRenderer;
+    protected Material[] materials;
     protected Color currentGlowColor, desiredGlowColor;
 
     [Header("Color Glow Properties")]
@@ -18,6 +20,7 @@ public class Interactable : MonoBehaviour
 
     [Tooltip("Deselect in case this interactable should not be focusable.")]
     public bool isFocusable = true;
+    public bool focusWhenPlayerIsNear = false;
 
     /*
      * OnMouse functions to determine whether to focus, unfocus, interact with or use an object
@@ -32,7 +35,7 @@ public class Interactable : MonoBehaviour
      * Manual mouse button check, since the collider's OnMouse() function
      * only takes primary mouse button clicks into account
      */
-    void MouseButtonCheck()
+    public virtual void MouseButtonCheck()
     {
         if (!isFocusable)
             return;
@@ -73,6 +76,14 @@ public class Interactable : MonoBehaviour
     {
         // Get components needed for color glow on hover
         meshRenderer = GetComponent<MeshRenderer>();
+
+        if (!meshRenderer)
+            return;
+
+        materials = meshRenderer.materials;
+        if (materials.Length == 0)
+            materials = new Material[] { };
+
         glowColor = meshRenderer.material.GetColor("_GlowColor");
     }
 
@@ -81,7 +92,23 @@ public class Interactable : MonoBehaviour
      */
     private void Update() => UpdateFunctions();
 
-    protected virtual void UpdateFunctions() => LerpGlowColor();
+    protected virtual void UpdateFunctions()
+    {
+        FocusIfNearPlayer();
+        LerpGlowColor();
+    }
+
+    void FocusIfNearPlayer()
+    {
+        if (!focusWhenPlayerIsNear)
+            return;
+
+        if (!isFocusable)
+            return;
+
+        if (PlayerAimInteraction.IsFocusable(this))
+            Focus();
+    }
 
     /*
      * Constantly lerps to the desired glow color
@@ -102,7 +129,9 @@ public class Interactable : MonoBehaviour
             Time.deltaTime / colorLerpFactor
         );
 
-        meshRenderer.material.SetColor("_GlowColor", currentGlowColor);
+        if (materials != null || materials.Length > 0)
+            foreach (Material material in materials)
+                material.SetColor("_GlowColor", currentGlowColor);
 
         if (currentGlowColor.Equals(desiredGlowColor))
             lerpIsFinished = true;
@@ -118,8 +147,11 @@ public class Interactable : MonoBehaviour
 
         currentGlowColor = desiredGlowColor;
 
-        if (meshRenderer)
-            meshRenderer.material.SetColor("_GlowColor", desiredGlowColor);
+        if (materials == null || materials.Length == 0)
+            return;
+
+        foreach (Material material in materials)
+                material.SetColor("_GlowColor", desiredGlowColor);
     }
 
     /*

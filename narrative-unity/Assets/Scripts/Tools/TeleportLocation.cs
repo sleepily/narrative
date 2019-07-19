@@ -7,4 +7,5 @@ public class TeleportLocation : ScriptableObject
 {
     public SceneLoader.SceneIndices levelIndex;
     public Vector3 location;
+    public string title;
 }

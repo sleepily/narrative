@@ -79,7 +79,9 @@ public class Puzzle : MonoBehaviour
     {
         isSolved = true;
 
-        flowchart.SetBooleanVariable("isSolved", true);
+        if (flowchart.HasVariable("isSolved"))
+            flowchart.SetBooleanVariable("isSolved", true);
+
         TriggerDialogue();
     }
 

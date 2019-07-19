@@ -23,9 +23,6 @@ public class Item : InteractableWithDialogue
         canBePickedUp = itemStats.canBePickedUp;
     }
 
-    /*
-     * Pick up item when clicked.
-     */
     public override void Interact()
     {
         if (isInInventory)
@@ -34,9 +31,6 @@ public class Item : InteractableWithDialogue
         PickupItem();
     }
 
-    /*
-     * Don't trigger dialogue when using another item on this item
-     */
     public override void Use()
     {
         if (isInInventory)
@@ -64,6 +58,7 @@ public class Item : InteractableWithDialogue
 
         SetGlowColor(Color.clear, true);
 
+        GameManager.GLOBAL.player.PickupAndUseItemAnimation();
         GameManager.GLOBAL.inventory.ToggleInventory(true);
 
         TriggerDialogue();
@@ -74,7 +69,9 @@ public class Item : InteractableWithDialogue
     void UseItem(bool setInactive)
     {
         GameManager.GLOBAL.inventory.Remove(gameObject, itemStats.ID);
-        Debug.Log($"Using and removing {name}");
+        // Debug.Log($"Using and removing {name}");
+
+        GameManager.GLOBAL.player.ItemAnimation(itemStats);
 
         if (setInactive)
             gameObject.SetActive(false);
@@ -101,6 +98,7 @@ public class Item : InteractableWithDialogue
         localRotation.eulerAngles = new Vector3(.2f, .3f, 0f);
         transform.localRotation = localRotation;
 
+        // TODO: implement this
         float itemScale = 1f;
 
         if (GameManager.GLOBAL.inventory.isOpen)
@@ -134,7 +132,7 @@ public class Item : InteractableWithDialogue
             return;
 
         // Prevent mouse interaction advancing dialogue
-        if (IsInDialogueCheck())
+        if (GameManager.GLOBAL.dialogue.dialogueInProgress)
             return;
 
         // Get mouse input

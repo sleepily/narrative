@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: BaseballBat
   canBePickedUp: 1
+  isWeapon: 1
   inventoryInspectionScale: 1
   handheldScale: 1

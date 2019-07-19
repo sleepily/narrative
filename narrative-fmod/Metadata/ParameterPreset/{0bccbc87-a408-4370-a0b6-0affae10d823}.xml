@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{0bccbc87-a408-4370-a0b6-0affae10d823}">
+		<property name="name">
+			<value>childhood - piano</value>
+		</property>
+		<relationship name="folder">
+			<destination>{4c634eae-8d1b-41d9-a123-31de1bdae35b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{5e8bda6a-1f01-48e1-8ea8-081427425258}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{5e8bda6a-1f01-48e1-8ea8-081427425258}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

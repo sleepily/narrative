@@ -15,7 +15,8 @@ public class CheckForItem : MonoBehaviour
     public void Check()
     {
         if (triggered)
-            return;
+            if (onlyTriggerOnce)
+                return;
 
         if (!GameManager.GLOBAL.inventory.GetItemInInventory(itemToCheckFor.ID, out Item outItem))
             return;
