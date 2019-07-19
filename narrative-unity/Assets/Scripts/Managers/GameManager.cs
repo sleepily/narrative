@@ -32,4 +32,11 @@ public class GameManager : MonoBehaviour
     }
 
     public static void SetCursorLock(bool isLocked) => CursorLock.SetCursorLock(isLocked);
+
+    // Playtesting  
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+            CursorLock.SetCursorLock(false);
+    }
 }
